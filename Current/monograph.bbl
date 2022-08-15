@@ -1,0 +1,818 @@
+\begin{thebibliography}{100}
+
+\bibitem{basdevant_rich_spiro_2004}
+J.~L. Basdevant, J.~Rich, and M.~Spiro.
+\newblock {\em Fundamentals in nuclear physics: From nuclear structure to
+  cosmology}.
+\newblock Springer Verlag New York, 2004.
+
+\bibitem{heyde_2020}
+K.~Heyde.
+\newblock {\em Basic ideas and concepts in nuclear physics: An introductory
+  approach}.
+\newblock CRC Press, 2020.
+
+\bibitem{iliadis_2015}
+C.~Iliadis.
+\newblock {\em Nuclear physics of stars}.
+\newblock Wiley-VCH, 2015.
+
+\bibitem{dick_2016}
+R.~Dick.
+\newblock {\em Advanced Quantum Mechanics: Materials and photons}.
+\newblock Springer, 2016.
+
+\bibitem{joachain_1983}
+C.~J. Joachain.
+\newblock {\em Quantum collision theory}.
+\newblock North-Holland Pub. Co., 1983.
+
+\bibitem{sasaki_kawano_stetcu_2022}
+H.~Sasaki, T.~Kawano, and I.~Stetcu.
+\newblock Noniterative finite amplitude methods for ${E1}$ and ${M1}$ giant
+  resonances.
+\newblock {\em Physical Review C}, 105(4), 2022.
+
+\bibitem{bertulani_2003}
+C.~A. Bertulani.
+\newblock Nuclear reactions.
+\newblock {\em digital Encyclopedia of Applied Physics}, page 45–92, 2003.
+
+\bibitem{brune_davids_2015}
+C.~R. Brune and B.~Davids.
+\newblock Radiative capture reactions in astrophysics.
+\newblock {\em Annual Review of Nuclear and Particle Science}, 65(1):87–112,
+  2015.
+
+\bibitem{whitehead_poxon-pearson_nunes_potel_2022}
+T.~R. Whitehead, T.~Poxon-Pearson, F.~M. Nunes, and G.~Potel.
+\newblock Prediction for $(p, n)$ charge-exchange reactions with uncertainty
+  quantification.
+\newblock {\em Physical Review C}, 105(5), 2022.
+
+\bibitem{sharma_gandhi_kumar_2022}
+A.~Sharma, A.~Gandhi, and A.~Kumar.
+\newblock Investigation of {W}eisskopf-{E}wing approximation for the
+  determination of $(n, p)$ cross sections using the surrogate reaction
+  technique.
+\newblock {\em Physical Review C}, 105(1), 2022.
+
+\bibitem{bertulani_kajino_2016}
+C.~A. Bertulani and T.~Kajino.
+\newblock Frontiers in nuclear astrophysics.
+\newblock {\em Progress in Particle and Nuclear Physics}, 89:56–100, 2016.
+
+\bibitem{descouvemont_2020}
+P.~Descouvemont.
+\newblock Nuclear reactions of astrophysical interest.
+\newblock {\em Frontiers in Astronomy and Space Sciences}, 7, 2020.
+
+\bibitem{burbidge_burbidge_fowler_hoyle_1957}
+E.~Margaret Burbidge, G.~R. Burbidge, W.~A. Fowler, and F.~Hoyle.
+\newblock Synthesis of the {E}lements in {S}tars.
+\newblock {\em Reviews of Modern Physics}, 29(4):547–650, 1957.
+
+\bibitem{lotay_doherty_janssens_seweryniak_albers_almaraz-calderon_carpenter_champagne_chiara_hoffman_et_2022}
+G.~Lotay, D.~T. Doherty, R.~V. Janssens, D.~Seweryniak, H.~M. Albers,
+  S.~Almaraz-Calderon, M.~P. Carpenter, A.~E. Champagne, C.~J. Chiara, C.~R.
+  Hoffman, and et~al.
+\newblock Revised decay properties of the key 93-ke{V} resonance in the
+  $\mathrm{{}^{25}Mg(p,\gamma)}$ reaction and its influence on the {MgAl} cycle
+  in astrophysical environments.
+\newblock {\em Physical Review C}, 105(4), 2022.
+
+\bibitem{spitaleri_mukhamedzhanov_blokhintsev_cognata_pizzone_tumino_2011}
+C.~Spitaleri, A.~M. Mukhamedzhanov, L.~D. Blokhintsev, M.~La Cognata, R.~G.
+  Pizzone, and A.~Tumino.
+\newblock The {T}rojan {H}orse {M}ethod in {N}uclear {A}strophysics.
+\newblock {\em Physics of Atomic Nuclei}, 74(12):1725–1739, 2011.
+
+\bibitem{pignatari_hirschi_wiescher_gallino_bennett_beard_fryer_herwig_rockefeller_timmes_et_2012}
+M.~Pignatari, R.~Hirschi, M.~Wiescher, R.~Gallino, M.~Bennett, M.~Beard,
+  C.~Fryer, F.~Herwig, G.~Rockefeller, F.~X. Timmes, and et~al.
+\newblock The $\mathrm{{}^{12}C +{}^{12}C}$ reaction and the impact on
+  nucleosynthesis in massive stars.
+\newblock {\em The Astrophysical Journal}, 762(1):31, 2012.
+
+\bibitem{diaz-torres_wiescher_2018}
+A.~Diaz-Torres and M.~Wiescher.
+\newblock Characterizing the astrophysical ${S}$ factor for $\mathrm{{}^{12}C +
+  {}^{12}C}$ fusion with wave-packet dynamics.
+\newblock {\em Physical Review C}, 97(5), 2018.
+
+\bibitem{li_fang_bucher_li_ru_tang_2020}
+Y.~J. Li, X.~Fang, B.~Bucher, K.~A. Li, L.~H. Ru, and X.~D. Tang.
+\newblock Modified astrophysical ${S}$-factor of $\mathrm{{}^{12}C+{}^{12}C}$
+  fusion reaction at sub-barrier energies.
+\newblock {\em Chinese Physics C}, 44(11):115001, 2020.
+
+\bibitem{luo_wen_lin_yang_jia_yang_huang_chang_zhang_yang_et_2022}
+T.-P. Luo, P.-W. Wen, C.-J. Lin, L.~Yang, H.-M. Jia, F.~Yang, D.-H. Huang,
+  C.~Chang, M.-H. Zhang, Y.~Yang, and et~al.
+\newblock Bayesian analysis on non-resonant behavior of $\mathrm{{}^{12}C +
+  {}^{12}C}$ fusion reaction at sub-barrier energies.
+\newblock {\em Chinese Physics C}, 46(6):064105, 2022.
+
+\bibitem{mukhamedzhanov_pang_kadyrov_2019}
+A.~M. Mukhamedzhanov, D.~Y. Pang, and A.~S. Kadyrov.
+\newblock Astrophysical factors of $\mathrm{{}^{12}C + {}^{12}C}$ fusion
+  extracted using the {T}rojan horse method.
+\newblock {\em Physical Review C}, 99(6), 2019.
+
+\bibitem{mukhamedzanov_2022}
+A.~M. Mukhamedzanov.
+\newblock Status of deep subbarrier $\mathrm{{}^{12}C + {}^{12}C}$ fusion and
+  advancing the {T}rojan horse method.
+\newblock {\em The European Physical Journal A}, 58(4), 2022.
+
+\bibitem{taniguchi_kimura_2021}
+Y.~Taniguchi and M.~Kimura.
+\newblock $\mathrm{{}^{12}C + {}^{12}C}$ fusion ${S}^{*}$-factor from a
+  full-microscopic nuclear model.
+\newblock {\em Physics Letters B}, 823:136790, 2021.
+
+\bibitem{assuncao_descouvemont_2016}
+M.~Assunção and P.~Descouvemont.
+\newblock $\mathrm{{}^{12}C+{}^{12}C}$ fusion in a multichannel folding model.
+\newblock {\em Journal of Physics: Conference Series}, 665:012010, 2016.
+
+\bibitem{koyuncu_soylu_2018}
+F.~Koyuncu and A.~Soylu.
+\newblock Screening effects on $\mathrm{{}^{12}C+{}^{12}C}$ fusion reaction.
+\newblock {\em Chinese Physics C}, 42(5):054106, 2018.
+
+\bibitem{notani_esbensen_fang_bucher_davies_jiang_lamm_lin_ma_martin_et_2012}
+M.~Notani, H.~Esbensen, X.~Fang, B.~Bucher, P.~Davies, C.~L. Jiang, L.~Lamm,
+  C.~J. Lin, C.~Ma, E.~Martin, and et~al.
+\newblock Correlation between the $\mathrm{{}^{12}C + {}^{12}C}$,
+  $\mathrm{{}^{12}C + {}^{13}C}$, and $\mathrm{{}^{13}C + {}^{13}C}$ fusion
+  cross sections.
+\newblock {\em Physical Review C}, 85(1), 2012.
+
+\bibitem{zhang_wang_tudor_bucher_burducea_chen_chen_chesneanu_chilug_gasques_et_2020}
+N.~T. Zhang, X.~Y. Wang, D.~Tudor, B.~Bucher, I.~Burducea, H.~Chen, Z.~J. Chen,
+  D.~Chesneanu, A.~I. Chilug, L.~R. Gasques, and et~al.
+\newblock Constraining the $\mathrm{{}^{12}C+{}^{12}C}$ astrophysical
+  {S}-factors with the $\mathrm{{}^{12}C+{}^{13}C}$ measurements at very low
+  energies.
+\newblock {\em Physics Letters B}, 801:135170, 2020.
+
+\bibitem{duarte_gasques_oliveira_zagatto_chamon_medina_added_seale_alcantara-nunez_rossi_et_2015}
+J.~G. Duarte, L.~R. Gasques, J.~R. Oliveira, V.~A. Zagatto, L.~C. Chamon, N.~H.
+  Medina, N.~Added, W.~A. Seale, J.~A. Alcántara-Núñez, E.~S. Rossi, and
+  et~al.
+\newblock Measurement of fusion cross sections for
+  $\mathrm{{}^{16}O+{}^{16}O}$.
+\newblock {\em Journal of Physics G: Nuclear and Particle Physics},
+  42(6):065102, 2015.
+
+\bibitem{kuronen_keinonen_tikkanen_1987}
+A.~Kuronen, J.~Keinonen, and P.~Tikkanen.
+\newblock Cross section of $\mathrm{{}^{16}O + {}^{16}O}$ near the {C}oulomb
+  barrier.
+\newblock {\em Physical Review C}, 35(2):591–596, 1987.
+
+\bibitem{thomas_chen_hinds_meredith_olson_1986}
+J.~Thomas, Y.~T. Chen, S.~Hinds, D.~Meredith, and M.~Olson.
+\newblock Sub-barrier fusion of the oxygen isotopes: {A} more complete picture.
+\newblock {\em Physical Review C}, 33(5):1679–1689, 1986.
+
+\bibitem{guimin_deji_xiaowu_1992}
+L.~Guimin, F.~Deji, and C.~Xiaowu.
+\newblock Sub-{B}arrier {F}usion {C}oupled-{C}hannels {C}alculations for
+  $\mathrm{{}^{16}O+{}^{16,18}O}$.
+\newblock {\em Chinese Physics Letters}, 9(11):577–580, 1992.
+
+\bibitem{ferreira_lubian_linares_ermamatov_yepez-martinez_hess_2019}
+J.~L. Ferreira, J.~Lubian, R.~Linares, M.~J. Ermamatov, H.~Yépez-Martínez,
+  and P.~O. Hess.
+\newblock Analysis of the alpha-transfer reaction in the $\mathrm{{}^{12}C +
+  {}^{16}O}$ system using the semi-microscopic algebraic cluster model.
+\newblock {\em The European Physical Journal A}, 55(6), 2019.
+
+\bibitem{torilov_maltsev_zherebchevsky_2021}
+S.~Y. Torilov, N.~A. Maltsev, and V.~I. Zherebchevsky.
+\newblock Studying {L}ow-{E}nergy {R}esonances in the $\mathrm{{}^{12}C +
+  {}^{16}O}$ system.
+\newblock {\em Bulletin of the Russian Academy of Sciences: Physics},
+  85(5):548–551, 2021.
+
+\bibitem{chan_bohn_vandenbosch_sielemann_cramer_bernhardt_bhang_chiang_1979}
+Y.-D. Chan, H.~Bohn, R.~Vandenbosch, R.~Sielemann, J.~G. Cramer, K.~G.
+  Bernhardt, H.~C. Bhang, and D.~T. Chiang.
+\newblock Influence of {E}xtra {N}eutrons {A}dded to the
+  $\mathrm{{}^{12}C+{}^{16}O}$ {S}ystem: {G}ross {S}tructures in $\gamma$-ray
+  {Y}ields {F}ollowing the $\mathrm{{}^{13}C+{}^{16}O}$ and $\mathrm{{}^{12}C +
+  {}^{18}O}$ reactions.
+\newblock {\em Physical Review Letters}, 42(11):687–690, 1979.
+
+\bibitem{kovar_geesaman_braid_eisen_henning_ophel_paul_rehm_sanders_sperr_et_1979}
+D.~G. Kovar, D.~F. Geesaman, T.~H. Braid, Y.~Eisen, W.~Henning, T.~R. Ophel,
+  M.~Paul, K.~E. Rehm, S.~J. Sanders, P.~Sperr, and et~al.
+\newblock Systematics of carbon- and oxygen-induced fusion on nuclei with $12
+  \leq {A} \leq 19$.
+\newblock {\em Physical Review C}, 20(4):1305–1331, 1979.
+
+\bibitem{wang_ren_bai_2020}
+B.~Wang, Z.~Ren, and D.~Bai.
+\newblock ${}^{16-18}$$\mathrm{O + {}^{16}O}$ and $\mathrm{{}^{16,18}O +
+  {}^{12,13}C}$ fusion-evaporation reactions at near-{C}oulomb-barrier energies
+  from statistical model calculations.
+\newblock {\em Physical Review C}, 101(2), 2020.
+
+\bibitem{assuncao_descouvemont_2015}
+M.~Assunção and P.~Descouvemont.
+\newblock $\mathrm{{}^{12}C+{}^{12}C}$ and $\mathrm{{}^{16}O+{}^{16}O}$ fusion
+  reactions at low energies.
+\newblock {\em Journal of Physics: Conference Series}, 590:012038, 2015.
+
+\bibitem{descouvemont_2021}
+P.~Descouvemont.
+\newblock Resonances in $\mathrm{{}^{12}C}$ and $\mathrm{{}^{24}Mg}$: what do
+  we learn from a microscopic cluster theory?
+\newblock {\em The European Physical Journal A}, 57(1), 2021.
+
+\bibitem{montagnoli_stefanini_jiang_colucci_goasduff_brugnara_mazzocco_siciliano_scarlassara_corradi_et_2020}
+G.~Montagnoli, A.~M. Stefanini, C.~L. Jiang, G.~Colucci, A.~Goasduff,
+  D.~Brugnara, M.~Mazzocco, M.~Siciliano, F.~Scarlassara, L.~Corradi, and
+  et~al.
+\newblock Study of fusion hindrance in the system
+  $\mathrm{{}^{12}C+{}^{24}Mg}$.
+\newblock {\em Journal of Physics: Conference Series}, 1643(1):012098, 2020.
+
+\bibitem{nobre_chamon_gasques_carlson_thompson_2007}
+G.~P. Nobre, L.~C. Chamon, L.~R. Gasques, B.~V. Carlson, and I.~J. Thompson.
+\newblock Consistent analysis of fusion data without adjustable parameters for
+  a wide variety of heavy-ion systems.
+\newblock {\em Physical Review C}, 75(4), 2007.
+
+\bibitem{arcones_bardayan_beers_bernstein_blackmon_messer_brown_brown_brune_champagne_et_2017}
+A.~Arcones, D.~W. Bardayan, T.~C. Beers, L.~A. Bernstein, J.~C. Blackmon,
+  B.~Messer, B.~A. Brown, E.~F. Brown, C.~R. Brune, A.~E. Champagne, and et~al.
+\newblock White paper on nuclear astrophysics and low energy nuclear physics
+  {P}art 1: Nuclear astrophysics.
+\newblock {\em Progress in Particle and Nuclear Physics}, 94:1–67, 2017.
+
+\bibitem{carlson_carpenter_casten_elster_fallon_gade_gross_hagen_hayes_higinbotham_et_2017}
+J.~Carlson, M.~P. Carpenter, R.~Casten, C.~Elster, P.~Fallon, A.~Gade,
+  C.~Gross, G.~Hagen, A.~C. Hayes, D.~W. Higinbotham, and et~al.
+\newblock White paper on nuclear astrophysics and low-energy nuclear physics,
+  {P}art 2: Low-energy nuclear physics.
+\newblock {\em Progress in Particle and Nuclear Physics}, 94:68–124, 2017.
+
+\bibitem{jennings_karataglidis_shoppa_1998}
+B.~K. Jennings, S.~Karataglidis, and T.~D. Shoppa.
+\newblock Direct capture astrophysical ${S}$ factors at low energy.
+\newblock {\em Physical Review C}, 58(1):579–581, 1998.
+
+\bibitem{hussein_abdullah_2020}
+M.~I. Hussein and R.~H. Abdullah.
+\newblock Calculation of astrophysical {S}-factor and thermonuclear reaction
+  rates for (p,n) medium elements reactions.
+\newblock {\em Journal of Physics: Conference Series}, 1660(1):012102, 2020.
+
+\bibitem{ueda_sargeant_pato_hussein_2002}
+M.~Ueda, A.~J. Sargeant, M.~P. Pato, and M.~S. Hussein.
+\newblock Evaluation of effective astrophysical ${S}$ factor for non-resonant
+  reactions.
+\newblock {\em Progress of Theoretical Physics Supplement}, 146:634–635,
+  2002.
+
+\bibitem{ueda_sargeant_pato_hussein_2004}
+M.~Ueda, A.~J. Sargeant, M.~P. Pato, and M.~S. Hussein.
+\newblock Resonances and thermonuclear reaction rates for charged particle
+  collisions.
+\newblock {\em Physical Review C}, 70(2), 2004.
+
+\bibitem{beard_afanasjev_chamon_gasques_wiescher_yakovlev_2010}
+M.~Beard, A.~V. Afanasjev, L.~C. Chamon, L.~R. Gasques, M.~Wiescher, and D.~G.
+  Yakovlev.
+\newblock Astrophysical {S} factors for fusion reactions involving {C}, {O},
+  {N}e, and {Mg} isotopes.
+\newblock {\em Atomic Data and Nuclear Data Tables}, 96(5):541–566, 2010.
+
+\bibitem{yakovlev_beard_gasques_wiescher_2010}
+D.~G. Yakovlev, M.~Beard, L.~R. Gasques, and M.~Wiescher.
+\newblock Simple analytic model for astrophysical ${S}$ factors.
+\newblock {\em Physical Review C}, 82(4), 2010.
+
+\bibitem{ghasemi_sadeghi_2018}
+R.~Ghasemi and H.~Sadeghi.
+\newblock {S}-factor for radiative capture reactions for light nuclei at
+  astrophysical energies.
+\newblock {\em Results in Physics}, 9:151–165, 2018.
+
+\bibitem{dubovichenko_dzhazairov-kakhramanov_2012}
+S.~Dubovichenko and A.~Dzhazairov-Kakhramanov.
+\newblock Examination of the astrophysical {S}-factors of the radiative proton
+  capture on $\mathrm{{}^{2}H}$, $\mathrm{{}^{6}Li}$, $\mathrm{{}^{7}Li}$,
+  $\mathrm{{}^{12}C}$ and $\mathrm{{}^{13}C}$.
+\newblock {\em International Journal of Modern Physics E}, 21(03):1250039,
+  2012.
+
+\bibitem{tursunov_turakulov_kadyrov_blokhintsev_2021}
+E.~M. Tursunov, S.~A. Turakulov, A.~S. Kadyrov, and L.~D. Blokhintsev.
+\newblock Astrophysical {S} factor and rate of
+  $\mathrm{{}^{7}Be(p,\gamma){}^{8}B}$ direct capture reaction in a potential
+  model.
+\newblock {\em Physical Review C}, 104(4), 2021.
+
+\bibitem{bertulani_1996}
+C.~A. Bertulani.
+\newblock $\mathrm{{}^{7}Be(p, \gamma){}^{8}B}$ cross section from indirect
+  breakup experiments.
+\newblock {\em Zeitschrift für Physik A: Hadrons and Nuclei},
+  356(1):293–297, 1996.
+
+\bibitem{kabir_nabi_2021}
+A.~Kabir and J.-U. Nabi.
+\newblock Re-examination of astrophysical {S}-factor of proton capture
+  $\mathrm{{}^{9}Be(p,\gamma){}^{10}B}$ in stellar matter.
+\newblock {\em Nuclear Physics A}, 1007:122118, 2021.
+
+\bibitem{dubovichenko_dzhazairov-kakhramanov_2009}
+S.~B. Dubovichenko and A.~V. Dzhazairov-Kakhramanov.
+\newblock Astrophysical {S} -factor of $\mathrm{p{}^{2}H}$ radiative capture.
+\newblock {\em The European Physical Journal A}, 39(2):139–143, 2009.
+
+\bibitem{czerski_huke_heide_ruprecht_2006}
+K.~Czerski, A.~Huke, P.~Heide, and G.~Ruprecht.
+\newblock Experimental and theoretical screening energies for the
+  $\mathrm{{}^{2}H(d, p){}^{3}H}$ reaction in metallic environments.
+\newblock {\em The European Physical Journal A}, 27(S1):83–88, 2006.
+
+\bibitem{kabir_irgaziev_nabi_2020}
+A.~Kabir, B.~F. Irgaziev, and J.-U. Nabi.
+\newblock Radiative capture of proton by $\mathrm{{}^{13}C}$ at low energy.
+\newblock {\em Astrophysics and Space Science}, 365(6), 2020.
+
+\bibitem{dubovichenko_2012}
+S.~B. Dubovichenko.
+\newblock Astrophysical ${S}$-factor for the radiative-capture reaction
+  $\mathrm{p{}^{13}C \rightarrow {}^{14}N\gamma}$.
+\newblock {\em Physics of Atomic Nuclei}, 75(2):173–181, 2012.
+
+\bibitem{kabir_irgaziev_nabi_sagheer_2022}
+A.~Kabir, B.~F. Irgaziev, J.-U. Nabi, and S.~Sagheer.
+\newblock Re-analysis of radiative capture $\mathrm{{}^{11}C(p,
+  \gamma){}^{12}N}$ at low energy.
+\newblock {\em Journal of Physics G: Nuclear and Particle Physics},
+  49(7):075101, 2022.
+
+\bibitem{diaz-torres_gasques_wiescher_2007}
+A.~Diaz-Torres, L.~R. Gasques, and M.~Wiescher.
+\newblock Effects of nuclear molecular configurations on the astrophysical
+  {S}-factor for $\mathrm{{}^{16}O+{}^{16}O}$.
+\newblock {\em Physics Letters B}, 652(5-6):255–258, 2007.
+
+\bibitem{chamon_2007}
+L.~C. Chamon.
+\newblock The {S}ão {P}aulo potential.
+\newblock {\em Nuclear Physics A}, 787(1-4):198–205, 2007.
+
+\bibitem{amer_penionzhkevich_2021}
+A.~H. Amer and Y.~E. Penionzhkevich.
+\newblock Elastic scattering analysis of isobar nuclei ${A}=6$ projectiles on
+  $\mathrm{{}^{12}C}$ using different models of optical potential.
+\newblock {\em Nuclear Physics A}, 1015:122300, 2021.
+
+\bibitem{salamon_baran_vertse_2016}
+P.~Salamon, Á. Baran, and T.~Vertse.
+\newblock Distributions of the {S}-matrix {P}oles in {W}oods–{S}axon and
+  cut-off {W}oods–{S}axon potentials.
+\newblock {\em Nuclear Physics A}, 952:1–17, 2016.
+
+\bibitem{singh_sukhvinder_kharab_2013A}
+M.~Singh, Sukhvinder, and R.~Kharab.
+\newblock Analysis of fusion excitation functions of various systems using
+  modified {W}oods–{S}axon potential.
+\newblock {\em Nuclear Physics A}, 897:179–197, 2013.
+
+\bibitem{singh_sukhvinder_kharab_2013B}
+M.~Singh, Sukhvinder, and R.~Kharab.
+\newblock Analysis of fusion excitation function data by using an energy
+  dependent potential model.
+\newblock {\em Nuclear Physics A}, 897:198–217, 2013.
+
+\bibitem{bass_1977}
+R.~Bass.
+\newblock {N}ucleus-{N}ucleus {P}otential {D}educed from {E}xperimental
+  {F}usion {C}ross {S}ections.
+\newblock {\em Physical Review Letters}, 39(5):265–268, 1977.
+
+\bibitem{nandi_swami_gupta_kumar_chakraborty_manjunatha_2022}
+T.~Nandi, D.~K. Swami, P.~S. Gupta, Y.~Kumar, S.~Chakraborty, and H.~C.
+  Manjunatha.
+\newblock Search for a viable nucleus–nucleus potential in heavy-ion nuclear
+  reactions.
+\newblock {\em Pramana}, 96(2), 2022.
+
+\bibitem{barrett_navratil_vary_2013}
+B.~R. Barrett, P.~Navrátil, and J.~P. Vary.
+\newblock \textit{Ab Initio} no core shell model.
+\newblock {\em Progress in Particle and Nuclear Physics}, 69:131–181, 2013.
+
+\bibitem{beck_2012}
+C.~Beck.
+\newblock {\em Clusters in nuclei, vol. 2}.
+\newblock Springer Berlin Heidelberg, 2012.
+
+\bibitem{marcucci_nollett_schiavilla_wiringa_2006}
+L.~E. Marcucci, K.~M. Nollett, R.~Schiavilla, and R.~B. Wiringa.
+\newblock Modern theories of low-energy astrophysical reactions.
+\newblock {\em Nuclear Physics A}, 777:111–136, 2006.
+
+\bibitem{grigorenko_danilin_efros_shulgina_zhukov_1998}
+L.~V. Grigorenko, B.~V. Danilin, V.~D. Efros, N.~B. Shul’gina, and M.~V.
+  Zhukov.
+\newblock Structure of the $\mathrm{{}^{8}Li}$ and $\mathrm{{}^{8}B}$ nuclei in
+  an extended three-body model and astrophysical ${S_{17}}$ factor.
+\newblock {\em Physical Review C}, 57(5), 1998.
+
+\bibitem{neff_feldmeier_langanke_2011}
+T.~Neff, H.~Feldmeier, and K.~Langanke.
+\newblock Towards microscopic ab initio calculations of astrophysical
+  ${S}$-factors.
+\newblock {\em Progress in Particle and Nuclear Physics}, 66(2):341–345,
+  2011.
+
+\bibitem{navratil_quaglioni_hupin_romero-redondo_calci_2016}
+P.~Navrátil, S.~Quaglioni, G.~Hupin, C.~Romero-Redondo, and A.~Calci.
+\newblock Unified \textit{ab initio} approaches to nuclear structure and
+  reactions.
+\newblock {\em Physica Scripta}, 91(5):053002, 2016.
+
+\bibitem{navratil_bertulani_caurier_2006}
+P.~Navratil, C.~A. Bertulani, and E.~Caurier.
+\newblock $\mathrm{{}^{7}Be(p,\gamma){}^{8}B}$ {S}-factor from ab
+  \textit{initio} wave functions.
+\newblock {\em Journal of Physics: Conference Series}, 49:15–20, 2006.
+
+\bibitem{atkinson_navratil_hupin_kravvaris_quaglioni_2022}
+M.~C. Atkinson, P.~Navrátil, G.~Hupin, K.~Kravvaris, and S.~Quaglioni.
+\newblock \textit{Ab initio} calculation of the $\beta$ decay from
+  $\mathrm{{}^{11}Be}$ to a $\mathrm{{}^{10}Be} + p$ resonance.
+\newblock {\em Physical Review C}, 105(5), 2022.
+
+\bibitem{arai_aoyama_suzuki_descouvemont_baye_2013}
+K.~Arai, S.~Aoyama, Y.~Suzuki, P.~Descouvemont, and D.~Baye.
+\newblock Tensor force manifestations in \textit{ab initio} study of the
+  $\mathrm{{}^{2}H(d, \gamma){}^{4}He}$, $\mathrm{{}^{2}H(d, p){}^{3}H}$ and
+  $\mathrm{{}^{2}H(d, n){}^{3}He}$ reactions.
+\newblock {\em Journal of Physics: Conference Series}, 436:012024, 2013.
+
+\bibitem{dohet-eraly_navratil_quaglioni_horiuchi_hupin_raimondi_2016}
+J.~Dohet-Eraly, P.~Navrátil, S.~Quaglioni, W.~Horiuchi, G.~Hupin, and
+  F.~Raimondi.
+\newblock $\mathrm{{}^{3}He(\alpha,\gamma){}^{7}Be}$ and
+  $\mathrm{{}^{3}H(\alpha,\gamma){}^{7}Li}$ astrophysical ${S}$ factors from
+  the no-core shell model with continuum.
+\newblock {\em Physics Letters B}, 757:430–436, 2016.
+
+\bibitem{dong_wang_michel_ploszajczak_2022}
+G.~X. Dong, X.~B. Wang, N.~Michel, and M.~Płoszajczak.
+\newblock Gamow shell model description of the radiative capture reaction
+  $\mathrm{{}^{8}Li(n,\gamma){}^{9}Li}$.
+\newblock {\em Physical Review C}, 105(6), 2022.
+
+\bibitem{tazawa_1974}
+T.~Tazawa.
+\newblock Nucleus-{N}ucleus potential in the {T}wo-{C}enter {S}hell {M}odel.
+\newblock {\em Progress of Theoretical Physics}, 51(6):1764–1782, 1974.
+
+\bibitem{sadeghi_khalili_godarzi_2013}
+H.~Sadeghi, H.~Khalili, and M.~Godarzi.
+\newblock Astrophysical ${S}$-factor of the $\mathrm{d(p,\gamma){}^{3}He}$
+  process by effective field theory.
+\newblock {\em Chinese Physics C}, 37(4):044102, 2013.
+
+\bibitem{higa_premarathna_rupak_2022}
+R.~Higa, P.~Premarathna, and G.~Rupak.
+\newblock Coupled-channels treatment of $\mathrm{{}^{7}Be(p,\gamma){}^{8}B}$ in
+  effective field theory.
+\newblock {\em Physical Review C}, 106(1), 2022.
+
+\bibitem{dufour_descouvemont_1997}
+M.~Dufour and P.~Descouvemont.
+\newblock Multicluster study of the $\mathrm{{}^{12}C} + n$ and
+  $\mathrm{{}^{12}C} + p$ systems.
+\newblock {\em Physical Review C}, 56(4):1831–1839, 1997.
+
+\bibitem{simenel_keser_umar_oberacker_2013}
+C.~Simenel, R.~Keser, A.~S. Umar, and V.~E. Oberacker.
+\newblock Microscopic study of $\mathrm{{}^{16}O + {}^{16}O}$ fusion.
+\newblock {\em Physical Review C}, 88(2), 2013.
+
+\bibitem{jayatissa_avila_rehm_talwar_mohr_auranen_chen_gorelov_hoffman_jiang_et_2022}
+H.~Jayatissa, M.~L. Avila, K.~E. Rehm, R.~Talwar, P.~Mohr, K.~Auranen, J.~Chen,
+  D.~A. Gorelov, C.~R. Hoffman, C.~L. Jiang, and et~al.
+\newblock First direct measurement of the $\mathrm{{}^{13}N(\alpha,
+  p){}^{16}O}$ reaction relevant for core-collapse supernovae nucleosynthesis.
+\newblock {\em Physical Review C}, 105(4), 2022.
+
+\bibitem{shubhchintak_descouvemont_2022}
+Shubhchintak and P.~Descouvemont.
+\newblock Breakup effects in the $\mathrm{{}^{16}C}+p$ and
+  $\mathrm{{}^{16}C}+d$ reactions.
+\newblock {\em Physical Review C}, 105(2), 2022.
+
+\bibitem{baba_taniguchi_kimura_2022}
+T.~Baba, Y.~Taniguchi, and M.~Kimura.
+\newblock $4\alpha$ linear-chain state produced by $\mathrm{{}^{9}Be +
+  {}^{9}Be}$ collisions.
+\newblock {\em Physical Review C}, 105(6), 2022.
+
+\bibitem{leanh_minhloc_2022}
+N.~Le~Anh and B.~Minh~Loc.
+\newblock Low-energy $\mathrm{{}^{7}Li(n,\gamma){}^{8}Li}$ and
+  $\mathrm{{}^{7}Be(p,\gamma){}^{8}B}$ radiative capture reactions within the
+  {S}kyrme {H}artree-{F}ock approach.
+\newblock {\em Physical Review C}, 106(1), 2022.
+
+\bibitem{lane_thomas_1958}
+A.~M. Lane and R.~G. Thomas.
+\newblock {R}-matrix theory of nuclear reactions.
+\newblock {\em Reviews of Modern Physics}, 30(2):257–353, 1958.
+
+\bibitem{ramirezjimenez_kelkar_2018}
+D.~F. Ramírez~Jiménez and N.~G. Kelkar.
+\newblock Different manifestations of {S}-matrix poles.
+\newblock {\em Annals of Physics}, 396:18–43, 2018.
+
+\bibitem{desouza_iliadis_coc_2019}
+R.~S. de~Souza, C.~Iliadis, and A.~Coc.
+\newblock Astrophysical ${S}$-factors, {T}hermonuclear {R}ates, and {E}lectron
+  {S}creening {P}otential for the $\mathrm{{}^{3}He(d,p){}^{4}He}$ {B}ig {B}ang
+  {R}eaction via a {H}ierarchical {B}ayesian {M}odel.
+\newblock {\em The Astrophysical Journal}, 872(1):75, 2019.
+
+\bibitem{sparta_pizzone_bertulani_hou_lamia_tumino_2020}
+R.~Spartá, R.~G. Pizzone, C.~A. Bertulani, S.~Hou, L.~Lamia, and A.~Tumino.
+\newblock Direct and {I}ndirect {M}easurements for a {B}etter {U}nderstanding
+  of the {P}rimordial {N}ucleosynthesis.
+\newblock {\em Frontiers in Astronomy and Space Sciences}, 7, 2020.
+
+\bibitem{odell_brune_phillips_2022}
+D.~Odell, C.~R. Brune, and D.~R. Phillips.
+\newblock How bayesian methods can improve ${R}$-matrix analyses of data: The
+  example of the $dt$ reaction.
+\newblock {\em Physical Review C}, 105(1), 2022.
+
+\bibitem{grineviciute_lamia_mukhamedzhanov_spitaleri_lacognata_2015}
+J.~Grineviciute, L.~Lamia, A.~M. Mukhamedzhanov, C.~Spitaleri, and
+  M.~La~Cognata.
+\newblock Low-energy ${R}$-matrix fits for the
+  $\mathrm{{}^{6}Li(d,\alpha){}^{4}He}$ ${S}$ factor.
+\newblock {\em Physical Review C}, 91(1), 2015.
+
+\bibitem{kolk_macon_deboer_anderson_boeltzig_brandenburg_brune_chen_clark_danley_et_2022}
+B.~Vande Kolk, K.~T. Macon, R.~J. deBoer, T.~Anderson, A.~Boeltzig,
+  K.~Brandenburg, C.~R. Brune, Y.~Chen, A.~M. Clark, T.~Danley, and et~al.
+\newblock Investigation of the $\mathrm{{}^{10}B(p, \alpha){}^{7}Be}$ reaction
+  from 0.8 to 2.0 {M}e{V}.
+\newblock {\em Physical Review C}, 105(5), 2022.
+
+\bibitem{sieverding_randhawa_zetterberg_deboer_ahn_mancino_martinez-pinedo_hix_2022}
+A.~Sieverding, J.~S. Randhawa, D.~Zetterberg, R.~J. deBoer, T.~Ahn, R.~Mancino,
+  G.~Martínez-Pinedo, and W.~R. Hix.
+\newblock Role of low-lying resonances for the $\mathrm{{}^{10}Be(p,
+  \alpha){}^{7}Li}$ reaction rate and implications for the formation of the
+  {S}olar {S}ystem.
+\newblock {\em Physical Review C}, 106(1), 2022.
+
+\bibitem{kaur_guimaraes_zamora_assuncao_alcantara-nunez_delara_zevallos_ribeiro_lichtenthaler_pires_et_2022}
+G.~Kaur, V.~Guimarães, J.~C. Zamora, M.~Assunção, J.~Alcantara-Nuñez, A.~L.
+  de~Lara, E.~O. Zevallos, J.~B. Ribeiro, R.~Lichtenthäler, K.~C. Pires, and
+  et~al.
+\newblock New resonances in $\mathrm{{}^{11}C}$ above the $\mathrm{{}^{10}B} +
+  p$ threshold investigated by inverse kinematic resonant scattering.
+\newblock {\em Physical Review C}, 105(2), 2022.
+
+\bibitem{schurmann_gialanella_kunz_strieder_2012}
+D.~Schürmann, L.~Gialanella, R.~Kunz, and F.~Strieder.
+\newblock The astrophysical {S} factor of
+  $\mathrm{{}^{12}C(\alpha,\gamma){}^{16}O}$ at stellar energy.
+\newblock {\em Physics Letters B}, 711(1):35–40, 2012.
+
+\bibitem{sparenberg_2005}
+J.-M. Sparenberg.
+\newblock Hybrid potential/${R}$-matrix models for the $\mathrm{12C + \alpha}$
+  system.
+\newblock {\em Nuclear Physics A}, 758:423–426, 2005.
+
+\bibitem{prusachenko_bobrovsky_bondarenko_bokhovko_gurbich_ketlerov_2022}
+P.~S. Prusachenko, T.~L. Bobrovsky, I.~P. Bondarenko, M.~V. Bokhovko, A.~F.
+  Gurbich, and V.~V. Ketlerov.
+\newblock Measurement of the cross section for the $\mathrm{{}^{13}C(\alpha,
+  n){}^{16}O}$ reaction and determination of the cross section for the
+  $\mathrm{{}^{16}O(n, \alpha){}^{13}C}$ reaction.
+\newblock {\em Physical Review C}, 105(2), 2022.
+
+\bibitem{burtebaev_igamov_peterson_yarmukhamedov_zazulin_2008}
+N.~Burtebaev, S.~B. Igamov, R.~J. Peterson, R.~Yarmukhamedov, and D.~M.
+  Zazulin.
+\newblock New measurements of the astrophysical ${S}$ factor for
+  $\mathrm{^{12}C( p, \gamma ){}^{13}N}$ reaction at low energies and the
+  asymptotic normalization coefficient (nuclear vertex constant) for the $p +
+  \mathrm{{}^{12}C \rightarrow {}^{13}N}$ reaction.
+\newblock {\em Physical Review C}, 78(3), 2008.
+
+\bibitem{chakraborty_deboer_mukherjee_roy_2015}
+S.~Chakraborty, R.~deBoer, A.~Mukherjee, and S.~Roy.
+\newblock Systematic ${R}$-matrix analysis of the $\mathrm{{}^{13}C( p, \gamma
+  ){}^{14}N}$ capture reaction.
+\newblock {\em Physical Review C}, 91(4), 2015.
+
+\bibitem{genard_descouvemont_terwagne_2010}
+G.~Genard, P.~Descouvemont, and G.~Terwagne.
+\newblock S-factor measurement of the $\mathrm{{}^{13}C(p,\gamma){}^{14}N}$
+  reaction in reverse kinematics.
+\newblock {\em Journal of Physics: Conference Series}, 202:012015, 2010.
+
+\bibitem{barker_2008}
+F.~C. Barker.
+\newblock $\mathrm{{}^{15}N( p, \gamma_0){}^{16}O}$ ${S}$ factor.
+\newblock {\em Physical Review C}, 78(4), 2008.
+
+\bibitem{angulo_champagne_trautvetter_2005}
+C.~Angulo, A.~E. Champagne, and H.-P. Trautvetter.
+\newblock ${R}$-matrix analysis of the $\mathrm{{}^{14}N(p,\gamma){}^{15}O}$
+  astrophysical ${S}$-factor.
+\newblock {\em Nuclear Physics A}, 758:391–394, 2005.
+
+\bibitem{formicola_imbriani_costantini_angulo_bemmerer_bonetti_broggini_corvisiero_cruz_descouvemont_et_2004}
+A.~Formicola, G.~Imbriani, H.~Costantini, C.~Angulo, D.~Bemmerer, R.~Bonetti,
+  C.~Broggini, P.~Corvisiero, J.~Cruz, P.~Descouvemont, and et~al.
+\newblock Astrophysical ${S}$-factor of $\mathrm{{}^{14}N(p,\gamma){}^{15}O}$.
+\newblock {\em Physics Letters B}, 591(1-2):61–68, 2004.
+
+\bibitem{humblet_1990}
+J.~Humblet.
+\newblock ${K}$-matrix analysis of resonance nuclear reactions.
+\newblock {\em Physical Review C}, 42(4):1582–1591, 1990.
+
+\bibitem{brune_2002}
+C.~R. Brune.
+\newblock Alternative parametrization of ${R}$-matrix theory.
+\newblock {\em Physical Review C}, 66(4), 2002.
+
+\bibitem{huang_bertulani_guimaraes_2010}
+J.~T. Huang, C.~A. Bertulani, and V.~Guimarães.
+\newblock Radiative capture of nucleons at astrophysical energies with
+  single-particle states.
+\newblock {\em Atomic Data and Nuclear Data Tables}, 96(6):824–847, 2010.
+
+\bibitem{adelberger_garcia_robertson_snover_balantekin_heeger_ramsey-musolf_bemmerer_junghans_bertulani_et_2011}
+E.~G. Adelberger, A.~García, R.~G. Robertson, K.~A. Snover, A.~B. Balantekin,
+  K.~Heeger, M.~J. Ramsey-Musolf, D.~Bemmerer, A.~Junghans, C.~A. Bertulani,
+  and et~al.
+\newblock Solar fusion cross sections. {II}. {T}he $pp$ chain and {CNO} cycles.
+\newblock {\em Reviews of Modern Physics}, 83(1):195–245, 2011.
+
+\bibitem{rossum_drake_2009}
+G.~V. Rossum and F.~L. Drake.
+\newblock {\em Python 3: {R}eference {M}anual}.
+\newblock SohoBooks, 2009.
+
+\bibitem{mckinney_2010}
+W.~McKinney.
+\newblock {\em 9th Python in Science Conference}, page 56–61.
+\newblock Scipy, 2010.
+\newblock Editors Stéfan van der Walt and Jarrod Millman.
+
+\bibitem{harris_millman_vanderwalt_gommers_virtanen_cournapeau_wieser_taylor_berg_smith_et_2020}
+C.~R. Harris, K.~J. Millman, S.~J. van~der Walt, R.~Gommers, P.~Virtanen,
+  D.~Cournapeau, E.~Wieser, J.~Taylor, S.~Berg, N.~J. Smith, and et~al.
+\newblock Array programming with {N}um{P}y.
+\newblock {\em Nature}, 585(7825):357–362, 2020.
+
+\bibitem{virtanen_gommers_oliphant_haberland_reddy_cournapeau_burovski_peterson_weckesser_bright_et_2020}
+P.~Virtanen, R.~Gommers, T.~E. Oliphant, M.~Haberland, T.~Reddy, D.~Cournapeau,
+  E.~Burovski, P.~Peterson, W.~Weckesser, J.~Bright, and et~al.
+\newblock Scipy 1.0: Fundamental algorithms for scientific computing in
+  {P}ython.
+\newblock {\em Nature Methods}, 17(3):261–272, 2020.
+
+\bibitem{hunter_2007}
+J.~D. Hunter.
+\newblock Matplotlib: A {2D} {G}raphics {E}nvironment.
+\newblock {\em Computing in Science \& Engineering}, 9(3):90–95, 2007.
+
+\bibitem{descouvemont_adahchour_angulo_coc_vangioni-flam_2004}
+P.~Descouvemont, A.~Adahchour, C.~Angulo, A.~Coc, and E.~Vangioni-Flam.
+\newblock Compilation and ${R}$-matrix analysis of {B}ig {B}ang nuclear
+  reaction rates.
+\newblock {\em Atomic Data and Nuclear Data Tables}, 88(1):203–236, 2004.
+
+\bibitem{zerkin_pritychenko_totans_vrapcenjak_rodionov_shulyak_2022}
+V.~V. Zerkin, B.~Pritychenko, J.~Totans, L.~Vrapcenjak, A.~Rodionov, and G.~I.
+  Shulyak.
+\newblock {EXFOR-NSR PDF} database: A system for nuclear knowledge preservation
+  and data curation.
+\newblock {\em Journal of Instrumentation}, 17(03), 2022.
+
+\bibitem{iwamoto_iwamoto_shibata_ichihara_kunieda_minato_nakayama_2020}
+Osamu Iwamoto, Nobuyuki Iwamoto, Keiichi Shibata, Akira Ichihara, Satoshi
+  Kunieda, Futoshi Minato, and Shinsuke Nakayama.
+\newblock Status of {JENDL}.
+\newblock {\em EPJ Web of Conferences}, 239:09002, 2020.
+
+\bibitem{bystritsky_gerasimov_krylov_parzhitskii_dudkin_kaminskii_nechaev_padalko_petrov_mesyats_et_2008}
+V.~M. Bystritsky, V.~V. Gerasimov, A.~R. Krylov, S.~S. Parzhitskii, G.~N.
+  Dudkin, V.~L. Kaminskii, B.~A. Nechaev, V.~N. Padalko, A.~V. Petrov, G.~A.
+  Mesyats, and et~al.
+\newblock Study of the pd reaction in the astrophysical energy region using the
+  {H}all accelerator.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  595(3):543–548, 2008.
+
+\bibitem{schmid_chasteler_laymon_weller_prior_tilley_1995}
+G.~J. Schmid, R.~M. Chasteler, C.~M. Laymon, H.~R. Weller, R.~M. Prior, and
+  D.~R. Tilley.
+\newblock Polarized proton capture by deuterium and the
+  $\mathrm{{}^{2}H(p,\gamma){}^{3}He}$ astrophysical ${S}$ factor.
+\newblock {\em Physical Review C}, 52(4), 1995.
+
+\bibitem{berman_koester_smith_1964}
+B.~L. Berman, L.~J. Koester, and J.~H. Smith.
+\newblock Photodisintegration of $\mathrm{{He}^3}$.
+\newblock {\em Physical Review}, 133(1B), 1964.
+
+\bibitem{warren_erdman_robertson_axen_macdonald_1963}
+J.~B. Warren, K.~L. Erdman, L.~P. Robertson, D.~A. Axen, and J.~R. Macdonald.
+\newblock Photodisintegration of $\mathrm{{He}^3}$ near the {T}hreshold.
+\newblock {\em Physical Review}, 132(4):1691–1692, 1963.
+
+\bibitem{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}
+Y.~Xu, K.~Takahashi, S.~Goriely, M.~Arnould, M.~Ohta, and H.~Utsunomiya.
+\newblock {NACRE II}: an update of the {NACRE} compilation of
+  charged-particle-induced thermonuclear reaction rates for nuclei with mass
+  number ${A}<16$.
+\newblock {\em Nuclear Physics A}, 918:61–169, 2013.
+
+\bibitem{buompane_dileva_gialanella_d'onofrio_decesare_duarte_fulop_gasques_gyurky_morales-gallegos_et_2022}
+R.~Buompane, A.~Di~Leva, L.~Gialanella, A.~D'Onofrio, M.~De~Cesare, J.~G.
+  Duarte, Z.~Fülöp, L.~R. Gasques, G.~Gyürky, L.~Morales-Gallegos, and
+  et~al.
+\newblock Determination of the $\mathrm{{}^{7}Be(p,\gamma){}^{8}B}$ cross
+  section at astrophysical energies using a radioactive $\mathrm{{}^{7}Be}$ ion
+  beam.
+\newblock {\em Physics Letters B}, 824:136819, 2022.
+
+\bibitem{gaspard_2018}
+D.~Gaspard.
+\newblock Connection formulas between {C}oulomb wave functions.
+\newblock {\em Journal of Mathematical Physics}, 59(11):112104, 2018.
+
+\bibitem{chamon_carlson_gasques_2021}
+L.~C. Chamon, B.~V. Carlson, and L.~R. Gasques.
+\newblock São {P}aulo potential version 2 ({SPP2}) and {B}razilian nuclear
+  potential ({BNP}).
+\newblock {\em Computer Physics Communications}, 267:108061, 2021.
+
+\bibitem{diaz-torres_2018}
+A.~Diaz-Torres.
+\newblock {OWL}: {A} code for the two-center shell model with spherical
+  {W}oods–{S}axon potentials.
+\newblock {\em Computer Physics Communications}, 224:381–386, 2018.
+
+\bibitem{gontchar_chushnyakova_2016}
+I.~I. Gontchar and M.~V. Chushnyakova.
+\newblock {DFMSPH14}: {A} {C}-code for the double folding interaction potential
+  of two spherical nuclei.
+\newblock {\em Computer Physics Communications}, 206:97–102, 2016.
+
+\bibitem{descouvemont_2016}
+P.~Descouvemont.
+\newblock An {R}-matrix package for coupled-channel problems in nuclear
+  physics.
+\newblock {\em Computer Physics Communications}, 200:199–219, 2016.
+
+\bibitem{thompson_deboer_dimitriou_kunieda_pigni_arbanas_leeb_srdinko_hale_tamagno_et_2019}
+I.~J. Thompson, R.~J. deBoer, P.~Dimitriou, S.~Kunieda, M.~T. Pigni,
+  G.~Arbanas, H.~Leeb, T.~Srdinko, G.~Hale, P.~Tamagno, and et~al.
+\newblock Verification of {R}-matrix calculations for charged-particle
+  reactions in the resolved resonance region for the $\mathrm{{}^{7}Be}$
+  system.
+\newblock {\em The European Physical Journal A}, 55(6), 2019.
+
+\bibitem{azuma_uberseder_simpson_brune_costantini_deboer_gorres_heil_leblanc_ugalde_et_2010}
+R.~E. Azuma, E.~Uberseder, E.~C. Simpson, C.~R. Brune, H.~Costantini, R.~J.
+  de~Boer, J.~Görres, M.~Heil, P.~J. LeBlanc, C.~Ugalde, and et~al.
+\newblock Azure: An ${R}$-matrix code for nuclear astrophysics.
+\newblock {\em Physical Review C}, 81(4), 2010.
+
+\bibitem{salvat_fernandez-varea_2019}
+F.~Salvat and J.~M. Fernández-Varea.
+\newblock \textsc{radial}: {A} {F}ortran subroutine package for the solution of
+  the radial {S}chrödinger and {D}irac wave equations.
+\newblock {\em Computer Physics Communications}, 240:165–177, 2019.
+
+\bibitem{hagino_rowley_kruppa_1999}
+K.~Hagino, N.~Rowley, and A.~T. Kruppa.
+\newblock A program for coupled-channel calculations with all order couplings
+  for heavy-ion fusion reactions.
+\newblock {\em Computer Physics Communications}, 123(1-3):143–152, 1999.
+
+\end{thebibliography}
