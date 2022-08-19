@@ -5,15 +5,25 @@
 }
 
 
-\newcommand{\graph}[2]{
+\newcommand{\graph}[3]{
 	
-
 \begin{figure}[H]
 	\centering
 	\includegraphics{Graphs/#1.eps}
-	\caption{#2}
+	\caption[#2]{#3}
 	\label{fig:#1}
 \end{figure}
 
+}
 
+\newcommand{\radiativeCapture}[1][p]{
+	(#1, \gamma)
+}
+
+\newcommandx*{\Cfusion}[2][1=12, 2=12]{
+	\mathrm{C{}^{#1} +  C{}^{#2}}
+}
+
+\newcommandx*{\Ofusion}[2][1=16, 2=16]{
+	\mathrm{O{}^{#1} +  O{}^{#2}}
 }

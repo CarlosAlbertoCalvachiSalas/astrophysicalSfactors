@@ -18,6 +18,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[T1]{fontenc}
+\usepackage{xargs}
 
 \bibliographystyle{unsrt} 
 
@@ -82,7 +83,7 @@ Mom for everything.
 
 In order to apply nuclear astrophysics to the study of star element production, there are essentials to be considered. In this chapter, a general review of the main points relevant for nuclear physics are presented that emphasizes selected topics that are relevant in the field of nuclear astrophysics.
 
-\section{General aspects about the nucleus}
+\section{General aspects about the nucleus} \label{sec:nucleiAspects}
 Introduce a brief description of the nuclei.
 \indent The structure of the nuclei
 \indent The nuclear models
@@ -95,7 +96,7 @@ A more particular on nuclear astrophysics \cite{iliadis_2015}. \\
 
 Rest energy.
 
-\begin{equation}
+\begin{equation} \label{eq:restEnergy}
 	E_0 = Zm_pc^2 + (A-Z)m_nc^2 - B(A, Z),
 \end{equation}
 
@@ -148,7 +149,7 @@ Quantum mechanics governs the physics at the nuclear scale. In particular, some 
 
 Quantum mechanics text \cite{dick_2016}.
 
-\subsection{Scattering theory}
+\subsection{Scattering theory} \label{sub:scatteringTheory}
 
 %  https://arxiv.org/pdf/1202.1995.pdf EXAMINATION OF THE ASTROPHYSICAL S-FACTORS OF THE RADIATIVE PROTON CAPTURE ON 2H, 6Li, 7Li, 12C AND 13C  (cluster method)
 
@@ -164,7 +165,7 @@ When considering a potential, it appears that the oscillatory asymptotic wave fu
 
 A reference text on collision theory \cite{joachain_1983}.
 
-\begin{equation}
+\begin{equation} \label{eq:crossSection_definition}
 	\sigma  = \frac{\mathrm{scattered \ per \ time}}{(\mathrm{incident \ per \ time \ per \ area} )(\mathrm{total \ nuclei})}.
 \end{equation}
 
@@ -173,7 +174,7 @@ The probabilities are ruled by the laws of scattering theory, which can be under
 
 There is of interest the differential cross section. Particularly, there is a connection with quantum mechanics scattering amplitudes with the formula
 
-\begin{equation}
+\begin{equation}  \label{eq:diffCrossSection}
 	\frac{d\sigma}{d\Omega} = |f(\theta, \phi)|^2
 \end{equation}
 
@@ -184,7 +185,7 @@ Broad resonances, thin resonances, continuum, nonresonant. For particles of matt
 
 Scattering theory develops from the method of partial waves. It roughly consists on solving for the Schödinger equation in free space and, with the potential given, expand in terms of an orthonormal basis of functions, like spherical Bessel and Neumann functions and spherical harmonics. Then, conditions are adjusted via boundary condition satisfying. \\
 
-\begin{equation}
+\begin{equation}   \label{eq:partialWaveExpansion_definition}
 	\psi = \sum_{l} \sum_{m} {c_{lm}Y_{m}^{l}j_l(kr)}
 \end{equation}
 
@@ -192,53 +193,53 @@ Free space solution with $j_l(kr)$ the spherical Bessel function of $l$ paramete
 
 A result that relates cross sections and the probability current density is the  theorem. 
 
-\begin{equation}
+\begin{equation}  \label{eq:crossSection_opticalTheorem}
 	\sigma = \frac{4 \pi }{k} \mathrm{Im}(f(\theta = 0)))
 \end{equation}
 
 Born approximation that is used for estimating the scattering amplitude.
 
-\begin{equation}
+\begin{equation} \label{eq:bornApproximation_scatteringAmplitude}
 	f(\theta) =   - \frac{2m}{\hbar^2} \int_{0}^{\infty} {\mathcal{F}\{V(r)\}dk}.
 \end{equation}
 
 
-\subsection{Tunneling phenomena}
+\subsection{Tunneling phenomena} \label{sub:tunnelingPhenomena}
 
 Quantum tunneling phenomena is critical in understanding the phenomena of alpha particles decaying in the nuclei barriers. 
 
 WKB approximation for the classical forbidden regions.
 
-\begin{equation}
+\begin{equation} \label{eq:tunneling_transmissionProbability}
 	T = e^{2i\delta_l}.
 \end{equation}
 
 
 Ansatz: 
 
-\begin{equation}
+\begin{equation} \label{eq:WKB_ansatz}
 	\Psi(r) = \Psi_0\exp{(\Phi(r))}.
 \end{equation}
 
 The Schrödinger equation transforms as 
 
-\begin{equation}
+\begin{equation} \label{eq:WKB_schrodinger}
 	\left(\Phi'' + \Phi'^{2} \right)\Phi = \left(\frac{2m}{\hbar^2} (U(r) - E)\right) \Phi.
 \end{equation}
 
 Then, if it is considered that $\Phi'' \ll \Phi'^{2}$, then $\Phi$ can be directly integrated and is expressed as:
 
-\begin{equation}
+\begin{equation} \label{eq:WKB_definition}
 	\Phi(E) \approx -\frac{1}{\hbar}\int_{r_1}^{r_2} {\sqrt{2m(U(r)-E)}} dr,
 \end{equation}
 
 where $r_1$ and $r_2$ correspond to the lower and higher classical turning points respectively. In this opportunity, the negative choice for the square root was taken in order to account for the fact that the probability of transmission decreases within the non-classical region.
 
 
-\subsection{Perturbation theory}
+\subsection{Perturbation theory}\label{sub:perturbationTheory}
 Generalities of perturbation theory. Cross sections.  Fermi Golden rules.
 
-\begin{equation}
+\begin{equation} \label{eq:crossSection_perturbation}
 	\sigma \propto |\langle k | \delta H|m \rangle|^2
 \end{equation}
 
@@ -246,7 +247,7 @@ Splitting
 
 \input{Figures/splitting.tex}
 
-\subsection{Transitions of quantum states}
+\subsection{Quantum transitions} \label{sub:quantumTransitions}
 
 The changes of state that nuclei exhibit obey certain rules. In particular, this selection rules consider angular momentum conservation. 
 
@@ -258,15 +259,15 @@ Selection rules. Electromagnetic interaction and resonances \cite{sasaki_kawano_
 
 Nuclear structure is presented in this section.
 
-\subsection{Nuclear models}
+\subsection{Nuclear models}  \label{sub:nuclearModels}
 
 Stability depends closely on the biding energy. In particular, since the rest energy of the nucleus decreases with $B(A, Z)$, the more is the binding energy, the more stable is nucleus.
 
-\subsubsection{Liquid drop model}
+\subsubsection{Liquid drop model} \label{ssub:liquidDropModel}
 
 A first approach when modeling the binding energy is a phenomenological model which is inspired in the physical description of a liquid drop. In particular, the predictions of the binding energies are determined by the fitting of the empirical formula: \\ 
 
-\begin{equation}
+\begin{equation} \label{eq:liquidDrop_bindingEnergy}
 	B(Z,A )= a_vA - a_sA^{2/3} - a_3 \frac{Z(Z+1)}{A^{1/3}} +  a_4(Z-A)^2 +   a_5 \delta.
 \end{equation}
 
@@ -278,7 +279,7 @@ However, this model does not fit accurately the binding energy of a selected nuc
 Binding energy is the energy difference of rest energy of the nucleus constituents and the actual  rest mass of the overall nucleus. \\
 
 
-\begin{equation}
+\begin{equation} \label{eq:liquidDrop_deltaFactor}
 	\delta = 	\left\{\begin{array}{l}
 		\begin{split}
 			1, \quad & Z \ \mathrm{and} \ A \  \mathrm{even} \\ 
@@ -287,11 +288,11 @@ Binding energy is the energy difference of rest energy of the nucleus constituen
 		\end{split}
 	\end{array}\right.
 \end{equation}
-\subsubsection{Nuclear shell model} 
+\subsubsection{Nuclear shell model}  \label{ssub:nuclearShellModel}
 
 An alternative approach to the Liquid drop model is a model based on quantum mechanics. This model is closely related with the quantum mechanical modeling of the hydrogen atom. In particular, a great part of the nuclear shell model consists of solving Schrodinger equation which is expressed as:
 
-\begin{equation}
+\begin{equation} \label{eq:nuclearShell_schrodinger}
 	- \frac{\hbar^2}{2m} \partial_{tt} \psi + V  \psi = E \psi.
 \end{equation}
 
@@ -313,32 +314,32 @@ Nuclear reactions are reactions between nuclei.  \cite{bertulani_2003}.
 
 \input{Figures/reactionSquares.tex}
 
-\subsection{Classification of reactions}
+\subsection{Classification of reactions} \label{sub:classificationReactions}
 
 The relevant reactions for the document are:
-\begin{equation}
+\begin{equation} \label{eq:nuclearReaction_general}
 	0 + 1 \rightarrow 2 + 3
 \end{equation}
 
-\begin{equation}
+\begin{equation} \label{eq:nuclearReaction_gammaCapture}
 	\gamma + 3 \rightarrow 0 + 1
 \end{equation}
 
 Expand  on how the fusion reactions occurs, their conditions and types as well as the differentiation factors with respect to fission processes.
 
-\subsubsection{Capture reactions}
+\subsubsection{Capture reactions} \label{ssub:captureReactions}
 
 Also, radiative capture processes are considered at astrophysical energies. Various models could be used for determining potentials. There are clusters and potential models.
 
-\begin{equation}
+\begin{equation}  \label{eq:nuclearReaction_capture}
 	X + c \rightarrow  \gamma + X'.
 \end{equation}
 
 When $c$ is a proton, the reaction is called radiative proton capture. \cite{brune_davids_2015}
 
-\subsubsection{Exchange reactions}
+\subsubsection{Exchange reactions}  \label{ssub:exchangeReactions}
 
-\begin{equation}
+\begin{equation}  \label{eq:nuclearReaction_exchange}
 	X +  x_1 \rightarrow x_2 + X'
 \end{equation}
 
@@ -346,25 +347,25 @@ A development on the $\mathrm{(p,n)}$ reaction kind is given by \cite{whitehead_
 
 
 
-\subsubsection{Fusion reactions}
+\subsubsection{Fusion reactions} \label{ssub:fusionReactions}
 
-\begin{equation}
+\begin{equation}  \label{eq:nuclearReaction_fusion}
 	X + X \rightarrow a + X'.
 \end{equation}
 
-\subsection{Cross sections}
+\subsection{Cross sections} \label{sub:crossSections}
 
 Cross section of a process. 
 Partial and total cross sections depending on the reaction type.
 
-\subsection{Reaction rates}
+\subsection{Reaction rates} \label{sub:reactionRates}
 
 The ratio that determines the quantity of a nucleus.
-\begin{equation}
+\begin{equation}  \label{eq:reactionRate_definition}
 	r = A \int_0^{\infty} { E \sigma(E) e^{-\frac{E}{kT}}  dE}.
 \end{equation}
 
-\begin{equation}
+\begin{equation} \label{eq:maxwellBoltzmann}
 	P(v)dv \propto v^2 \exp{\left({\frac{mv^2}{2kT}}\right)}dv.
 \end{equation}
 
@@ -377,12 +378,12 @@ Reaction rates are considered from calculation of transmitted, incident and inte
 
 There are broad classification of reactions. 
 
-\section{The astrophysical S-factor} \label{sec:sFactor}
-\subsection{Motivation and definition}
+\section{The Astrophysical S-factor} \label{sec:sFactor}
+\subsection{Motivation and definition} \label{sub:sfactorMotivationDefinition}
 
 There are S factors associated with the energy and they are the path to determine the nature of the potential, which is not necessarily a Yukawa potential.
 
-\begin{equation}
+\begin{equation} \label{eq:sfactor_definition}
 	S(E) = E \exp({2\pi\eta}) \sigma({E}).
 \end{equation} % ISBN 978-0-521-85635-5.
 
@@ -391,7 +392,7 @@ In particular, the astrophysical S-factor 	scales the cross section with a facto
 
 The $\nu$ factor is defined as 
 
-\begin{equation}
+\begin{equation} \label{eq:sfactor_sommerfeld}
 	\eta = \frac{Z_1Z_2e^2}{4\pi\epsilon_0\hbar v}
 \end{equation}
 
@@ -402,7 +403,7 @@ Usually this relation depends on the square of the energy of the center of mass 
 
 There are topics that are relevant in the frontiers of nuclear astrophysics  \cite{bertulani_kajino_2016}. 
 
-\subsection{General applications}
+\subsection{General applications} \label{sub:sfactorApplications}
 
 Cross section extrapolation to low energies
 
@@ -418,7 +419,7 @@ Several reaction kinds and models are given in \cite{descouvemont_2020}.
 
 Primordial reactions that where expected to happen before big bang occurred. For example:
 
-\begin{equation}
+\begin{equation} \label{eq:reaction_2Hpradiative}
 	\mathrm{{}^{2}H + p \rightarrow \gamma + {}^{3}H}.
 \end{equation}
 
@@ -429,7 +430,7 @@ The classical treatment of fusion in stars is given by the classical \cite{burbi
 Introduce the needed conditions for the creation of stars in the primordial nebula.
 Describe how the hydrogen is burnt in the star's core and the associated products. 
 
-\begin{equation}
+\begin{equation} \label{eq:reaction_ppMain}
 	p + p \rightarrow d + e^{+} + \nu_e.
 \end{equation}
 
@@ -437,36 +438,32 @@ Consider the mechanisms for exchanging heat via radiation and convection.
 
 Explain the required conditions that permits nuclear fusion in the star's nucleus.
 
-\subsection{Light heavy nuclei reactions}
+\subsection{Light heavy nuclei reactions} \label{sub:lightReactions}
 
 This reaction is governed by the weak force, due to conversion of a proton into a neutron, and by the strong and electromagnetic force.
 
-\begin{equation}
-	d + p \rightarrow \gamma + {}^{3}\mathrm{He}.
-\end{equation}
-
 When it comes to deuterium fusion, this channel is the most abundant.\\
+
+\begin{equation} \label{eq:reaction_2Hdn3He}
+	d + d  \rightarrow n + {}^{3}\mathrm{He}.
+\end{equation}
 
 The reaction rates of nuclear fusion processes depend on the interaction cross section and the abundance of the reactant nuclei.
 
-\begin{equation}
-	d + d \rightarrow n +  {}^{3}\mathrm{He}.
-\end{equation}
-
-\begin{equation}
+\begin{equation}  \label{eq:reaction_2Hdpt}
 	d + d \rightarrow p + t.
 \end{equation}
 
 The interactions of the previous processes are the electromagnetic and strong force.
 
-\begin{equation}
+\begin{equation} \label{eq:reaction_3HepChain}
 	{}^{3}\mathrm{He} + p \rightarrow {}^{4}\mathrm{Li} + \gamma \rightarrow {}^{4}\mathrm{He} + e^{+} +  \nu_e + \gamma.
 \end{equation}
 
 This process is unlikely because of the instability of  ${}^{4}\mathrm{Li}$, which decay to ${}^{3}\mathrm{He}$.
 
 
-\begin{equation}
+\begin{equation} \label{eq:reaction_3Hep3He}
 	{}^{3}\mathrm{He} +  {}^{3}\mathrm{He}  \rightarrow {}^{4}\mathrm{He} + 2p.
 \end{equation}
 
@@ -474,7 +471,7 @@ This process in known as the pp1 chain.
 
 Exemplify how the reaction mechanisms permits the stability of a star as well as produces He. \\
 
-\subsection{CNO cycle}
+\subsection{CNO cycle}  \label{sub:CNOCycle}
 
 The carbon burning produces the neutrons that are going to be used in heavy nuclei production. 
 The neon burning stats by fusion Neon nuclei with 4He nuclei to produce heavier elements.
@@ -482,13 +479,13 @@ The oxygen burning starts are very high temperatures and pressures than the neon
 
 When the star has capacity for producing elements like carbon, oxygen and nitrogen,  CNO cycle process can be produced. In particular, reactions take the form 
 
-\begin{equation}
+\begin{equation} \label{eq:reaction_CNO_C}
 	\mathrm{{}_{6}^{12}C  \rightarrow {}^{13}_{7}N  \rightarrow {}^{13}_{6}C  \rightarrow {}^{14}_{7}N  \rightarrow {}^{15}_{8}O  \rightarrow {}^{15}_{7}N \rightarrow {}^{12}_{6}C  }.
 \end{equation}
 
 There are other CNO cycles that involve oxygen and fluorine reactions. For instance, the second CNO cycle consists of the following reactions
 
-\begin{equation}
+\begin{equation} \label{eq:reaction_CNO_N}
 	\mathrm{{}_{7}^{15}N  \rightarrow {}^{16}_{8}O  \rightarrow {}^{17}_{9}F  \rightarrow {}^{17}_{8}O  \rightarrow {}^{14}_{7}N  \rightarrow {}^{15}_{8}O \rightarrow {}^{15}_{7}N  }.
 \end{equation}
 
@@ -496,19 +493,19 @@ There is even a CNO III cycle, which is far more uncommon.
 brig
 This branch is less dominant than the first branch.
 
-\subsection{Medium heavy nuclei reactions}
+\subsection{Medium heavy nuclei reactions} \label{sub:mediumHeavyReactions}
 
 These reactions concern nuclei with $A < 28$. Examples of this kind of reaction include the $\mathrm{{}^{12}C + {}^{12}C}$,  $\mathrm{{}^{12}C + {}^{16}O}$ and the  $\mathrm{{}^{16}O + {}^{16}O}$ fusion reactions. Most of these reactions result in different channels. \\ 
 
 With respect to the carbon fusion reaction, the principal channel is given by: 
 
-\begin{equation}
+\begin{equation} \label{eq:reaction_C12fusion_alpha20Ne}
 	\mathrm{{}^{12}C + {}^{12}C \rightarrow {}^{4}He + {}^{20}Ne}. 
 \end{equation}
 
 On the other hand, the main channel of the oxygen fusion reaction occurs in the following manner:
 
-\begin{equation}
+\begin{equation} \label{eq:reaction_O12fusion_alpha28Si}
 	\mathrm{{}^{16}O + {}^{16}O \rightarrow {}^{4}He + {}^{28}Si}. 
 \end{equation}
 
@@ -561,28 +558,28 @@ heavy-ion  reactions \cite{nobre_chamon_gasques_carlson_thompson_2007}
 Additional fusion reactions with nuclei with $A > 28$ are present at the last stages of the life of a star. There are two main environments: The stellar fusion and explosive events fusion.
 
 
-\subsection{Heavy nuclei reactions}
+\subsection{Heavy nuclei reactions} \label{sub:heavyReactions}
 
 There is a silicon burning process with the following description 
 
-\begin{equation}
+\begin{equation} \label{eq:reaction_28Sialpha}
 	\mathrm{{}^{28}_{14}Si +{}^{4}_{2}He \rightarrow {}^{32}_{16}S}.
 \end{equation}
 
 Silicon burning is another process.\\
 
-\begin{equation}
+\begin{equation} \label{eq:reaction_28Sifusion_alpha56Fe}
 	\mathrm{{}^{28}Si + {}^{28}Si \rightarrow {}^{4}He + {}^{56}Fe }.
 \end{equation}
 
 This reaction is essential since the $\mathrm{{}^{56}Fe}$ nucleus has the maximum binding energy. Then, fusion reactions of heavier nuclei tend to be less spontaneous.Then,  this chain of reactions continues until the process in there 56-Ni is reached.
 
-\begin{equation}
+\begin{equation}  \label{eq:reaction_52Fealpha}
 	\mathrm{{}^{52}_{26}Fe +{}^{4}_{2}He \rightarrow {}^{56}_{28}Ni}.
 \end{equation}
 
 
-\subsection{The s and p processes}
+\subsection{The s and p processes} \label{sub:spProcesses}
 
 There exists the s and  the r processes. Each permits to form heavier nuclear elements products. Now, there are aspects of the particularities of the production of the nuclei that  are currently  unknown \\
 
@@ -600,7 +597,7 @@ Indicate that there exists different channels of production depending on the exi
 
 If mass increases further, there is no place to any degeneracy compensation so the star would collapse to a black hole.
 
-\subsection{Active research topics}
+\section{Active research topics} \label{sec:activeResearch}
 
 Enumerate the broad ranges of phenomena that are left to be explained.  \\
 
@@ -624,7 +621,7 @@ There are several methods for estimating the astrophysical S-factor. Each method
 
 For resonant reactions, the Breit-Wigner formula
 
-\begin{equation}
+\begin{equation} \label{eq:empirical_breitWigner}
 	S(E) = S_r \frac{\Gamma^2_r/4}{(E-E_r)^2 + (\Gamma_r/2)^2}.
 \end{equation}
 
@@ -635,22 +632,33 @@ On the other hand, non-resonant reactions S-factors can be calculated with polyn
 In particular, there is a polynomial expansion that is reported in literature to be useful. 
 
 
-\begin{equation}
-	S(E) = S(0)\exp{(g_0 + g_1E + g_2E^2 + g_3E^3 + ...)}.
+\begin{equation} \label{eq:empirical_exponential}
+	S(E) = \exp{(g_0 + g_1E + g_2E^2 + g_3E^3 + ...)}.
 \end{equation}
 
 Also, more generic expansions are modeled by fitting a Laurent series expansion. 
 
-\begin{equation}
-	S(E) =\frac{ a_{-1}}{E} + a_0 E + a_1 E^2 + ... \ .
+\begin{equation}  \label{eq:empirical_laurent}
+	S(E) =\frac{ a_{-1}}{E} + a_0 + a_1 E + a_2 E^2 + ... \ .
 \end{equation}
 
 For some reactions, $a_{-1} = 0$, then they are described as a Taylor series expansion.
 
+\begin{equation}  \label{eq:empirical_polynomial}
+	S(E) = a_0 + a_1E + a_2 E^2 + ... \ .
+\end{equation}
+
+
 On the other hand, empirical formulas can mix resonant and non-resonant terms. For example, consider the expression: 
 
-\begin{equation}
+\begin{equation}  \label{eq:empirical_hybridPolynomial}
 	S(E) =  \sum _{k = 0}^{N} {a_kE^k} + \sum_{l = 1}^{M} {\frac{\Gamma_l^2/4}{(E - E_l)^2 + \Gamma_l^2/4}},
+\end{equation}
+
+Analogously, if the non-resonant term has a polynomial form, the S-factor hybrid resonant and non-resonant expansion is expressed as:
+
+\begin{equation}  \label{eq:empirical_hybridExponential}
+	S(E) =  \exp { \left( \sum _{k = 0}^{N} {a_kE^k} \right) } + \sum_{l = 1}^{M} {\frac{\Gamma_l^2/4}{(E - E_l)^2 + \Gamma_l^2/4}},
 \end{equation}
 
 where $N$ is the maximum order of the polynomial to be fitted, which accounts for the non-resonant behavior of the reaction, and $M$ represents the number resonances present in the reaction. 
@@ -664,7 +672,8 @@ Fusion reactions, which is a more sophisticated model \cite{beard_afanasjev_cham
 \section{Potential models} \label{sec:potentialModels}
 
 The electromagnetic potential can be modeled as an uniform charged sphere potential. 
-\begin{equation}
+
+\begin{equation} \label{eq:potential_EM}
 V_{\mathrm{EM}} = 	\left\{\begin{array}{l}
 	\begin{split}
 	 	 \frac{Z_1Z_2e^2}{4\pi\epsilon_0R}\left(\frac{3}{2} - \frac{r^2}{2R^2}\right), \quad &r \le R \\ 
@@ -674,25 +683,25 @@ V_{\mathrm{EM}} = 	\left\{\begin{array}{l}
 \end{equation}
 
 In addition, in order to account for the nuclear force, there are several potentials. For instance, in a first approximation, there is the step potential.
-\begin{equation}
-	V_{\mathrm{SqW}} = V_0\theta(r).
+\begin{equation} \label{eq:potential_squareWell}
+	V_{\mathrm{SqW}} = -V_0\theta(r).
 \end{equation}
 
 Yakovlev et. al model \cite{yakovlev_beard_gasques_wiescher_2010} consists of an estimation of the potential that is similar to the parabolic potentials with free parameters that attempt to account for the effects of the nuclear and electromagnetic interactions.  \\
 
 
-\begin{equation}
+\begin{equation} \label{eq:potential_Yakovlev}
 	V_{\mathrm{YAK}} = 	\left\{\begin{array}{l}
 		\begin{split}
 			E_c\left(3 - \frac{r^2}{R_c^2}\right), \quad &r \le R_{c1} \\ 
-			\frac{\alpha}{r}, \quad &r > R_{c1}	
+			\frac{Z_1Z_2e^2}{r}, \quad &r > R_{c1}	
 		\end{split}
 	\end{array}\right.
 \end{equation}
 
 Additionally, the model distinguish between classical allowed and forbidden regions.  For the first region, where $E < E_c$, the astrophysical S-factor is estimated as:
 
-\begin{equation}
+\begin{equation}  \label{eq:potential_Yakovlev_sfactor}
 	S(E) = S(0)\sqrt{\frac{Ec}{E}} [\exp{(\Psi(E))+ k\xi} ],
 \end{equation}
 
@@ -701,22 +710,22 @@ where $\xi$ is a free parameter of the model that accounts for the deviation fro
 uses the WKB approximation for estimating the wave function. Then, the astrophysical S-factor is determined by a phenomenological equation. \\
 
 
-\begin{equation}
+\begin{equation}  \label{eq:potential_Yakovlev_psiWKB}
 	\Psi(E) = 2\pi\eta(E) + \Phi(E),
 \end{equation}
 
-where $\eta(E)$ is the Sommerfeld parameter, and $\Phi(E)$ is the wavefunction calculated by the WKB. Further details on the calculation of the last parameter are presented in [Tunneling phenomena]. \\
+where $\eta(E)$ is the Sommerfeld parameter, and $\Phi(E)$ is the wavefunction calculated by the WKB. Further details on the calculation of the last parameter are presented in section \ref{sub:tunnelingPhenomena}. \\
 
-In order to the potential to be more realistic, a Saxon-Woods potential consider a smooth behavior.
+In order to the potential to be more realistic, a Woods-Saxon potential consider a smooth behavior.
 
-\begin{equation}
-	V_{\mathrm{SW}}(r) = \frac{V_0}{1 + \exp  \left({\frac{r-R}{a}}\right)},
+\begin{equation} \label{eq:potential_WoodsSaxon}
+	V_{\mathrm{WS}}(r) = \frac{V_0}{1 + \exp  \left({\frac{r-R}{a}}\right)},
 \end{equation}
 
 
 where $V_0$ represents the potential depth, $a$ the parametrization and $R$ a computed radius which is defined as: 
 
-\begin{equation}
+\begin{equation} \label{eq:potential_WoodsSaxon_radius}
 	R = r_0(A_1^{1/3} + A_2^{1/3}).
 \end{equation}
 
@@ -724,32 +733,44 @@ On the other hand, it is relevant, specially at low energies, the inclusion of a
 
 Also, spin orbit coupling effect is noticeable for certain kind of reactions. The contribution to the potential associated with this effect is expressed as:
 
-\begin{equation}
-	V_{\mathrm{SO}} = \langle L \cdot S \rangle \frac{d}{dr} V_{\mathrm{WS}},
+\begin{equation}  \label{eq:potential_spinOrbit}
+	V_{\mathrm{SO}}(r) = k\langle L \cdot S \rangle  \frac{1}{m_{\pi}r} \frac{d}{dr} V(r),
 \end{equation}
 
 where the coupling  $  \langle L \cdot S \rangle$ is expressed as: 
 
-\begin{equation}
+\begin{equation}  \label{eq:potential_spinOrbit_LSexpansion}
 	\langle L \cdot S \rangle = J(J+1) - l(l+1) - s(l+1).
 \end{equation}
 
 In the radiative capture reactions, cross sections are computed based on electromagnetic field operators. In particular 
 
-\begin{equation}
+\begin{equation}  \label{eq:radiativeCapture_operator}
 	\sigma_m = \sum_{k}{\langle k | \mathcal{O} | m \rangle} C_{klm}.		
 \end{equation}
 
 
 Double exponential potentials: 
 
-\begin{equation}
-	V_{\mathrm{DE}}(r) = - \frac{V_0}{e^{\alpha_1 r} + e^{\alpha_2 r}}.
+\begin{equation} \label{eq:potential_doubleExponential}
+	V_{\mathrm{DE}}(r) = - V_0 \left(e^{\alpha_1 r} + e^{\alpha_2 r} \right)^{-1}.
+\end{equation}
+
+Cluster potential:
+
+\begin{equation} \label{eq:potential_cluster}
+	V_{\mathrm{CL}}(r) = - V_0 \exp{(-\alpha r^2 )} + V_1 \exp{(\beta r)}.
+\end{equation}
+
+Gaussian exponential: 
+
+\begin{equation} \label{eq:potential_gaussianExponential}
+	V_{\mathrm{GE}}(r) = - V_0 \exp{(-\alpha r^2 )}.
 \end{equation}
 
 Yukawa potential  which includes screening effect.
 
-\begin{equation}
+\begin{equation} \label{eq:potential_Yukawa}
 	V_{\mathrm{Y}} = -\frac{c}{4\pi\epsilon_0}e^{-\mu r}.
 \end{equation}
 
@@ -777,28 +798,38 @@ p2H radiative capture \cite{dubovichenko_dzhazairov-kakhramanov_2009}
 Sao pablo \cite{chamon_2007}
 
 
-\begin{equation}
-	V_{\mathrm{SPP}} = \left(1 - \frac{V^2}{c^2}\right) \exp{\left(V_{\mathrm{F}}\right)}.
+\begin{equation} \label{eq:potential_SaoPablo}
+	V_{\mathrm{SPP}} (r) = V_{\mathrm{F}} (r)e^{-4V^2/c^2}.
 \end{equation}
 
-\begin{equation}
-	V_{\mathrm{F}}(r) = \int \int \rho_1(\vec r_1)  \rho_2(\vec r_2) f(\vec r_1, \vec r_2) {d\vec{r}_1}^3  {d\vec{r}_2}^3.
+
+\begin{equation} \label{eq:potential_SaoPablo_speed}
+	V^2 = \frac{2}{\mu} \left( E - V_{\mathrm{F}}(r) - V_{\mathrm{C}}(r) \right),
 \end{equation}
+
+where the reduced mass is $\mu$, the Coulomb potential is $V_{\mathrm{C}}(r)$ and the folding potential  $V_{\mathrm{F}}(r)$ is expressed as:
+
+
+\begin{equation} \label{eq:potential_SaoPablo_folding}
+	V_{\mathrm{F}}(r) = \int \int \rho_1(\vec r_1)  \rho_2(\vec r_2) \delta(\vec r - \vec r_1 +  \vec r_2) {d\vec{r}_1}  {d\vec{r}_2}.
+\end{equation}
+
+\input{Figures/foldingCoordinates.tex}
 
 Optical model \cite{amer_penionzhkevich_2021}
 
-\begin{equation}
+\begin{equation}  \label{eq:potential_Optical}
 	V(r) = V_R(r) + iW_R(r).
 \end{equation}
 
 Woods-Saxon \cite{salamon_baran_vertse_2016}
 \cite{singh_sukhvinder_kharab_2013A}
 
-\begin{equation}
+\begin{equation} \label{eq:potential_WoodsSaxon2}
 	V_{\mathrm{WS}} = -V_0 f(r),
 \end{equation}
 
-\begin{equation}
+\begin{equation}  \label{eq:potential_WoodsSaxon2_fermiDirac}
 	f(r) = \frac{1}{1 + \exp {\left(\frac{r- R}{a}\right)}}.
 \end{equation}
 
@@ -813,7 +844,7 @@ Cross section deduced potential \cite{bass_1977} \cite{nandi_swami_gupta_kumar_c
 
 Microscopic models are based on first principles and usually require assumptions about the nucleus and its structure. \\ 
 
-\begin{equation}
+\begin{equation} \label{eq:micro_hamiltonian}
 	H = \sum_{k} T_k + \sum_{k} V_k (r) + \sum_{k \neq j} V_{kj}(r).
 \end{equation}
 
@@ -825,7 +856,7 @@ The \textit{ab initio} no core shell model is presented in \cite{barrett_navrati
 
 A more detailed survey on cluster models \cite{beck_2012}.
 
-\begin{equation}
+\begin{equation}  \label{eq:micro_folding}
 	\int \int \rho(r_1) \rho(r_2) dr_1 dr_2. 
 \end{equation}
 
@@ -835,7 +866,7 @@ Also, nuclei deformation can be considered in models. For example, there are mod
 
 More sophisticated models use effective field theory for calculations. The general principle of these theories is the low-energy approximate solution of the physics described in quantum chromodynamics. \\
 
-\begin{equation}
+\begin{equation} \label{eq:micro_lagrangian_nucleons}
 	\mathcal{L} = N^{\dagger}i\hbar\gamma^\mu\partial_\mu N + ... .
 \end{equation}
 
@@ -875,29 +906,29 @@ Hartree-Fock \cite{leanh_minhloc_2022}
 
 The matrix models permit the modeling of resonances with an appropiate fitting of free parameters. In particular, the main formalism in this approach is the R-matrix model. \cite{lane_thomas_1958}.
 
-\begin{equation}
+\begin{equation}  \label{eq:rmatrix_elements}
 	R_{cc'} = \sum_k {\frac{\gamma_{ck} \gamma_{c'k}}{E - E_k}}.
 \end{equation}
 
-\begin{equation}
+\begin{equation} \label{eq:rmatrix_sfactor}
 	S(E) = S_r \frac{\Gamma^2/4}{(E-E_r + \Delta)^2 + (\Gamma/2)^2}.
 \end{equation}
 
 There is parameter $P(E)$ which is expressed as: 
 
-\begin{equation}
+\begin{equation} \label{eq:rmatrix_penetrationFactor}
 	P= \frac{\Gamma}{F_l^2 + G_l^2},
 \end{equation}
 
 where the functions $F_l = F_l(ka)$ and $G_l = G_l(ka)$ are the Coulomb functions evaluated at a particular $\rho = ka$. In addition, another parameter $Q$ is given: 
 
-\begin{equation}
+\begin{equation} \label{eq:rmatrix_QFactor}
 	Q = \frac{\Gamma}{F_lG_l' + G_lF_l'}.
 \end{equation}
 
 On the other hand, the phase shift is given by:
 
-\begin{equation}
+\begin{equation}  \label{eq:rmatrix_phaseShift}
 	\delta = \delta_{\mathrm{HS}} + \delta_R.
 \end{equation}
 
@@ -956,25 +987,25 @@ Yakovlev and other fitting methods.  can be also used with selected microscopica
  %Then, those standards that were once imposed, by what it seemed to be the external and restrictive interest of others, are converted in friendly procedures that you truly need. It is now the time to you to create the standards, which would be rather called, the guidelines and opportunities for your creations. 
  
  
-\subsection{Calculation considerations}
+\subsection{Calculation considerations} \label{sub:considerationsNonResonant}
 
 Yakovlev is used for middle-heavy fusion reactions. However, this model is not expected to work for radiative capture reactions since it predicts a decrement of the S-factor for all energies. In contrast, the S-factor increases in radiative capture reactions.  \\
 
 In the Yakovlev model, there is a fitting of the parameters in the following way.  The free parameters are $\delta$, $E_c$ and $\xi$. In particular, $E_c$ can be determined by the following expression:
 
-\begin{equation}
+\begin{equation} \label{eq:potential_Yakovlev_Ec}
 	E_c = \frac{\alpha}{R},
 \end{equation}
 
 where $\alpha = \sqrt{Z_1Z_2e^2}$ and $R$ is a parameter that is determined as:
 
-\begin{equation}
+\begin{equation} \label{eq:potential_Yakovlev_R}
 	R = R_0 + \Delta R_{1} |2Z_1 - A_1| + \Delta R_{2}|2Z_2 - A_2|.
 \end{equation}
 
 In particular, the parameter $R_0$ depends on the reactant nuclei while the parameters $\Delta R_{1}$ and $\Delta R_{2}$ can assume two values per pair of reactant nuclei. For instance, the values are given in the following way: 
 
-\begin{equation}
+\begin{equation} \label{eq:potential_Yakovlev_R1}
 	\Delta R_1= 	\left\{\begin{array}{l}
 		\begin{split}
 			\Delta R_{10}, \quad & 2Z_1 > A_1\\ 
@@ -985,7 +1016,7 @@ In particular, the parameter $R_0$ depends on the reactant nuclei while the para
 
 Analogously, $\Delta R_2$ is determined as: 
 
-\begin{equation}
+\begin{equation} \label{eq:potential_Yakovlev_R2}
 	\Delta R_2= 	\left\{\begin{array}{l}
 		\begin{split}
 			\Delta R_{20}, \quad & 2Z_2 > A_2\\ 
@@ -994,17 +1025,18 @@ Analogously, $\Delta R_2$ is determined as:
 	\end{array}\right.
 \end{equation}
 
-\subsection{Results}
+\subsection{Results} \label{sub:resultsNonResonant}
 
-\graph{Dp}{Caption}
+\graph{Dp}{Dp reaction }{Detailed Caption reaction}
 
-\graph{Dd}{Caption}
+\graph{Dd}{Dd reaction}{Detailed caption reaction}
 
-\graph{2H(d,p)3H}{Caption}
+\graph{2H(d,p)3H}{D deuterium capture}{Detailed caption reaction}
 
-\graph{2H(p,gamma)3He}{Caption}
+\graph{2H(p,gamma)3He}{D proton radiative capture }{Detailed caption reaction}
 
-\subsection{Analysis}
+
+\subsection{Analysis}  \label{sub:analysisNonResonant}
 \section{Resonant reactions} \label{sec:resonant}
 Breit-Wigner. Single channel approximation.
 
@@ -1012,15 +1044,15 @@ $\mathrm{{}^{7}{Be} + p \rightarrow \gamma +  {}^{8}{B} } $ and $\mathrm{{}^{13}
 
 A compilation of additional R-matrix treatment is given by \cite{descouvemont_adahchour_angulo_coc_vangioni-flam_2004}.
 
-\subsection{Calculation considerations}
-\subsection{Results}
+\subsection{Calculation considerations} \label{sub:considerationsResonant}
+\subsection{Results} \label{sub:resultsResonant}
 
-\graph{7Be(p,gamma)8B}{Caption}
-\graph{13C(p,gamma)14N}{Caption}
-\graph{C12C12}{Caption}
+\graph{7Be(p,gamma)8B}{7Be radiative capture}{Detailed 7Be radiative capture}
+\graph{13C(p,gamma)14N}{13C radiative capture}{Detailed 13C radiative capture}
+\graph{C12C12}{C12 + C12 reaction}{Detailed 12C + 12C reaction}
 
 
-\subsection{Analysis}
+\subsection{Analysis} \label{sub:analysisResonant}
 
 \chapter{Conclusions} \label{ch:conclusions}
 
@@ -1045,7 +1077,7 @@ In this section general data about the structure of the nuclei will be presented
 EXFOR \cite{zerkin_pritychenko_totans_vrapcenjak_rodionov_shulyak_2022}. \\
 Japanese database \cite{iwamoto_iwamoto_shibata_ichihara_kunieda_minato_nakayama_2020}.
 
-\subsection{Selected constants}
+\subsection{Selected constants} \label{sub:selectedConstants}
 
 NIST selected constants and conversion factors to convenient units. \\
 
@@ -1055,19 +1087,19 @@ Some constants to be considered: $c$, $h$, $\hbar$, $m_e$, $m_p$, $m_n$. \\
 
 In the units to be used for nuclear physics calculations: $4\pi\epsilon_0 = 1$. So, the fine structure constant is expressed as:
 
-\begin{equation}
+\begin{equation} \label{eq:constants_alpha}
 	\alpha = \frac{e^2}{\hbar c}.
 \end{equation}
 
 Therefore, the elementary charge is given by: 
 
-\begin{equation}
+\begin{equation} \label{eq:constants_e}
 	e = \sqrt{\alpha\hbar c} \approx \sqrt{1.41...} \sqrt{\mathrm{MeV \ fm}}.
 \end{equation}
 
 Masses can be expressed in terms of $\mathrm{MeV/c^2}$ or $\mathrm{MeV \ {fm}^{-2} \ s^{2}}$ depending on the context.  
 
-\subsection{Nuclei structure data}
+\subsection{Nuclei structure data} \label{sub:nucleiStructureData}
 
 atomic, massic, mass excess, spin, charge, data. $L^{\pi}$.
 
@@ -1077,16 +1109,16 @@ In this section, the reference to the experimental data on astrophysical S-facto
 
 Additional, light heavy experimental data pd reaction \cite{bystritsky_gerasimov_krylov_parzhitskii_dudkin_kaminskii_nechaev_padalko_petrov_mesyats_et_2008} and 2H proton capture c\cite{schmid_chasteler_laymon_weller_prior_tilley_1995} and He3 photodisintegration \cite{berman_koester_smith_1964} with \cite{warren_erdman_robertson_axen_macdonald_1963}
 
-\subsection{Nacre II database}
+\subsection{Nacre II database} \label{sub:nacreII}
 
 Selected reactions reference table.  \cite{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}.
 
 
-\subsection{Middle heavy nuclei data}
+\subsection{Middle heavy nuclei data} \label{sub:middleHeavyData}
 
 Selected reaction reference table for the $\mathrm{{}^{12}C + {}^{12}C}$, $\mathrm{{}^{12}C + {}^{16}O}$,  $\mathrm{{}^{16}O + {}^{16}O}$ ,  $\mathrm{{}^{13}C + {}^{13}C}$ reactions. 
 
-\subsection{Transitions data}
+\subsection{Transitions data} \label{sub:TransitionsData}
 
 Transition type data, energy levels. 
 
@@ -1096,11 +1128,11 @@ Resonant specific data will be presented. In particular, for those reactions wit
 
 Data on the resonant 7Be + p and experimental methods \cite{buompane_dileva_gialanella_d'onofrio_decesare_duarte_fulop_gasques_gyurky_morales-gallegos_et_2022}.
 
-\subsection{Resonance data}
+\subsection{Resonance data}  \label{sub:ResonanceData}
 
 Selection reaction reference list.
 
-\subsection{Transitions data}
+\subsection{Transitions data} \label{sub:Transitions2Data}
 
 Transition type data, energy levels, energy peak and widths.
 
@@ -1108,11 +1140,11 @@ Transition type data, energy levels, energy peak and widths.
 
 The fitting parameters in a selected list of articles will be presented. In particular, this section distinguish between specific model parameters, like empirical, potential or microscopical models, and R-matrix fitting, whose special calculation considerations will be detailed.
 
-\subsection{Specific model parameters}
+\subsection{Specific model parameters} \label{sub:modelParameters}
 
 Tables of models and parameters, with uncertainties. 
 
-\subsection{R-matrix parameters}
+\subsection{R-matrix parameters} \label{sub:rmatrixParameters}
 
 Tables of parameters that were chosen for the selected reactions
 
@@ -1126,7 +1158,7 @@ Differential equation, solutions, 1st and 2nd kind and some useful properties. T
 
 The spherical functions are solutions for the differential equation:
 
-\begin{equation}
+\begin{equation} \label{eq:special_bessel_diffEquation}
 	\frac{d^2x}{d\rho^2} + 2\rho \frac{dx}{d\rho} + (\rho^2 - l(l+1))x= 0.
 \end{equation}
 
@@ -1134,14 +1166,14 @@ In particular, the solutions $J_l(\rho)$ and $Y_l(\rho)$ are called the Bessel a
 
 In addition, the asymptotic behavior when $\rho \rightarrow \infty$ is different for each function as shown:
 
-\begin{equation}
+\begin{equation} \label{eq:special_bessel_J}
 	J_l(\rho) \rightarrow \sqrt{ \frac{2}{\pi\rho}}\cos{\left(\rho - \frac{\pi}{4} - \frac{l\pi}{2}\right)}.
 \end{equation}
 
 and
 
 
-\begin{equation}
+\begin{equation} \label{eq:special_bessel_Y}
 	Y_l(\rho) \rightarrow \sqrt{\frac{2}{\pi\rho}}\sin{\left(\rho - \frac{\pi}{4} - \frac{l\pi}{2}\right)}.
 \end{equation}
 
@@ -1150,7 +1182,7 @@ and
 
 Differential equations, solutions and more properties.
 
-\begin{equation}
+\begin{equation}  \label{eq:special_coulomb_diffEquation}
 	\frac{d^2x}{d\rho^2}+ (\rho^2 - 2\eta \rho  - l(l+1) )x= 0.
 \end{equation}
 
@@ -1158,13 +1190,13 @@ There are two solutions for this equations. In the context of scattering theory,
 
 The formulas are connected as \cite{gaspard_2018}.
 
-\begin{equation}
+\begin{equation}  \label{eq:special_coulomb_connection}
 	G_{l\eta} = \frac{F_{l\eta} - iF_{-l\eta} }{2i}.
 \end{equation}
 
 In a similar way than the Bessel functions, the Coulomb functions have harmonic like asymptotic behavior. In particular,  $F_{l\eta} \rightarrow \sin{\theta_{l\eta}}$ and $G_{l\eta} \rightarrow \cos{\theta_{l\eta}}$ with $\theta_{l\eta}$ defined as :
 
-\begin{equation}
+\begin{equation} \label{eq:special_coulomb_theta}
 	\theta_{l\eta}(\rho) = \rho -  l\frac{\pi}{2}  - \eta\ln{(2\rho)} +  \arg\Gamma(l+ 1+i\eta).
 \end{equation}
 
@@ -1180,23 +1212,23 @@ Motivation, definition and some computations. Generalization to further spins an
 
 The total angular momentum and change of basis.
 
-\begin{equation}
+\begin{equation} \label{eq:angularMomentum_definition}
 	J = L + S
 \end{equation}.
 
 Tensor products.
 
-\begin{equation}
+\begin{equation} \label{eq:angularMomentum_tensorSum}
 	a \otimes b.
 \end{equation}
 
-\begin{equation}
+\begin{equation} \label{eq:angularMomentum_tensorProduct}
 	a \oplus b.
 \end{equation}
 
 And the Wigner notation for the Clebsh-Gordan coefficients.
 
-\begin{equation}
+\begin{equation} \label{eq:angularMomentum_wignerCoefficients}
 	\left(\begin{array}{ccc}
 		s &	l &	I_x \\
 		j_s & j & J
@@ -1271,15 +1303,15 @@ The numerical solution of the Schrödinger equation is found to be useful for th
 
 Coupled channels \cite{hagino_rowley_kruppa_1999}.
 
-\subsection{Main approach}
+\subsection{Main approach} \label{sub:diffSolvingMainApproach}
 
 The different methods to be solved the Schroödinger equation and overall differential equation solving strategy. 
 
-\subsection{Implementation of the potential functions}
+\subsection{Implementation of the potential functions} \label{sub:diffSolvingPotential}
 
 Different potential considerations. 
 
-\subsection{Boundary conditions implementation}
+\subsection{Boundary conditions implementation} \label{sub:diffSolvingBoundaries}
 
 Expected boundary conditions at $r \rightarrow \infty$ and their numerical implementation.
 
@@ -1295,35 +1327,36 @@ The full tree with the files with explanation of the detailed packages.
 
 In this section the user manual should be presented.
 
-\subsection{Installation}
+\subsection{Installation} \label{sub:codesInstallation}
 
 In this section a full installation sequence will be presented
 
-\subsection{Plotting}
+\subsection{Plotting}  \label{sub:codesPlotting}
 
 Plotting of S-factors. 
 
-\subsection{Empirical fitting}
+\subsection{Empirical fitting} \label{sub:codesEmpiricalFitting}
 
 Empirical fitting based on predetermined and custom functions.
 
-\subsection{Specific model fitting}
+\subsection{Specific model fitting}  \label{sub:codesModelFitting}
 
 Model fitting.
 
-\subsection{Model testing}
+\subsection{Model testing} \label{sub:codesModelTesting}
 
 Different tests of the program code. 
 
 \section{Documentation} \label{sec:documentation}
 
-\subsection{Databases}
+\subsection{Databases} \label{sub:codesDatabases}
 
-\subsection{Non resonant}
-\subsection{Resonant}
-\subsection{Plots}
-\subsection{Reconstructed Plots}
-\subsection{Solver}
+\subsection{Non resonant} \label{sub:codesNonResonant}
+\subsection{Resonant} \label{sub:codesResonant}
+\subsection{Plots} \label{sub:codesPlots}
+\subsection{Reconstructed Plots} \label{sub:codesReconstructedPlots}
+\subsection{Solver} \label{sub:codesSolver}
+\subsection{Utils} \label{sub:codesUtils}
 
 \newpage
 
