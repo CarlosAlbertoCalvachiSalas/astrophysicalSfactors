@@ -9,6 +9,14 @@ def Er(mu, alpha):
 def eta(E, Er):
 	return np.sqrt(Er/E)
 
+def sommerfeld(E, Z1, Z2, mu, convert = True):
+	if(convert):
+		mu = amuToMeVfm_2s2(mu)
+	else:
+		mu = mu
+		
+	return eta(E, Er(mu, alpha(Z1, Z2)))
+
 def reducedMass(m1, m2):
 	return (m1 * m2)/(m1 + m2)
 

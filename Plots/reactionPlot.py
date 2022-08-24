@@ -5,7 +5,7 @@ import regex
 import sfactors.Resonant.single
 from scipy.optimize import curve_fit
 
-from sfactors.Utils.formulas import sfactorFromCrossSection
+from sfactors.Utils.formulas import *
 from sfactors.Utils.strings import decodeNucleusStr
 from sfactors.Databases.Reader.nuclearData import Nucleus
 
@@ -60,9 +60,9 @@ def plotFuncOverData(f, E, S, N = 10000, color = 'blue', label = None):
 
 	plt.plot(Elin, y, color = color, label = label)
 
-def plotFitFunc(f, E, S, p0 = None, sigma = None, Emin = None, Emax = None, N = 10000, label = None, color = 'blue'):
+def plotFitFunc(f, E, S, p0 = None, sigma = None, bounds = (-np.inf, np.inf), Emin = None, Emax = None, N = 10000, label = None, color = 'blue'):
 
-	params, conv = curve_fit(f, E, S, p0, sigma)
+	params, conv = curve_fit(f, E, S, p0, sigma, bounds = bounds)
 	print(params)
 	EminLin = np.min(E)
 	EmaxLin = np.max(E)
@@ -86,14 +86,23 @@ class ReactionPlot():
 		self.r2 = Nucleus(r2)
 		self.r3 = Nucleus(r3)
 		self.r4 = Nucleus(r4)
-	
+
+		self.mu = reducedMass(self.r1.m, self.r2.m)
+
+		self.sommerfeld = np.vectorize(sommerfeld)
+		
+		self.fittingData = np.array([], dtype = np.dtype('O'))
+
 		self.link = FILE_PATH + 'Databases/ReactionData/' + r1 + r2 + '.csv'
+
 		#print(self.link)
 		try:
 			self.dataFrame = pd.read_csv(self.link)	
 			self.E = self.dataFrame.iloc[:, 0]
 			self.S = self.dataFrame.iloc[:, 1]
 			self.sigma = self.dataFrame.iloc[:, 2]
+			self.indexSelection = np.zeros(len(self.dataFrame), dtype = int) == 0
+		
 			#print(self.E)
 		except Exception as e:
 			print('No database available')
@@ -101,22 +110,59 @@ class ReactionPlot():
 		self.groupData()
 
 		if(crossSection):
-			self.S = sfactorFromCrossSection(crossSection=self.S, 
+			self.crossSection = True
+			self.crossSectionSfactor()
+
+		self.plot()
+
+	def allRef(self):
+		self.E = self.dataFrame.iloc[:, 0]
+		self.S = self.dataFrame.iloc[:, 1]
+		
+		self.indexSelection = np.zeros(len(self.dataFrame), dtype = int) == 0
+		self.groupData()
+
+	def includeRef(self, references):
+
+		if(np.array(references, dtype = str).ndim == 0):
+			references = np.array([references])
+		else:
+			references = references
+
+		self.indexSelection = np.isin(self.dataFrame["Reference"], references)
+		self.groupData()
+
+	def excludeRef(self, references):
+		
+		if(np.array(references, dtype = str).ndim == 0):
+			references = np.array([references])
+		else:
+			references = references
+
+		self.indexSelection = ~np.isin(self.dataFrame["Reference"], references)
+		self.groupData()
+
+	def groupData(self):
+		self.groups = self.dataFrame.iloc[self.indexSelection].groupby(by=["Reference"])
+
+		self.groupsArray = np.array(self.groups, dtype = np.dtype('O'))[:,1]
+
+		self.E = self.dataFrame.iloc[self.indexSelection].iloc[:, 0]
+		self.S = self.dataFrame.iloc[self.indexSelection].iloc[:, 1]
+
+
+
+	def crossSectionSfactor(self):
+		self.S = sfactorFromCrossSection(crossSection=self.S, 
 																			E = self.E,
 																			Z1 = self.r1.Z, 	
 																			Z2 = self.r2.Z, 
 																			A1 = self.r1.A,
 																			A2 = self.r2.A)
 
-			self.groups[0].iloc[:, 1] = self.S
-
+		self.groupsArray[0].iloc[:, 1] = self.S
+		self.dataFrame.iloc[:, 1] = self.S
 		
-		self.plot()
-
-	def groupData(self):
-		self.groups = self.dataFrame.groupby(by=["Reference"])
-
-		self.groups = np.array(self.groups, dtype = np.dtype('O'))[:,1]
 
 	def plot(self, Eaxis = 'lin', Saxis = 'lin', Eunit = 'MeV', Sunit = 'MeV-b', color = 'black'):
 		
@@ -145,7 +191,7 @@ class ReactionPlot():
 
 
 		plotFromDataFrameVect(**{
-			'dataFrames': self.groups, 
+			'dataFrames': self.groupsArray, 
 			'r1':r1, 'r2':r2, 'r3':r3, 'r4':r4, 
 			'Eaxis':Eaxis, 'Saxis':Saxis, 
 			'Eunit':Eunit, 'Sunit':Sunit, 
@@ -154,7 +200,7 @@ class ReactionPlot():
 
 
 
-	def fit(self, f, p0 = None, Emin = None, Emax = None, Smin = None, Smax = None , N = 10000, color = 'blue', label = None):
+	def fit(self, f, p0 = None, bounds = (-np.inf, np.inf), Emin = None, Emax = None, Smin = None, Smax = None , N = 10000, color = 'blue', label = None):
 		
 		indexes = np.ones(len(self.E), dtype = int) == 1
 
@@ -175,7 +221,7 @@ class ReactionPlot():
 		else:
 			sigmaFit = self.sigma[indexes]
 
-		params, conv = plotFitFunc(f, self.E[indexes], self.S[indexes], p0 = p0, sigma = sigmaFit, Emin = Emin, Emax = Emax, N = N, color = color, label = label)
+		self.params, self.conv = plotFitFunc(f, self.E[indexes], self.S[indexes], p0 = p0, bounds = bounds, sigma = sigmaFit, Emin = Emin, Emax = Emax, N = N, color = color, label = label)
 
 		logE = np.log10(np.sort(self.E))
 		logS = np.log10(np.sort(self.S))
@@ -186,9 +232,9 @@ class ReactionPlot():
 		if(np.max(logS) - np.min(logS) > 1.5):
 			plt.yscale('log')
 
-		self.residuals = self.S[indexes] - f(self.E[indexes], *params)
+		self.residuals = self.S[indexes] - f(self.E[indexes], *self.params)
 
-		return self.residuals
+		return self.params, self.conv
 
 
 	def show(self):

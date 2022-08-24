@@ -19,9 +19,9 @@ def amuToMeVfm_2s2(m):
 
 class WKB():
 
-	def __init__(self, U, m, rmin = 0, rmax = 20, Emin = 0, Emax = 30, Ncrit = 10000):	
+	def __init__(self, U, m, rmin = 0, rmax = 20, Emin = 0, Emax = 30, Ncrit = 10000, *args, **kwargs):	
 		self.U = U # U(r)
-		self.invU = lambda r: -self.U(r)
+		self.invU = lambda r: -self.U(r, *args, **kwargs)
 		self.vectU = np.vectorize(self.U, otypes = [float])
 		self.vectInvU = np.vectorize(self.invU, otypes = [float])
 		self.Emin = Emin
@@ -34,12 +34,15 @@ class WKB():
 		self.Ncrit = Ncrit
 		self.rLin = np.linspace(self.rleft, self.right, self.Ncrit)
 
-	def graphPotential(self):
+	def graphPotential(self, color = 'blue', label = None):
 
-		plt.plot(self.rLin, self.vectU(self.rLin), color = 'blue', label = 'plot')
+		plt.plot(self.rLin, self.vectU(self.rLin), color = color, label = label)
 		plt.ylabel('U(MeV)')
 		plt.xlabel('r(fm)')
 		plt.title('Potential plot')
+		
+		if(label):
+			plt.legend()
 
 	def f(self, E):
 
@@ -48,7 +51,7 @@ class WKB():
 		self.phi = lambda r: K * np.sqrt((2*self.m)*(self.vectU(r) - E)) 
 		return self.phi 
 
-	def phiSinge(self, E, r1, r2):
+	def phiSingle(self, E, r1, r2):
 
 		return np.array(quad(self.f(E), r1, r2))
 
@@ -70,9 +73,9 @@ class WKB():
 		signatureString = signatureString + ('->(n)')
 
 		if(len(excludedParams) == 3):
-			self.phi, self.phiError = self.phiSinge(E, r1, r2)
+			self.phi, self.phiError = self.phiSingle(E, r1, r2)
 		else:
-			self.phiPoints = np.vectorize(self.phiSinge, excluded = excludedParams, signature = signatureString)(E, r1, r2)
+			self.phiPoints = np.vectorize(self.phiSingle, excluded = excludedParams, signature = signatureString)(E, r1, r2)
 			self.phi, self.phiError = self.phiPoints.T
 		
 		return self.phi
@@ -81,15 +84,15 @@ class WKB():
 
 class WKB1(WKB):
 
-	def __init__(self, U, m, rmin = 10, rmax = 20, Emin = 1, Emax = 16, Ncrit = 10000):
-		super().__init__(U, m, rmin, rmax, Emin, Emax, Ncrit)
+	def __init__(self, U, m, rmin = 10, rmax = 20, Emin = 1, Emax = 16, Ncrit = 10000, *args, **kwargs):
+		super().__init__(U, m, rmin, rmax, Emin, Emax, Ncrit, *args)
 		self.criticalPointsNum = 1
 
 		self.getMaxPoint()
 
 	def getMaxPoint(self, rGuess = None):
 
-		pointWiseDerivatives = derivative(self.vectU, self.rLin, dx = 1E-6*((self.right - self.rleft)/self.Ncrit) )
+		pointWiseDerivatives = derivative(self.vectU, self.rLin, dx = 1E-6*((self.right - self.rleft)/self.Ncrit))
 
 		rmaxGuess = self.rLin[np.min(np.abs(pointWiseDerivatives)) == np.abs(pointWiseDerivatives)][0]
 
@@ -166,7 +169,7 @@ class WKB1(WKB):
 
 		return super().phi(E, self.r1, self.r2)
 
-def phi(E, m, U, Emin = 0, Emax = 30, N = 100):
+def phi(E, m, U, Emin = 0, Emax = 30, N = 100, *args):
 
 	Elin = np.linspace(Emin, Emax, N)
 

@@ -19,6 +19,11 @@ print(RC0)
 
 def potential(r):
 
+	#U = (alphaConstant/r)*(r >= Rc1) + (Ec * (1 - beta*(((r - Rc)**2)/(Rc**2))))*(r < Rc1)
+
+	#return U * (U > 0)
+
+
 	if(r >= Rc1):
 		U = alphaConstant/r
 	else:
@@ -28,6 +33,7 @@ def potential(r):
 		return U
 	else:
 		return 0.0
+
 
 Mg46Y = Yakovlev(12, 12, 46, 46, 5.9785, 16.269, 0.0332, 0.5263 + (46 + 46)*(0.1393))
 
