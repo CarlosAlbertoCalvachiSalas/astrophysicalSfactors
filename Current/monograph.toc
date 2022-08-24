@@ -25,69 +25,67 @@
 \contentsline {subsection}{\numberline {2.2.1}Light heavy nuclei reactions}{16}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}CNO cycle}{17}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Medium heavy nuclei reactions}{17}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Supernovae and other explosive environments}{18}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Supernovae and other explosive environments}{19}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Heavy nuclei reactions}{19}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}The s and p processes}{19}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Active research topics}{19}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Active research topics}{20}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Astrophysical S-factor models}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Empirical formulas}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Potential models}{22}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Microscopic models}{24}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Matrix models}{25}{section.3.4}%
+\contentsline {section}{\numberline {3.1}Microscopic models}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Matrix models}{22}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Potential models}{23}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Empirical formulas}{25}{section.3.4}%
 \contentsline {chapter}{\numberline {4}S-factor calculations for selected reactions}{27}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Non-resonant reactions}{27}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Calculation considerations}{27}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Results}{28}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Analysis}{31}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Resonant reactions}{31}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Calculation considerations}{31}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Results}{32}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Analysis}{34}{subsection.4.2.3}%
-\contentsline {chapter}{\numberline {5}Conclusions}{35}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Literature selected data}{36}{appendix.A}%
-\contentsline {section}{\numberline {A.1}General data of nuclei}{36}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Selected constants}{36}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Nuclei structure data}{36}{subsection.A.1.2}%
-\contentsline {section}{\numberline {A.2}Astrophysical S-factor data}{36}{section.A.2}%
-\contentsline {subsection}{\numberline {A.2.1}Nacre II database}{37}{subsection.A.2.1}%
-\contentsline {subsection}{\numberline {A.2.2}Middle heavy nuclei data}{37}{subsection.A.2.2}%
-\contentsline {subsection}{\numberline {A.2.3}Transitions data}{37}{subsection.A.2.3}%
-\contentsline {section}{\numberline {A.3}Resonances and transitions}{37}{section.A.3}%
-\contentsline {subsection}{\numberline {A.3.1}Resonance data}{37}{subsection.A.3.1}%
-\contentsline {subsection}{\numberline {A.3.2}Transitions data}{37}{subsection.A.3.2}%
-\contentsline {section}{\numberline {A.4}Fitting parameters}{37}{section.A.4}%
-\contentsline {subsection}{\numberline {A.4.1}Specific model parameters}{37}{subsection.A.4.1}%
-\contentsline {subsection}{\numberline {A.4.2}R-matrix parameters}{37}{subsection.A.4.2}%
-\contentsline {chapter}{\numberline {B}Special functions}{38}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Bessel functions}{38}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Coulomb functions}{38}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Additional selected functions}{39}{section.B.3}%
-\contentsline {section}{\numberline {B.4}Clebsch-Gordan coefficients}{39}{section.B.4}%
-\contentsline {section}{\numberline {B.5}Microscopic model functions}{39}{section.B.5}%
-\contentsline {chapter}{\numberline {C}Fitting}{40}{appendix.C}%
-\contentsline {section}{\numberline {C.1}Empirical formulas fitting}{40}{section.C.1}%
-\contentsline {section}{\numberline {C.2}Free parameters fitting on potential models}{40}{section.C.2}%
-\contentsline {section}{\numberline {C.3}Microscopic model fitting}{40}{section.C.3}%
-\contentsline {section}{\numberline {C.4}R-matrix fitting}{40}{section.C.4}%
-\contentsline {chapter}{\numberline {D}Numerical integration and differential equation solving}{41}{appendix.D}%
-\contentsline {section}{\numberline {D.1}Integration of selected potentials}{41}{section.D.1}%
-\contentsline {section}{\numberline {D.2}Numerical solution of the Schrödinger equation}{41}{section.D.2}%
-\contentsline {subsection}{\numberline {D.2.1}Main approach}{41}{subsection.D.2.1}%
-\contentsline {subsection}{\numberline {D.2.2}Implementation of the potential functions}{41}{subsection.D.2.2}%
-\contentsline {subsection}{\numberline {D.2.3}Boundary conditions implementation}{41}{subsection.D.2.3}%
-\contentsline {chapter}{\numberline {E}Computer codes implementation}{42}{appendix.E}%
-\contentsline {section}{\numberline {E.1}Structure of the computer program}{42}{section.E.1}%
-\contentsline {section}{\numberline {E.2}User manual}{42}{section.E.2}%
-\contentsline {subsection}{\numberline {E.2.1}Installation}{42}{subsection.E.2.1}%
-\contentsline {subsection}{\numberline {E.2.2}Plotting}{42}{subsection.E.2.2}%
-\contentsline {subsection}{\numberline {E.2.3}Empirical fitting}{42}{subsection.E.2.3}%
-\contentsline {subsection}{\numberline {E.2.4}Specific model fitting}{42}{subsection.E.2.4}%
-\contentsline {subsection}{\numberline {E.2.5}Model testing}{42}{subsection.E.2.5}%
-\contentsline {section}{\numberline {E.3}Documentation}{42}{section.E.3}%
-\contentsline {subsection}{\numberline {E.3.1}Databases}{42}{subsection.E.3.1}%
-\contentsline {subsection}{\numberline {E.3.2}Non resonant}{42}{subsection.E.3.2}%
-\contentsline {subsection}{\numberline {E.3.3}Resonant}{43}{subsection.E.3.3}%
-\contentsline {subsection}{\numberline {E.3.4}Plots}{43}{subsection.E.3.4}%
-\contentsline {subsection}{\numberline {E.3.5}Reconstructed Plots}{43}{subsection.E.3.5}%
-\contentsline {subsection}{\numberline {E.3.6}Solver}{43}{subsection.E.3.6}%
-\contentsline {subsection}{\numberline {E.3.7}Utils}{43}{subsection.E.3.7}%
+\contentsline {subsection}{\numberline {4.1.1}Calculation considerations}{28}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Results and analysis}{29}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Resonant reactions}{32}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Calculation considerations}{32}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Results and analysis}{33}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Conclusions}{36}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Literature selected data}{37}{appendix.A}%
+\contentsline {section}{\numberline {A.1}General data of nuclei}{37}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Selected constants}{37}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Nuclei structure data}{37}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Astrophysical S-factor data}{37}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Nacre II database}{38}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Middle heavy nuclei data}{38}{subsection.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Transitions data}{38}{subsection.A.2.3}%
+\contentsline {section}{\numberline {A.3}Resonances and transitions}{38}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}Resonance data}{38}{subsection.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Transitions data}{38}{subsection.A.3.2}%
+\contentsline {section}{\numberline {A.4}Fitting parameters}{38}{section.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}Specific model parameters}{38}{subsection.A.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}R-matrix parameters}{38}{subsection.A.4.2}%
+\contentsline {chapter}{\numberline {B}Special functions}{39}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Bessel functions}{39}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Coulomb functions}{39}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Additional selected functions}{40}{section.B.3}%
+\contentsline {section}{\numberline {B.4}Clebsch-Gordan coefficients}{40}{section.B.4}%
+\contentsline {section}{\numberline {B.5}Microscopic model functions}{40}{section.B.5}%
+\contentsline {chapter}{\numberline {C}Fitting}{41}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Empirical formulas fitting}{41}{section.C.1}%
+\contentsline {section}{\numberline {C.2}Free parameters fitting on potential models}{41}{section.C.2}%
+\contentsline {section}{\numberline {C.3}Microscopic model fitting}{41}{section.C.3}%
+\contentsline {section}{\numberline {C.4}R-matrix fitting}{41}{section.C.4}%
+\contentsline {chapter}{\numberline {D}Numerical integration and differential equation solving}{42}{appendix.D}%
+\contentsline {section}{\numberline {D.1}Integration of selected potentials}{42}{section.D.1}%
+\contentsline {section}{\numberline {D.2}Numerical solution of the Schrödinger equation}{42}{section.D.2}%
+\contentsline {subsection}{\numberline {D.2.1}Main approach}{42}{subsection.D.2.1}%
+\contentsline {subsection}{\numberline {D.2.2}Implementation of the potential functions}{42}{subsection.D.2.2}%
+\contentsline {subsection}{\numberline {D.2.3}Boundary conditions implementation}{42}{subsection.D.2.3}%
+\contentsline {chapter}{\numberline {E}Computer codes implementation}{43}{appendix.E}%
+\contentsline {section}{\numberline {E.1}Structure of the computer program}{43}{section.E.1}%
+\contentsline {section}{\numberline {E.2}User manual}{43}{section.E.2}%
+\contentsline {subsection}{\numberline {E.2.1}Installation}{43}{subsection.E.2.1}%
+\contentsline {subsection}{\numberline {E.2.2}Plotting}{43}{subsection.E.2.2}%
+\contentsline {subsection}{\numberline {E.2.3}Empirical fitting}{43}{subsection.E.2.3}%
+\contentsline {subsection}{\numberline {E.2.4}Specific model fitting}{43}{subsection.E.2.4}%
+\contentsline {subsection}{\numberline {E.2.5}Model testing}{43}{subsection.E.2.5}%
+\contentsline {section}{\numberline {E.3}Documentation}{43}{section.E.3}%
+\contentsline {subsection}{\numberline {E.3.1}Databases}{43}{subsection.E.3.1}%
+\contentsline {subsection}{\numberline {E.3.2}Non resonant}{43}{subsection.E.3.2}%
+\contentsline {subsection}{\numberline {E.3.3}Resonant}{44}{subsection.E.3.3}%
+\contentsline {subsection}{\numberline {E.3.4}Plots}{44}{subsection.E.3.4}%
+\contentsline {subsection}{\numberline {E.3.5}Reconstructed Plots}{44}{subsection.E.3.5}%
+\contentsline {subsection}{\numberline {E.3.6}Solver}{44}{subsection.E.3.6}%
+\contentsline {subsection}{\numberline {E.3.7}Utils}{44}{subsection.E.3.7}%
