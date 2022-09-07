@@ -63,7 +63,13 @@ def plotFuncOverData(f, E, S, N = 10000, color = 'blue', label = None):
 def plotFitFunc(f, E, S, p0 = None, sigma = None, bounds = (-np.inf, np.inf), Emin = None, Emax = None, N = 10000, label = None, color = 'blue'):
 
 	params, conv = curve_fit(f, E, S, p0, sigma, bounds = bounds)
-	print(params)
+	
+	diagConv = np.array(conv).diagonal()	
+
+	print('p: ', params)
+	if(not np.isinf(diagConv).any()):
+		print('e: ', np.sqrt(diagConv))
+	
 	EminLin = np.min(E)
 	EmaxLin = np.max(E)
 
@@ -94,6 +100,7 @@ class ReactionPlot():
 		self.fittingData = np.array([], dtype = np.dtype('O'))
 
 		self.link = FILE_PATH + 'Databases/ReactionData/' + r1 + r2 + '.csv'
+		self.tags = np.array([], dtype = str)
 
 		#print(self.link)
 		try:
@@ -162,7 +169,14 @@ class ReactionPlot():
 
 		self.groupsArray[0].iloc[:, 1] = self.S
 		self.dataFrame.iloc[:, 1] = self.S
-		
+	
+	def setTags(self, tags):
+
+		if(np.array(tags).ndim > 0):
+			self.tags = np.append(self.tags, tags)
+		else:
+			self.tags = np.append(self.tags, [tags])
+
 
 	def plot(self, Eaxis = 'lin', Saxis = 'lin', Eunit = 'MeV', Sunit = 'MeV-b', color = 'black'):
 		
@@ -243,21 +257,32 @@ class ReactionPlot():
 
 	def save(self, close = False):
 		plt.legend()
+
+		tagsStr = ''
+		tagsStr = '-'.join(np.append([tagsStr], self.tags))
+
 		if(self.r2.synonym):
-				r2 = self.r2
+				r2 = self.r2.synonym
 		else:
 				r2 = self.r2.__str__()
 
 		if(self.r3 and self.r4):
 			if(self.r3.synonym):
-				r3 = self.r3
+				r3 = self.r3.synonym
 			else:
 				r3 = self.r3.__str__()
 
-			plt.savefig(FILE_PATH + 'ReconstructedPlots/{}({},{}){}.eps'.format(self.r1, r2, r3, self.r4), format = 'eps')
+			titleStr = 'ReconstructedPlots/{}({},{}){}{}.eps'.format(self.r1, r2, r3, self.r4, tagsStr)
+			#plt.savefig(FILE_PATH + titleStr , format = 'eps')
 		else:
-			plt.savefig(FILE_PATH + 'ReconstructedPlots/{}{}.eps'.format(self.r1, r2), format = 'eps')
+			titleStr = 'ReconstructedPlots/{}{}{}.eps'.format(self.r1, r2, tagsStr)
+			
+		plt.savefig(FILE_PATH + titleStr, format = 'eps')
 
 		if(close):
 			plt.close()
+
+		return titleStr[:len(titleStr)-4]
+
+
 
