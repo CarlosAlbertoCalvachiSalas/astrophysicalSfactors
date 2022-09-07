@@ -7,18 +7,19 @@
 \usepackage{csquotes}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{tikz-3dplot}
 \usepackage{import}
 \usepackage{color}
 \usepackage{amssymb}
-\usepackage{tikz}
 \usepackage{epstopdf}
 \usepackage{bold-extra}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[T1]{fontenc}
 \usepackage{xargs}
+\usepackage{etoolbox}
 
 \bibliographystyle{unsrt} 
 
@@ -366,6 +367,7 @@ A development on the $\mathrm{(p,n)}$ reaction kind is given by \cite{whitehead_
 
 Cross section of a process. 
 Partial and total cross sections depending on the reaction type.
+Cross sections have relations with the $S$-matrix.
 
 \subsection{Reaction rates} \label{sub:reactionRates}
 
@@ -428,7 +430,7 @@ Screening effect present in light weight nuclear reactions \cite{raiola_migliard
 
 \section{Big bang nucleosynthesis} \label{sec:BBN}
 
-Primordial reactions that where expected to happen before big bang occurred. For example:
+Primordial reactions that where expected to happen after the big bang occurred. For example:
 
 \begin{equation} \label{eq:reaction_2Hpradiative}
 	\mathrm{{}^{2}H + p \rightarrow \gamma + {}^{3}H}.
@@ -638,6 +640,8 @@ Microscopic models are based on first principles and usually require assumptions
 
 On the other, clusters consider the system of interactant nuclei as a whole. In particular, there are models based on \textit{ab initio} assumptions about a particular set of nuclei.  \\
 
+$NN$ and $NNN$ interactions.
+
 \input{Figures/cluster.tex}
 
 The \textit{ab initio} no core shell model is presented in \cite{barrett_navratil_vary_2013}. \\
@@ -647,6 +651,12 @@ A more detailed survey on cluster models \cite{beck_2012}.
 \begin{equation}  \label{eq:micro_folding}
 	\int \int \rho(r_1) \rho(r_2) dr_1 dr_2. 
 \end{equation}
+
+The mass and nuclear density of the nuclei can be modeled as:
+
+\begin{equation} \label{eq:micro_density}
+	\rho(r) = \frac{\rho_0}{1 + \exp{\left(\frac{r - R}{a}\right)}}.
+\end{equation} 
 
 Non-local calculations. Multi-body calculations. \\
 
@@ -1001,15 +1011,15 @@ Python \cite{rossum_drake_2009}, Pandas \cite{mckinney_2010}, NumPy \cite{harris
 
 The starting point in the process of analysis of reaction is the study of its non-resonant part. \\
 
-Reactions are $\mathrm{{}^{2}{H} + p \rightarrow \gamma +  {}^{3}{He} } $ and $\mathrm{{}^{2}{H} + d  \rightarrow p+  {}^{3}{H}} $ for non-resonant reactions. On the other hand,  $\Cfusion$  and $\Ofusion$ are the fusion reactions to be considered. \\
+Light heavy selected reactions are $\mathrm{{}^{2}{H} (p, \gamma) {}^{3}{He}} $ and $\mathrm{{}^{2}{H}(d,p){}^{3}{H}} $. On the other hand,  $\Cfusion$  and $\Ofusion$ are the fusion reactions to be considered. \\
 
-Empirical formulas to be considered for the light heavy reactions. In particular, the non-resonant part of the equations \ref{eq:empirical_hybridExponential}  and \ref{eq:empirical_hybridPolynomial} are fitted to experimental data.  \\
+Empirical formulas are initially considered for the light heavy S-factor description. In particular, the non-resonant part of the equations \ref{eq:empirical_hybridExponential}  and \ref{eq:empirical_hybridPolynomial} are fitted to experimental data.  \\
 
 In addition, a correction factor that accounts for the electron screening effect observed at low-energies  in the $\mathrm{{}^{2}H(d, p){}^{3}H}$ reaction is included. \\
  
-On the other hand, the Yakovlev et.al  potential model and empirical formulas are used to describe the fusion reactions. \\
+On the other hand, fusion reactions are described by the Yakovlev et. al empirical formula \cite{beard_afanasjev_chamon_gasques_wiescher_yakovlev_2010} and potential model  \cite{yakovlev_beard_gasques_wiescher_2010}. 
 
-Microscopical and matrix model to be used to complete this description.
+Microscopical and matrix model approaches are  used to be describe all the selected reactions.
 
 
 
@@ -1068,55 +1078,145 @@ Although Yakovlev et. al model is used for middle-heavy fusion reactions, is not
 
 \subsection{Results and analysis} \label{sub:resultsAnalysisNonResonant}
 
-\graph{Dp}{Dp reaction }{Detailed Caption reaction}
+\graphWrapper{
+	\subGraph{2H(d,p)3H-poly12345}{Polynomial fits.}
+	\subGraph{2H(d,p)3H-exp12345}{Exponential fits.}
+	\subGraph{2H(d,p)3H-exp5-poly5-best}{Best fits.}[1]
+}
+{2H(d,p)3H}{Polynomial and exponential fits $\ddexchange$ reaction}{Empirical formulas fitted to the S-factor for the  $\ddexchange$ reaction. In panel a), poly1, poly2, poly3, poly4, and poly5 represent fits to polynomials function from first order up to fifth order respectively.  Similarly, in panel b), exp1, exp2, exp3, exp4 and exp5 represent the exponential fit up to fifth order. Additionally, in panel c) the poly5-exclude graph corresponds to a poly5 like fit without data from RA02 and GR95. The black points are related with experimental data which was taken form different sources.}
 
-\graph{Dd}{Dd reaction}{Detailed caption reaction}
-
-\graph{2H(d,p)3H}{D deuterium capture}{Detailed caption reaction}
+%\graph{2H(d,p)3H}{D deuterium capture}{Detailed caption reaction}
 
 At low-energies as far as $ \mathrm{10^{-3} \ MeV}  <  E<\mathrm{10^{-2} \ MeV}$, an exponential-like damping of the S-factor is observed. In fact, this  behavior could explained due to the electron screening effect \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002}.
 
-\graph{2H(p,gamma)3He}{D proton radiative capture }{Detailed caption reaction}
+
+GR85 \cite{greife_gorris_junker_rolfs_zahnow_1995}
+KR87a \cite{krauss_becker_trautvetter_rolfs_brand_1987}
+LE06a \cite{leonard_karwowski_brune_fisher_ludwig_2006}
+RA02 \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002}
+SC72 \cite{schulte_cosack_obst_weil_1972}
+TU11 \cite{tumino_spitaleri_mukhamedzhanov_typel_aliotta_burjan_delsanto_kiss_kroha_hons_et_2011}
+
+\graph{2H(d,p)3H-screening-exp5-poly5-exclude}{Screening effect $\ddexchange$ reaction}{Polynomial fits to the experimental data with the consideration of the screening effect. The curve fit labeled as \textit{screening-fit} is obtained by taken into account all data points, \textit{screening-exclude} is fitted without data from the RA02 and GR95 references and by fixing $U_e = 309\mathrm{eV}$, \textit{screening-exclude-fit} is obtained without data from the RA02 and GR95 references and by fitting $U_e = 250 \pm 10 \mathrm{eV}$, and \textit{screening-RAO2} is the fitting curve of  \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002}. All the experimental points were presented in Figure \ref{fig:2H(d,p)3H}.}
+
+
+\graphWrapper{
+	\subGraph{2H(p,gamma)3He-poly12345-bounds}{Polynomial fits with constraints.}
+	\subGraph{2H(p,gamma)3He-exp12345}{Exponential fits.}
+	\subGraph{2H(p,gamma)3He-selected-exp5-poly45}{Selected fits.}[1]
+}
+{2H(p,gamma)3He}{Polynomial and exponential fits $\dRadiativeCapture$ reaction}{Empirical formulas fitted to the S-factor for the $\dRadiativeCapture$ reaction. In panels a) and b) polynomial and exponential fits up to fifth order are presented respectively.  In particular, the fit parameters used for the graphs in panel a) were constrained. Additionally, in panel c), the best selected fits are visualized. The black points are related with experimental data which was taken form different sources.}
+
 
 S-factor curve for the low energy regime in Figure \ref{fig:2H(p,gamma)3He}.
 
-Exponential fit does not converge as desired.
+Exponential fit does not converge as desired at low-energies.
+
+CA02 \cite{casella_costantini_lemut_limata_bonetti_broggini_campajola_corvisiero_cruz_donofrio_et_2002}
+FE65 \cite{fetisov_gorbunov_varfolomeev_1965}
+GE67 \cite{geller_muirhead_cohen_1967}
+GR62 \cite{griffiths_larson_robertson_1962}
+MA97 \cite{ma_karwowski_brune_ayer_black_blackmon_ludwig_viviani_kievsky_schiavilla_et_1997}
+SC96 \cite{schmid_viviani_rice_chasteler_godwin_kiang_kiang_kievsky_laymon_prior_et_1996}
+WA63 \cite{warren_erdman_robertson_axen_macdonald_1963}
+WO67 \cite{wolfli_bosch_lang_muller_marmier_1967}
+
+
+\graph{12C12C}{Potential model prediction $\mathrm{{}^{12}C + {}^{12}C}$ reaction }{Astrophysical S-factor prediction for the $\Cfusion$ reaction as parametrized in the Yakovlev et. al analytical potential model \cite{yakovlev_beard_gasques_wiescher_2010}. Experimental data points were taken from different sources.}
+
+Becker1981  \cite{becker_kettner_rolfs_trautvetter_1981}
+Fruet2020 \cite{fruet_courtin_heine_jenkins_adsley_brown_canavan_catford_charon_curien_et_2020}
+Spillane2007  \cite{spillane_raiola_rolfs_schurmann_strieder_zeng_becker_bordeanu_gialanella_romano_et_2007}
+Tan2002  \cite{tan_boeltzig_dulal_deboer_frentz_henderson_howard_kelmar_kolata_long_et_2020}
+
+\graph{12C16O}{Potential model prediction $\mathrm{{}^{12}C + {}^{16}O}$ reaction }{Astrophysical S-factor prediction for the $\mathrm{{}^{12}C + {}^{16}O}$ reaction as parametrized in the Yakovlev et. al analytical potential model \cite{yakovlev_beard_gasques_wiescher_2010}. Experimental data points were taken from different sources.}
+
+Torilov21 \cite{torilov_maltsev_zherebchevsky_2021}
+
+\graphWrapper{
+	\subGraph{16O18O}{$\Ofusion[16][18]$ reaction.}
+	\subGraph{16O17O}{$\Ofusion[16][17]$ reaction.}
+	\subGraph{16O16O}{$\Ofusion[16][16]$ reaction.}[1]
+}
+{Oreactions}{Potential model prediction for a selection of oxygen fusion reactions.}{Potential model prediction for a selection of oxygen fusion reactions. In panels a), b) and c) are presented the  Yakovlev et. al prediction for the S-factor of the $\Ofusion[16][18]$, $\Ofusion[16][17]$ and $\Ofusion$ reactions respectively. Additionally, in panel c), the \textit{SaoPablo} entry corresponds with the predictions made in \cite{yakovlev_beard_gasques_wiescher_2010} which were obtained by using the São Pablo potential model. Experimental data points were retrieved from various papers.}
+
+Thomas86 \cite{thomas_chen_hinds_meredith_olson_1986}
+Duarte2015 \cite{duarte_gasques_oliveira_zagatto_chamon_medina_added_seale_alcantara-nunez_rossi_et_2015}
+SaoPablo \cite{yakovlev_beard_gasques_wiescher_2010}
+Spinka1974 \cite{spinka_winkler_1974}
+
+\ref{fig:Oreactions} 
+\ref{sfig:16O16O} 
+\ref{sfig:16O17O} 
+\ref{sfig:16O18O} 
 
 
 \section{Resonant reactions} \label{sec:resonant}
-Breit-Wigner. Single channel approximation.
 
-$\mathrm{{}^{7}{Be} + p \rightarrow \gamma +  {}^{8}{B} } $ and $\mathrm{{}^{13}{C} + p  \rightarrow \gamma +  {}^{14}{N}} $
+It is frequent to find sharp peaks in the S-factor values of some nuclear reactions. The existence of these fluctuations usually suggest the presence of  resonant phenomena. In particular, each peak is characterized by additional variables like its height, width and energy center. Then, the non-resonant astrophysical S-factor predictions of section \ref{sec:nonResonant} shall be modified.
+
+A first apporach towards the description of resonances Breit-Wigner. Single channel approximation.
+
+$\mathrm{{}^{7}{Be}(p, \gamma){}^{8}{B} } $ and $\mathrm{{}^{13}{C}(p, \gamma){}^{14}{N}} $
 
 A compilation of additional R-matrix treatment is given by \cite{descouvemont_adahchour_angulo_coc_vangioni-flam_2004}.
 
 \subsection{Calculation considerations} \label{sub:considerationsResonant}
+
+Breit-Wigner empirical formula was used for initial fitting. 
+
 \subsection{Results and analysis} \label{sub:resultsAnalysisResonant}
 
-\graph{7Be(p,gamma)8B}{7Be radiative capture}{Detailed 7Be radiative capture}
+Background estimation with non-resonant fits.
 
-A single resonance with a peak close to $E$ = 0.7 MeV is observed in Figure \ref{fig:7Be(p,gamma)8B}. Then, in order to model the single resonance, a Breit-Wigner fit was performed.
+\graphWrapper{
+	\subGraph{7Be(p,gamma)8B-poly}{Polynomial fits.}
+	\subGraph{7Be(p,gamma)8B-exp}{Exponential fits.}
+	\subGraph{7Be(p,gamma)8B-BW-exp1-poly1}{Selected fits.}[1]
+}
+{7Be(p,gamma)8B-parts}{Background and resonance fits for the $\BeRadiativeCapture$ reaction}{Empirical formulas fitted to background of the S-factor for the $\BeRadiativeCapture$ reaction. In panels a) and b) polynomial and exponential fits up to sixth order are presented respectively. Additionally, in panel c), the most simple and accurate fits, in this case exp1 and poly1, were selected. In addition, the \textit{BW} labeled curve corresponds to a Breit-Wigner fit for the resonance.  The black points are related with experimental data which was taken form different sources.}
+
+
+\graph{7Be(p,gamma)8B-background-exp1-poly1}{Joint resonant and non-resonant fit for the $\BeRadiativeCapture$ reaction}{Empirical fit for the $\BeRadiativeCapture$ reaction. In this graph, the resonant contribution, as modeled with a Breit-Wigner, was added to the non-resonant background estimation, which was modeled with first order polynomial and exponential formulas.}
+
+BA03 \cite{baby_bordeanu_goldring_hass_weissman_fedoseyev_koster_nir-el_haquin_gaggeler_weinreich_et_2003}
+JU03 \cite{junghans_mohrmann_snover_steiger_adelberger_casandjian_swanson_buchmann_park_zyuzin_et_2003}
+JU10 \cite{junghans_snover_mohrmann_adelberger_buchmann_2010}
+SC06 \cite{schumann_typel_hammache_summerer_uhlig_bottcher_cortina_forster_gai_geissel_et_2006}
+
+A single resonance with a peak close to $E$ = 0.7 MeV is observed in Figure \ref{fig:7Be(p,gamma)8B-background-exp1-poly1}. Then, in order to model the single resonance, a Breit-Wigner fit was performed.
 
 
 However, as it is visualized in S-factor dependence, this fit does not account for the entire behavior of the experimental points far from the resonance. Consequently, the theoretical prediction is modified to improve the modeling of the non-resonant part of the S-factor.
 
 Additionally, an increment of the background, namely the non-resonant part of the S-factor, is present.
 
-\graph{13C(p,gamma)14N}{13C radiative capture}{Detailed 13C radiative capture} 
+\graph{13C(p,gamma)14N-BW}{Resonance fit of the $\CRadiativeCapture$ reaction}{Breit-Wigner fit for the S-factor of the resonant $\CRadiativeCapture$ reaction. The experimental data points were taken from various sources.} 
+
+KI94 \cite{king_azuma_vise_gorres_rolfs_trautvetter_vlieks_1994}
+WO52 \cite{woodbury_fowler_1952}
 
 
-A resonance with a peak close to $E$ = 0.6 MeV is observed in the S-factor data presented of Figure \ref{fig:13C(p,gamma)14N}. In order to model this behavior, a Breit-Wigner fit was initially performed.  \\
+A resonance with a peak close to $E$ = 0.6 MeV is observed in the S-factor data presented of Figure \ref{fig:13C(p,gamma)14N-BW}. In order to model this behavior, a Breit-Wigner fit was initially performed.  \\
 
 
-Despite the global correspondence between the experimental data and the predictions of the fit, the resonant behavior does not entirely explain the shape of the S-factor data. This discrepancy specially  occurs far from the resonance peak at low energies. In order to improve the prediction, the non-resonant contribution to the S-factor needs to be included. 
+Despite the global correspondence between the experimental data and the predictions of the fit, the resonant behavior does not entirely explain the shape of the S-factor data. This discrepancy specially  occurs far from the resonance peak at low energies. In order to improve the prediction, the non-resonant contribution to the S-factor needs to be included. \\
 
 In a first approach, the non-resonant background is modeled empirically. In particular, the polynomial and exponential expansion was used.
 
+\graphWrapper{
+	\subGraph{13C(p,gamma)14N-BW-residuals-poly1234}{Polynomial fits.}
+	\subGraph{13C(p,gamma)14N-BW-residuals-exp1234}{Exponential fits.}
+	\subGraph{13C(p,gamma)14N-BW-residuals-exp1-poly1}{Selected fits.}[1]
+}
+{13C(p,gamma)14N-BW-residuals}{Background estimation for the $\CRadiativeCapture$ reaction}{Empirical formulas fitted to background of the S-factor for the $\CRadiativeCapture$ reaction. The background was quantified with the residuals of the Breit-Wigner fit of Figure \ref{fig:13C(p,gamma)14N-BW}.}
+
+
 The correspondence between the joint resonant and non-resonant prediction with experimental data at low energies improved at low energies. However, at energies above the resonance peak, the fit overestimated the S-factor. 
 
-This difference could be explained due to particularities of the physical phenomena underlying the $\mathrm{{}^{13}C(p, \gamma)^{14}N}$ reaction. In fact, the S-factor values presented in Figure \ref{fig:13C(p,gamma)14N} corresponds to the sum of different channels associated with non-excited and excited states of  $\mathrm{{}^{14}N}$ \cite{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}. This means that the theoretical prediction should consider the transitions to all possible states of the reactants and product nuclei.
+\graph{13C(p,gamma)14N-background-exp12-poly12}{Empirical fit of the $\CRadiativeCapture$ reaction}{Empirical fit for the S-factor of the resonant $\CRadiativeCapture$ reaction. The resonant part was estimated with a BW fit and the non-resonant background was fitted with exponential and polynomial with first and second order formulas. Both contributions were added.} 
 
-\graph{C12C12}{C12 + C12 reaction}{Detailed 12C + 12C reaction}
+This difference could be explained due to particularities of the physical phenomena underlying the $\mathrm{{}^{13}C(p, \gamma)^{14}N}$ reaction. In fact, the S-factor values presented in Figure \ref{fig:13C(p,gamma)14N-BW} corresponds to the sum of different channels associated with non-excited and excited states of  $\mathrm{{}^{14}N}$ \cite{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}. This means that the theoretical prediction should consider the transitions to all possible states of the reactants and product nuclei.
 
 
 The $\Cfusion$ channel have various resonances. These resonances could be explained from the Trojan Horse method or other alternative microscopical methods.
