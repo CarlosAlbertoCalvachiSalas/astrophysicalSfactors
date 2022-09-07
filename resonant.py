@@ -5,6 +5,8 @@ from sfactors.Resonant import *
 from sfactors.nonResonant import * 
 from sfactors.Plots.reactionPlot import *
 
+from sfactors import FILE_PATH
+
 rp7Bep = ReactionPlot('7Be','p','gamma','8B')
 rp7Bep.fit(polynomial1, color = 'grey', label = 'poly1')
 rp7Bep.fit(polynomial2, color = 'dodgerblue', label = 'poly2')
@@ -12,6 +14,18 @@ rp7Bep.fit(polynomial3, color = 'chocolate', label = 'poly3', p0 = [18.31552157,
 rp7Bep.fit(polynomial4, color = 'seagreen', label = 'poly4', p0 = [18.31552157,8.04220547,-0.21736566, 0, 0])
 rp7Bep.fit(polynomial(5), color = 'darkorange', label = 'poly5', p0 = [18.31552157,8.04220547,-0.21736566, 0, 0, 0])
 rp7Bep.fit(polynomial(6), color = 'violet', label = 'poly6',  p0 = [18.31552157,8.04220547,-0.21736566, 0, 0, 0, 0])
+rp7Bep.setTags('poly')
+rp7Bep.save()
+rp7Bep.show()
+
+rp7Bep = ReactionPlot('7Be','p','gamma','8B')
+rp7Bep.fit(exponential1, color = 'grey', label = 'exp1')
+rp7Bep.fit(exponential2, color = 'dodgerblue', label = 'exp2')
+rp7Bep.fit(exponential3, color = 'chocolate', label = 'exp3', p0 = [18.31552157,8.04220547,-0.21736566, 0])
+rp7Bep.fit(exponential4, color = 'seagreen', label = 'exp4', p0 = [18.31552157,8.04220547,-0.21736566, 0, 0])
+rp7Bep.fit(exponential(5), color = 'darkorange', label = 'exp5', p0 = [18.31552157,8.04220547,-0.21736566, 0, 0, 0])
+rp7Bep.fit(exponential(6), color = 'violet', label = 'exp6',  p0 = [18.31552157,8.04220547,-0.21736566, 0, 0, 0, 0])
+rp7Bep.setTags('exp')
 rp7Bep.save()
 rp7Bep.show()
 
@@ -22,37 +36,30 @@ rp7Bep.fit(breitWigner, p0 = [110, 0.65, 0.08], Emin = 0.5, Emax = 0.8, Smin = 3
 #plotFuncOverData(lambda E:  breitWignerBackground(E, 110, 0.65, 0.08, 19.09067254, 0.30103139), rp7Bep.E, rp7Bep.S)
 rp7Bep.fit(exponential1, color = 'green', label = 'exp1')
 rp7Bep.fit(polynomial1, color = 'grey', label = 'poly1')
+rp7Bep.setTags(['BW', 'exp1', 'poly1'])
 rp7Bep.save()
 rp7Bep.show()
 
 rp7Bep = ReactionPlot('7Be','p','gamma','8B')
 rp7Bep.fit(breitWignerBackground1, p0 = [110, 0.65, 0.08, 19.09067254, 0.30103139], color = 'blue', label = 'exp+BW')
 rp7Bep.fit(rmatrixPolynomial1, p0 = [110, 0.65, 0.08, (0.08**2/4), 19.09067254, 0.30103139], color = 'red', label = 'poly+BW')
+rp7Bep.setTags(['background', 'exp1', 'poly1'])
+rp7Bep.save()
 rp7Bep.show()
 
 
 rp13Cp = ReactionPlot('13C','p','gamma','14N')
 #plotFuncOverData(lambda E: breitWigner(E, 2.03956298, 0.51380586, 0.0325387), rp7Bep.E, rp7Bep.S)
 rp13Cp.fit(breitWigner, p0 = [1, 0.5, 0.2], color = 'red', label = 'BW')
-rp13Cp.save()
+rp13Cp.setTags(['BW'])
+fileName = rp13Cp.save()
 rp13Cp.show()
 
+#print(fileName)
 
-plt.scatter(rp13Cp.E,rp13Cp.residuals)
-plotFitFunc(exponential1, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00], label = 'exp1')  
+plt.scatter(rp13Cp.E,rp13Cp.residuals, s=10, color = 'black', label = 'residuals')
 plotFitFunc(polynomial1, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00], color = 'red', label = 'poly1')  
-#rp13Cp.fit(exponential1, color = 'green', label = 'exp', Emax = 0.44)
-plt.title('Residuals BW fit')
-plt.ylabel('S(MeV-b)')
-plt.legend()
-plt.xlabel('E(MeV)')
-plt.yscale('log')
-plt.show()
-
-
-plt.scatter(rp13Cp.E,rp13Cp.residuals)
-plotFitFunc(polynomial1, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00], color = 'red', label = 'poly1')  
-plotFitFunc(polynomial2, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00, 0], color = 'black', label = 'poly2')  
+plotFitFunc(polynomial2, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00, 0], color = 'darkturquoise', label = 'poly2')  
 plotFitFunc(polynomial3, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00, 0, 0], color = 'seagreen', label = 'poly3')  
 plotFitFunc(polynomial4, rp13Cp.E, rp13Cp.residuals, color = 'grey', label = 'poly4')  
 # p0 = [2.49185090e-03,7.81050299e+00, 0, 0, 0],
@@ -64,11 +71,12 @@ plt.ylabel('S(MeV-b)')
 plt.xlabel('E(MeV)')
 plt.legend()
 plt.yscale('log')
+plt.savefig(FILE_PATH + fileName + '-residuals-poly1234.eps')
 plt.show()
 
-plt.scatter(rp13Cp.E,rp13Cp.residuals)
+plt.scatter(rp13Cp.E,rp13Cp.residuals, s=10, color = 'black', label = 'residuals')
 plotFitFunc(exponential1, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00], color = 'red', label = 'exp1')  
-plotFitFunc(exponential2, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00, 0], color = 'black', label = 'exp2')  
+plotFitFunc(exponential2, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00, 0], color = 'darkturquoise', label = 'exp2')  
 plotFitFunc(exponential3, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00, 0, 0], color = 'seagreen', label = 'exp3')  
 plotFitFunc(exponential4, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00, 0, 0, 0], color = 'grey', label = 'exp4')  
 # p0 = [2.49185090e-03,7.81050299e+00, 0, 0, 0],
@@ -80,6 +88,21 @@ plt.ylabel('S(MeV-b)')
 plt.xlabel('E(MeV)')
 plt.legend()
 plt.yscale('log')
+plt.savefig(FILE_PATH + fileName + '-residuals-exp1234.eps')
+plt.show()
+
+plt.scatter(rp13Cp.E,rp13Cp.residuals,s= 10, color = 'black', label = 'residuals')
+plotFitFunc(exponential1, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00], label = 'exp1')  
+plotFitFunc(polynomial1, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00], color = 'red', label = 'poly1')  
+plotFitFunc(exponential2, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00, 0], color = 'green', label = 'exp2')  
+plotFitFunc(polynomial2, rp13Cp.E, rp13Cp.residuals, p0 = [2.49185090e-03,7.81050299e+00, 0], color = 'magenta', label = 'poly2')  
+#rp13Cp.fit(exponential1, color = 'green', label = 'exp', Emax = 0.44)
+plt.title('Residuals BW fit')
+plt.ylabel('S(MeV-b)')
+plt.legend()
+plt.xlabel('E(MeV)')
+plt.yscale('log')
+plt.savefig(FILE_PATH + fileName + '-residuals-exp1-poly1.eps')
 plt.show()
 
 
@@ -94,10 +117,10 @@ rp13Cp.fit(rmatrixPolynomial2, color = 'darkorange', p0 = [2.03956298,0.51380586
 #plotFitFunc(breitWignerBackground2, rp13Cp.E, rp13Cp.S, p, color = 'fuchsia', label = 'exp6')  
 #plotFuncOverData(lambda E: breitWignerBackground2(E, *[2.03956298,0.51380586,0.03253878,-0.00203961,0.06281975,-0.06971001] ), rp13Cp.E, rp13Cp.S, color = 'forestgreen', label = 'exp2+BW')
 #plotFuncOverData(lambda E: rmatrixPolynomial2(E, *[2.03956298,0.51380586,0.03253878, (0.03253878**2/4),2.92356824e-03,6.04883663e+00,-6.52640185e+00] ), rp13Cp.E, rp13Cp.S, color = 'darkorange', label = 'poly2+BW')
-
+plt.ylim(bottom=1E-3)
+rp13Cp.setTags(['background', 'exp12', 'poly12'])
+rp13Cp.save()
 rp13Cp.show()
-
-
 
 
 
