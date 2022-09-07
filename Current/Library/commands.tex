@@ -4,7 +4,6 @@
 
 }
 
-
 \newcommand{\graph}[3]{
 	
 \begin{figure}[H]
@@ -16,14 +15,95 @@
 
 }
 
+
 \newcommand{\radiativeCapture}[1][p]{
 	(#1, \gamma)
 }
 
 \newcommandx*{\Cfusion}[2][1=12, 2=12]{
-	\mathrm{C{}^{#1} +  C{}^{#2}}
+	\mathrm{{}^{#1}C +  {}^{#2}C}
 }
 
 \newcommandx*{\Ofusion}[2][1=16, 2=16]{
-	\mathrm{O{}^{#1} +  O{}^{#2}}
+	\mathrm{{}^{#1}O +  {}^{#2}O}
+}
+
+\newcommand{\ddexchange}{\mathrm{{}^{2}H(d, p){}^{3}H}}
+\newcommand{\dRadiativeCapture}{\mathrm{{}^{2}H(p, \gamma){}^{3}He}}
+\newcommand{\BeRadiativeCapture}{\mathrm{{}^{7}Be(p, \gamma){}^{8}B}}
+\newcommand{\CRadiativeCapture}{\mathrm{{}^{13}C(p, \gamma){}^{14}N}}
+
+\newcommandx*{\subGraph}[3][3 = 0]{
+	\ifnumodd{#3}
+	{\begin{subfigure}[b]{0.90\linewidth}
+			\centering 
+			\includegraphics[width=\linewidth]{Graphs/#1}
+			\caption{#2\label{sfig:#1}}
+	\end{subfigure}}
+	{\begin{subfigure}[b]{0.48\linewidth}
+			\centering 
+			\includegraphics[width=\linewidth]{Graphs/#1}
+			\caption{#2\label{sfig:#1}}
+	\end{subfigure}}
+}
+
+
+\newcommand{\graphWrapper}[4]{
+	\begin{figure}[H]
+		\centering
+		#1
+		\caption[#3]{#4}
+		\label{fig:#2}
+	\end{figure}
+}
+
+\newcommand{\multiGraphs}[4]{
+	\newcounter{n}
+	\newcounter{m}
+	\newcounter{l}
+	\newcounter{a}
+	\newcounter{b}
+
+	\setcounter{n}{0}
+	\setcounter{m}{0}
+	\setcounter{l}{0}
+	\setcounter{a}{0}
+	\setcounter{b}{0}
+	
+	
+	\def \textSubFigCaption {}
+	
+	
+	\foreach \x in #1{
+		\stepcounter{m}
+	}
+	
+	
+	
+	\begin{figure}[H]
+		\centering
+		\foreach \x in #1{
+			\stepcounter{n}
+			%\foreach \y in \x {\stepcounter{a}\ifnumodd{\thea}{\y}{}}
+			%\foreach \y in \x {\stepcounter{b}\ifnumodd{\theb}{}{\y}}
+			%\ifthenelse{\then = \them \AND \isodd{\them}}{1}{0}
+						\ifthenelse{\then = \them \AND \isodd{\them} }{\begin{subfigure}[b]{0.90\linewidth}}{\begin{subfigure}[b]{0.45\linewidth}}
+					\centering
+					\foreach \y in \x {
+						\stepcounter{l}
+						\ifnumodd{\thel}{\includegraphics[width=\linewidth]{Graphs/\y.eps}}
+						{\caption{\y}}
+					}
+				\end{subfigure}
+				\setcounter{l}{0}
+				\foreach \y in \x {
+					\stepcounter{l}
+					\ifnumodd{\thel}{\label{sfig:\y}}{}
+				}
+			%\subGraph{16O18O}{$\Ofusion[16][18]$ reaction.}
+			
+		}
+		\caption[#3]{#4}
+		\label{fig:#2}
+	\end{figure}
 }
