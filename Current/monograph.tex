@@ -16,18 +16,17 @@
 \usepackage{epstopdf}
 \usepackage{bold-extra}
 \usepackage{caption}
-\usepackage{subcaption}
+\usepackage{subcaption}	
 \usepackage[T1]{fontenc}
 \usepackage{xargs}
 \usepackage{etoolbox}
+\usepackage{multirow}
 
 \bibliographystyle{unsrt} 
 
 \setlength\parindent{0pt}
 
 \begin{document}
-	
-
 
 		\begin{titlepage}
 		\centering
@@ -107,7 +106,7 @@ where $Z$, $A$ are the atomic and mass number respectively.
 
 \input{Figures/sphere.tex}
 
-Each nucleus is compound of a finite number of proton and neutrons. In addition, 
+In addition, 
 
 Elementary nuclear structure 
 -	Atomic nuclei are bond states of nucleons 
@@ -257,13 +256,15 @@ Splitting
 
 \input{Figures/splitting.tex}
 
-\subsection{Quantum transitions} \label{sub:quantumTransitions}
+%\subsection{Quantum transitions} \label{sub:quantumTransitions}
 
 The changes of state that nuclei exhibit obey certain rules. In particular, this selection rules consider angular momentum conservation. 
 
 \input{Figures/transitions.tex}
 
 Selection rules. Electromagnetic interaction and resonances \cite{sasaki_kawano_stetcu_2022}.
+
+\subsection{Angular momentum}  \label{sub:quantumAngularMomentum}
 
 \section{Nuclear structure} \label{sec:nuclearStructure}
 
@@ -316,6 +317,7 @@ Spin orbit coupling rules the energy levels of the nucleons.  \\
 \input{Figures/nuclearLevels.tex}
 
 
+\subsection{Nuclear levels and transitions}  \label{sub:nuclearLevelsTransitions}
 
 
 \section{Nuclear reactions} \label{sec:nuclearReactions}
@@ -508,7 +510,7 @@ There is even a CNO III cycle, which is far more uncommon.
 brig
 This branch is less dominant than the first branch.
 
-\subsection{Medium heavy nuclei reactions} \label{sub:mediumHeavyReactions}
+\subsection{Medium heavy fusion reactions} \label{sub:mediumHeavyReactions}
 
 These reactions concern nuclei with $A < 28$. Examples of this kind of reaction include the $\mathrm{{}^{12}C + {}^{12}C}$,  $\mathrm{{}^{12}C + {}^{16}O}$ and the  $\mathrm{{}^{16}O + {}^{16}O}$ fusion reactions. Most of these reactions result in different channels. \\ 
 
@@ -594,7 +596,7 @@ This reaction is essential since the $\mathrm{{}^{56}Fe}$ nucleus has the maximu
 \end{equation}
 
 
-\subsection{The s and p processes} \label{sub:spProcesses}
+\subsection{The s and r processes} \label{sub:srProcesses}
 
 There exists the s and  the r processes. Each permits to form heavier nuclear elements products. Now, there are aspects of the particularities of the production of the nuclei that  are currently  unknown \\
 
@@ -611,6 +613,8 @@ Electron degeneracy prevents the white dwarf to collapse and the neutron degener
 Indicate that there exists different channels of production depending on the existence of neutron capture or fission products. Additionally, explain the needed conditions in order to those processes to occur. \\ 
 
 If mass increases further, there is no place to any degeneracy compensation so the star would collapse to a black hole.
+
+\subsection{The p and sp processes} \label{sub:pProcesses}
 
 \section{Active research topics} \label{sec:activeResearch}
 
@@ -638,6 +642,35 @@ Microscopic models are based on first principles and usually require assumptions
 	H = \sum_{k} T_k + \sum_{k} V_k (r) + \sum_{k \neq j} V_{kj}(r).
 \end{equation}
 
+Modern theories \cite{marcucci_nollett_schiavilla_wiringa_2006}
+
+\subsection{\textit{Ab initio} models} \label{sub:microscopical_abinitio}
+
+Stats from first principles without prior empirical or phenomenological assumptions.
+
+Ab initio \cite{neff_feldmeier_langanke_2011}
+\cite{navratil_quaglioni_hupin_romero-redondo_calci_2016}
+\cite{navratil_bertulani_caurier_2006}
+\cite{atkinson_navratil_hupin_kravvaris_quaglioni_2022}
+tensor force \cite{arai_aoyama_suzuki_descouvemont_baye_2013}
+
+
+\subsection{Many body models}  \label{sub:microscopical_manybody}
+Non-local calculations. Multi-body calculations. \\
+
+Also, nuclei deformation can be considered in models. For example, there are models with no-core shell. \\
+
+Three body \cite{grigorenko_danilin_efros_shulgina_zhukov_1998}
+
+No core shell model \cite{dohet-eraly_navratil_quaglioni_horiuchi_hupin_raimondi_2016}
+
+Hauser-Feshbach \cite{jayatissa_avila_rehm_talwar_mohr_auranen_chen_gorelov_hoffman_jiang_et_2022}
+
+Hartree-Fock \cite{leanh_minhloc_2022}
+
+
+\subsection{Cluster models} \label{sub:microscopical_cluster}
+
 On the other, clusters consider the system of interactant nuclei as a whole. In particular, there are models based on \textit{ab initio} assumptions about a particular set of nuclei.  \\
 
 $NN$ and $NNN$ interactions.
@@ -658,64 +691,56 @@ The mass and nuclear density of the nuclei can be modeled as:
 	\rho(r) = \frac{\rho_0}{1 + \exp{\left(\frac{r - R}{a}\right)}}.
 \end{equation} 
 
-Non-local calculations. Multi-body calculations. \\
-
-Also, nuclei deformation can be considered in models. For example, there are models with no-core shell. \\
-
-More sophisticated models use effective field theory for calculations. The general principle of these theories is the low-energy approximate solution of the physics described in quantum chromodynamics. \\
-
-\begin{equation} \label{eq:micro_lagrangian_nucleons}
-	\mathcal{L} = N^{\dagger}i\hbar\gamma^\mu\partial_\mu N + ... .
-\end{equation}
-
-Diagrams associated with the processes of low-energy nuclear force. Mediators are mesons like pions. \\
-
-Modern theories \cite{marcucci_nollett_schiavilla_wiringa_2006}
-
-Three body \cite{grigorenko_danilin_efros_shulgina_zhukov_1998}
-
-Ab initio \cite{neff_feldmeier_langanke_2011}
-\cite{navratil_quaglioni_hupin_romero-redondo_calci_2016}
-\cite{navratil_bertulani_caurier_2006}
-\cite{atkinson_navratil_hupin_kravvaris_quaglioni_2022}
-tensor force \cite{arai_aoyama_suzuki_descouvemont_baye_2013}
-
-No core shell model \cite{dohet-eraly_navratil_quaglioni_horiuchi_hupin_raimondi_2016}
 
 Shell model \cite{dong_wang_michel_ploszajczak_2022}
 \cite{tazawa_1974}
 
-Effective field theory \cite{sadeghi_khalili_godarzi_2013}
-\cite{higa_premarathna_rupak_2022}
-
 Multicluster \cite{dufour_descouvemont_1997}
 \cite{simenel_keser_umar_oberacker_2013}
-
-Hauser-Feshbach \cite{jayatissa_avila_rehm_talwar_mohr_auranen_chen_gorelov_hoffman_jiang_et_2022}
 
 Break up effects \cite{shubhchintak_descouvemont_2022}
 
 Linear chain \cite{baba_taniguchi_kimura_2022}
 
-Hartree-Fock \cite{leanh_minhloc_2022}
-
-
 \section{Matrix models}  \label{sec:matrixModels}
 
-The matrix models permit the modeling of resonances with an appropiate fitting of free parameters. In particular, the main formalism in this approach is the R-matrix model. \cite{lane_thomas_1958}.
+The matrix models permit the modeling of resonances with an appropriate fitting of free parameters. In particular, the main formalism in this approach is the R-matrix model \cite{lane_thomas_1958} \cite{descouvemont_baye_2010}. \\
+
+On the other hand, there are matrix models with no free parameters. For example, the K-matrix model predicts the cross sections without including the channel radius, which is an arbitrary parameter required in the R-matrix calculations \cite{humblet_1990}. \\
+
+Finally, there is more than a single parametrization for matrix models \cite{brune_2002}. Usually the alternative formulations surge from the need to express the parameters of the model in order to facilitate the imposition of boundary conditions.  
+
+\subsection{Calculable R-matrix} \label{sub:rmatrix_calculable}
+
+The model includes free parameter $a$ which is called the radius channel. \\
 
 \begin{equation}  \label{eq:rmatrix_elements}
 	R_{cc'} = \sum_k {\frac{\gamma_{ck} \gamma_{c'k}}{E - E_k}}.
 \end{equation}
 
-The sum is over levels and the elements are parameterized as channels. 
+The sum is over levels and the elements are parameterized as channels.  \\
 
+Resonances arrives from poles. A description on the physical consideration of poles in the scattering (S-matrix) is given in \cite{ramirezjimenez_kelkar_2018}. \\
 
-\begin{equation} \label{eq:rmatrix_sfactor}
-	S(E) = S_r \frac{\Gamma^2/4}{(E-E_r + \Delta)^2 + (\Gamma/2)^2}.
-\end{equation}
+Applications of the R-matrix formalism to specific reactions:
 
-There is parameter $P(E)$ which is expressed as: 
+In primordial nucleosynthesis \cite{desouza_iliadis_coc_2019} big-bang 3He and several reactions \cite{sparta_pizzone_bertulani_hou_lamia_tumino_2020}. \\
+
+Bayesian fitting methods \cite{odell_brune_phillips_2022}.
+
+Litium detueron capture \cite{grineviciute_lamia_mukhamedzhanov_spitaleri_lacognata_2015}. \\
+
+10B proton non-radiative \cite{kolk_macon_deboer_anderson_boeltzig_brandenburg_brune_chen_clark_danley_et_2022} and similarly \cite{sieverding_randhawa_zetterberg_deboer_ahn_mancino_martinez-pinedo_hix_2022}. 10B radiative and resonances in 11C inverse kinematics \cite{kaur_guimaraes_zamora_assuncao_alcantara-nunez_delara_zevallos_ribeiro_lichtenthaler_pires_et_2022}.
+
+Alpha capture reactions of carbon \cite{schurmann_gialanella_kunz_strieder_2012}.  Hybrid potential/R-matrix \cite{sparenberg_2005}. \\ 13C alpha capture and 16O determination \cite{prusachenko_bobrovsky_bondarenko_bokhovko_gurbich_ketlerov_2022}.
+
+Proton capture carbon \cite{burtebaev_igamov_peterson_yarmukhamedov_zazulin_2008} for C12 and \cite{chakraborty_deboer_mukherjee_roy_2015} for C13 and \cite{genard_descouvemont_terwagne_2010} for the same reaction . \\
+
+15N capture in \cite{barker_2008} and 14N in \cite{angulo_champagne_trautvetter_2005}. also on 14N proton capture \cite{formicola_imbriani_costantini_angulo_bemmerer_bonetti_broggini_corvisiero_cruz_descouvemont_et_2004}.
+
+\subsection{Phenomenological R-matrix} \label{sub:rmatrix_phenomenological}
+
+The penetration factor parameter $P(E)$ which is expressed as: 
 
 \begin{equation} \label{eq:rmatrix_penetrationFactor}
 	P= \frac{\Gamma}{F_l^2 + G_l^2},
@@ -733,33 +758,25 @@ On the other hand, the phase shift is given by:
 	\delta = \delta_{\mathrm{HS}} + \delta_R.
 \end{equation}
 
-The model includes free parameter $a$ which is called the radius channel. \\
+An empirical formula obtained from the R-matrix formalism is given by:
 
-Resonances arrives from poles. A description on the physical consideration of poles in the scattering (S-matrix) is given in \cite{ramirezjimenez_kelkar_2018}.
+\begin{equation} \label{eq:rmatrix_sfactor}
+	S(E) = S_r \frac{\Gamma^2/4}{(E-E_r + \Delta)^2 + (\Gamma/2)^2}.
+\end{equation}
 
+\subsection{K-matrix} \label{sub:kmatrix}
 
-In primordial nucleosynthesis \cite{desouza_iliadis_coc_2019} big-bang 3He and several reactions \cite{sparta_pizzone_bertulani_hou_lamia_tumino_2020}. \\
-
-Bayesian fitting methods \cite{odell_brune_phillips_2022}.
-
-Litium detueron capture \cite{grineviciute_lamia_mukhamedzhanov_spitaleri_lacognata_2015}. \\
-
-10B proton non-radiative \cite{kolk_macon_deboer_anderson_boeltzig_brandenburg_brune_chen_clark_danley_et_2022} and similarly \cite{sieverding_randhawa_zetterberg_deboer_ahn_mancino_martinez-pinedo_hix_2022}. 10B radiative and resonances in 11C inverse kinematics \cite{kaur_guimaraes_zamora_assuncao_alcantara-nunez_delara_zevallos_ribeiro_lichtenthaler_pires_et_2022}.
-
-Alpha capture reactions of carbon \cite{schurmann_gialanella_kunz_strieder_2012}.  Hybrid potential/R-matrix \cite{sparenberg_2005}. \\ 13C alpha capture and 16O determination \cite{prusachenko_bobrovsky_bondarenko_bokhovko_gurbich_ketlerov_2022}.
-
-Proton capture carbon \cite{burtebaev_igamov_peterson_yarmukhamedov_zazulin_2008} for C12 and \cite{chakraborty_deboer_mukherjee_roy_2015} for C13 and \cite{genard_descouvemont_terwagne_2010} for the same reaction . \\
-
-15N capture in \cite{barker_2008} and 14N in \cite{angulo_champagne_trautvetter_2005}. also on 14N proton capture \cite{formicola_imbriani_costantini_angulo_bemmerer_bonetti_broggini_corvisiero_cruz_descouvemont_et_2004}.
-
-There is also the K-matrix model as an alternative of the R-matrix model \cite{humblet_1990}.
-
-Alternative formulation of R-matrix \cite{brune_2002}.
-
+There is also the K-matrix model as an alternative of the R-matrix model \cite{humblet_1990}. The advantage of this model with respect to the R-matrix is that the K-matrix does not include the channel radius as a free parameter.  Alternative formulation of R-matrix \cite{brune_2002}.
 
 \section{Potential models} \label{sec:potentialModels}
 
-The electromagnetic potential can be modeled as an uniform charged sphere potential. 
+Nuclei are considered as objects subject to effective interactions. These interactions are also modeled by effective potentials which account qualitatively for the nature of the underlying physics behind the nuclear reactions. In particular, different kind of potentials offer a particular shape of the interaction which make them suitable for the modeling of concrete reactions.
+
+\subsection{Effective potentials} \label{sub:potential_effective}
+
+The effective interaction between nuclei is referred as a composite effect of the electromagnetic and nuclear interactions.  \\
+
+The first interaction is considered due to the electromagnetic repulsion between the nuclei. In a first approach, the  substructure of the nuclei is ignored. Then, nuceli charged cloud is modeled as uniformly charged sphere. Therefore, the corresponding potential is given by:
 
 \begin{equation} \label{eq:potential_EM}
 	V_{\mathrm{EM}} = 	\left\{\begin{array}{l}
@@ -770,7 +787,10 @@ The electromagnetic potential can be modeled as an uniform charged sphere potent
 	\end{array}\right.
 \end{equation}
 
-In addition, in order to account for the nuclear force, there are several potentials. For instance, in a first approximation, there is the step potential.
+Secondly, in order to account for the nuclear force, an short-distance attractive potential is needed to be included. However, unlike the electromagnetic interaction, nuclear potentials might not be deduced  in a closed and fundamental form such as the expression given in \ref{eq:potential_EM}. Consequently, these  potentials are usually phenomenological and account for specific purposes. In fact, there is a an extent list of potentials available in literature which are used for modeling the interactions of different kind of reactions. \\
+
+ For instance, in a first approximation, there is the step potential.
+
 \begin{equation} \label{eq:potential_squareWell}
 	V_{\mathrm{SqW}} = -V_0\theta(r).
 \end{equation}
@@ -797,7 +817,6 @@ where $\xi$ is a free parameter of the model that accounts for the deviation fro
 
 uses the WKB approximation for estimating the wave function. Then, the astrophysical S-factor is determined by a phenomenological equation. \\
 
-
 \begin{equation}  \label{eq:potential_Yakovlev_psiWKB}
 	\Psi(E) = 2\pi\eta(E) + \Phi(E),
 \end{equation}
@@ -809,7 +828,6 @@ In order to the potential to be more realistic, a Woods-Saxon potential consider
 \begin{equation} \label{eq:potential_WoodsSaxon}
 	V_{\mathrm{WS}}(r) = \frac{V_0}{1 + \exp  \left({\frac{r-R}{a}}\right)},
 \end{equation}
-
 
 where $V_0$ represents the potential depth, $a$ the parametrization and $R$ a computed radius which is defined as: 
 
@@ -837,7 +855,6 @@ In the radiative capture reactions, cross sections are computed based on electro
 	\sigma_m = \sum_{k}{\langle k | \mathcal{O} | m \rangle} C_{klm}.		
 \end{equation}
 
-
 Double exponential potentials: 
 
 \begin{equation} \label{eq:potential_doubleExponential}
@@ -862,6 +879,40 @@ Yukawa potential  which includes screening effect.
 	V_{\mathrm{Y}} = -\frac{c}{4\pi\epsilon_0}e^{-\mu r}.
 \end{equation}
 
+\subsection{Calculations}  \label{sub:potential_calculations}
+
+The potentials just introduced are useful for the calculation of cross sections and, therefore, S-factors. The connection between potentials and cross sections depends on the kind of reaction to be modeled. In the general approach, cross sections are directly computed form wave functions,  which are numerically estimated from the numerical solution of the Schroödinger equation. \\
+
+On the other hand, in certain specific cases when the expressions of the potentials are not mathematically sophisticated, approximations can be made. In particular, WKB approximation offers a comprehensive approach towards handy estimation of the cross sections. 
+
+\subsection{Folding} \label{sub:potential_folding}
+
+During the previous discussion, mass and charge distributions were not considered in detail. However, with nuceli with higher mass, the intrinsic distribution of the mass and charge gains relevance in the reaction cross section estimation. In particular, mass and charge is usually concentrated at the center of the nuceli and there is a sharp drop of the mentioned variables in the surrounding of the radius. \\
+
+In order to account for this effect, an initial formula which accounts 
+
+Sao pablo \cite{chamon_2007}
+
+\begin{equation} \label{eq:potential_SaoPablo}
+	V_{\mathrm{SPP}} (r) = V_{\mathrm{F}} (r)e^{-4V^2/c^2}.
+\end{equation}
+
+
+\begin{equation} \label{eq:potential_SaoPablo_speed}
+	V^2 = \frac{2}{\mu} \left( E - V_{\mathrm{F}}(r) - V_{\mathrm{C}}(r) \right),
+\end{equation}
+
+where the reduced mass is $\mu$, the Coulomb potential is $V_{\mathrm{C}}(r)$ and the folding potential  $V_{\mathrm{F}}(r)$ is expressed as:
+
+
+\begin{equation} \label{eq:potential_SaoPablo_folding}
+	V_{\mathrm{F}}(r) = \int \int \rho_1(\vec r_1)  \rho_2(\vec r_2) \delta(\vec r - \vec r_1 +  \vec r_2) {d\vec{r}_1}  {d\vec{r}_2}.
+\end{equation}
+
+\input{Figures/foldingCoordinates.tex}
+
+\subsection{Non-locality}  \label{sub:potential_nonlocality}
+
 And, potentials with non-locality are also found in literature. For example, there is the São Pablo potential that accounts for the effect of non-local interactions between the interactant nuclei. \\
 
 Capture reaction review light nuclei\cite{ghasemi_sadeghi_2018}
@@ -882,27 +933,6 @@ p2H radiative capture \cite{dubovichenko_dzhazairov-kakhramanov_2009}
 11C radiative capture\cite{kabir_irgaziev_nabi_sagheer_2022}
 
 16O fusion \cite{diaz-torres_gasques_wiescher_2007} \\
-
-Sao pablo \cite{chamon_2007}
-
-
-\begin{equation} \label{eq:potential_SaoPablo}
-	V_{\mathrm{SPP}} (r) = V_{\mathrm{F}} (r)e^{-4V^2/c^2}.
-\end{equation}
-
-
-\begin{equation} \label{eq:potential_SaoPablo_speed}
-	V^2 = \frac{2}{\mu} \left( E - V_{\mathrm{F}}(r) - V_{\mathrm{C}}(r) \right),
-\end{equation}
-
-where the reduced mass is $\mu$, the Coulomb potential is $V_{\mathrm{C}}(r)$ and the folding potential  $V_{\mathrm{F}}(r)$ is expressed as:
-
-
-\begin{equation} \label{eq:potential_SaoPablo_folding}
-	V_{\mathrm{F}}(r) = \int \int \rho_1(\vec r_1)  \rho_2(\vec r_2) \delta(\vec r - \vec r_1 +  \vec r_2) {d\vec{r}_1}  {d\vec{r}_2}.
-\end{equation}
-
-\input{Figures/foldingCoordinates.tex}
 
 Optical model \cite{amer_penionzhkevich_2021}
 
@@ -928,24 +958,46 @@ $V_0(E)$
 Cross section deduced potential \cite{bass_1977} \cite{nandi_swami_gupta_kumar_chakraborty_manjunatha_2022}
 
 
+\section{Special models} \label{sec:specialModels}
 
+Models which do not fit in the previously presented categories.
+
+\subsection{Trojan Horse models} \label{sub:special_trojanHorse}
+
+It occurs in a two step reaction process as expressed in:
+
+\begin{equation}
+	A + B \rightarrow a + b \rightarrow a + (c + d),
+\end{equation}\label{eq: special_trojanHorse_reaction}
+
+where the first and second steps correspond to the $A + B \rightarrow a + b$ and $b \rightarrow c + d$ reactions respectively. Notice that the $b$ nucleus does not appear as a final product of the reaction as it is consumed in the second step. 
+
+\subsection{Effective field theories} \label{sub:special_effectiveField}
+
+Based on effective field theories. The general principle of these theories is that nuclear interactions correspond to low-energy approximate solutions of the physics described in quantum chromodynamics. \\
+
+\begin{equation} \label{eq:micro_lagrangian_nucleons}
+	\mathcal{L} = N^{\dagger}i\hbar\gamma^\mu\partial_\mu N + ... .
+\end{equation}
+
+Diagrams associated with the processes of low-energy nuclear force. Mediators are mesons like pions. \\
+
+Effective field theory \cite{sadeghi_khalili_godarzi_2013}
+\cite{higa_premarathna_rupak_2022}
+
+\subsection{Hybrid models} \label{sub:special_hybrid}
+
+These models include aspect of potential, microscopical and even R-matrix models. For example, there are models with clustering and effective potentials.
 
 \section{Empirical formulas} \label{sec:empiricalFormulas}
 
-%Explain the forces and interactions going on in a star. Highlight what makes a star stable.
-
-For resonant reactions, the Breit-Wigner formula
-
-\begin{equation} \label{eq:empirical_breitWigner}
-	S(E) = S_r \frac{\Gamma^2_r/4}{(E-E_r)^2 + (\Gamma_r/2)^2}.
-\end{equation}
-
 And some empirical formulas can be given. 
 
-On the other hand, non-resonant reactions S-factors can be calculated with polynomial interpolations and fits. 
+\subsection{Interpolations} \label{sub:empirical_interpolation}
+
+Non-resonant reactions S-factors can be calculated with polynomial interpolations and fits. 
 
 In particular, there is a polynomial expansion that is reported in literature to be useful. 
-
 
 \begin{equation} \label{eq:empirical_exponential}
 	S(E) = \exp{(g_0 + g_1E + g_2E^2 + g_3E^3 + ...)}.
@@ -957,14 +1009,32 @@ Also, more generic expansions are modeled by fitting a Laurent series expansion.
 	S(E) =\frac{ a_{-1}}{E} + a_0 + a_1 E + a_2 E^2 + ... \ .
 \end{equation}
 
-For some reactions, $a_{-1} = 0$, then they are described as a Taylor series expansion.
+For most of the reactions, $a_{-1} = 0$, since $S(E)$ should be smooth at very low energies. Therefore, the S-factor is  described as a Taylor series expansion.
 
 \begin{equation}  \label{eq:empirical_polynomial}
 	S(E) = a_0 + a_1E + a_2 E^2 + ... \ .
 \end{equation}
 
+\subsection{Fusion reactions formulas} \label{sub:empirical_fusion}
 
-On the other hand, empirical formulas can mix resonant and non-resonant terms. For example, consider the expression: 
+Fusion reactions, which is a more sophisticated model \cite{beard_afanasjev_chamon_gasques_wiescher_yakovlev_2010}.
+
+\begin{equation} \label{eq:empirical_yakovlev}
+	S(E) = \sum_{k=0}^{N} {a_kE^k} + \left(1 + \exp{\left(1 +  \frac{E - E_c}{D}\right)}\right)^{-1} \sum_{l=0}^{M} {b_lE^l}  .
+\end{equation}
+
+
+\subsection{Resonances and composite formulas} \label{sub:empirical_resonances}
+
+%Explain the forces and interactions going on in a star. Highlight what makes a star stable.
+
+For resonant reactions, the Breit-Wigner formula
+
+\begin{equation} \label{eq:empirical_breitWigner}
+	S(E) = S_r \frac{\Gamma^2_r/4}{(E-E_r)^2 + (\Gamma_r/2)^2}.
+\end{equation}
+
+This formulation permits empirical formulas to add resonant terms to the non-resonant estimation. Usually the resonant terms are added to background which is fitted to a non-resonant formula. For example, consider the expression: 
 
 \begin{equation}  \label{eq:empirical_hybridPolynomial}
 	S(E) =  \sum _{k = 0}^{N} {a_kE^k} + \sum_{l = 1}^{M} {\frac{\Gamma_l^2/4}{(E - E_l)^2 + \Gamma_l^2/4}},
@@ -982,11 +1052,6 @@ Applications in direct capture \cite{jennings_karataglidis_shoppa_1998}.  Exchan
 
 Charged particle collisions non-resonant \cite{ueda_sargeant_pato_hussein_2002} and resonant \cite{ueda_sargeant_pato_hussein_2004}. \\
 
-Fusion reactions, which is a more sophisticated model \cite{beard_afanasjev_chamon_gasques_wiescher_yakovlev_2010}.
-
-\begin{equation} \label{eq:empirical_yakovlev}
-	S(E) = \sum_{k=0}^{N} {a_kE^k} + \left(1 + \exp{\left(1 +  \frac{E - E_c}{D}\right)}\right)^{-1} \sum_{l=0}^{M} {b_lE^l}  .
-\end{equation}
 
 \chapter{S-factor calculations for selected reactions} \label{ch:sfactorCalculations}
 
@@ -1083,21 +1148,22 @@ Although Yakovlev et. al model is used for middle-heavy fusion reactions, is not
 	\subGraph{2H(d,p)3H-exp12345}{Exponential fits.}
 	\subGraph{2H(d,p)3H-exp5-poly5-best}{Best fits.}[1]
 }
-{2H(d,p)3H}{Polynomial and exponential fits $\ddexchange$ reaction}{Empirical formulas fitted to the S-factor for the  $\ddexchange$ reaction. In panel a), poly1, poly2, poly3, poly4, and poly5 represent fits to polynomials function from first order up to fifth order respectively.  Similarly, in panel b), exp1, exp2, exp3, exp4 and exp5 represent the exponential fit up to fifth order. Additionally, in panel c) the poly5-exclude graph corresponds to a poly5 like fit without data from RA02 and GR95. The black points are related with experimental data which was taken form different sources.}
+{2H(d,p)3H}{Polynomial and exponential fits $\ddexchange$ reaction}{Empirical formulas fitted to $\ddexchange$ reaction S-factor data. In panel a), poly1, poly2, poly3, poly4, and poly5 represent fits to polynomials from 1st to 5th order.  Similarly, in panel b), exp1, exp2, exp3, exp4 and exp5 represent exponential fits up to 5th order. Additionally, in panel c), poly5-exclude corresponds to a poly5 fit without data from RA02 and GR95. References to the sources of the black colored experimental points are given in Table \ref{table:light_nonResonant}. Fitting parameters values are given in Tables \ref{table:fitting_empirical_dd_poly} and \ref{table:fitting_empirical_dd_exp}.}
 
 %\graph{2H(d,p)3H}{D deuterium capture}{Detailed caption reaction}
 
-At low-energies as far as $ \mathrm{10^{-3} \ MeV}  <  E<\mathrm{10^{-2} \ MeV}$, an exponential-like damping of the S-factor is observed. In fact, this  behavior could explained due to the electron screening effect \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002}.
 
+At low-energies as far as $ \mathrm{10^{-3} \ MeV}  <  E<\mathrm{10^{-2} \ MeV}$, an exponential-like damping of the S-factor is observed. In fact, this  behavior could explained due to the electron screening effect \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002}. In particular, the enhancement factor $f$ for the S-factor is defined as \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002}: 
 
-GR85 \cite{greife_gorris_junker_rolfs_zahnow_1995}
-KR87a \cite{krauss_becker_trautvetter_rolfs_brand_1987}
-LE06a \cite{leonard_karwowski_brune_fisher_ludwig_2006}
-RA02 \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002}
-SC72 \cite{schulte_cosack_obst_weil_1972}
-TU11 \cite{tumino_spitaleri_mukhamedzhanov_typel_aliotta_burjan_delsanto_kiss_kroha_hons_et_2011}
+\begin{equation}\label{eq:screening_factor}
+	f = \frac{E}{E + U_e}\exp{\left(\frac{\pi \eta U_e}{E}\right)},
+\end{equation}
 
-\graph{2H(d,p)3H-screening-exp5-poly5-exclude}{Screening effect $\ddexchange$ reaction}{Polynomial fits to the experimental data with the consideration of the screening effect. The curve fit labeled as \textit{screening-fit} is obtained by taken into account all data points, \textit{screening-exclude} is fitted without data from the RA02 and GR95 references and by fixing $U_e = 309\mathrm{eV}$, \textit{screening-exclude-fit} is obtained without data from the RA02 and GR95 references and by fitting $U_e = 250 \pm 10 \mathrm{eV}$, and \textit{screening-RAO2} is the fitting curve of  \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002}. All the experimental points were presented in Figure \ref{fig:2H(d,p)3H}.}
+where $E$ is the center of mass energy, $\eta$ is the Sommerfeld parameter and $U_e$ is a parameter that quantifies the degree of enhancement of the S-factor. The sharp increase of the S-factor at low energies is explained by the shielding of the Coulomb potential produced by the electron cloud that surrounds the interacting nuclei \cite{assenbaum_langanke_rolfs_1987}. In particular, this dismissal of the strength of the potential reduces the Coluomb barrier. Therefore, as the tunneling probability increases, the cross-section for the reaction also increases. \\
+
+Additionally, the value of the $U_e$ parameter is usually obtained by fitting. An example of such fitting is found in the graphs of Figure \ref{fig:2H(d,p)3H-screening-exp5-poly5-exclude}.
+
+\graph{2H(d,p)3H-screening-exp5-poly5-exclude}{Screening effect $\ddexchange$ reaction}{Polynomial fits to experimental data with screening effect. The curve labeled as screening-all-fit is obtained by fitting $U_e$ with all data points, screening-only-RA02-fit is obtained only with RA02 data,  \textit{screening-Ue-theory} is calculated with $U_e$ fixed to the value given in RA02. The poly5-exclude fit of Figure \ref{fig:2H(d,p)3H} was used as the S-factor estimation without screening of the last three curves. Additionally, the screening-RAO2 curve presents the S-factor prediction made in the RA02 paper. Further details about the fitting parameters and their values are given in Table \ref{table:fitting_empirical_dd_screening}.}
 
 
 \graphWrapper{
@@ -1105,45 +1171,27 @@ TU11 \cite{tumino_spitaleri_mukhamedzhanov_typel_aliotta_burjan_delsanto_kiss_kr
 	\subGraph{2H(p,gamma)3He-exp12345}{Exponential fits.}
 	\subGraph{2H(p,gamma)3He-selected-exp5-poly45}{Selected fits.}[1]
 }
-{2H(p,gamma)3He}{Polynomial and exponential fits $\dRadiativeCapture$ reaction}{Empirical formulas fitted to the S-factor for the $\dRadiativeCapture$ reaction. In panels a) and b) polynomial and exponential fits up to fifth order are presented respectively.  In particular, the fit parameters used for the graphs in panel a) were constrained. Additionally, in panel c), the best selected fits are visualized. The black points are related with experimental data which was taken form different sources.}
+{2H(p,gamma)3He}{Polynomial and exponential fits $\dRadiativeCapture$ reaction}{Empirical formulas fitted to the S-factor for the $\dRadiativeCapture$ reaction. In panels a) and b) polynomial and exponential fits up to fifth order are presented respectively.  In particular, the fit parameters used for the graphs in panel a) were constrained. Additionally, in panel c), the best selected fits are visualized. The references to the experimental points are given in Table \ref{table:light_nonResonant}. The values of the fitting parameters are encountered in Tables \ref{table:fitting_empirical_dp_poly} and \ref{table:fitting_empirical_dp_exp}.}
 
 
 S-factor curve for the low energy regime in Figure \ref{fig:2H(p,gamma)3He}.
 
 Exponential fit does not converge as desired at low-energies.
 
-CA02 \cite{casella_costantini_lemut_limata_bonetti_broggini_campajola_corvisiero_cruz_donofrio_et_2002}
-FE65 \cite{fetisov_gorbunov_varfolomeev_1965}
-GE67 \cite{geller_muirhead_cohen_1967}
-GR62 \cite{griffiths_larson_robertson_1962}
-MA97 \cite{ma_karwowski_brune_ayer_black_blackmon_ludwig_viviani_kievsky_schiavilla_et_1997}
-SC96 \cite{schmid_viviani_rice_chasteler_godwin_kiang_kiang_kievsky_laymon_prior_et_1996}
-WA63 \cite{warren_erdman_robertson_axen_macdonald_1963}
-WO67 \cite{wolfli_bosch_lang_muller_marmier_1967}
+
+\graph{12C12C}{Potential model prediction $\mathrm{{}^{12}C + {}^{12}C}$ reaction }{Astrophysical S-factor prediction for the $\Cfusion$ reaction as parametrized in the Yakovlev et. al analytical potential model \cite{yakovlev_beard_gasques_wiescher_2010}. Experimental points references are presented in Table \ref{table:fusion}.}
 
 
-\graph{12C12C}{Potential model prediction $\mathrm{{}^{12}C + {}^{12}C}$ reaction }{Astrophysical S-factor prediction for the $\Cfusion$ reaction as parametrized in the Yakovlev et. al analytical potential model \cite{yakovlev_beard_gasques_wiescher_2010}. Experimental data points were taken from different sources.}
+\graph{12C16O}{Potential model prediction $\mathrm{{}^{12}C + {}^{16}O}$ reaction }{Astrophysical S-factor prediction for the $\mathrm{{}^{12}C + {}^{16}O}$ reaction as parametrized in the Yakovlev et. al analytical potential model \cite{yakovlev_beard_gasques_wiescher_2010}. The reference for the experimental points is given in Table \ref{table:fusion}.}
 
-Becker1981  \cite{becker_kettner_rolfs_trautvetter_1981}
-Fruet2020 \cite{fruet_courtin_heine_jenkins_adsley_brown_canavan_catford_charon_curien_et_2020}
-Spillane2007  \cite{spillane_raiola_rolfs_schurmann_strieder_zeng_becker_bordeanu_gialanella_romano_et_2007}
-Tan2002  \cite{tan_boeltzig_dulal_deboer_frentz_henderson_howard_kelmar_kolata_long_et_2020}
-
-\graph{12C16O}{Potential model prediction $\mathrm{{}^{12}C + {}^{16}O}$ reaction }{Astrophysical S-factor prediction for the $\mathrm{{}^{12}C + {}^{16}O}$ reaction as parametrized in the Yakovlev et. al analytical potential model \cite{yakovlev_beard_gasques_wiescher_2010}. Experimental data points were taken from different sources.}
-
-Torilov21 \cite{torilov_maltsev_zherebchevsky_2021}
 
 \graphWrapper{
 	\subGraph{16O18O}{$\Ofusion[16][18]$ reaction.}
 	\subGraph{16O17O}{$\Ofusion[16][17]$ reaction.}
 	\subGraph{16O16O}{$\Ofusion[16][16]$ reaction.}[1]
 }
-{Oreactions}{Potential model prediction for a selection of oxygen fusion reactions.}{Potential model prediction for a selection of oxygen fusion reactions. In panels a), b) and c) are presented the  Yakovlev et. al prediction for the S-factor of the $\Ofusion[16][18]$, $\Ofusion[16][17]$ and $\Ofusion$ reactions respectively. Additionally, in panel c), the \textit{SaoPablo} entry corresponds with the predictions made in \cite{yakovlev_beard_gasques_wiescher_2010} which were obtained by using the São Pablo potential model. Experimental data points were retrieved from various papers.}
+{Oreactions}{Potential model prediction for a selection of oxygen fusion reactions.}{Potential model prediction for a selection of oxygen fusion reactions. In panels a), b) and c) are presented the  Yakovlev et. al prediction for the S-factor of the $\Ofusion[16][18]$, $\Ofusion[16][17]$ and $\Ofusion$ reactions respectively. Additionally, in panel c), the \textit{SaoPablo} entry corresponds with the predictions made in \cite{yakovlev_beard_gasques_wiescher_2010} which were obtained by using the São Pablo potential model. Experimental data sources are cited in Table \ref{table:fusion}.}
 
-Thomas86 \cite{thomas_chen_hinds_meredith_olson_1986}
-Duarte2015 \cite{duarte_gasques_oliveira_zagatto_chamon_medina_added_seale_alcantara-nunez_rossi_et_2015}
-SaoPablo \cite{yakovlev_beard_gasques_wiescher_2010}
-Spinka1974 \cite{spinka_winkler_1974}
 
 \ref{fig:Oreactions} 
 \ref{sfig:16O16O} 
@@ -1174,15 +1222,10 @@ Background estimation with non-resonant fits.
 	\subGraph{7Be(p,gamma)8B-exp}{Exponential fits.}
 	\subGraph{7Be(p,gamma)8B-BW-exp1-poly1}{Selected fits.}[1]
 }
-{7Be(p,gamma)8B-parts}{Background and resonance fits for the $\BeRadiativeCapture$ reaction}{Empirical formulas fitted to background of the S-factor for the $\BeRadiativeCapture$ reaction. In panels a) and b) polynomial and exponential fits up to sixth order are presented respectively. Additionally, in panel c), the most simple and accurate fits, in this case exp1 and poly1, were selected. In addition, the \textit{BW} labeled curve corresponds to a Breit-Wigner fit for the resonance.  The black points are related with experimental data which was taken form different sources.}
+{7Be(p,gamma)8B-parts}{Background and resonance fits for the $\BeRadiativeCapture$ reaction}{Empirical formulas fitted to background of the S-factor for the $\BeRadiativeCapture$ reaction. In panels a) and b) polynomial and exponential fits up to sixth order are presented respectively. Additionally, in panel c), the most simple and accurate fits, in this case exp1 and poly1, were selected. In addition, the BW labeled curve corresponds to a Breit-Wigner fit for the resonance.  The references to the experimental points are given in Table \ref{table:light_resonant}. The values of the fitting parameters are found in Tables \ref{table:fitting_empirical_BeRadiative_poly}, \ref{table:fitting_empirical_BeRadiative_exp} and  \ref{table:fitting_empirical_BeRadiative_BW}.}
 
 
-\graph{7Be(p,gamma)8B-background-exp1-poly1}{Joint resonant and non-resonant fit for the $\BeRadiativeCapture$ reaction}{Empirical fit for the $\BeRadiativeCapture$ reaction. In this graph, the resonant contribution, as modeled with a Breit-Wigner, was added to the non-resonant background estimation, which was modeled with first order polynomial and exponential formulas.}
-
-BA03 \cite{baby_bordeanu_goldring_hass_weissman_fedoseyev_koster_nir-el_haquin_gaggeler_weinreich_et_2003}
-JU03 \cite{junghans_mohrmann_snover_steiger_adelberger_casandjian_swanson_buchmann_park_zyuzin_et_2003}
-JU10 \cite{junghans_snover_mohrmann_adelberger_buchmann_2010}
-SC06 \cite{schumann_typel_hammache_summerer_uhlig_bottcher_cortina_forster_gai_geissel_et_2006}
+\graph{7Be(p,gamma)8B-background-exp1-poly1}{Joint resonant and non-resonant fit for the $\BeRadiativeCapture$ reaction}{Empirical fit for the $\BeRadiativeCapture$ reaction. In this graph, the resonant contribution, as modeled with a Breit-Wigner, was added to the non-resonant background estimation, which was modeled with first order polynomial and exponential formulas. In addition, fitting parameters are found in Table \ref{table:fitting_empirical_BeRadiative_composite}.}
 
 A single resonance with a peak close to $E$ = 0.7 MeV is observed in Figure \ref{fig:7Be(p,gamma)8B-background-exp1-poly1}. Then, in order to model the single resonance, a Breit-Wigner fit was performed.
 
@@ -1191,10 +1234,7 @@ However, as it is visualized in S-factor dependence, this fit does not account f
 
 Additionally, an increment of the background, namely the non-resonant part of the S-factor, is present.
 
-\graph{13C(p,gamma)14N-BW}{Resonance fit of the $\CRadiativeCapture$ reaction}{Breit-Wigner fit for the S-factor of the resonant $\CRadiativeCapture$ reaction. The experimental data points were taken from various sources.} 
-
-KI94 \cite{king_azuma_vise_gorres_rolfs_trautvetter_vlieks_1994}
-WO52 \cite{woodbury_fowler_1952}
+\graph{13C(p,gamma)14N-BW}{Resonance fit of the $\CRadiativeCapture$ reaction}{Breit-Wigner fit for the S-factor of the resonant $\CRadiativeCapture$ reaction. The experimental data points were taken from sources cited in Table \ref{table:light_resonant}.  Further details about the fitting parameters and their values are given in Table \ref{table:fitting_empirical_CRadiative_BW}.} 
 
 
 A resonance with a peak close to $E$ = 0.6 MeV is observed in the S-factor data presented of Figure \ref{fig:13C(p,gamma)14N-BW}. In order to model this behavior, a Breit-Wigner fit was initially performed.  \\
@@ -1209,12 +1249,12 @@ In a first approach, the non-resonant background is modeled empirically. In part
 	\subGraph{13C(p,gamma)14N-BW-residuals-exp1234}{Exponential fits.}
 	\subGraph{13C(p,gamma)14N-BW-residuals-exp1-poly1}{Selected fits.}[1]
 }
-{13C(p,gamma)14N-BW-residuals}{Background estimation for the $\CRadiativeCapture$ reaction}{Empirical formulas fitted to background of the S-factor for the $\CRadiativeCapture$ reaction. The background was quantified with the residuals of the Breit-Wigner fit of Figure \ref{fig:13C(p,gamma)14N-BW}.}
+{13C(p,gamma)14N-BW-residuals}{Background estimation for the $\CRadiativeCapture$ reaction}{Empirical formulas fitted to background of the S-factor for the $\CRadiativeCapture$ reaction. The background was quantified with the residuals of the Breit-Wigner fit of Figure \ref{fig:13C(p,gamma)14N-BW}. he values of the fitting parameters are found in Tables \ref{table:fitting_empirical_CRadiative_poly} and \ref{table:fitting_empirical_CRadiative_exp}.}
 
 
 The correspondence between the joint resonant and non-resonant prediction with experimental data at low energies improved at low energies. However, at energies above the resonance peak, the fit overestimated the S-factor. 
 
-\graph{13C(p,gamma)14N-background-exp12-poly12}{Empirical fit of the $\CRadiativeCapture$ reaction}{Empirical fit for the S-factor of the resonant $\CRadiativeCapture$ reaction. The resonant part was estimated with a BW fit and the non-resonant background was fitted with exponential and polynomial with first and second order formulas. Both contributions were added.} 
+\graph{13C(p,gamma)14N-background-exp12-poly12}{Empirical fit of the $\CRadiativeCapture$ reaction}{Empirical fit for the S-factor of the resonant $\CRadiativeCapture$ reaction. The resonant part was estimated with a Breit-Wigner fit added to a  non-resonant background, which was fitted with exponential and polynomial with first and second order formulas. All the values of the parameters used are found in Table \ref{table:fitting_empirical_CRadiative_composite}.} 
 
 This difference could be explained due to particularities of the physical phenomena underlying the $\mathrm{{}^{13}C(p, \gamma)^{14}N}$ reaction. In fact, the S-factor values presented in Figure \ref{fig:13C(p,gamma)14N-BW} corresponds to the sum of different channels associated with non-excited and excited states of  $\mathrm{{}^{14}N}$ \cite{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}. This means that the theoretical prediction should consider the transitions to all possible states of the reactants and product nuclei.
 
@@ -1279,12 +1319,86 @@ Additional, light heavy experimental data pd reaction \cite{bystritsky_gerasimov
 
 \subsection{Nacre II database} \label{sub:nacreII}
 
-Selected reactions reference table for a wide variety of proton radiative capture and exchange reactions is found in \cite{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}. A potential model fit is also found for the S-factors of the Nacre II paper reaction.
+The experimental data for a wide selection of radiative capture and exchange reactions at low energies is found in the Nacre II database \cite{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}. This database serves as a compilation of data obtained form various experiments for the relevant reactions. In addition, in this paper a potential model calculation for each reaction is also included.\\
+
+In the following tables, the references to the papers form which experimental data was obtained form this work will be presented. \\
+
+Light nuclei reactions
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Name & Reference & Reaction \\ \hline
+		GR85 &  \cite{greife_gorris_junker_rolfs_zahnow_1995}  &   \multirow{6}{*}{$\ddexchange$}       \\ \cline{1-2}
+		KR87a &  \cite{krauss_becker_trautvetter_rolfs_brand_1987}  &         \\ \cline{1-2}
+		LE06a &     \cite{leonard_karwowski_brune_fisher_ludwig_2006}  &     \\ \cline{1-2}
+		RA02 &    \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002}      & \\ \cline{1-2}
+		SC72 &    \cite{schulte_cosack_obst_weil_1972} & \\ \cline{1-2}
+		TU11 &  \cite{tumino_spitaleri_mukhamedzhanov_typel_aliotta_burjan_delsanto_kiss_kroha_hons_et_2011} & \\ \hline
+		CA02 &   \cite{casella_costantini_lemut_limata_bonetti_broggini_campajola_corvisiero_cruz_donofrio_et_2002}  &   \multirow{8}{*}{$\dRadiativeCapture$}         \\ \cline{1-2}
+		FE65 &  \cite{fetisov_gorbunov_varfolomeev_1965} &         \\ \cline{1-2}
+		GE67 &  \cite{geller_muirhead_cohen_1967} &     \\ \cline{1-2}
+		GR62 &  \cite{griffiths_larson_robertson_1962} &     \\ \cline{1-2}
+		MA97 &    \cite{ma_karwowski_brune_ayer_black_blackmon_ludwig_viviani_kievsky_schiavilla_et_1997} &  \\ \cline{1-2}
+		SC96  &   \cite{schmid_viviani_rice_chasteler_godwin_kiang_kiang_kievsky_laymon_prior_et_1996} & \\ \cline{1-2}
+		WA63 &   \cite{warren_erdman_robertson_axen_macdonald_1963} & \\ \cline{1-2}
+		WO67  &   \cite{wolfli_bosch_lang_muller_marmier_1967} & \\ \hline
+	\end{tabular}
+	\caption[References $\ddexchange$ and $\dRadiativeCapture$ experimental data]{Experimental data references for a selection of non-resonant light heavy nuclei reactions. This table includes data corresponding to the $\ddexchange$ and $\dRadiativeCapture$ reactions.}
+	\label{table:light_nonResonant}
+\end{table}
+
+
+Resonant reactions
+
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Name & Reference & Reaction \\ \hline
+		BA03 &\cite{baby_bordeanu_goldring_hass_weissman_fedoseyev_koster_nir-el_haquin_gaggeler_weinreich_et_2003}  &   \multirow{4}{*}{$\BeRadiativeCapture$}       \\ \cline{1-2}
+		JU03 &  \cite{junghans_mohrmann_snover_steiger_adelberger_casandjian_swanson_buchmann_park_zyuzin_et_2003}  &         \\ \cline{1-2}
+		JU10 &    \cite{junghans_snover_mohrmann_adelberger_buchmann_2010}  &     \\ \cline{1-2}
+		SC06 &     \cite{schumann_typel_hammache_summerer_uhlig_bottcher_cortina_forster_gai_geissel_et_2006} & \\  \hline
+		KI94 &    \cite{king_azuma_vise_gorres_rolfs_trautvetter_vlieks_1994} &   \multirow{2}{*}{$\CRadiativeCapture$}         \\ \cline{1-2}
+		WO52 &   \cite{woodbury_fowler_1952}
+		 &      \\ \hline
+	\end{tabular}
+	\caption[References $\BeRadiativeCapture$ and $\CRadiativeCapture$ experimental data]{Experimental data references for a selection of resonant reactions. This table includes data corresponding to the $\BeRadiativeCapture$ and $\CRadiativeCapture$ reactions.}
+	\label{table:light_resonant}
+\end{table}
+
 
 
 \subsection{Middle heavy nuclei data} \label{sub:middleHeavyData}
 
 Selected reaction reference table for the $\mathrm{{}^{12}C + {}^{12}C}$, $\mathrm{{}^{12}C + {}^{16}O}$,  $\mathrm{{}^{16}O + {}^{16}O}$ ,  $\mathrm{{}^{13}C + {}^{13}C}$ reactions. 
+
+$\Cfusion$ reaction.
+
+ 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Name & Reference & Reaction \\ \hline
+		Becker1981 &   \cite{becker_kettner_rolfs_trautvetter_1981}  &    \multirow{4}{*}{$\Cfusion$} \\ \cline{1-2}
+		Fruet2020 &  \cite{fruet_courtin_heine_jenkins_adsley_brown_canavan_catford_charon_curien_et_2020}          & \\ \cline{1-2}
+		Spillane2007 &   \cite{spillane_raiola_rolfs_schurmann_strieder_zeng_becker_bordeanu_gialanella_romano_et_2007}  &   \\ \cline{1-2}
+		Tan2002 &    \cite{tan_boeltzig_dulal_deboer_frentz_henderson_howard_kelmar_kolata_long_et_2020}  & \\ \hline
+		Torilov21  &  \cite{torilov_maltsev_zherebchevsky_2021}     & $\mathrm{{}^{12}C + {}^{16}O}$       \\ \hline
+		\multirow{2}{*}{Thomas86} & \multirow{2}{*}{  \cite{thomas_chen_hinds_meredith_olson_1986} }  &     $\Ofusion[16][18]$  \\ \cline{3-3} 
+	 	 &  &     $\Ofusion[16][17]$ \\ \hline
+		Duarte2015  &   \cite{duarte_gasques_oliveira_zagatto_chamon_medina_added_seale_alcantara-nunez_rossi_et_2015} & \multirow{2}{*}{ $\Ofusion$}  \\ \cline{1-2} 
+		Spinka1974   &  \cite{spinka_winkler_1974}  &  \\ \hline
+	\end{tabular}
+	\caption[References oxygen and carbon fusion experimental data]{Experimental data citations for a selection of oxygen and carbon fusion reactions.}
+\label{table:fusion}
+\end{table}
+
 
 \subsection{Transitions data} \label{sub:TransitionsData}
 
@@ -1416,6 +1530,223 @@ This section is about fitting considerations on the different approaches used to
 \section{Empirical formulas fitting} \label{sec:empiricalFitting}
 
 Parameter list with uncertainty for its respective formula. 
+
+
+
+Polynomial.  $\ddexchange$ reaction.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		Label & $g_0$ & $g_1$  & $g_2$   & $g_3$ &  $g_4$ &  $g_5$    \\  \hline
+		poly1 &  \begin{tabular}[c]{@{}c@{}} 0.0680  \\  $\pm$  0.0017 \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.152 \\  $\pm$  0.0025 \end{tabular}  &   &  &  &  \\  \hline
+		poly2 &   \begin{tabular}[c]{@{}c@{}} 0.0627 \\  $\pm$  0.0016  \end{tabular} &  \begin{tabular}[c]{@{}c@{}}  0.193 \\  $\pm$  0.0052  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.0205 \\  $\pm$  0.0023 \end{tabular}   &   &  &     \\ \hline
+		poly3 &    \begin{tabular}[c]{@{}c@{}} 0.0613\\  $\pm$  0.0016 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 0.218  \\  $\pm$  0.011  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.0523\\  $\pm$  0.013 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}   0.00847 \\  $\pm$  0.0034 \end{tabular}   & & \\ \hline
+		poly4 &  0.0615  &  0.212 & -0.0401 & 0.00128  &  1.000 & \\ \hline
+		poly5 &    \begin{tabular}[c]{@{}c@{}} 0.0622  \\  $\pm$  0.0018 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 0.173  \\  $\pm$  0.032 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 0.116 \\  $\pm$ 0.094 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}   -0.189 \\  $\pm$   0.097 \end{tabular}   &   \begin{tabular}[c]{@{}c@{}} 0.0886 \\  $\pm$ 0.040 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -0.0133  \\  $\pm$  0.0058  \end{tabular}  \\ \hline
+		   \begin{tabular}[c]{@{}c@{}} poly5-  \\  exclude \end{tabular}&    \begin{tabular}[c]{@{}c@{}} 0.0554  \\  $\pm$  0.0013  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 0.254 \\  $\pm$  0.015 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.0827 \\  $\pm$ 0.041 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -0.00712 \\  $\pm$   0.042 \end{tabular}   &   \begin{tabular}[c]{@{}c@{}} 0.0197 \\  $\pm$ 0.017 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.00417 \\  $\pm$  0.0024 \end{tabular}  \\ \hline
+	\end{tabular}
+	\caption[Fitting parameters polynomial $\ddexchange$ reaction.]{Fitting parameters of the polynomial fits, presented in Figures \ref{sfig:2H(d,p)3H-poly12345} and  \ref{sfig:2H(d,p)3H-exp5-poly5-best}, of the $\ddexchange$ reaction.}
+	\label{table:fitting_empirical_dd_poly}
+\end{table}
+
+Exponential 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		Label & $g_0$ & $g_1$  & $g_2$   & $g_3$ &  $g_4$ &  $g_5$    \\  \hline
+		exp1 &  \begin{tabular}[c]{@{}c@{}} 0.0929 \\  $\pm$  0.003 \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.622 \\  $\pm$  0.019  \end{tabular}  &   &  &  &  \\  \hline
+		exp2 &   \begin{tabular}[c]{@{}c@{}} 0.0724 \\  $\pm$  0.0018 \end{tabular} &  \begin{tabular}[c]{@{}c@{}}  1.397 \\  $\pm$  0.039 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.271 \\  $\pm$  0.013 \end{tabular}   &   &  &     \\ \hline
+		exp3 &    \begin{tabular}[c]{@{}c@{}} 0.066 \\  $\pm$  0.0016  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 2.028 \\  $\pm$  0.075 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -0.888 \\  $\pm$  0.066 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}   0.145  \\  $\pm$  0.015 \end{tabular}   & & \\ \hline
+		exp4 &  0.0674 & 1.847 & -0.623 &  0.0191  &  1.000 & \\ \hline
+		exp5 &    \begin{tabular}[c]{@{}c@{}} -2.789  \\  $\pm$  0.026 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 3.011 \\  $\pm$  0.22 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -2.818 \\  $\pm$  0.51 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}   1.495  \\  $\pm$  0.46 \end{tabular}   &   \begin{tabular}[c]{@{}c@{}}  -0.384 \\  $\pm$  0.17 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  0.459 \\  $\pm$  0.023  \end{tabular}  \\ \hline
+	\end{tabular}
+	\caption[Fitting parameters exponential $\ddexchange$ reaction.]{Fitting parameters of the exponential fits, presented in Figure \ref{sfig:2H(d,p)3H-exp12345}, of the $\ddexchange$ reaction.}
+	\label{table:fitting_empirical_dd_exp}
+\end{table}
+
+Screening with poly5-exclude
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Label & Comment & $U_e(\mathrm{eV})$  \\  \hline
+		screening-all-fit &  Fitting & \begin{tabular}[c]{@{}c@{}} 100.0 \\  $\pm$  8.6 \end{tabular}   \\  \hline
+		screening-only-RA02-fit & \begin{tabular}[c]{@{}c@{}} Fitting without \\  RA02 data included \end{tabular}  &  \begin{tabular}[c]{@{}c@{}}  230.7 \\  $\pm$ 9.2 \end{tabular}      \\ \hline
+		screening-Ue-theory&   \begin{tabular}[c]{@{}c@{}}  Calculation with \\ RA02 $U_e$ value  \end{tabular}  &   \multirow{2}{*}{309} \\ \cline{1-2}
+		RA02-paper &  \begin{tabular}[c]{@{}c@{}}  Prediction \\ RA02 paper  \end{tabular}  & \\ \hline
+	\end{tabular}
+	\caption[Screening parameter $\ddexchange$ reaction.]{Screening effect parameter $U_e$ values related to $\ddexchange$ reaction fits presented in Figure \ref{fig:2H(d,p)3H-screening-exp5-poly5-exclude}. In the RA02-paper curve a poly1 for background estimation was used with parameters $g_0 = 0.0043$ and $g_1 = 0.54$ \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002}.}
+	\label{table:fitting_empirical_dd_screening}
+\end{table}
+
+
+Polynomial. 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		Label & $g_0$ & $g_1$  & $g_2$   & $g_3$ &  $g_4$ &  $g_5$    \\  \hline
+		poly1-c &  \begin{tabular}[c]{@{}c@{}} 1.0 \\  $\pm$  1.5 \end{tabular} & \begin{tabular}[c]{@{}c@{}} 10.00 \\  $\pm$  0.43  \end{tabular}  &   &  &  &  \\  \hline
+		poly2-c &   \begin{tabular}[c]{@{}c@{}} 1.0 \\  $\pm$  1.2 \end{tabular} &  \begin{tabular}[c]{@{}c@{}}   10.00 \\  $\pm$ 0.93  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 0.309 \\  $\pm$ 0.11 \end{tabular}   &   &  &     \\ \hline
+		poly3-c &    \begin{tabular}[c]{@{}c@{}}   0.0342 \\  $\pm$  1.1  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 10.0   \\  $\pm$ 1.8 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 1.011 \\  $\pm$  0.55 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}   -0.0839 \\  $\pm$  0.043 \end{tabular}   & & \\ \hline
+		poly4-c &    \begin{tabular}[c]{@{}c@{}}   0.253 \\  $\pm$  1.1 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 4.712   \\  $\pm$ 3.30 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 4.803 \\  $\pm$   1.9 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -0.830 \\  $\pm$ 0.34 \end{tabular}   & 
+		\begin{tabular}[c]{@{}c@{}}  0.0432 \\  $\pm$ 0.019 \end{tabular} & \\ \hline
+		poly5-c &    \begin{tabular}[c]{@{}c@{}} 0.434  \\  $\pm$  1.2 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 1.389  \\  $\pm$  5.96 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 7.980 \\  $\pm$ 5.1 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -1.829\\  $\pm$   1.5 \end{tabular}   &   \begin{tabular}[c]{@{}c@{}} 0.169 \\  $\pm$ 0.19 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.00547\\  $\pm$  0.0081 \end{tabular}  \\ \hline
+	\end{tabular}
+	\caption[Fitting parameters polynomial $\dRadiativeCapture$ reaction.]{Fitting parameters polynomial fits, shown in Figure \ref{sfig:2H(p,gamma)3He-poly12345-bounds}, $\dRadiativeCapture$ reaction.}
+	\label{table:fitting_empirical_dp_poly}
+\end{table}
+
+Exponential 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		Label & $g_0$ & $g_1$  & $g_2$   & $g_3$ &  $g_4$ &  $g_5$    \\  \hline
+		exp1 &  \begin{tabular}[c]{@{}c@{}} 12.958 \\  $\pm$ 1.4 \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.250 \\  $\pm$  0.014 \end{tabular}  &   &  &  &  \\  \hline
+		exp2 &   \begin{tabular}[c]{@{}c@{}} 6.165 \\  $\pm$  0.86  \end{tabular} &  \begin{tabular}[c]{@{}c@{}}  0.649 \\  $\pm$  0.047 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.0367 \\  $\pm$  0.038 \end{tabular}   &   &  &     \\ \hline
+		exp3 &    \begin{tabular}[c]{@{}c@{}} 2.754 \\  $\pm$ 0.64 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 1.334 \\  $\pm$  0.14  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -0.181 \\  $\pm$  0.025  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}   0.00865 \\  $\pm$  0.0014 \end{tabular}   & & \\ \hline
+		exp4 &    \begin{tabular}[c]{@{}c@{}} 0.311 \\  $\pm$ 0.45 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 2.116 \\  $\pm$  0.39  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -0.447\\  $\pm$  0.12  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  0.0439 \\  $\pm$  0.014 \end{tabular}   &
+		\begin{tabular}[c]{@{}c@{}}   -0.00159 \\  $\pm$  0.00063 \end{tabular} & \\ 
+		\hline
+		exp5 &    \begin{tabular}[c]{@{}c@{}} 0.315  \\  $\pm$  0.62  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  2.109  \\$\pm$  0.73  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.444\\  $\pm$  0.33 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  0.0431 \\  $\pm$  0.067 \end{tabular}   &   \begin{tabular}[c]{@{}c@{}}  -0.00151\\  $\pm$  0.0064 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -0.000294 \\  $\pm$ 0.00023 \end{tabular}  \\ \hline
+	\end{tabular}
+	\caption[Fitting parameters exponential $\dRadiativeCapture$ reaction.]{Fitting parameters exponential fits, shown in Figure \ref{sfig:2H(p,gamma)3He-exp12345}, related to the $\dRadiativeCapture$ reaction.}
+	\label{table:fitting_empirical_dp_exp}
+\end{table}
+
+
+Polynomial.  $\BeRadiativeCapture$ reaction. Non-resonant background.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Label & $g_0$ & $g_1$  & $g_2$   & $g_3$ &  $g_4$ &  $g_5$ & $g_6$   \\  \hline
+		poly1 &  \begin{tabular}[c]{@{}c@{}} 18.429  \\  $\pm$  0.86 \end{tabular} & \begin{tabular}[c]{@{}c@{}} 7.668 \\  $\pm$  1.1 \end{tabular}  &   &  &  & &  \\  \hline
+		poly2 &   \begin{tabular}[c]{@{}c@{}} 18.316 \\  $\pm$  1.3  \end{tabular} &  \begin{tabular}[c]{@{}c@{}}  8.042 \\  $\pm$  3.3  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.217 \\  $\pm$  1.8 \end{tabular}   &   &  &  &   \\ \hline
+		poly3 &    \begin{tabular}[c]{@{}c@{}} 13.868 \\  $\pm$  2.3 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 29.490 \\  $\pm$ 10.0  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -24.403\\  $\pm$ 10.8 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  7.101 \\  $\pm$ 3.1 \end{tabular}   & & &  \\ \hline
+		poly4 &  15.075  &  22.690 & -13.835 &1.106   &  	0.000  & & \\ \hline
+		poly5 &    \begin{tabular}[c]{@{}c@{}}13.219  \\  $\pm$  5.4 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 27.594   \\  $\pm$  35.8 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.187 \\  $\pm$ 79.8 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}   -35.841 \\  $\pm$   78.3 \end{tabular}   &   \begin{tabular}[c]{@{}c@{}} 26.055  \\  $\pm$  34.3 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -5.072  \\  $\pm$   5.4  \end{tabular} &  \\ \hline
+		poly6 &    \begin{tabular}[c]{@{}c@{}} 27.181  \\  $\pm$  7.7  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -103.057\\  $\pm$   63.1 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 419.070  \\  $\pm$ 185.7 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -631.656 \\  $\pm$  251.3  \end{tabular}   &   \begin{tabular}[c]{@{}c@{}} 435.745 \\  $\pm$  167.9 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -138.269 \\  $\pm$  53.8  \end{tabular} & \begin{tabular}[c]{@{}c@{}} 16.382\\  $\pm$   6.6  \end{tabular}   \\ \hline
+	\end{tabular}
+	\caption[Fitting parameters polynomial $\BeRadiativeCapture$ reaction.]{Parameters polynomial fits, included in Figure \ref{sfig:7Be(p,gamma)8B-poly}, corresponding to $\BeRadiativeCapture$ reaction.}
+	\label{table:fitting_empirical_BeRadiative_poly}
+\end{table}
+
+Exponential 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Label & $g_0$ & $g_1$  & $g_2$   & $g_3$ &  $g_4$ &  $g_5$ & $g_6$   \\  \hline
+		exp1 &  \begin{tabular}[c]{@{}c@{}} 19.091   \\  $\pm$ 0.71 \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.301  \\  $\pm$  0.042 \end{tabular}  &   &  &  & &  \\  \hline
+		exp2 &   \begin{tabular}[c]{@{}c@{}} 18.731 \\  $\pm$  1.1   \end{tabular} &  \begin{tabular}[c]{@{}c@{}}  0.356  \\  $\pm$  0.13  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.0278  \\  $\pm$  0.060 \end{tabular}   &   &  &  &   \\ \hline
+		exp3 &    \begin{tabular}[c]{@{}c@{}} 16.162  \\  $\pm$  1.5 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 1.024\\  $\pm$  0.36  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.734\\  $\pm$  0.36 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  0.194  \\  $\pm$ 0.096 \end{tabular}   & & &  \\ \hline
+		exp4 & 16.985 & 0.770 & -0.388 & 0.0261 & 0.000 & & \\ \hline
+		exp5 &    \begin{tabular}[c]{@{}c@{}} 2.645   \\  $\pm$  0.29 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 1.355   \\  $\pm$  1.9 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 0.295  \\ $\pm$  4.3\ \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}   -2.425  \\  $\pm$   4.2  \end{tabular}   &   \begin{tabular}[c]{@{}c@{}} 1.720 \\  $\pm$ 1.9 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -0.344 \\  $\pm$  0.30   \end{tabular} &  \\ \hline
+		exp6 &    \begin{tabular}[c]{@{}c@{}} 3.071   \\  $\pm$  0.36  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -2.499  \\  $\pm$ 2.7 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 12.451 \\  $\pm$ 7.5 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  -19.720  \\  $\pm$  9.6 \end{tabular}   &   \begin{tabular}[c]{@{}c@{}} 13.799 \\  $\pm$ 6.1  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -4.382 \\  $\pm$  1.9  \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.516  \\  $\pm$   0.22 \end{tabular}   \\ \hline
+	\end{tabular}
+	\caption[Fitting parameters exponential $\BeRadiativeCapture$ reaction.]{Parameters exponential fits, included in Figure \ref{sfig:7Be(p,gamma)8B-exp}, associated with the $\BeRadiativeCapture$ reaction.}
+	\label{table:fitting_empirical_BeRadiative_exp}
+\end{table}
+
+BW $\BeRadiativeCapture$
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Label & $S_r$(MeV b) & $E_r$(MeV)  & $\Gamma_r$(MeV)    \\  \hline
+		BW &  \begin{tabular}[c]{@{}c@{}} 99.153 \\  $\pm$  4.9 \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.632  \\  $\pm$  0.0010  \end{tabular}  &  
+		\begin{tabular}[c]{@{}c@{}} 0.0535 \\  $\pm$  0.0034 \end{tabular}    \\  \hline
+	\end{tabular}
+	\caption[Fitting parameters Breit-Wigner $\BeRadiativeCapture$ reaction.]{Fitting parameters to the Breit-Wigner function, shown in Figure \ref{sfig:7Be(p,gamma)8B-BW-exp1-poly1}, for the $\BeRadiativeCapture$ reaction.}
+	\label{table:fitting_empirical_BeRadiative_BW}
+\end{table}
+
+
+Composite $\BeRadiativeCapture$
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		Label & $S_r$(MeV b) & $E_r$(MeV) & $\Gamma_r$(MeV) & $c_r$($\mathrm{MeV}^{2}$) & $g_0$ & $g_1$   \\  \hline
+		exp + BW &  \begin{tabular}[c]{@{}c@{}} 87.097 \\  $\pm$  2.2 \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.631  \\  $\pm$  0.00036   \end{tabular}  &  \begin{tabular}[c]{@{}c@{}}  0.0335  \\  $\pm$  0.00095   \end{tabular} & & \begin{tabular}[c]{@{}c@{}}  17.935  \\  $\pm$ 0.13  \end{tabular} & 
+		\begin{tabular}[c]{@{}c@{}} 0.325   \\  $\pm$ 0.0077 \end{tabular}  \\  \hline
+		poly + BW &  21.227 & \begin{tabular}[c]{@{}c@{}} 0.631 \\  $\pm$  0.00062 \end{tabular}  & 0.0331 & 0.00113  &  \begin{tabular}[c]{@{}c@{}} 17.370  \\  $\pm$ 0.20  \end{tabular} &  \begin{tabular}[c]{@{}c@{}} 7.725   \\  $\pm$ 0.27  \end{tabular} \\  \hline
+	\end{tabular}
+	\caption[Fitting parameters composite $\BeRadiativeCapture$ reaction.]{Fitting parameters for composite resonant and non-resonant behavior fits, as visualized in Figure \ref{fig:7Be(p,gamma)8B-background-exp1-poly1}, for the $\BeRadiativeCapture$ reaction.}
+	\label{table:fitting_empirical_BeRadiative_composite}
+\end{table}
+
+BW $\CRadiativeCapture$
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Label & $S_r$(MeV b) & $E_r$(MeV)  & $\Gamma_r$(MeV)    \\  \hline
+		BW &  \begin{tabular}[c]{@{}c@{}} 2.040  \\  $\pm$  0.059 \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.514 \\  $\pm$  0.00026   \end{tabular}  &   
+		\begin{tabular}[c]{@{}c@{}} 0.0325  \\  $\pm$ 0.0013  \end{tabular}   \\  \hline
+	\end{tabular}
+	\caption[Fitting parameters Breit-Wigner $\CRadiativeCapture$ reaction.]{Fitting parameters Breit-Wigner fits, included in Figure \ref{fig:13C(p,gamma)14N-BW}, related to the $\CRadiativeCapture$ reaction.}
+	\label{table:fitting_empirical_CRadiative_BW}
+\end{table}
+
+Residuals polynomial fit $\CRadiativeCapture$ reaction. 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Label & $g_0$ & $g_1$  & $g_2$   & $g_3$ &  $g_4$    \\  \hline
+		poly1 &  \begin{tabular}[c]{@{}c@{}} 0.00841  \\  $\pm$  0.016 \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.00211  \\  $\pm$  0.033  \end{tabular}  &   &  &    \\  \hline
+		poly2 &   \begin{tabular}[c]{@{}c@{}} -0.00204 \\  $\pm$  0.032  \end{tabular} &  \begin{tabular}[c]{@{}c@{}}  0.0628 \\  $\pm$ 0.17  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.0697 \\  $\pm$ 0.19  \end{tabular}   &   &      \\ \hline
+		poly3 &    \begin{tabular}[c]{@{}c@{}}   0.00694 \\  $\pm$   0.076  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -0.0193   \\  $\pm$  0.65 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} 0.135 \\  $\pm$  1.6 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}   -0.150 \\  $\pm$  1.1 \end{tabular}   &  \\ \hline
+		poly4 &   0.00678  &  -0.0134  & 0.0943  &  -0.0606 & 1.000 \\ \hline
+	\end{tabular}
+	\caption[Fitting parameters polynomial fit residuals $\CRadiativeCapture$ reaction.]{Fitting parameters polynomial fit residuals, as visible in Figure \ref{sfig:13C(p,gamma)14N-BW-residuals-poly1234}, for the $\CRadiativeCapture$ reaction.}
+	\label{table:fitting_empirical_CRadiative_poly}
+\end{table}
+
+Residuals exponential fit $\CRadiativeCapture$ reaction. 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Label & $g_0$ & $g_1$  & $g_2$   & $g_3$ &  $g_4$     \\  \hline
+		exp1 &  \begin{tabular}[c]{@{}c@{}} 0.00862 \\  $\pm$ 0.015  \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.181  \\  $\pm$  3.6 \end{tabular}  &   &  &    \\  \hline
+		exp2 &   \begin{tabular}[c]{@{}c@{}} 0.00292  \\  $\pm$  0.013  \end{tabular} &  \begin{tabular}[c]{@{}c@{}}  6.049  \\  $\pm$  21.3 \end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -6.526  \\  $\pm$  23.9 \end{tabular}   &   &    \\ \hline
+		exp3 &    \begin{tabular}[c]{@{}c@{}} 0.0238  \\  $\pm$  0.23\end{tabular}  &   \begin{tabular}[c]{@{}c@{}} -13.564  \\  $\pm$  83.3  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}  42.626  \\  $\pm$ 205.1  \end{tabular}  &   \begin{tabular}[c]{@{}c@{}}   -36.166 \\  $\pm$  153.3  \end{tabular}   & \\ \hline
+		exp4 &   0.0306 & -15.084  & 39.610 &  -17.343  & 0.000\\ 
+		\hline
+	\end{tabular}
+	\caption[Fitting parameters exponential fit residuals $\CRadiativeCapture$ reaction.]{Fitting parameters exponential fit t residuals, as shown in Figure \ref{sfig:13C(p,gamma)14N-BW-residuals-exp1234}, for the $\CRadiativeCapture$  reaction.}
+	\label{table:fitting_empirical_CRadiative_exp}
+\end{table}
+
+Composite $\CRadiativeCapture$
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Label & $S_r$& $E_r$ & $\Gamma_r$ & $c_r$ & $g_0$ & $g_1$ & $g_2$   \\  \hline
+		exp1 + BW &  \begin{tabular}[c]{@{}c@{}} 2.056 \\  $\pm$  0.062  \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.514 \\  $\pm$  0.00025  \end{tabular}  &    \begin{tabular}[c]{@{}c@{}} 0.0314 \\  $\pm$  0.0014 \end{tabular} & & \begin{tabular}[c]{@{}c@{}} 0.0113 \\ $\pm$  0.014  \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 0.612  \\ $\pm$ 2.4  \end{tabular} &  \\  \hline
+		poly1 + BW & 2.057 & \begin{tabular}[c]{@{}c@{}} 0.514 \\  $\pm$  0.00026    \end{tabular}  &  0.0314 &  \begin{tabular}[c]{@{}c@{}} 0.000247 \\  $\pm$ 0.0014 \end{tabular} &  \begin{tabular}[c]{@{}c@{}} 0.00910 \\  $\pm$ 0.017 \end{tabular} &  \begin{tabular}[c]{@{}c@{}} 0.0135  \\  $\pm$  0.037 \end{tabular}  &  \\  \hline
+		exp2 + BW &  \begin{tabular}[c]{@{}c@{}} 2.057  \\  $\pm$  0.063  \end{tabular} & \begin{tabular}[c]{@{}c@{}} 0.514  \\  $\pm$  0.00026  \end{tabular}  &    \begin{tabular}[c]{@{}c@{}} 0.0314 \\  $\pm$ 0.0015 \end{tabular} & & \begin{tabular}[c]{@{}c@{}} 0.0117\\ $\pm$   0.033  \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 1.0	    \\ $\pm$ 15.1  \end{tabular} & \begin{tabular}[c]{@{}c@{}} -0.770    \\ $\pm$ 16.3  \end{tabular}   \\  \hline
+		poly2 + BW & 2.041 & \begin{tabular}[c]{@{}c@{}} 0.514 \\  $\pm$  0.00025  \end{tabular}  & \begin{tabular}[c]{@{}c@{}} 0.031  \\  $\pm$ 0.0015 \end{tabular} & 0.000236  &  \begin{tabular}[c]{@{}c@{}} -0.037 \\  $\pm$ 0.039 \end{tabular} &  \begin{tabular}[c]{@{}c@{}} 0.294   \\  $\pm$  0.22 \end{tabular}  & \begin{tabular}[c]{@{}c@{}} -0.310  \\  $\pm$ 0.24  \end{tabular}  \\  \hline
+	\end{tabular}
+	\caption[Fitting parameters composite $\CRadiativeCapture$ reaction.]{Fitting parameters composite fits, included in Figure \ref{fig:13C(p,gamma)14N-background-exp12-poly12}, corresponding to the $\CRadiativeCapture$ reaction.}
+	\label{table:fitting_empirical_CRadiative_composite}
+\end{table}
+
 
 \section{Free parameters fitting on potential models} \label{sec:potentialFitting}
 

@@ -405,6 +405,11 @@ A.~M. Lane and R.~G. Thomas.
 \newblock {R}-matrix theory of nuclear reactions.
 \newblock {\em Reviews of Modern Physics}, 30(2):257–353, 1958.
 
+\bibitem{descouvemont_baye_2010}
+P.~Descouvemont and D.~Baye.
+\newblock The ${R}$-matrix theory.
+\newblock {\em Reports on Progress in Physics}, 73(3):036301, 2010.
+
 \bibitem{ramirezjimenez_kelkar_2018}
 D.~F. Ramírez~Jiménez and N.~G. Kelkar.
 \newblock Different manifestations of {S}-matrix poles.
@@ -716,6 +721,59 @@ J.~D. Hunter.
 \newblock Matplotlib: A {2D} {G}raphics {E}nvironment.
 \newblock {\em Computing in Science \& Engineering}, 9(3):90–95, 2007.
 
+\bibitem{descouvemont_adahchour_angulo_coc_vangioni-flam_2004}
+P.~Descouvemont, A.~Adahchour, C.~Angulo, A.~Coc, and E.~Vangioni-Flam.
+\newblock Compilation and ${R}$-matrix analysis of {B}ig {B}ang nuclear
+  reaction rates.
+\newblock {\em Atomic Data and Nuclear Data Tables}, 88(1):203–236, 2004.
+
+\bibitem{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}
+Y.~Xu, K.~Takahashi, S.~Goriely, M.~Arnould, M.~Ohta, and H.~Utsunomiya.
+\newblock {NACRE II}: an update of the {NACRE} compilation of
+  charged-particle-induced thermonuclear reaction rates for nuclei with mass
+  number ${A}<16$.
+\newblock {\em Nuclear Physics A}, 918:61–169, 2013.
+
+\bibitem{zerkin_pritychenko_totans_vrapcenjak_rodionov_shulyak_2022}
+V.~V. Zerkin, B.~Pritychenko, J.~Totans, L.~Vrapcenjak, A.~Rodionov, and G.~I.
+  Shulyak.
+\newblock {EXFOR-NSR PDF} database: A system for nuclear knowledge preservation
+  and data curation.
+\newblock {\em Journal of Instrumentation}, 17(03), 2022.
+
+\bibitem{iwamoto_iwamoto_shibata_ichihara_kunieda_minato_nakayama_2020}
+O.~Iwamoto, N.~Iwamoto, K.~Shibata, A.~Ichihara, S.~Kunieda, F.~Minato, and
+  S.~Nakayama.
+\newblock Status of {JENDL}.
+\newblock {\em EPJ Web of Conferences}, 239:09002, 2020.
+
+\bibitem{bystritsky_gerasimov_krylov_parzhitskii_dudkin_kaminskii_nechaev_padalko_petrov_mesyats_et_2008}
+V.~M. Bystritsky, V.~V. Gerasimov, A.~R. Krylov, S.~S. Parzhitskii, G.~N.
+  Dudkin, V.~L. Kaminskii, B.~A. Nechaev, V.~N. Padalko, A.~V. Petrov, G.~A.
+  Mesyats, and et~al.
+\newblock Study of the pd reaction in the astrophysical energy region using the
+  {H}all accelerator.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  595(3):543–548, 2008.
+
+\bibitem{schmid_chasteler_laymon_weller_prior_tilley_1995}
+G.~J. Schmid, R.~M. Chasteler, C.~M. Laymon, H.~R. Weller, R.~M. Prior, and
+  D.~R. Tilley.
+\newblock Polarized proton capture by deuterium and the
+  $\mathrm{{}^{2}H(p,\gamma){}^{3}He}$ astrophysical ${S}$ factor.
+\newblock {\em Physical Review C}, 52(4), 1995.
+
+\bibitem{berman_koester_smith_1964}
+B.~L. Berman, L.~J. Koester, and J.~H. Smith.
+\newblock Photodisintegration of $\mathrm{{He}^3}$.
+\newblock {\em Physical Review}, 133(1B), 1964.
+
+\bibitem{warren_erdman_robertson_axen_macdonald_1963}
+J.~B. Warren, K.~L. Erdman, L.~P. Robertson, D.~A. Axen, and J.~R. Macdonald.
+\newblock Photodisintegration of $\mathrm{{He}^3}$ near the {T}hreshold.
+\newblock {\em Physical Review}, 132(4):1691–1692, 1963.
+
 \bibitem{greife_gorris_junker_rolfs_zahnow_1995}
 U.~Greife, F.~Gorris, M.~Junker, C.~Rolfs, and D.~Zahnow.
 \newblock Oppenheimer-{P}hillips effect and electron screening in $d+d$ fusion
@@ -786,55 +844,10 @@ G.~J. Schmid, M.~Viviani, B.~J. Rice, R.~M. Chasteler, M.~A. Godwin, G.~C.
   d,\gamma)\mathrm{{}^{3}He}$ {R}eactions.
 \newblock {\em Physical Review Letters}, 76(17):3088–3091, 1996.
 
-\bibitem{warren_erdman_robertson_axen_macdonald_1963}
-J.~B. Warren, K.~L. Erdman, L.~P. Robertson, D.~A. Axen, and J.~R. Macdonald.
-\newblock Photodisintegration of $\mathrm{{He}^3}$ near the {T}hreshold.
-\newblock {\em Physical Review}, 132(4):1691–1692, 1963.
-
 \bibitem{wolfli_bosch_lang_muller_marmier_1967}
 W.~Wölfli, R.~Bösch, J.~Lang, R.~Müller, and P.~Marmier.
 \newblock Einfang von {P}rotonen durch {D}euteronen.
 \newblock {\em Helvetica Physica Acta}, 40:946–972, 1967.
-
-\bibitem{becker_kettner_rolfs_trautvetter_1981}
-H.~W. Becker, K.~U. Kettner, C.~Rolfs, and H.~P. Trautvetter.
-\newblock The $\mathrm{{}^{12}C+{}^{12}C}$ reaction at subcoulomb energies
-  {(II)}.
-\newblock {\em Zeitschrift für Physik A Atoms and Nuclei}, 303(4):305–312,
-  1981.
-
-\bibitem{fruet_courtin_heine_jenkins_adsley_brown_canavan_catford_charon_curien_et_2020}
-G.~Fruet, S.~Courtin, M.~Heine, D.~G. Jenkins, P.~Adsley, A.~Brown, R.~Canavan,
-  W.~N. Catford, E.~Charon, D.~Curien, and et~al.
-\newblock Advances in the {D}irect {S}tudy of {C}arbon {B}urning in {M}assive
-  {S}tars.
-\newblock {\em Physical Review Letters}, 124(19), 2020.
-
-\bibitem{spillane_raiola_rolfs_schurmann_strieder_zeng_becker_bordeanu_gialanella_romano_et_2007}
-T.~Spillane, F.~Raiola, C.~Rolfs, D.~Schürmann, F.~Strieder, S.~Zeng, H.-W.
-  Becker, C.~Bordeanu, L.~Gialanella, M.~Romano, and et~al.
-\newblock $\mathrm{{}^{12}C+{}^{12}C}$ {F}usion {R}eactions near the {G}amow
-  {E}nergy.
-\newblock {\em Physical Review Letters}, 98(12), 2007.
-
-\bibitem{tan_boeltzig_dulal_deboer_frentz_henderson_howard_kelmar_kolata_long_et_2020}
-W.~P. Tan, A.~Boeltzig, C.~Dulal, R.~J. deBoer, B.~Frentz, S.~Henderson, K.~B.
-  Howard, R.~Kelmar, J.~J. Kolata, J.~Long, and et~al.
-\newblock New {M}easurement of $\mathrm{{}^{12}C +{}^{12}C}$ {F}usion
-  {R}eaction at {A}strophysical {E}nergies.
-\newblock {\em Physical Review Letters}, 124(19), 2020.
-
-\bibitem{spinka_winkler_1974}
-H.~Spinka and H.~Winkler.
-\newblock Experimental determination of the total reaction cross section of the
-  stellar nuclear reaction $\mathrm{{}^{16}O + {}^{16}O}$.
-\newblock {\em Nuclear Physics A}, 233(2):456–494, 1974.
-
-\bibitem{descouvemont_adahchour_angulo_coc_vangioni-flam_2004}
-P.~Descouvemont, A.~Adahchour, C.~Angulo, A.~Coc, and E.~Vangioni-Flam.
-\newblock Compilation and ${R}$-matrix analysis of {B}ig {B}ang nuclear
-  reaction rates.
-\newblock {\em Atomic Data and Nuclear Data Tables}, 88(1):203–236, 2004.
 
 \bibitem{baby_bordeanu_goldring_hass_weissman_fedoseyev_koster_nir-el_haquin_gaggeler_weinreich_et_2003}
 L.~T. Baby, C.~Bordeanu, G.~Goldring, M.~Hass, L.~Weissman, V.~N. Fedoseyev,
@@ -878,47 +891,39 @@ E.~J. Woodbury and W.~A. Fowler.
   $\mathrm{C^{13}}$ at 129 kev.
 \newblock {\em Physical Review}, 85(1):51–57, 1952.
 
-\bibitem{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}
-Y.~Xu, K.~Takahashi, S.~Goriely, M.~Arnould, M.~Ohta, and H.~Utsunomiya.
-\newblock {NACRE II}: an update of the {NACRE} compilation of
-  charged-particle-induced thermonuclear reaction rates for nuclei with mass
-  number ${A}<16$.
-\newblock {\em Nuclear Physics A}, 918:61–169, 2013.
+\bibitem{becker_kettner_rolfs_trautvetter_1981}
+H.~W. Becker, K.~U. Kettner, C.~Rolfs, and H.~P. Trautvetter.
+\newblock The $\mathrm{{}^{12}C+{}^{12}C}$ reaction at subcoulomb energies
+  {(II)}.
+\newblock {\em Zeitschrift für Physik A Atoms and Nuclei}, 303(4):305–312,
+  1981.
 
-\bibitem{zerkin_pritychenko_totans_vrapcenjak_rodionov_shulyak_2022}
-V.~V. Zerkin, B.~Pritychenko, J.~Totans, L.~Vrapcenjak, A.~Rodionov, and G.~I.
-  Shulyak.
-\newblock {EXFOR-NSR PDF} database: A system for nuclear knowledge preservation
-  and data curation.
-\newblock {\em Journal of Instrumentation}, 17(03), 2022.
+\bibitem{fruet_courtin_heine_jenkins_adsley_brown_canavan_catford_charon_curien_et_2020}
+G.~Fruet, S.~Courtin, M.~Heine, D.~G. Jenkins, P.~Adsley, A.~Brown, R.~Canavan,
+  W.~N. Catford, E.~Charon, D.~Curien, and et~al.
+\newblock Advances in the {D}irect {S}tudy of {C}arbon {B}urning in {M}assive
+  {S}tars.
+\newblock {\em Physical Review Letters}, 124(19), 2020.
 
-\bibitem{iwamoto_iwamoto_shibata_ichihara_kunieda_minato_nakayama_2020}
-O.~Iwamoto, N.~Iwamoto, K.~Shibata, A.~Ichihara, S.~Kunieda, F.~Minato, and
-  S.~Nakayama.
-\newblock Status of {JENDL}.
-\newblock {\em EPJ Web of Conferences}, 239:09002, 2020.
+\bibitem{spillane_raiola_rolfs_schurmann_strieder_zeng_becker_bordeanu_gialanella_romano_et_2007}
+T.~Spillane, F.~Raiola, C.~Rolfs, D.~Schürmann, F.~Strieder, S.~Zeng, H.-W.
+  Becker, C.~Bordeanu, L.~Gialanella, M.~Romano, and et~al.
+\newblock $\mathrm{{}^{12}C+{}^{12}C}$ {F}usion {R}eactions near the {G}amow
+  {E}nergy.
+\newblock {\em Physical Review Letters}, 98(12), 2007.
 
-\bibitem{bystritsky_gerasimov_krylov_parzhitskii_dudkin_kaminskii_nechaev_padalko_petrov_mesyats_et_2008}
-V.~M. Bystritsky, V.~V. Gerasimov, A.~R. Krylov, S.~S. Parzhitskii, G.~N.
-  Dudkin, V.~L. Kaminskii, B.~A. Nechaev, V.~N. Padalko, A.~V. Petrov, G.~A.
-  Mesyats, and et~al.
-\newblock Study of the pd reaction in the astrophysical energy region using the
-  {H}all accelerator.
-\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment},
-  595(3):543–548, 2008.
+\bibitem{tan_boeltzig_dulal_deboer_frentz_henderson_howard_kelmar_kolata_long_et_2020}
+W.~P. Tan, A.~Boeltzig, C.~Dulal, R.~J. deBoer, B.~Frentz, S.~Henderson, K.~B.
+  Howard, R.~Kelmar, J.~J. Kolata, J.~Long, and et~al.
+\newblock New {M}easurement of $\mathrm{{}^{12}C +{}^{12}C}$ {F}usion
+  {R}eaction at {A}strophysical {E}nergies.
+\newblock {\em Physical Review Letters}, 124(19), 2020.
 
-\bibitem{schmid_chasteler_laymon_weller_prior_tilley_1995}
-G.~J. Schmid, R.~M. Chasteler, C.~M. Laymon, H.~R. Weller, R.~M. Prior, and
-  D.~R. Tilley.
-\newblock Polarized proton capture by deuterium and the
-  $\mathrm{{}^{2}H(p,\gamma){}^{3}He}$ astrophysical ${S}$ factor.
-\newblock {\em Physical Review C}, 52(4), 1995.
-
-\bibitem{berman_koester_smith_1964}
-B.~L. Berman, L.~J. Koester, and J.~H. Smith.
-\newblock Photodisintegration of $\mathrm{{He}^3}$.
-\newblock {\em Physical Review}, 133(1B), 1964.
+\bibitem{spinka_winkler_1974}
+H.~Spinka and H.~Winkler.
+\newblock Experimental determination of the total reaction cross section of the
+  stellar nuclear reaction $\mathrm{{}^{16}O + {}^{16}O}$.
+\newblock {\em Nuclear Physics A}, 233(2):456–494, 1974.
 
 \bibitem{buompane_dileva_gialanella_d'onofrio_decesare_duarte_fulop_gasques_gyurky_morales-gallegos_et_2022}
 R.~Buompane, A.~Di~Leva, L.~Gialanella, A.~D'Onofrio, M.~De~Cesare, J.~G.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.5)  7 SEP 2022 12:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.5)  16 SEP 2022 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -793,51 +793,58 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 \xargs@toksa=\toks44
 \xargs@toksb=\toks45
 )
+(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip54
+\multirow@cntb=\count318
+\multirow@dima=\skip55
+\bigstrutjot=\dimen282
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count318
+\l__color_backend_stack_int=\count319
 \l__pdf_internal_box=\box63
 )
 (./monograph.aux)
 \openout1 = `monograph.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count319
-\scratchdimen=\dimen282
+\scratchcounter=\count320
+\scratchdimen=\dimen283
 \scratchbox=\box64
-\nofMPsegments=\count320
-\nofMParguments=\count321
+\nofMPsegments=\count321
+\nofMParguments=\count322
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count322
-\MPscratchDim=\dimen283
-\MPnumerator=\count323
-\makeMPintoPDFobject=\count324
+\MPscratchCnt=\count323
+\MPscratchDim=\dimen284
+\MPnumerator=\count324
+\makeMPintoPDFobject=\count325
 \everyMPtoPDFconversion=\toks47
 )
-Package hyperref Info: Link coloring OFF on input line 28.
+Package hyperref Info: Link coloring OFF on input line 29.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -848,11 +855,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count325
+\c@section@level=\count326
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
  (./monograph.out) (./monograph.out)
 \@outlinefile=\write4
 \openout4 = `monograph.out'.
@@ -862,36 +869,36 @@ LaTeX Info: Redefining \nameref on input line 28.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 28.
+ on input line 29.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<logo.pdf, id=352, 398.48875pt x 202.86128pt>
+<logo.pdf, id=429, 398.48875pt x 202.86128pt>
 File: logo.pdf Graphic file (type pdf)
 <use logo.pdf>
-Package pdftex.def Info: logo.pdf  used on input line 39.
+Package pdftex.def Info: logo.pdf  used on input line 38.
 (pdftex.def)             Requested size: 234.8775pt x 119.56947pt.
 [1
 
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logo.
 pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
@@ -933,17 +940,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
@@ -951,10 +958,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--99
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfarrowinset=\dimen284
-\pgfarrowlength=\dimen285
-\pgfarrowwidth=\dimen286
-\pgfarrowlinewidth=\dimen287
+\pgfarrowinset=\dimen285
+\pgfarrowlength=\dimen286
+\pgfarrowwidth=\dimen287
+\pgfarrowlinewidth=\dimen288
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarybending.code.tex
@@ -967,18 +974,18 @@ File: pgfmodulebending.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineart
 ransformations.code.tex
 File: pgfmodulenonlineartransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgftransformnonlinearflatness=\dimen288
+\pgftransformnonlinearflatness=\dimen289
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvili
 near.code.tex
 File: pgflibrarycurvilinear.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@curvilinear@time@a=\dimen289
-\pgf@curvilinear@length@a=\dimen290
-\pgf@curvilinear@length@b=\dimen291
-\pgf@curvilinear@length@c=\dimen292
-\pgf@curvilinear@length@d=\dimen293
+\pgf@curvilinear@time@a=\dimen290
+\pgf@curvilinear@length@a=\dimen291
+\pgf@curvilinear@length@b=\dimen292
+\pgf@curvilinear@length@c=\dimen293
+\pgf@curvilinear@length@d=\dimen294
 )
-\pgf@arrows@the@rigidity=\dimen294
+\pgf@arrows@the@rigidity=\dimen295
 ))
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarypositioning.code.tex
@@ -986,51 +993,51 @@ File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )) [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
+Underfull \hbox (badness 10000) in paragraph at lines 185--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
 [10] (./Figures/splitting.tex) (./Figures/transitions.tex [11])
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--290
+Underfull \hbox (badness 10000) in paragraph at lines 289--291
 
  []
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 298.
+(amsmath)                trying to recover with `aligned' on input line 299.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
@@ -1038,56 +1045,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--312
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13])
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
 [15]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--426
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
 
  []
 
 [16
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 485--486
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--492
+Underfull \hbox (badness 10000) in paragraph at lines 491--494
 
  []
 
 (./Figures/CNO.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 513--514
+Underfull \hbox (badness 10000) in paragraph at lines 515--516
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--528
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
 
  []
 
 (./Figures/Ochannels.tex [17]) [18]
-Underfull \hbox (badness 10000) in paragraph at lines 584--585
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 599--600
+Underfull \hbox (badness 10000) in paragraph at lines 586--587
 
  []
 
@@ -1097,7 +1099,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 601--602
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 605--606
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
 
  []
 
@@ -1117,16 +1119,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 611--612
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--618
+Underfull \hbox (badness 10000) in paragraph at lines 613--614
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 619--620
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 621--622
 
  []
@@ -1136,20 +1133,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 623--624
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
+
+ []
+
 [20]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 635--636
+Underfull \hbox (badness 10000) in paragraph at lines 639--640
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--642
-
- []
-
-(./Figures/cluster.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 647--648
+Underfull \hbox (badness 10000) in paragraph at lines 659--660
 
  []
 
@@ -1158,58 +1160,70 @@ Underfull \hbox (badness 10000) in paragraph at lines 661--662
 
  []
 
-[21
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 663--664
+Underfull \hbox (badness 10000) in paragraph at lines 674--675
+
+ []
+
+(./Figures/cluster.tex [21
+
+])
+Underfull \hbox (badness 10000) in paragraph at lines 680--681
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--666
+Underfull \hbox (badness 10000) in paragraph at lines 707--708
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--672
+Underfull \hbox (badness 10000) in paragraph at lines 709--710
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 736--737
+Underfull \hbox (badness 10000) in paragraph at lines 715--716
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 741--742
+Underfull \hbox (badness 10000) in paragraph at lines 721--722
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--724
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 727--728
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 745--746
+Underfull \hbox (badness 10000) in paragraph at lines 731--732
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 751--752
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
 
  []
 
 
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 769.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 778--779
+Underfull \hbox (badness 10000) in paragraph at lines 777--778
 
  []
 
+[23]
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 786.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 796--797
+Underfull \hbox (badness 10000) in paragraph at lines 790--791
 
  []
 
@@ -1219,97 +1233,131 @@ Underfull \hbox (badness 10000) in paragraph at lines 798--799
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 805--806
-
- []
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 820--821
-
- []
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 806.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 865--866
+Underfull \hbox (badness 10000) in paragraph at lines 816--817
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 818--819
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--825
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 838--839
+
+ []
+
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 884--885
 
  []
 
-[24] (./Figures/foldingCoordinates.tex) [25]
-Underfull \hbox (badness 10000) in paragraph at lines 983--984
+
+Underfull \hbox (badness 10000) in paragraph at lines 890--891
+
+ []
+
+[25] (./Figures/foldingCoordinates.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 916--917
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 935--936
 
  []
 
 [26]
+Underfull \hbox (badness 10000) in paragraph at lines 977--978
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 983--984
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 1053--1054
+
+ []
+
+[28]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 993--994
+Underfull \hbox (badness 10000) in paragraph at lines 1058--1059
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 998--999
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1064
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1002
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1067
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1078
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1014--1015
+Underfull \hbox (badness 10000) in paragraph at lines 1079--1080
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1017
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1018--1019
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1084
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
 
  []
 
 
 Underfull \vbox (badness 1831) has occurred while \output is active []
 
- [27
+ [29
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1038--1039
+Underfull \hbox (badness 10000) in paragraph at lines 1103--1104
 
  []
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 1059.
+(amsmath)                trying to recover with `aligned' on input line 1124.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 1070.
+(amsmath)                trying to recover with `aligned' on input line 1135.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1075
+Underfull \hbox (badness 10000) in paragraph at lines 1139--1140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1077
+Underfull \hbox (badness 10000) in paragraph at lines 1141--1142
 
  []
 
@@ -1322,14 +1370,14 @@ o.pdf>
 (epstopdf)                    size: 36360 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/2H(d,p)3H-poly12345
 -eps-converted-to.pdf Graphs/2H(d,p)3H-poly12345.eps>
-(epstopdf)             \includegraphics on input line 1086.
+(epstopdf)             \includegraphics on input line 1151.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/2H(d,p)3H-poly12345-eps-converted-to.pdf, id=931, 462.72874pt x 347.297
-5pt>
+<Graphs/2H(d,p)3H-poly12345-eps-converted-to.pdf, id=1074, 462.72874pt x 347.29
+75pt>
 File: Graphs/2H(d,p)3H-poly12345-eps-converted-to.pdf Graphic file (type pdf)
 <use Graphs/2H(d,p)3H-poly12345-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/2H(d,p)3H-poly12345-eps-converted-to.pdf  used 
-on input line 1086.
+on input line 1151.
 (pdftex.def)             Requested size: 225.4804pt x 169.23398pt.
 Package epstopdf Info: Source file: <Graphs/2H(d,p)3H-exp12345.eps>
 (epstopdf)                    date: 2022-09-03 13:23:07
@@ -1340,14 +1388,14 @@ Package epstopdf Info: Source file: <Graphs/2H(d,p)3H-exp12345.eps>
 (epstopdf)                    size: 36478 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/2H(d,p)3H-exp12345-
 eps-converted-to.pdf Graphs/2H(d,p)3H-exp12345.eps>
-(epstopdf)             \includegraphics on input line 1086.
+(epstopdf)             \includegraphics on input line 1151.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/2H(d,p)3H-exp12345-eps-converted-to.pdf, id=932, 462.72874pt x 347.2975
-pt>
+<Graphs/2H(d,p)3H-exp12345-eps-converted-to.pdf, id=1075, 462.72874pt x 347.297
+5pt>
 File: Graphs/2H(d,p)3H-exp12345-eps-converted-to.pdf Graphic file (type pdf)
 <use Graphs/2H(d,p)3H-exp12345-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/2H(d,p)3H-exp12345-eps-converted-to.pdf  used o
-n input line 1086.
+n input line 1151.
 (pdftex.def)             Requested size: 225.4804pt x 169.23398pt.
 Package epstopdf Info: Source file: <Graphs/2H(d,p)3H-exp5-poly5-best.eps>
 (epstopdf)                    date: 2022-09-03 13:23:12
@@ -1358,43 +1406,47 @@ rted-to.pdf>
 (epstopdf)                    size: 35851 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/2H(d,p)3H-exp5-poly
 5-best-eps-converted-to.pdf Graphs/2H(d,p)3H-exp5-poly5-best.eps>
-(epstopdf)             \includegraphics on input line 1086.
+(epstopdf)             \includegraphics on input line 1151.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/2H(d,p)3H-exp5-poly5-best-eps-converted-to.pdf, id=933, 462.72874pt x 3
-47.2975pt>
+<Graphs/2H(d,p)3H-exp5-poly5-best-eps-converted-to.pdf, id=1076, 462.72874pt x 
+347.2975pt>
 File: Graphs/2H(d,p)3H-exp5-poly5-best-eps-converted-to.pdf Graphic file (type 
 pdf)
 <use Graphs/2H(d,p)3H-exp5-poly5-best-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/2H(d,p)3H-exp5-poly5-best-eps-converted-to.pdf 
- used on input line 1086.
+ used on input line 1151.
 (pdftex.def)             Requested size: 422.77664pt x 317.31305pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28]
-[29 <./Graphs/2H(d,p)3H-poly12345-eps-converted-to.pdf> <./Graphs/2H(d,p)3H-exp
+ [30]
+[31 <./Graphs/2H(d,p)3H-poly12345-eps-converted-to.pdf> <./Graphs/2H(d,p)3H-exp
 12345-eps-converted-to.pdf> <./Graphs/2H(d,p)3H-exp5-poly5-best-eps-converted-t
 o.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1162--1163
+
+ []
+
 Package epstopdf Info: Source file: <Graphs/2H(d,p)3H-screening-exp5-poly5-excl
 ude.eps>
-(epstopdf)                    date: 2022-09-03 13:23:14
-(epstopdf)                    size: 330931 bytes
+(epstopdf)                    date: 2022-09-15 22:03:31
+(epstopdf)                    size: 331253 bytes
 (epstopdf)             Output file: <Graphs/2H(d,p)3H-screening-exp5-poly5-excl
 ude-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-09-05 15:09:45
-(epstopdf)                    size: 36925 bytes
+(epstopdf)                    date: 2022-09-16 13:29:19
+(epstopdf)                    size: 37060 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/2H(d,p)3H-screening
 -exp5-poly5-exclude-eps-converted-to.pdf Graphs/2H(d,p)3H-screening-exp5-poly5-
 exclude.eps>
-(epstopdf)             \includegraphics on input line 1100.
+(epstopdf)             \includegraphics on input line 1166.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/2H(d,p)3H-screening-exp5-poly5-exclude-eps-converted-to.pdf, id=1022, 4
+<Graphs/2H(d,p)3H-screening-exp5-poly5-exclude-eps-converted-to.pdf, id=1169, 4
 62.72874pt x 347.2975pt>
 File: Graphs/2H(d,p)3H-screening-exp5-poly5-exclude-eps-converted-to.pdf Graphi
 c file (type pdf)
 <use Graphs/2H(d,p)3H-screening-exp5-poly5-exclude-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/2H(d,p)3H-screening-exp5-poly5-exclude-eps-conv
-erted-to.pdf  used on input line 1100.
+erted-to.pdf  used on input line 1166.
 (pdftex.def)             Requested size: 462.72762pt x 347.29665pt.
 Package epstopdf Info: Source file: <Graphs/2H(p,gamma)3He-poly12345-bounds.eps
 >
@@ -1406,15 +1458,15 @@ Package epstopdf Info: Source file: <Graphs/2H(p,gamma)3He-poly12345-bounds.eps
 (epstopdf)                    size: 24964 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/2H(p,gamma)3He-poly
 12345-bounds-eps-converted-to.pdf Graphs/2H(p,gamma)3He-poly12345-bounds.eps>
-(epstopdf)             \includegraphics on input line 1108.
+(epstopdf)             \includegraphics on input line 1174.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/2H(p,gamma)3He-poly12345-bounds-eps-converted-to.pdf, id=1027, 462.7287
+<Graphs/2H(p,gamma)3He-poly12345-bounds-eps-converted-to.pdf, id=1174, 462.7287
 4pt x 347.2975pt>
 File: Graphs/2H(p,gamma)3He-poly12345-bounds-eps-converted-to.pdf Graphic file 
 (type pdf)
 <use Graphs/2H(p,gamma)3He-poly12345-bounds-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/2H(p,gamma)3He-poly12345-bounds-eps-converted-t
-o.pdf  used on input line 1108.
+o.pdf  used on input line 1174.
 (pdftex.def)             Requested size: 225.4804pt x 169.23398pt.
 Package epstopdf Info: Source file: <Graphs/2H(p,gamma)3He-exp12345.eps>
 (epstopdf)                    date: 2022-09-03 13:23:32
@@ -1425,15 +1477,15 @@ ed-to.pdf>
 (epstopdf)                    size: 25089 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/2H(p,gamma)3He-exp1
 2345-eps-converted-to.pdf Graphs/2H(p,gamma)3He-exp12345.eps>
-(epstopdf)             \includegraphics on input line 1108.
+(epstopdf)             \includegraphics on input line 1174.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/2H(p,gamma)3He-exp12345-eps-converted-to.pdf, id=1028, 462.72874pt x 34
+<Graphs/2H(p,gamma)3He-exp12345-eps-converted-to.pdf, id=1175, 462.72874pt x 34
 7.2975pt>
 File: Graphs/2H(p,gamma)3He-exp12345-eps-converted-to.pdf Graphic file (type pd
 f)
 <use Graphs/2H(p,gamma)3He-exp12345-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/2H(p,gamma)3He-exp12345-eps-converted-to.pdf  u
-sed on input line 1108.
+sed on input line 1174.
 (pdftex.def)             Requested size: 225.4804pt x 169.23398pt.
 Package epstopdf Info: Source file: <Graphs/2H(p,gamma)3He-selected-exp5-poly45
 .eps>
@@ -1446,40 +1498,37 @@ Package epstopdf Info: Source file: <Graphs/2H(p,gamma)3He-selected-exp5-poly45
 (epstopdf)             Command: <repstopdf --outfile=Graphs/2H(p,gamma)3He-sele
 cted-exp5-poly45-eps-converted-to.pdf Graphs/2H(p,gamma)3He-selected-exp5-poly4
 5.eps>
-(epstopdf)             \includegraphics on input line 1108.
+(epstopdf)             \includegraphics on input line 1174.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/2H(p,gamma)3He-selected-exp5-poly45-eps-converted-to.pdf, id=1029, 462.
+<Graphs/2H(p,gamma)3He-selected-exp5-poly45-eps-converted-to.pdf, id=1176, 462.
 72874pt x 347.2975pt>
 File: Graphs/2H(p,gamma)3He-selected-exp5-poly45-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Graphs/2H(p,gamma)3He-selected-exp5-poly45-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/2H(p,gamma)3He-selected-exp5-poly45-eps-convert
-ed-to.pdf  used on input line 1108.
+ed-to.pdf  used on input line 1174.
 (pdftex.def)             Requested size: 422.77664pt x 317.31305pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30 <./Graphs/2H(d,p)3H-screening-exp5-poly5-exclude-eps-converted-to.pdf>]
+[32 <./Graphs/2H(d,p)3H-screening-exp5-poly5-exclude-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Graphs/12C12C.eps>
-(epstopdf)                    date: 2022-09-05 15:06:55
-(epstopdf)                    size: 249765 bytes
+(epstopdf)                    date: 2022-09-09 16:13:18
+(epstopdf)                    size: 251237 bytes
 (epstopdf)             Output file: <Graphs/12C12C-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-09-05 15:09:47
-(epstopdf)                    size: 21269 bytes
+(epstopdf)                    date: 2022-09-16 13:29:41
+(epstopdf)                    size: 21635 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/12C12C-eps-converte
 d-to.pdf Graphs/12C12C.eps>
-(epstopdf)             \includegraphics on input line 1125.
+(epstopdf)             \includegraphics on input line 1182.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/12C12C-eps-converted-to.pdf, id=1065, 462.72874pt x 347.2975pt>
+<Graphs/12C12C-eps-converted-to.pdf, id=1206, 462.72874pt x 347.2975pt>
 File: Graphs/12C12C-eps-converted-to.pdf Graphic file (type pdf)
 <use Graphs/12C12C-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/12C12C-eps-converted-to.pdf  used on input line
- 1125.
+ 1182.
 (pdftex.def)             Requested size: 462.72762pt x 347.29665pt.
 
-Underfull \vbox (badness 1371) has occurred while \output is active []
+Underfull \vbox (badness 3260) has occurred while \output is active []
 
- [31 <./Graphs/2H(p,gamma)3He-poly12345-bounds-eps-converted-to.pdf> <./Graphs/
+ [33 <./Graphs/2H(p,gamma)3He-poly12345-bounds-eps-converted-to.pdf> <./Graphs/
 2H(p,gamma)3He-exp12345-eps-converted-to.pdf> <./Graphs/2H(p,gamma)3He-selected
 -exp5-poly45-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Graphs/12C16O.eps>
@@ -1490,18 +1539,18 @@ Package epstopdf Info: Source file: <Graphs/12C16O.eps>
 (epstopdf)                    size: 33634 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/12C16O-eps-converte
 d-to.pdf Graphs/12C16O.eps>
-(epstopdf)             \includegraphics on input line 1132.
+(epstopdf)             \includegraphics on input line 1185.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/12C16O-eps-converted-to.pdf, id=1129, 462.72874pt x 347.2975pt>
+<Graphs/12C16O-eps-converted-to.pdf, id=1267, 462.72874pt x 347.2975pt>
 File: Graphs/12C16O-eps-converted-to.pdf Graphic file (type pdf)
 <use Graphs/12C16O-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/12C16O-eps-converted-to.pdf  used on input line
- 1132.
+ 1185.
 (pdftex.def)             Requested size: 462.72762pt x 347.29665pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32 <./Graphs/12C12C-eps-converted-to.pdf>]
+ [34 <./Graphs/12C12C-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Graphs/16O18O.eps>
 (epstopdf)                    date: 2022-09-05 15:06:43
 (epstopdf)                    size: 217260 bytes
@@ -1510,13 +1559,13 @@ Package epstopdf Info: Source file: <Graphs/16O18O.eps>
 (epstopdf)                    size: 15404 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/16O18O-eps-converte
 d-to.pdf Graphs/16O18O.eps>
-(epstopdf)             \includegraphics on input line 1141.
+(epstopdf)             \includegraphics on input line 1193.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/16O18O-eps-converted-to.pdf, id=1166, 462.72874pt x 347.2975pt>
+<Graphs/16O18O-eps-converted-to.pdf, id=1293, 462.72874pt x 347.2975pt>
 File: Graphs/16O18O-eps-converted-to.pdf Graphic file (type pdf)
 <use Graphs/16O18O-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/16O18O-eps-converted-to.pdf  used on input line
- 1141.
+ 1193.
 (pdftex.def)             Requested size: 225.4804pt x 169.23398pt.
 Package epstopdf Info: Source file: <Graphs/16O17O.eps>
 (epstopdf)                    date: 2022-09-05 15:06:48
@@ -1526,13 +1575,13 @@ Package epstopdf Info: Source file: <Graphs/16O17O.eps>
 (epstopdf)                    size: 15743 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/16O17O-eps-converte
 d-to.pdf Graphs/16O17O.eps>
-(epstopdf)             \includegraphics on input line 1141.
+(epstopdf)             \includegraphics on input line 1193.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/16O17O-eps-converted-to.pdf, id=1167, 462.72874pt x 347.2975pt>
+<Graphs/16O17O-eps-converted-to.pdf, id=1294, 462.72874pt x 347.2975pt>
 File: Graphs/16O17O-eps-converted-to.pdf Graphic file (type pdf)
 <use Graphs/16O17O-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/16O17O-eps-converted-to.pdf  used on input line
- 1141.
+ 1193.
 (pdftex.def)             Requested size: 225.4804pt x 169.23398pt.
 Package epstopdf Info: Source file: <Graphs/16O16O.eps>
 (epstopdf)                    date: 2022-09-05 15:06:49
@@ -1542,21 +1591,21 @@ Package epstopdf Info: Source file: <Graphs/16O16O.eps>
 (epstopdf)                    size: 18141 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/16O16O-eps-converte
 d-to.pdf Graphs/16O16O.eps>
-(epstopdf)             \includegraphics on input line 1141.
+(epstopdf)             \includegraphics on input line 1193.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/16O16O-eps-converted-to.pdf, id=1168, 462.72874pt x 347.2975pt>
+<Graphs/16O16O-eps-converted-to.pdf, id=1295, 462.72874pt x 347.2975pt>
 File: Graphs/16O16O-eps-converted-to.pdf Graphic file (type pdf)
 <use Graphs/16O16O-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/16O16O-eps-converted-to.pdf  used on input line
- 1141.
+ 1193.
 (pdftex.def)             Requested size: 422.77664pt x 317.31305pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33 <./Graphs/12C16O-eps-converted-to.pdf>]
+ [35 <./Graphs/12C16O-eps-converted-to.pdf>]
 Underfull \vbox (badness 3260) has occurred while \output is active []
 
- [34 <./Graphs/16O18O-eps-converted-to.pdf> <./Graphs/16O17O-eps-converted-to.p
+ [36 <./Graphs/16O18O-eps-converted-to.pdf> <./Graphs/16O17O-eps-converted-to.p
 df> <./Graphs/16O16O-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Graphs/7Be(p,gamma)8B-poly.eps>
 (epstopdf)                    date: 2022-09-03 14:41:51
@@ -1567,14 +1616,14 @@ o.pdf>
 (epstopdf)                    size: 27392 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/7Be(p,gamma)8B-poly
 -eps-converted-to.pdf Graphs/7Be(p,gamma)8B-poly.eps>
-(epstopdf)             \includegraphics on input line 1177.
+(epstopdf)             \includegraphics on input line 1225.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/7Be(p,gamma)8B-poly-eps-converted-to.pdf, id=1245, 462.72874pt x 347.29
+<Graphs/7Be(p,gamma)8B-poly-eps-converted-to.pdf, id=1369, 462.72874pt x 347.29
 75pt>
 File: Graphs/7Be(p,gamma)8B-poly-eps-converted-to.pdf Graphic file (type pdf)
 <use Graphs/7Be(p,gamma)8B-poly-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/7Be(p,gamma)8B-poly-eps-converted-to.pdf  used 
-on input line 1177.
+on input line 1225.
 (pdftex.def)             Requested size: 225.4804pt x 169.23398pt.
 Package epstopdf Info: Source file: <Graphs/7Be(p,gamma)8B-exp.eps>
 (epstopdf)                    date: 2022-09-03 14:42:03
@@ -1585,14 +1634,14 @@ Package epstopdf Info: Source file: <Graphs/7Be(p,gamma)8B-exp.eps>
 (epstopdf)                    size: 27226 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/7Be(p,gamma)8B-exp-
 eps-converted-to.pdf Graphs/7Be(p,gamma)8B-exp.eps>
-(epstopdf)             \includegraphics on input line 1177.
+(epstopdf)             \includegraphics on input line 1225.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/7Be(p,gamma)8B-exp-eps-converted-to.pdf, id=1246, 462.72874pt x 347.297
+<Graphs/7Be(p,gamma)8B-exp-eps-converted-to.pdf, id=1370, 462.72874pt x 347.297
 5pt>
 File: Graphs/7Be(p,gamma)8B-exp-eps-converted-to.pdf Graphic file (type pdf)
 <use Graphs/7Be(p,gamma)8B-exp-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/7Be(p,gamma)8B-exp-eps-converted-to.pdf  used o
-n input line 1177.
+n input line 1225.
 (pdftex.def)             Requested size: 225.4804pt x 169.23398pt.
 Package epstopdf Info: Source file: <Graphs/7Be(p,gamma)8B-BW-exp1-poly1.eps>
 (epstopdf)                    date: 2022-09-03 14:42:04
@@ -1603,20 +1652,20 @@ nverted-to.pdf>
 (epstopdf)                    size: 25440 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/7Be(p,gamma)8B-BW-e
 xp1-poly1-eps-converted-to.pdf Graphs/7Be(p,gamma)8B-BW-exp1-poly1.eps>
-(epstopdf)             \includegraphics on input line 1177.
+(epstopdf)             \includegraphics on input line 1225.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/7Be(p,gamma)8B-BW-exp1-poly1-eps-converted-to.pdf, id=1247, 462.72874pt
+<Graphs/7Be(p,gamma)8B-BW-exp1-poly1-eps-converted-to.pdf, id=1371, 462.72874pt
  x 347.2975pt>
 File: Graphs/7Be(p,gamma)8B-BW-exp1-poly1-eps-converted-to.pdf Graphic file (ty
 pe pdf)
 <use Graphs/7Be(p,gamma)8B-BW-exp1-poly1-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/7Be(p,gamma)8B-BW-exp1-poly1-eps-converted-to.p
-df  used on input line 1177.
+df  used on input line 1225.
 (pdftex.def)             Requested size: 422.77664pt x 317.31305pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35]
+ [37]
 Package epstopdf Info: Source file: <Graphs/7Be(p,gamma)8B-background-exp1-poly
 1.eps>
 (epstopdf)                    date: 2022-09-03 14:42:06
@@ -1628,20 +1677,20 @@ Package epstopdf Info: Source file: <Graphs/7Be(p,gamma)8B-background-exp1-poly
 (epstopdf)             Command: <repstopdf --outfile=Graphs/7Be(p,gamma)8B-back
 ground-exp1-poly1-eps-converted-to.pdf Graphs/7Be(p,gamma)8B-background-exp1-po
 ly1.eps>
-(epstopdf)             \includegraphics on input line 1180.
+(epstopdf)             \includegraphics on input line 1228.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/7Be(p,gamma)8B-background-exp1-poly1-eps-converted-to.pdf, id=1253, 462
+<Graphs/7Be(p,gamma)8B-background-exp1-poly1-eps-converted-to.pdf, id=1386, 462
 .72874pt x 347.2975pt>
 File: Graphs/7Be(p,gamma)8B-background-exp1-poly1-eps-converted-to.pdf Graphic 
 file (type pdf)
 <use Graphs/7Be(p,gamma)8B-background-exp1-poly1-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/7Be(p,gamma)8B-background-exp1-poly1-eps-conver
-ted-to.pdf  used on input line 1180.
+ted-to.pdf  used on input line 1228.
 (pdftex.def)             Requested size: 462.72762pt x 347.29665pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36 <./Graphs/7Be(p,gamma)8B-poly-eps-converted-to.pdf> <./Graphs/7Be(p,gamma)
+ [38 <./Graphs/7Be(p,gamma)8B-poly-eps-converted-to.pdf> <./Graphs/7Be(p,gamma)
 8B-exp-eps-converted-to.pdf> <./Graphs/7Be(p,gamma)8B-BW-exp1-poly1-eps-convert
 ed-to.pdf>]
 Package epstopdf Info: Source file: <Graphs/13C(p,gamma)14N-BW.eps>
@@ -1653,25 +1702,25 @@ Package epstopdf Info: Source file: <Graphs/13C(p,gamma)14N-BW.eps>
 (epstopdf)                    size: 22933 bytes
 (epstopdf)             Command: <repstopdf --outfile=Graphs/13C(p,gamma)14N-BW-
 eps-converted-to.pdf Graphs/13C(p,gamma)14N-BW.eps>
-(epstopdf)             \includegraphics on input line 1194.
+(epstopdf)             \includegraphics on input line 1237.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/13C(p,gamma)14N-BW-eps-converted-to.pdf, id=1309, 462.72874pt x 347.297
+<Graphs/13C(p,gamma)14N-BW-eps-converted-to.pdf, id=1440, 462.72874pt x 347.297
 5pt>
 File: Graphs/13C(p,gamma)14N-BW-eps-converted-to.pdf Graphic file (type pdf)
 <use Graphs/13C(p,gamma)14N-BW-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/13C(p,gamma)14N-BW-eps-converted-to.pdf  used o
-n input line 1194.
+n input line 1237.
 (pdftex.def)             Requested size: 462.72762pt x 347.29665pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37 <./Graphs/7Be(p,gamma)8B-background-exp1-poly1-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1201
+ [39 <./Graphs/7Be(p,gamma)8B-background-exp1-poly1-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1240--1241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1203--1204
+Underfull \hbox (badness 10000) in paragraph at lines 1243--1244
 
  []
 
@@ -1686,15 +1735,15 @@ Package epstopdf Info: Source file: <Graphs/13C(p,gamma)14N-BW-residuals-poly12
 (epstopdf)             Command: <repstopdf --outfile=Graphs/13C(p,gamma)14N-BW-
 residuals-poly1234-eps-converted-to.pdf Graphs/13C(p,gamma)14N-BW-residuals-pol
 y1234.eps>
-(epstopdf)             \includegraphics on input line 1212.
+(epstopdf)             \includegraphics on input line 1252.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/13C(p,gamma)14N-BW-residuals-poly1234-eps-converted-to.pdf, id=1337, 46
+<Graphs/13C(p,gamma)14N-BW-residuals-poly1234-eps-converted-to.pdf, id=1465, 46
 2.72874pt x 347.2975pt>
 File: Graphs/13C(p,gamma)14N-BW-residuals-poly1234-eps-converted-to.pdf Graphic
  file (type pdf)
 <use Graphs/13C(p,gamma)14N-BW-residuals-poly1234-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/13C(p,gamma)14N-BW-residuals-poly1234-eps-conve
-rted-to.pdf  used on input line 1212.
+rted-to.pdf  used on input line 1252.
 (pdftex.def)             Requested size: 225.4804pt x 169.23398pt.
 Package epstopdf Info: Source file: <Graphs/13C(p,gamma)14N-BW-residuals-exp123
 4.eps>
@@ -1707,15 +1756,15 @@ Package epstopdf Info: Source file: <Graphs/13C(p,gamma)14N-BW-residuals-exp123
 (epstopdf)             Command: <repstopdf --outfile=Graphs/13C(p,gamma)14N-BW-
 residuals-exp1234-eps-converted-to.pdf Graphs/13C(p,gamma)14N-BW-residuals-exp1
 234.eps>
-(epstopdf)             \includegraphics on input line 1212.
+(epstopdf)             \includegraphics on input line 1252.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/13C(p,gamma)14N-BW-residuals-exp1234-eps-converted-to.pdf, id=1338, 462
+<Graphs/13C(p,gamma)14N-BW-residuals-exp1234-eps-converted-to.pdf, id=1466, 462
 .72874pt x 347.2975pt>
 File: Graphs/13C(p,gamma)14N-BW-residuals-exp1234-eps-converted-to.pdf Graphic 
 file (type pdf)
 <use Graphs/13C(p,gamma)14N-BW-residuals-exp1234-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/13C(p,gamma)14N-BW-residuals-exp1234-eps-conver
-ted-to.pdf  used on input line 1212.
+ted-to.pdf  used on input line 1252.
 (pdftex.def)             Requested size: 225.4804pt x 169.23398pt.
 Package epstopdf Info: Source file: <Graphs/13C(p,gamma)14N-BW-residuals-exp1-p
 oly1.eps>
@@ -1728,20 +1777,20 @@ oly1-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Graphs/13C(p,gamma)14N-BW-
 residuals-exp1-poly1-eps-converted-to.pdf Graphs/13C(p,gamma)14N-BW-residuals-e
 xp1-poly1.eps>
-(epstopdf)             \includegraphics on input line 1212.
+(epstopdf)             \includegraphics on input line 1252.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/13C(p,gamma)14N-BW-residuals-exp1-poly1-eps-converted-to.pdf, id=1339, 
+<Graphs/13C(p,gamma)14N-BW-residuals-exp1-poly1-eps-converted-to.pdf, id=1467, 
 462.72874pt x 347.2975pt>
 File: Graphs/13C(p,gamma)14N-BW-residuals-exp1-poly1-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use Graphs/13C(p,gamma)14N-BW-residuals-exp1-poly1-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/13C(p,gamma)14N-BW-residuals-exp1-poly1-eps-con
-verted-to.pdf  used on input line 1212.
+verted-to.pdf  used on input line 1252.
 (pdftex.def)             Requested size: 422.77664pt x 317.31305pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38 <./Graphs/13C(p,gamma)14N-BW-eps-converted-to.pdf>]
+ [40 <./Graphs/13C(p,gamma)14N-BW-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Graphs/13C(p,gamma)14N-background-exp12-po
 ly12.eps>
 (epstopdf)                    date: 2022-09-03 14:42:25
@@ -1753,126 +1802,146 @@ ly12-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Graphs/13C(p,gamma)14N-bac
 kground-exp12-poly12-eps-converted-to.pdf Graphs/13C(p,gamma)14N-background-exp
 12-poly12.eps>
-(epstopdf)             \includegraphics on input line 1217.
+(epstopdf)             \includegraphics on input line 1257.
 Package epstopdf Info: Output file is already uptodate.
-<Graphs/13C(p,gamma)14N-background-exp12-poly12-eps-converted-to.pdf, id=1367, 
+<Graphs/13C(p,gamma)14N-background-exp12-poly12-eps-converted-to.pdf, id=1497, 
 462.72874pt x 347.2975pt>
 File: Graphs/13C(p,gamma)14N-background-exp12-poly12-eps-converted-to.pdf Graph
 ic file (type pdf)
 <use Graphs/13C(p,gamma)14N-background-exp12-poly12-eps-converted-to.pdf>
 Package pdftex.def Info: Graphs/13C(p,gamma)14N-background-exp12-poly12-eps-con
-verted-to.pdf  used on input line 1217.
+verted-to.pdf  used on input line 1257.
 (pdftex.def)             Requested size: 462.72762pt x 347.29665pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3260) has occurred while \output is active []
 
- [39 <./Graphs/13C(p,gamma)14N-BW-residuals-poly1234-eps-converted-to.pdf> <./G
+ [41 <./Graphs/13C(p,gamma)14N-BW-residuals-poly1234-eps-converted-to.pdf> <./G
 raphs/13C(p,gamma)14N-BW-residuals-exp1234-eps-converted-to.pdf> <./Graphs/13C(
 p,gamma)14N-BW-residuals-exp1-poly1-eps-converted-to.pdf>]
-Overfull \hbox (4.209pt too wide) in paragraph at lines 1219--1220
+Overfull \hbox (4.209pt too wide) in paragraph at lines 1259--1260
 []\T1/cmr/m/n/10 This dif-fer-ence could be ex-plained due to par-tic-u-lar-i-t
 ies of the phys-i-cal phe-nom-ena un-der-ly-ing the $[]$
  []
 
-[40 <./Graphs/13C(p,gamma)14N-background-exp12-poly12-eps-converted-to.pdf>]
+[42 <./Graphs/13C(p,gamma)14N-background-exp12-poly12-eps-converted-to.pdf>]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
+Underfull \hbox (badness 10000) in paragraph at lines 1267--1268
 
  []
 
-[41
+[43
 
 ]
 Appendix A.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1250--1251
+Underfull \hbox (badness 10000) in paragraph at lines 1290--1291
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1252--1253
+Underfull \hbox (badness 10000) in paragraph at lines 1292--1293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1254--1255
-
- []
-
-[42
-
-] [43]
-Appendix B.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1325--1326
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1333--1334
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1357--1358
+Underfull \hbox (badness 10000) in paragraph at lines 1294--1295
 
  []
 
 [44
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1373--1374
+Underfull \hbox (badness 10000) in paragraph at lines 1322--1323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1375--1376
+Underfull \hbox (badness 10000) in paragraph at lines 1324--1325
+
+ []
+
+[45] [46]
+Appendix B.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1439--1440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1408--1409
+Underfull \hbox (badness 10000) in paragraph at lines 1447--1448
 
  []
 
-[45]
-Appendix C.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1424--1425
+Underfull \hbox (badness 10000) in paragraph at lines 1471--1472
 
  []
 
-[46
+[47
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 1487--1488
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1489--1490
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1522--1523
+
+ []
+
+[48]
+Appendix C.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+[51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+Underfull \hbox (badness 10000) in paragraph at lines 1755--1756
+
+ []
+
+[53]
 Appendix D.
-[47
+[54
 
 ]
 Appendix E.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-490.
+821.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [48
+) [55
 
-] [49]
-(./monograph.bbl [50
+] [56]
+(./monograph.bbl [57
 
-] [51] [52] [53] [54] [55] [56] [57] [58]) [59]
+] [58] [59] [60] [61] [62] [63] [64] [65]) [66]
 (./monograph.aux)
 Package rerunfilecheck Info: File `monograph.out' has not changed.
-(rerunfilecheck)             Checksum: 777D212084AF3E3BB46759799440228E;14741.
+(rerunfilecheck)             Checksum: EFE0FFAEAEBBB51AE72954B0B7FAF745;17696.
  ) 
 Here is how much of TeX's memory you used:
- 34844 strings out of 478994
- 810683 string characters out of 5858185
- 1185658 words of memory out of 5000000
- 51268 multiletter control sequences out of 15000+600000
- 419073 words of font info for 62 fonts, out of 8000000 for 9000
+ 34997 strings out of 478994
+ 813627 string characters out of 5858185
+ 1218561 words of memory out of 5000000
+ 51371 multiletter control sequences out of 15000+600000
+ 419772 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,14n,89p,886b,704s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,16n,89p,860b,704s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -1892,23 +1961,24 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texm
-f-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2021/texmf-dist
-/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2021/texmf-dist/f
-onts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2021/texmf-dist/fon
-ts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2021/texmf-dist/fonts
-/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
-ype1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
-e1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
-/public/cm-super/sfrm2488.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
-ublic/cm-super/sfti1000.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
-lic/cm-super/sfti1440.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publi
-c/cm-super/sftt1000.pfb>
-Output written on monograph.pdf (59 pages, 895165 bytes).
+f-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2021/texmf-di
+st/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2021/texmf-dist
+/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2021/texmf-dist/f
+onts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2021/texmf-dist/fonts
+/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2021/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2021/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1
+/public/cm-super/sfrm1440.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/p
+ublic/cm-super/sfrm2488.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pub
+lic/cm-super/sfti1000.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publi
+c/cm-super/sfti1440.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+cm-super/sftt1000.pfb>
+Output written on monograph.pdf (66 pages, 941321 bytes).
 PDF statistics:
- 1742 PDF objects out of 2073 (max. 8388607)
- 1603 compressed objects within 17 object streams
- 415 named destinations out of 1000 (max. 500000)
- 823 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1990 PDF objects out of 2073 (max. 8388607)
+ 1807 compressed objects within 19 object streams
+ 460 named destinations out of 1000 (max. 500000)
+ 975 words of extra memory for PDF output out of 10000 (max. 10000000)
 

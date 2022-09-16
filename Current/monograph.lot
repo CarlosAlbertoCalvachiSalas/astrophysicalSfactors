@@ -4,8 +4,24 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces References $\mathrm {{}^{2}H(d, p){}^{3}H}$ and $\mathrm {{}^{2}H(p, \gamma ){}^{3}He}$ experimental data}}{45}{table.caption.23}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces References $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ and $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ experimental data}}{45}{table.caption.24}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces References oxygen and carbon fusion experimental data}}{46}{table.caption.25}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {C.1}{\ignorespaces R-matrix table}}{46}{table.caption.23}%
+\contentsline {table}{\numberline {C.1}{\ignorespaces Fitting parameters polynomial $\mathrm {{}^{2}H(d, p){}^{3}H}$ reaction.}}{49}{table.caption.26}%
+\contentsline {table}{\numberline {C.2}{\ignorespaces Fitting parameters exponential $\mathrm {{}^{2}H(d, p){}^{3}H}$ reaction.}}{50}{table.caption.27}%
+\contentsline {table}{\numberline {C.3}{\ignorespaces Screening parameter $\mathrm {{}^{2}H(d, p){}^{3}H}$ reaction.}}{50}{table.caption.28}%
+\contentsline {table}{\numberline {C.4}{\ignorespaces Fitting parameters polynomial $\mathrm {{}^{2}H(p, \gamma ){}^{3}He}$ reaction.}}{50}{table.caption.29}%
+\contentsline {table}{\numberline {C.5}{\ignorespaces Fitting parameters exponential $\mathrm {{}^{2}H(p, \gamma ){}^{3}He}$ reaction.}}{51}{table.caption.30}%
+\contentsline {table}{\numberline {C.6}{\ignorespaces Fitting parameters polynomial $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{51}{table.caption.31}%
+\contentsline {table}{\numberline {C.7}{\ignorespaces Fitting parameters exponential $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{51}{table.caption.32}%
+\contentsline {table}{\numberline {C.8}{\ignorespaces Fitting parameters Breit-Wigner $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{52}{table.caption.33}%
+\contentsline {table}{\numberline {C.9}{\ignorespaces Fitting parameters composite $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{52}{table.caption.34}%
+\contentsline {table}{\numberline {C.10}{\ignorespaces Fitting parameters Breit-Wigner $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{52}{table.caption.35}%
+\contentsline {table}{\numberline {C.11}{\ignorespaces Fitting parameters polynomial fit residuals $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{52}{table.caption.36}%
+\contentsline {table}{\numberline {C.12}{\ignorespaces Fitting parameters exponential fit residuals $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{53}{table.caption.37}%
+\contentsline {table}{\numberline {C.13}{\ignorespaces Fitting parameters composite $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{53}{table.caption.38}%
+\contentsline {table}{\numberline {C.14}{\ignorespaces R-matrix table}}{53}{table.caption.39}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
