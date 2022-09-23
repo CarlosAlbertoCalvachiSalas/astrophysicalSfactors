@@ -30,12 +30,20 @@ def plotFromDataFrameVect(dataFrames, r1, r2, r3, r4, Eaxis = 'lin', Saxis = 'li
 
 def plotFromDataFrame(dataFrame, r1, r2, r3, r4, Eaxis = 'lin', Saxis = 'lin', Eunit = 'MeV', Sunit = 'MeV-b', color = 'black'):
 
-	plotASeries(r1, r2, r3, r4, dataFrame.iloc[:, 0],dataFrame.iloc[:, 1], dataFrame.iloc[:, 2], dataFrame.iloc[0, 3], dataFrame.iloc[0, 4], Eaxis , Saxis , Eunit, Sunit, color)
+	colNum = dataFrame.shape[1]
+	kwargs = {}
+
+	if(colNum > 5):
+		appendixDataFrame = dataFrame.iloc[:, 5:]
+
+		kwargs = dict(appendixDataFrame.iloc[0])
+
+	plotASeries(r1, r2, r3, r4, dataFrame.iloc[:, 0],dataFrame.iloc[:, 1], dataFrame.iloc[:, 2], dataFrame.iloc[0, 3], dataFrame.iloc[0, 4], Eaxis , Saxis , Eunit, Sunit, color, **kwargs)
 
 
-def plotASeries(r1, r2, r3, r4, E, S, sigma, marker, reference, Eaxis = 'lin', Saxis = 'lin', Eunit = 'MeV', Sunit = 'MeV-b', color = 'black'):
+def plotASeries(r1, r2, r3, r4, E, S, sigma, marker, reference, Eaxis = 'lin', Saxis = 'lin', Eunit = 'MeV', Sunit = 'MeV-b', color = 'black', **kwargs):
 	
-	plt.errorbar(E, S, sigma, color = color, linestyle = 'None', capsize = 2, marker = marker, label = reference)
+	plt.errorbar(E, S, sigma, color = color, linestyle = 'None', capsize = 2, marker = marker, label = reference, **kwargs)
 	plt.xlabel('E({})'.format(Eunit))
 	plt.ylabel('S({})'.format(Sunit))
 
@@ -148,6 +156,9 @@ class ReactionPlot():
 
 		self.indexSelection = ~np.isin(self.dataFrame["Reference"], references)
 		self.groupData()
+
+	def noSigma(self):
+		self.sigma = np.zeros(len(self.sigma))
 
 	def groupData(self):
 		self.groups = self.dataFrame.iloc[self.indexSelection].groupby(by=["Reference"])
