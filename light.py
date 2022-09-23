@@ -51,7 +51,7 @@ rp2Hd.fit(lambda E, Ue: screenedFunction(
 						Z1=1,
 						Z2=1,
 						mu=rp2Hd.mu), p0 = [309E-6], bounds = ([100E-6],[400E-6]),
-						label = 'screening-fit', 
+						label = 'screening-all-fit', 
 						color = 'royalblue')
 
 #rp2Hd.includeRef(['RA02'])
@@ -72,7 +72,7 @@ rp2Hd.fit(lambda E, Ue: screenedFunction(
 						Z1=1,
 						Z2=1,
 						mu=rp2Hd.mu), p0 = [309E-6], bounds = ([100E-6],[400E-6]),
-						label = 'screening-exclude-fit', 
+						label = 'screening-only-RA02-fit', 
 						color = 'blue')
 #rp2Hd.fit(MergeFitFuncs([exponential(5), lambda E, Ue: screeningFactor(E, Ue, Z1=1, Z2=1, mu=rp2Hd.mu)]).prod(), p0=[0.0554494,0.25410999,-0.08265845,-0.00711975,0.01966242,-0.00417225, 309E-6],  Emax = 1E-2, label = 'screening-exclude', color = 'mediumvioletred')
 rp2Hd.allRef()
@@ -82,7 +82,7 @@ plotFuncOverData(lambda E: screenedFunction(
 						Ue=309E-6, 
 						Z1=1,
 						Z2=1,
-						mu=rp2Hd.mu), rp2Hd.E, rp2Hd.S, label = 'screening-exclude', color = 'mediumvioletred')
+						mu=rp2Hd.mu), rp2Hd.E, rp2Hd.S, label = 'screening-Ue-theory', color = 'mediumvioletred')
 
 plotFuncOverData(lambda E: screenedFunction(
 						E=E, 
@@ -90,7 +90,7 @@ plotFuncOverData(lambda E: screenedFunction(
 						Ue=309E-6, 
 						Z1=1,
 						Z2=1,
-						mu=rp2Hd.mu), rp2Hd.E, rp2Hd.S, label = 'screening-RA02', color = 'sandybrown')
+						mu=rp2Hd.mu), rp2Hd.E, rp2Hd.S, label = 'RA02-paper', color = 'sandybrown')
 
 #plotFuncOverData(lambda E: polynomial(5)(E, 5.5325E-02,0.18293,0.28256,0.62121,0.44865,0.61893),rp2Hd.E, rp2Hd.S, color = 'pink',  label = 'poly5')
 #plotFuncOverData(lambda E: exponential1(E,0.7E-1, 0.7), rp2Hp.E, rp2Hp.S)
