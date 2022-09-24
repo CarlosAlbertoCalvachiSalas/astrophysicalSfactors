@@ -4,25 +4,30 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces References $\mathrm {{}^{2}H(d, p){}^{3}H}$ and $\mathrm {{}^{2}H(p, \gamma ){}^{3}He}$ experimental data}}{47}{table.caption.27}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces References $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ and $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ experimental data}}{47}{table.caption.28}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces References oxygen and carbon fusion experimental data}}{48}{table.caption.29}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces References $\mathrm {{}^{2}H(d, p){}^{3}H}$ and $\mathrm {{}^{2}H(p, \gamma ){}^{3}He}$ experimental data}}{48}{table.caption.28}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces References $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ and $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ experimental data}}{48}{table.caption.29}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces References oxygen and carbon fusion experimental data}}{49}{table.caption.30}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {C.1}{\ignorespaces Units of the exponential and polynomial parameters.}}{51}{table.caption.30}%
-\contentsline {table}{\numberline {C.2}{\ignorespaces Fitting parameters polynomial $\mathrm {{}^{2}H(d, p){}^{3}H}$ reaction.}}{52}{table.caption.31}%
-\contentsline {table}{\numberline {C.3}{\ignorespaces Fitting parameters exponential $\mathrm {{}^{2}H(d, p){}^{3}H}$ reaction.}}{52}{table.caption.32}%
-\contentsline {table}{\numberline {C.4}{\ignorespaces Screening parameter $\mathrm {{}^{2}H(d, p){}^{3}H}$ reaction.}}{52}{table.caption.33}%
-\contentsline {table}{\numberline {C.5}{\ignorespaces Fitting parameters polynomial $\mathrm {{}^{2}H(p, \gamma ){}^{3}He}$ reaction.}}{53}{table.caption.34}%
-\contentsline {table}{\numberline {C.6}{\ignorespaces Fitting parameters exponential $\mathrm {{}^{2}H(p, \gamma ){}^{3}He}$ reaction.}}{53}{table.caption.35}%
-\contentsline {table}{\numberline {C.7}{\ignorespaces Fitting parameters polynomial $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{53}{table.caption.36}%
-\contentsline {table}{\numberline {C.8}{\ignorespaces Fitting parameters exponential $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{54}{table.caption.37}%
-\contentsline {table}{\numberline {C.9}{\ignorespaces Fitting parameters Breit-Wigner $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{54}{table.caption.38}%
-\contentsline {table}{\numberline {C.10}{\ignorespaces Fitting parameters composite $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{54}{table.caption.39}%
-\contentsline {table}{\numberline {C.11}{\ignorespaces Fitting parameters Breit-Wigner $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{54}{table.caption.40}%
-\contentsline {table}{\numberline {C.12}{\ignorespaces Fitting parameters polynomial fit residuals $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{55}{table.caption.41}%
-\contentsline {table}{\numberline {C.13}{\ignorespaces Fitting parameters exponential fit residuals $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{55}{table.caption.42}%
-\contentsline {table}{\numberline {C.14}{\ignorespaces Fitting parameters composite $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{55}{table.caption.43}%
-\contentsline {table}{\numberline {C.15}{\ignorespaces R-matrix table}}{56}{table.caption.44}%
+\contentsline {table}{\numberline {C.1}{\ignorespaces Units of the exponential and polynomial parameters.}}{52}{table.caption.31}%
+\contentsline {table}{\numberline {C.2}{\ignorespaces Fitting parameters polynomial $\mathrm {{}^{2}H(d, p){}^{3}H}$ reaction.}}{53}{table.caption.32}%
+\contentsline {table}{\numberline {C.3}{\ignorespaces Fitting parameters exponential $\mathrm {{}^{2}H(d, p){}^{3}H}$ reaction.}}{53}{table.caption.33}%
+\contentsline {table}{\numberline {C.4}{\ignorespaces Screening parameter $\mathrm {{}^{2}H(d, p){}^{3}H}$ reaction.}}{53}{table.caption.34}%
+\contentsline {table}{\numberline {C.5}{\ignorespaces Fitting parameters polynomial $\mathrm {{}^{2}H(p, \gamma ){}^{3}He}$ reaction.}}{54}{table.caption.35}%
+\contentsline {table}{\numberline {C.6}{\ignorespaces Fitting parameters exponential $\mathrm {{}^{2}H(p, \gamma ){}^{3}He}$ reaction.}}{54}{table.caption.36}%
+\contentsline {table}{\numberline {C.7}{\ignorespaces Fitting parameters polynomial $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{54}{table.caption.37}%
+\contentsline {table}{\numberline {C.8}{\ignorespaces Fitting parameters exponential $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{55}{table.caption.38}%
+\contentsline {table}{\numberline {C.9}{\ignorespaces Parameters empirical formula $\mathrm {{}^{12}C + {}^{12}C}$ reaction.}}{55}{table.caption.39}%
+\contentsline {table}{\numberline {C.10}{\ignorespaces Parameters empirical formula $\mathrm {{}^{12}C + {}^{16}O}$ reaction.}}{55}{table.caption.40}%
+\contentsline {table}{\numberline {C.11}{\ignorespaces Parameters empirical formula $\mathrm {{}^{16}O + {}^{18}O}$ reaction.}}{55}{table.caption.41}%
+\contentsline {table}{\numberline {C.12}{\ignorespaces Parameters empirical formula $\mathrm {{}^{16}O + {}^{17}O}$ reaction.}}{55}{table.caption.42}%
+\contentsline {table}{\numberline {C.13}{\ignorespaces Parameters empirical formula $\mathrm {{}^{16}O + {}^{16}O}$ reaction.}}{56}{table.caption.43}%
+\contentsline {table}{\numberline {C.14}{\ignorespaces Fitting parameters Breit-Wigner $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{56}{table.caption.44}%
+\contentsline {table}{\numberline {C.15}{\ignorespaces Fitting parameters composite $\mathrm {{}^{7}Be(p, \gamma ){}^{8}B}$ reaction.}}{56}{table.caption.45}%
+\contentsline {table}{\numberline {C.16}{\ignorespaces Fitting parameters Breit-Wigner $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{56}{table.caption.46}%
+\contentsline {table}{\numberline {C.17}{\ignorespaces Fitting parameters polynomial fit residuals $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{56}{table.caption.47}%
+\contentsline {table}{\numberline {C.18}{\ignorespaces Fitting parameters exponential fit residuals $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{57}{table.caption.48}%
+\contentsline {table}{\numberline {C.19}{\ignorespaces Fitting parameters composite $\mathrm {{}^{13}C(p, \gamma ){}^{14}N}$ reaction.}}{57}{table.caption.49}%
+\contentsline {table}{\numberline {C.20}{\ignorespaces R-matrix table}}{57}{table.caption.50}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
