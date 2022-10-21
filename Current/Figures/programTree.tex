@@ -1,0 +1,17 @@
+\usetikzlibrary {arrows.meta, trees} 
+\begin{center}
+	\begin{tikzpicture}[edge from parent fork down, sibling distance=23mm, level distance=23mm]
+		 \node {sfactors}
+			child {node {Databases}}
+			child {node {nonResonant}}
+			child {node {Plots}}
+			child {node {\begin{tabular}{l}
+						Reconstructed \\
+						Plots
+			\end{tabular}}}
+			child {node {Resonant}}
+			child {node {Solver}}
+			child {node {Tests}}
+			child {node {Utils}};
+	\end{tikzpicture}
+\end{center}
