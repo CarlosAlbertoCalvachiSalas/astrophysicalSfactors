@@ -624,15 +624,15 @@ Angular momentum is an relevant conserved quantity in physics, in particular in 
 
 \begin{equation} \label{eq:angularMomentum_definition}
 	J = L + S.
-\end{equation}.
+\end{equation}
 
 \begin{equation} \label{eq:angularMomentum_conmutation}
 	[J_a, J_b]  = i \epsilon_{abc} J_c.
-\end{equation}.
+\end{equation}
 
 \begin{equation} \label{eq:angularMomentum_coupledBaseExpansion}
  |JM \rangle = \sum_{J = j_1 - j_2}^{j_1 + j_2} \sum_{M = -J}^{J} {\langle j_1j_2m_1m_2 | JM \rangle  |j_1j_2m_1m_2\rangle}.
-\end{equation}.
+\end{equation}
 
 
 
@@ -649,26 +649,36 @@ Stability depends closely on the biding energy. In particular, since the rest en
 A first approach when modeling the binding energy is a phenomenological model which is inspired in the physical description of a liquid drop. In particular, the predictions of the binding energies are determined by the fitting of the empirical formula: \\ 
 
 \begin{equation} \label{eq:liquidDrop_bindingEnergy}
-	B(Z,A )= a_1A - a_2A^{2/3} - a_3 \frac{Z(Z+1)}{A^{1/3}} + a_4 \frac{(A - 2Z)^2}{A}   +   a_5 A^{-1/2} \delta.
+	B(Z,A )= a_1A - a_2A^{2/3} - a_3 \frac{Z(Z+1)}{A^{1/3}} - a_4 \frac{(A - 2Z)^2}{A}   +   a_5 A^{-1/2} \delta.
 \end{equation}
 
+The first term $a_1A$ accounts for the volume term, given the close relation that the mass number has with the volume of the nucleus. Particularly, $A \sim r^3$, where $r$ is associated with an estimation of the radius of the nucleus. This terms is usually related to the gluing effect of the nuclear force. Then, if the nuclei is interpreted as a liquid drop, there is a cohesion effect due to accumulation of volume, which in the nuclear case corresponds to a higher number $A$. Consequently, stability is added to the nucleus.   \\
 
-However, this model does not fit accurately the binding energy of a selected nuclei which are more stable than expected from the model. In particular, it is said that the pair of number of protons and nucleons $(Z, A)$ of these nuclei are magic numbers. 
+Secondly, the term $- a_2A^{2/3} $, is regarded as the surface term. This term is repulsive since it represents the surface tension of the liquid drop, as $A^{2/3}  \sim r^2$. The instability effect is given by a wider distribution of nucleons inside the nucleus, which leans to tear them apart. \\
 
+Next, the $ a_3 Z(Z+1)/A^{1/3}$ term corresponds to the Coulomb interaction. Thus, this term is repulsive due to the positive charge of the protons. Additionally, the term decays in a similar manner than the Coulomb potential given that $A^{-1/3} \sim r^{-1}$. \\
 
--	The more stable the nuclei, the greater the binding energy.
-Binding energy is the energy difference of rest energy of the nucleus constituents and the actual  rest mass of the overall nucleus. \\
+Subsequently, the $ -a_4 (A - 2Z)^2/A$ contribution is named as the asymmetrical term. Concretely, this is a repulsive term for contributions when the proton and neutron numbers are unequal, and therefore $A \neq 2Z$. This motivates why stable nuclei leans to equal the number of protons and neutrons.\\ 
 
+Finally, the term $a_5 A^{-1/2} \delta$ corresponds to the pairing term. This is a hybrid term which can be repulsive or attractive dependent on the value of the $\delta$ parameter, which is given by:
 
 \begin{equation} \label{eq:liquidDrop_deltaFactor}
 	\delta = 	\left\{\begin{array}{l}
 		\begin{split}
 			1, \quad & Z \ \mathrm{and} \ A \  \mathrm{even} \\ 
 			-1, \quad &  Z \ \mathrm{and} \ A \  \mathrm{odd} 	\\
-			0, \quad & \mathrm{otherwise}	\\
+			0, \quad & \mathrm{otherwise}.	\\
 		\end{split}
 	\end{array}\right.
 \end{equation}
+
+-	The more stable the nuclei, the greater the binding energy.
+Binding energy is the energy difference of rest energy of the nucleus constituents and the actual  rest mass of the overall nucleus. \\
+
+However, this model does not fit accurately the binding energy of a selected nuclei which are more stable than expected from the model. In particular, it is said that the pair of number of protons and nucleons $(Z, A)$ of these nuclei are magic numbers. 
+
+
+
 \subsubsection{Nuclear shell model}  \label{ssub:nuclearShellModel}
 
 An alternative approach to the Liquid drop model is a model based on quantum mechanics. This model is closely related with the quantum mechanical modeling of the hydrogen atom. In particular, a great part of the nuclear shell model consists of solving Schrodinger equation which is expressed as:
@@ -716,9 +726,135 @@ Spin orbit coupling rules the energy levels of the nucleons. Levels are planned 
 \end{figure}
 
 
-\subsection{Nuclear levels and transitions}  \label{sub:nuclearLevelsTransitions}
+\subsection{Nuclear transitions}  \label{sub:nuclearTransitions}
 
-Nuclear levels work in a similar way than atomic levels. Additionally, the are possibilities of transitions between levels.
+Nuclear levels work quite in a similar way than atomic levels, as it was seen in the nuclear shell model. In the context of shell models, each nucleon can be associated with a state.  Additionally, as it happens in atomic physics, transitions between levels are allowed and some of these emit photons as a result. \\
+
+When distinguishing between levels, there are critical variables to be included. Most notably, angular momentum and parity are critical to be included when analyzing nuclear reactions. These quantities are conserved when nuclear and electromagnetic interactions are involved.  \\
+
+The inclusion of these conservation laws imposes constraints which permit the definition of the allowed transitions of the nucleus. The canonical way of imposing such conditions are the selection rules. Specifically, they involve restrictions on the values of angular momentum and parity.  \\
+
+Electromagnetic interaction with the nucleus is described by an expansion of the electromagnetic wave in terms of partial waves, as it is given by: 
+
+\begin{equation}\label{eq:nuclearTransitions_waveExpansion}
+	e^{ikr} = \sum_{l = 0}^{\infty} {\frac{k^{2l + 1}}{(2l +1)!!}}, 
+\end{equation}
+
+where $k$ and $l$ correspond to the wave number and an analogous quantity related to the orbital quantum number respectively. Additionally, the double factorial factor is calculated by considering a sequence starting with $2l +1$ and continuing with multiplying the indeterminately non consecutive term. Namely, 
+
+\begin{equation}\label{eq:nuclearTransitions_doubleFactorial}
+	(2l + 1)!! = (2l +1)(2l-1)(2l -3 ) .... (2l + 1 - 2k) ....
+\end{equation}
+
+The specific interpretation of the $l$ number is given in a the multipole expansion language, which is familiar from classical electrodynamics.  For instance, $l = 0, 1, 2$ are the monopole, dipole and quadrupole terms respectively. The strength of the contribution heavily decreases with the order.  \\
+
+However, due to angular momentum restrictions, monopoles contributions are not included since the photon has a non-vanishing angular momentum. Instead, the leading contribution is given by the dipoles. Additionally, there are both electrical and magnetical origins for the radiation.  \\
+
+Nonetheless, order 0 terms can be still considered in the nuclei in alternative processes than electromagnetic emission. This is the case for internal conversion processes in where a inner shell electron is kicked off the nucleus by an internal excitation. In replacement, an electron with higher energy can decay to occupy the state of the missing electron. As a result of this rearrangement process, radiation with frequencies on the range of the X-range may be emitted. This kind of emission is usually referred as Auger radiation. \\
+
+An alternative process is pair production. However, it is not directly associated with a level transitioning and is more related with electron production.  \\
+
+Continuing with the determinations of the terms of the multipole expansion, the computations are to some extent analogous to classical electrodynamics calculations with the notable difference that instead of functions, the different multipole expansion moments are operators in quantum mechanics. Particularly, the dipole moment is calculated as
+
+\begin{equation}\label{eq:nuclearTransitions_dipole}
+	p = \int  \sum_m {\rho r Y^{m}_1 } d\Omega dr, 
+\end{equation}
+
+where $\rho$ corresponds to the charge density of the nuclei and $Y^{m}_1$ is the spherical harmonic with $l =1$ and $m$, which is used as an index in the sum to consider all the contributions due to values of the $\vec L_z$ operator. \\
+
+On the other hand, quadrupole moments and beyond aspects of structures can be also calculated with quantum mechanical operators. For example, a closed expression $Q$ is given by \\
+
+\begin{equation}\label{eq:nuclearTransitions_quadrupole}
+	Q = \int  \sum_m {\rho r Y^{m}_1 } d\Omega dr, 
+\end{equation}
+
+\subsection{Nuclear motion}  \label{sub:nuclearMotion}
+
+As it happens with compounded structures like molecules, nuclei have additional degrees of freedom than translation. Rotational and vibrational motion is frequent to be relevant in modeling middle to heavy nuclei. In fact, the inclusion of these additional parameters to calculations allow to improve the estimation of cross sections in nuclear reactions.  \\
+
+Rotation modes are started to be modeled in a similar fashion than with molecules. If the angular momentum operator of rotation is $\hat J$, the related term for rotational motion is given by:
+
+\begin{equation}\label{eq:nuclearMotion_rotation}
+	H_{\mathrm{rot}} =  \frac{\hat J^2}{2\mathcal{I}_0},
+\end{equation}
+
+where the rotational Hamiltonian $H_{\mathrm{rot}}$ includes $\mathcal{I}_0$ is the moment of inertia of the nucleus. Since rotations can involve multiple axes, a suitable parametrization is usually given in terms of variables analogous to the Euler angles in classical mechanics. These parameters, which are labeled as $\delta$, $\phi$ and $\psi$ are related by the following expressions: 
+
+\begin{equation}\label{eq:nuclearMotion_angles}
+	\begin{split}
+		x &=  \sin {(\delta)} \sin{(\phi)}  + \cos {(\delta)} \cos {(\phi)} \\
+		y &= \sin {(\delta)} \cos {(\phi)} - \sin {(\phi)} \cos {(\delta)} \\
+		z &= \cos {(\psi)},
+	\end{split}
+\end{equation}
+
+where $x$, $y$ and $z$ are the Cartesian coordinates of the nucleus. This parametrization permits to define the principal axes. Therefore, components for the three dimensional inertia moments are calculated. \\
+
+On the other hand, vibration modes are modeled by assuming a harmonic oscillator structure. As a first approximation, the vibrational motion is expressed in the following form:  
+
+\begin{equation}\label{eq:nuclearMotion_vibration}
+	H_{\mathrm{vib}}	=  \sum_{k}{a_k^{\dagger}a_k}  + \frac{1}{2} \hbar \omega, 
+\end{equation}
+
+This quantized version of the Hamiltonian term $H_{\mathrm{vib}}$ corresponding to the harmonic oscillator includes $a_k$ and $a^{\dagger}_k$ as the creator and annihilation operators for the vibration mode $k$ respectively. Additionally, a base term is included with a frequency of oscillation $\omega$. \\
+
+Rotational and vibrational phenomena are included by couplings to specific modes. This can be achieved by introducing operators $\hat O$, which serves to represent the composite rotation and vibration modes of the nucleus. Particularly, the transition matrix has the form: 
+
+\begin{equation}\label{eq:nuclearMotion_coupling}
+	\delta H_{\mathrm{c}} \propto |\langle a | \hat O| b \rangle|^{2},
+\end{equation}
+
+where $a$ and $b$ are the initial and final states associated to a transition respectively and the $	\delta H_{\mathrm{c}}$ term corresponds to the perturbation in the Hamiltonian due to rotational or vibrational coupling. \\
+
+An additional critical aspect about couplings are conservations of parity and angular momentum. For the case of rotational coupling, it is necessary to consider, in addition to the angular momentum of the nuclei involved in the reaction, the rotational angular state to decide which transitions are allowed. On the other hand, for the case of rotation, it is essential to realize how the symmetry of the system will be changed with the rotation modes. Then, by symmetric arguments, the allowed transitions can the following deduced.  
+
+\subsection{Nuclear deformation}  \label{sub:nuclearDeformation}
+
+As the mass number growths, nuclei are more prone to be deformed. One way of deforming is by deviating from a  spherical shape. Actually, the shape of heavy nuclei rather ellipsoid form. Alternatively, another way of deformation includes breaking effects can be associated due to the excess of protons and neutrons by various mechanism. The stability of these nuclei heavily depends on assumptions about the deformability of the nucleus. These effects are particularly relevant when detailing the behavior of reactions involving middle to high heavy nuclei. \\
+
+Nuclei are not completely spherical. Then, their parametrization needs additional variables to make a complete characterization. For instance, a nucleus can be associated with short $r_s$ and long radii $r_l$, which can be calculated based on radius $r_0$ with eccentricity $\epsilon$. The expression for $r_s$ could be expressed as:
+
+\begin{equation}\label{eq:nuclearDeformation_radius_short}
+	r_s = r_0 (1 - \epsilon^2).
+\end{equation} 
+
+and for the long radius, the formula is given by: 
+
+\begin{equation}\label{eq:nuclearDeformation_radius_long}
+	r_s = r_0 (1 - \epsilon^2)^{-1/2}.
+\end{equation} 
+
+Last equations are consistent with the short and long radius conditions, which respect to the reference radius, $r_s < r_0$ and  $r_l > r_0$ respectively. At zero eccentricity, $\epsilon = 0$, the nuclei assumes as spherical shape since $r_s = r_l = r_0$.  \\
+
+Eccentricity values may vary depending on the mass and atomic number as well as other values of stability determine variables, like pairing, evenness, or magic numbers. In general, more stable nuclei are more spherical. Master formulas for the $\epsilon$ can be given in terms $A$ and  $Z$. Such formulas also consider additional parameters which are unique for a specific nuclei. \\
+
+Nuclear deformation is relevant when computing values in the multipole expansion. Since the shape of the nucleus is not spherical, some assumptions of the multipolar expansion should be modified to include parameters of a non-spherical nucleus.  For example, such alterations can be visualized with the dipole, which can be expressed as: 
+
+ \begin{equation}\label{eq:nuclearDeformation_dipole}
+	p' = p (1 - \epsilon^2)^{-1/2},
+\end{equation} 
+
+where $p'$ and $p$ are the dipoles of the spherical and non spherical nuclei respectively. The oscillations of dipoles are critical in determining stability of heavy nuclei, specially those fissible. As a general rule, fission is produced due to sharp oscillations of the dipole moment of the nucleus after the incidence of a neutron. These breaking probabilities are be affected if the nucleus is non-spherical. \\ 
+
+In fact, hyperdeformed nuclei are expected to be found at nucleus close to the drip line. For these nuclei, any alteration would involve decay. Therefore, their shape should make them vulnerable of breaking down. \\
+
+On the other hand, modified quadrupoles, which are the next in order after dipoles,  are given by \\
+
+ \begin{equation}\label{eq:nuclearDeformation_quadrupole}
+ 	Q' = Q (1 - \epsilon^2)^{-1/2},
+ \end{equation} 
+
+where $Q'$ and $Q$ correspond to the values of the quadrupoles associated with the deformed and non deformed nuclei respectively. As it happens with the dipoles, changes in the quadrupole calculations are going to also impact nuclear transitions. \\
+
+When in comes to determining how a nucleus would break apart, like it happens in nuclear reactions or decay events, breaking effects should be considered. There are several approaches for considering nuclear breaking. Usually these models require a re parametrization of mass. The name of this new variable is cranking mass and its expression is frequently assumed as: \\
+
+ \begin{equation}\label{eq:nuclearDeformation_mass}
+	m' = m(1 - \epsilon^2)^{-1/2},
+\end{equation} 
+
+where $m'$ represents the cranking mass. In contrast, the non-deformed alternative for the mass is simply given by the reduced mass $\mu$. This distinction can be made when modeling the cross section of reactions involving middle heavy nuclei. \\
+
+The breaking process involves substates of the nucleus where partial bounding between their original subparts is included. Initially, the nucleus is considered as a wrapper of the cluster which later will become independent nuclei. Then, in the intemediate step, the nucleus has deformed to a point where substructures are unbounded enough. Next, the nucleus reaches a point where clusters are effectively separated from their original nucleus. 
 
 \section{Nuclear reactions} \label{sec:nuclearReactions}
 
@@ -735,19 +871,51 @@ A planned chart is found in Figure \ref{fig.nuclerReactionChains}.
 	\label{fig.nuclerReactionChains}
 \end{figure}
 
-
 \subsection{Classification of reactions} \label{sub:classificationReactions}
 
-The relevant reactions for the document are:
+There are a vast variety of reactions in the astrophysical context. Most of them are classified depending on the interactions involved, the kind of reactant and product nuclei or their relevance in a particular astrophysical environment. This section pretends to give a broad classification of the reactions of interest in this document.\\ 
+
+Most of the relevant reactions to be studied are of the form: 
+
 \begin{equation} \label{eq:nuclearReaction_general}
-	0 + 1 \rightarrow 2 + 3
+	0 + 1 \rightarrow 2 + 3,
 \end{equation}
+
+where the pairs $0$ and $1$, $2$ and $3$ represent the reactant and product pairs respectively. However, there are processes which involve more than two reactants and products. \\
+
+Also, there are some processes involving photons $\gamma$. Reactions with this characteristics are called radiative and their general form is the following:
 
 \begin{equation} \label{eq:nuclearReaction_gammaCapture}
-	\gamma + 3 \rightarrow 0 + 1
+		0 + 1 \rightarrow 2 + \gamma.
 \end{equation}
 
-Expand  on how the fusion reactions occurs, their conditions and types as well as the differentiation factors with respect to fission processes.
+Additionally, electrons and neutrinos can be also incorporated to the reactions, specially in processes mediated by the weak force.  \\
+
+Depending on the nature of the interaction involved in a particular process, a reaction can occur in a higher, medium and lower rates for nuclear, electromagnetic and weak force mediated processes. \\
+
+In the upcoming subsections, a general description of reactions of considerable interest for the document is given. Reaction kinds such scattering, capture, exchange and fusion are given. 
+
+\subsubsection{Scattering reactions} \label{ssub:scatteringReactions}
+
+The first kind of reaction to be studied is scattering. In this case there is no change in the kind of nuclei. There is a subdivision depending if energy is conserved between the reactant nuclei. If it is such case, the scattering is elastic. Otherwise, it is inelastic. \\
+
+The process of elastic scattering can be described, in classical terms, by nuclei get deflected after interacting as it is given in the following equation
+
+\begin{equation}  \label{eq:nuclearReaction_scattering_elastic}
+	A + a \rightarrow A + a.
+\end{equation}
+
+Notice that the process has the form of $A(a, a)A$ where $A$ and $a$ are the interacting nuclei. \\
+
+On the other hand, the inelastic scattering proceeds similarly to the elastic case with the crucial difference that the final states of the nuclei might not have arrived with the same energy as the initial counterpart. For example, a nucleus can be excited after the interaction and, then, it is possible to claim that energy was not conserved. An example of this case can be represented by:
+
+\begin{equation}  \label{eq:nuclearReaction_scattering_inelastic}
+	A + a \rightarrow A^{*} + a,
+\end{equation}
+
+where the $*$ symbol is an indicator that the initial $A$ nucleus ended up in an excited state, which is annotated as $A^{*}$. In these cases, usually the $a$ nucleus is considerably lighter than $A$.\\ 
+
+Each of these two cases are relevant for astrophysical contexts. The elastic scattering is a common process critical to be accounted in the calculation of abundances. Additionally, excited states can be associated with resonances which are characteristic features of the behavior of a particular reaction and they increase the probability of interacting. \\
 
 \subsubsection{Capture reactions} \label{ssub:captureReactions}
 
@@ -806,11 +974,23 @@ $\ddexchange$ is an example of an exchange reaction relevant for BBN and pp-chai
 	X + X \rightarrow a + X'.
 \end{equation}
 
+\subsection{Kinematics} \label{sub:kinematics}
+
+Definition of the $Q$ value. This determines if the reaction is exogenic or endogenic and thus it estimates the favorability of the process. \\
+
+Center of mass frame is preferred since there multiple nuclei are interacting as a common system. Then, kinematical variables shall be converted to the center of mass frame. \\
+
 \subsection{Cross sections} \label{sub:crossSections}
 
 Cross section of a process. 
 Partial and total cross sections depending on the reaction type.
 Cross sections have relations with the $S$-matrix.
+
+The center of mass is defined closely with the quantum mechanical definition. Particularly, the definition must consider the two body problem, which is usually the case for nuclear reactions. \\
+
+Reciprocal relations and the inclusion of spin channels. \\
+
+
 
 \subsection{Reaction rates} \label{sub:reactionRates}
 
@@ -1249,7 +1429,7 @@ Beyond that peak, alpha process is still given. However, as the weight of nuclei
 Still, there are various reactions in where alpha capture involved. In fact, double alpha processes involving heavy nuclei are also possible in some special cases. \\
 
 Possible common channels of alpha absorption :
-$(\alpha, n), (\alpha, p), (\alpha, \gamma)$ and alpha emission: $(p, \alpha), (n, \alpha),  (\gamma, \alpha)$. Beyond that, it is possible to find also double alpha absorption and emission processes. Namely, $(\alpha \alpha, n), (\alpha \alpha, p), (\alpha \alpha, \gamma)$ and $(\alpha \alpha, n), (\alpha \alpha, p), (\alpha \alpha, \gamma)$ respectively. \\
+$(\alpha, n), (\alpha, p), (\alpha, \gamma)$ and alpha emission: $(p, \alpha), (n, \alpha),  (\gamma, \alpha)$. Beyond that, it is possible to find also double alpha absorption and emission processes. Namely, $(\alpha \alpha, n)$, $(\alpha \alpha, p)$, $(\alpha \alpha, \gamma)$ and $(\alpha \alpha, n), (\alpha \alpha, p), (\alpha \alpha, \gamma)$ respectively. \\
 
 In fact, at explosive environments, accelerated alpha capture is given. However, as it will be treated later, rapid neutron, and to a minor extent proton capture, are the predominant processes under these scenarios. \\  
 
@@ -2267,6 +2447,14 @@ Then, $\xi_0$ can be interpreted as a zero order approximation for $\xi$ while $
 The numerical values of the 9 lastly mentioned parameters are provided in the Table II contained in \cite{yakovlev_beard_gasques_wiescher_2010}. \\
 
 Finally, although Yakovlev et. al model is used for middle-heavy fusion reactions, is not expected to work for radiative capture reactions since it predicts a decrement of the S-factor for all energies. In contrast, the S-factor increases in radiative capture reactions.  \\
+
+Actually, for calculations, data from the modified astrophysical S-factor $S^{*}$ is usually given instead of unmodified S-factor data. The expression of this new factor is given by:
+
+\begin{equation}\label{eq:potential_modifed_Sfactor}
+	S^{*}(E) = S(E) \exp {(g_1E)},
+\end{equation}
+
+where the constant is widely chosen to be $g_1 = 0.46 \mathrm{MeV^{-1}}$. Then, experimental points were chosen by computing $S(E)$ values with the expression of equation \ref{eq:potential_modifed_Sfactor} and with experimental data for $S^{*}(E)$.
 
 
 \subsection{Results and analysis} \label{sub:resultsAnalysisNonResonant}
