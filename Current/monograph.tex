@@ -467,6 +467,13 @@ As it will be reviewed in more detail, the $S$-matrix has a direct relation with
 	\sigma \propto \sum_{l} (2l + 1) |S_l|^2. 
 \end{equation}
 
+It is worth to be noticed that the effect of the spin has not been included up to this point. As a first approximation, the 
+wavefunction ansatz with spin is given by:
+
+\begin{equation} \label{eq:scattering_waveFunction}
+	\psi(r, \theta, \phi, \xi) = \frac{u(r)}{r} Y_{l}^{m}(\theta, \phi) \otimes \chi(\xi).
+\end{equation}
+
 \subsubsection{Born approximation}
 
 An alternative approach for finding the scattered state is through approximating the integral Schrödinger equation. As an initial step, equation \ref{eq:scattering_Schrodinger_timeIndependent} is rearranged as:
@@ -475,26 +482,82 @@ An alternative approach for finding the scattered state is through approximating
  	(\nabla^2  - k^2 + V(r))\psi(\vec r) = 0.
 \end{equation}
 
-Then, it can be said that $\nabla^2  - k^2 + V$ corresponds to the Schrödinger operator. Since it transforms the wave function to zero,  $\psi(\vec r)$ can be estimated via the computation of the Green's function associated with that operator. Then, as anticipated, the wave function can be expressed in integral form. Particularly, it holds that:
+Then, it can be said that $\nabla^2  - k^2 + V$ corresponds to the Schrödinger operator. Since it transforms the wave function to zero,  $\psi(\vec r)$ can be estimated via the computation of the Green's function associated with that operator. The key feature of this operator is its form such that wave function is computed as 
 
- \begin{equation} \label{eq:bornApproximation_operator}
+\begin{equation} \label{eq:bornApproximation_greenFunction}
+		\psi(\vec r') = \psi_0(\vec r') + \int {G(\vec r, \vec r') \psi(r') d^3\vec r'},
+\end{equation}
+
+where $G(\vec r, \vec r')$ is the Green's function connecting the position of the wave function to be calculated $\vec r$ and the positions of the integration region  $\vec r'$. \\
+
+Then, as anticipated, the wave function can be expressed in integral form. Particularly, it holds that:
+
+ \begin{equation} \label{eq:bornApproximation_equation}
  	\psi(\vec r) = \int{ \psi(\vec r' )U(r)e^{-\vec k \cdot \vec r'} d^3 \vec k}. 
  \end{equation}
 
-However, this expression is self-defined since $\psi(\vec r) $ cannot be deduced without kwnowing its value. Then, as an approximation, $\psi(\vec r') $ is taken out of the integral.  \\
+However, this expression is self-defined since $\psi(\vec r) $ cannot be deduced without knowing its value. Then, as an approximation, $\psi(\vec r') $ is taken out of the integral.  \\
 
+In order to reduce this expression, the condition of elastic scattering on wave numbers shall be imposed. In particular, $|\vec k| = |\vec k'| $ holds for the initial $\vec k$ and final $\vec k'$ wave numbers. Therefore, the computation of the magnitude of the difference of the wave numbers $\delta \vec k = $ is given by: 
+
+\begin{equation} \label{eq:bornApproximation_waveNumber_difference}
+	\begin{split}
+	|\delta \vec k| &= (\vec k - \vec k')^2 \\
+						   &= |\vec k|^2 - 2 \vec k \cdot  \vec k' + |\vec k'|^2 \\
+						   &= 2|\vec k|^2(1 - \cos {(\theta)}) \\
+						   &= 4 |\vec k|^2 \sin^2{\left(\frac{\theta}{2}\right)},
+	\end{split}
+\end{equation}
+
+where $\theta$ is the angle separating $\vec k$ and $\vec k'$. In spherical coordinates, equation \ref{eq:bornApproximation_equation} can be reduced to:
+
+\begin{equation} \label{eq:bornApproximation_equation_spherical}
+	 	\psi(\vec r) = \int_{0}^{\infty} \int_{0}^{\pi} \int_{0}^{2\pi} { \psi(\vec r' )U(r)e^{-i|\delta \vec k|r'\cos \theta' } {r'}^{2}   \sin(\theta') dr d\theta' d\phi' },
+\end{equation}
+
+with $(r', \theta', \phi')$ as the spherical coordinates of the integration. \\
+ 
 Subsequentely, it is observed that the remaining term has the shape of a Fourier transform. Therefore, the scattering amplitude can be approximated at first order as:
 
 \begin{equation} \label{eq:bornApproximation_scatteringAmplitude}
 	f(\theta) =   - \frac{2m}{\hbar^2} \int_{0}^{\infty} {\mathcal{F}\{V(r)\}dk}.
 \end{equation}
 
-It is worth to be noticed that the effect of the spin has not been included up to this point. As a first approximation, the 
-wavefunction ansatz with spin is given by:
+The just presented  $\psi$ corresponds to the zeroth order contribution to the Born series. The total wavefunction is calculating by summing the terms with all the possible orders, as it is seen in the following expression: 
 
-\begin{equation} \label{eq:scattering_waveFunction}
-	\psi(r, \theta, \phi, \xi) = \frac{u(r)}{r} Y_{l}^{m}(\theta, \phi) \otimes \chi(\xi).
+\begin{equation} \label{eq:bornApproximation_series}
+	\psi = \sum_n{\psi^{(n)}w_n},
 \end{equation}
+
+where $\psi^{(n})$ is the $n$th contribution to the Born series expansion and $w_n$ is the weight for that contribution. \\
+
+Further orders contributions imply computing iterations on the wave function. For instance, the $n+1$th order correction $\psi^{n+1}$ is obtained from the recurrence formula with the relation given by:
+
+\begin{equation} \label{eq:bornApproximation_iteration}
+	\psi^{(n+1)}  = \int  \psi^{(n} U(k) d^3\vec k,
+\end{equation}
+
+where the $U(k)$ potential is defined as:
+
+\begin{equation} \label{eq:bornApproximation_U_potential}
+	U(k)  = V(r) e^{ikz}.
+\end{equation}
+
+There is a general treatment of the Born series approximation, which is obtained by a more general Schwinger formalism. A key item is the propagator $F$, which is defined as 
+
+\begin{equation}\label{eq:bornApproximation_propagator}
+	F = \frac{1}{E - E' - i \epsilon \delta},
+\end{equation}
+
+where $E$ and $E'$ are energy related quantities and the imaginary term  $i \epsilon \delta$, which is parametrized by a small perturbation $\epsilon$ with a parameter $\delta$ helps to expand the series. This expansion is related with Dyson series $T$, which are roughly given by:
+
+ \begin{equation}\label{eq:bornApproximation_DysonSeries}
+ 	T = \lim_{n\rightarrow\infty} \sum \sum ... \sum \int \int .... f(r_1, r_2, ...) dr_1 dr_2 ... dr_n,
+ \end{equation}
+
+where $f(r_1, r_2, ...) $ is a master function to be approximated by an infinite leaning order $n$. \\
+
+This series may not converge. Then, it is said that a theory is not perturbative. For such cases, effective theories are used to account for the interactions and they are specially useful at the low energy regime. 
 
 
 \subsection{Tunneling phenomena} \label{sub:tunnelingPhenomena}
@@ -551,18 +614,13 @@ Perturbation theory presents a handy framework for simplifying the computations 
 
 where $H_0$ and $\delta H$ are the known and unknown Hamiltonians respectively. In addition, there is a parameter $\lambda$, with $0 \le \lambda \le 1$, which is introduced to parametrize the perturbation. \\
 
-Therefore, approximation methods provide the key for finding solutions in nuclear physics are required to a precision degree. For example, 
+Therefore, approximation methods provide the key for finding solutions in nuclear physics are required to a precision degree. \\
 
-are heavily restricted  involve the n  general rule due to the complexity of the nuclear interaction interactions that they involve. In order to overcome this, some approximation methods are introduced.
+Are heavily restricted  involve the n  general rule due to the complexity of the nuclear interaction interactions that they involve. In order to overcome this, some approximation methods are introduced. \\
 
-In particular, it is desirable that methods ca 
-
-
-hich are based on perturbation theory, which can be regarded as perturbative methods, express   in order to find the solution of complex Hamiltonian with the basis of an initial known solutions.
+In particular, it is desirable that methods are based on perturbation theory, which can be regarded as perturbative methods, express   in order to find the solution of complex Hamiltonian with the basis of an initial known solutions.
 
 General definition of the perturbed Hamiltonian.
-
-
 
 Energy shifts and state shifts. 
 
@@ -570,11 +628,65 @@ There are two main approaches:
 
 Time-independent perturbation theory.\\
 
+The first shift is given by the estimated value of perturbed term of the Hamiltonian in the $n$th state, as it is given by 
+
+\begin{equation} \label{eq:perturbationTheory_timeIndependent_E1}
+	E^{(1)}_n = \langle  n |\delta H| n \rangle,
+\end{equation}
+
+where $E^{(1)_n}$ corresponds to the first order correction of energy associated with the $n$th state. Additionally, the states associated with the initial unperturbed state $\psi_n$ are corrected by:
+
+\begin{equation} \label{eq:perturbationTheory_timeIndependent_psi1}
+	\psi^{(1)}_n = \lambda \sum_{k \neq n}{\frac{\delta H_{nk}}{E_k - E_n}},
+\end{equation}
+
+where the transitions elements are defined as $\delta H_{nk} = \langle n |  \delta H | k \rangle $. \\
+
+A second order correction can be obtained, which is given by 
+
+\begin{equation} \label{eq:perturbationTheory_timeIndependent_E2}
+	E^{(2)}_n = \sum_{p \neq k} \sum_{k \neq n} {\frac{\delta H_{np}\delta H_{kp} }{(E^{1}_n - E_p)^2}}.
+\end{equation}
+
+Additionally, the second order correction term for the wave function can be also be computed as: 
+
+\begin{equation} \label{eq:perturbationTheory_timeIndependent_psi2}
+	\psi^{(2)}_n = \lambda  \sum_{l \neq p}  \sum_{p \neq k} \sum_{k \neq n}{\frac{\delta H_{pl}\delta H_{kl} }{(E^{2}_n - E_l)^2}}.
+\end{equation}
+
+
 Time-dependent perturbation theory.\\
 
-Perturbation theory is involved in the calculation of cross sections and reaction rates.
+The first order coefficient is usually the leading contribution to the perturbative calculation. It can be obtained by coefficients finding or by rearranging the Born expansion of equation \ref{eq:bornApproximation_series}. Both cases arrive to an expression for the transition coefficient  $c_{m\rightarrow n} $ with the form:
+
+\begin{equation} \label{eq:perturbationTheory_timeDeependent_c}
+	c^{1}_{m\rightarrow n} = - \frac{1}{i\hbar} \int_{0}^{t} \frac{\langle m \delta H n \rangle  } {E_n - E_m}, dt 
+\end{equation}
+
+where $E_n$ and  $E_m$ are the observable energies associated to the final $|n \rangle$ and initial  $|m \rangle$ eigenstates respectively. \\
+
+Further contributions are computed with iterative integration, in a similar form to equation \ref{eq:bornApproximation_DysonSeries} integration. Particularly, the $k$the order coefficient  $c^{(k)}_{m\rightarrow n}$ is given by:
+
+\begin{equation} \label{eq:perturbationTheory_timeDeependent_ck}
+	c^{(k)}_{m\rightarrow n} = - \int \int ...  f(\langle m \delta H  n \rangle  ) dt dt' ... ,
+\end{equation}
+
+where the last expression is integrated $k$th times with different from 0 to $t$. \\
+
+Perturbation theory is involved in the calculation of cross sections and reaction rates. \\
 
 An application of perturbation theory is the Fermi Golden rule for transition decay rates. 
+
+\begin{equation} \label{eq:perturbationTheory_fermiGoldenRule_rate}
+	\lambda_{m\rightarrow n} = \frac{2\pi}{k} |\langle m | \delta H| n \rangle|^2 \rho(E_n),
+\end{equation}
+
+where $\rho(E_n)$ corresponds to the density of states in the final state. Alternatively, for the cross section, equation \ref{eq:perturbationTheory_fermiGoldenRule_rate} is extended as: 
+
+ \begin{equation} \label{eq:perturbationTheory_fermiGoldenRule_crossSection}
+ 	\sigma_{m\rightarrow n} = \frac{(2\pi)^4}{k^2} |\langle m | \delta H| n \rangle|^2 \rho(E_n).
+ \end{equation}
+ 
 
 Electromagnetic transitions are also modeled as perturbations. In this case, the perturbed Hamiltonian is proportional to an electromagnetic wave oscillating term as it is given by:
 
@@ -623,22 +735,94 @@ Selection rules. Electromagnetic interaction and resonances E1 and M1 gigantic r
 Angular momentum is an relevant conserved quantity in physics, in particular in nuclear reactions.
 
 \begin{equation} \label{eq:angularMomentum_definition}
-	J = L + S.
+	\hat J = \hat L + \hat S,
 \end{equation}
+
+where $\hat L$ and $\hat S$ correspond to the orbital angular momentum and spin operators respectively. \\
+
+Some constraints are imposed to the angular momentum. For instance, its value is quantized. For the case of the $z$ axis projection, the $z$ component can assume values:
+
+\begin{equation} \label{eq:angularMomentum_Lz}
+	L_z = m\hbar, 
+\end{equation}
+
+where $m$ is an integer. Since the angular momentum has upper and lower bounds, given that it should represent classically a finite valued vector, $m$ is constrained to: 
+
+\begin{equation} \label{eq:angularMomentum_mConstraint}
+	-l, -l + 1, .... \leq m \leq 1, ....., l,
+\end{equation}
+
+where $l$ is another integer which at the same time parametrizes the total angular momentum. Particularly, the observables of the $\hat L^2$ operator assume the form:
+
+\begin{equation} \label{eq:angularMomentum_L2}
+	L^2 = l(l+1)\hbar^2. 
+\end{equation}
+
+The previous operators are worth to be used since they commute. Namely, 
+
+\begin{equation} \label{eq:angularMomentum_commutator}
+	[\hat L^2, \hat L_z] = 0.
+\end{equation}
+
+Therefore, it is possible to find common eigenvalues for both operators. In fact, it turns out that the spherical harmonics $Y^{l}_m(\theta, \phi)$ defined in equation \ref{eq:scattering_Schrodinger_sphericalHarmonics} are the are suitable for such requirements of the $\hat L_z$ and $L^2$ operators. Then, the aforementioned functions represent the possible observable states of total and $z$ component angular momentum.  \\
+
+Any component of the angular momentum shall obey a commutation relation expressed as: 
 
 \begin{equation} \label{eq:angularMomentum_conmutation}
-	[J_a, J_b]  = i \epsilon_{abc} J_c.
+	[J_a, J_b]  = i \epsilon_{abc} J_c,
 \end{equation}
+
+where the commutator of operators $J_a$ and $J_b$ depends on an number $\epsilon_{abc}$ which is part of what is called the Levi-Civita tensor. The key property of this mathematical object is the totally anti symmetric property. In particular, it is evaluated as:
+
+\begin{equation} \label{eq:angularMomentum_LeviCivitaTensor}
+	\epsilon_{abc} = 	\left\{\begin{array}{l}
+		\begin{split}
+			1, \quad &abc\mathrm{\ is \ even \ permutation \ of \ 123} \\ 
+			-1, \quad &abc\mathrm{\ is \ odd \ permutation \ of \ 123} \\
+			0,	\quad &\mathrm{otherwise.}
+		\end{split}
+	\end{array}\right.
+\end{equation}
+
+When change of basis for addition of angular momentum is needed, a special procedure is required. Particularly, a change from the uncoupled to the coupled basis $|j_1j_2m_1m_2 \rangle \rightarrow |JM \rangle$ can be parametrized with the following expression:
 
 \begin{equation} \label{eq:angularMomentum_coupledBaseExpansion}
- |JM \rangle = \sum_{J = j_1 - j_2}^{j_1 + j_2} \sum_{M = -J}^{J} {\langle j_1j_2m_1m_2 | JM \rangle  |j_1j_2m_1m_2\rangle}.
+ |JM \rangle = \sum_{J = j_1 - j_2}^{j_1 + j_2} \sum_{M = -J}^{J} {\langle j_1j_2m_1m_2 | JM \rangle  |j_1j_2m_1m_2\rangle},
 \end{equation}
 
+where $\langle j_1j_2m_1m_2 | JM \rangle $ are known as the Clebsh-Gordan coefficients. Further details about their computation are given in appendix \ref{sec:clebschGordan}. For reactions, it is particularly useful the case when there are more than two angular momentum operators to be added. For such cases, the Clebsh-Gordan approach can be generalized with the aid of the $3j$ and $6j$ symbols, which are also reviewed in appendix \ref{sec:clebschGordan}. \\
+
+An example of such case is when the channel spin is included with an already coupled spin-orbital angular momentum addition. The eigenfunctions corresponding to each case are the hyperspherical harmonics of equation \ref{eq:angularMomentum_ClebshGordan_sphericalHarmonics}, which are extensions of the spherical harmonics for the three angular momentum addition case. \\
+
+On the other hand, another quantum number which is also associated with conservation laws is parity, which is symbolized as $\pi$. It is said that a system is invariant under parity changes when spacial transformation of the form $\vec r \rightarrow - \vec r$ do not affect the physics of the system. \\
+
+The eigenstates of the parity operators are two: symmetric  or antisymmetric states. For example, a wavefunction $\psi(\vec r)$ is symmetric if $\psi(-\vec r) = \psi(\vec r) $ and antisymmetric if $\psi(-\vec r) = -\psi(\vec r) $. To a certain extent, party has a close relation with the concept of chirality and mirror symmetry. \\
+
+A key difference with angular momentum conservation is that parity is a multiplicative, not additive property. This can be explained by defining the observables of the parity operator as:  
+
+\begin{equation} \label{eq:parity_observables}
+	\pi = 	\left\{\begin{array}{l}
+		\begin{split}
+			1, \quad & \psi(-\vec r) = \psi(\vec r) \\ 
+			-1, \quad & \psi(-\vec r) = -\psi(\vec r) \\
+		\end{split}
+	\end{array}\right.
+\end{equation}
+
+Any symmetric transformation will not alter the party of the system while antisymmetric transformations will indeed invert the parity. Thus, symmetric and antisymmetric operators are associated with positive and negative observables respectively.  \\
+
+Additionally, an essential connection between the orbital angular momentum and parity occurs. Particularly, the parity transformation by the spherical harmonics is given by:
+
+\begin{equation} \label{eq:parity_sphericalHarmonics}
+	Y^{l}_{m}(-\vec r) = (-1)^{l}Y^{l}_{m}(\vec r),
+\end{equation}
+
+where the factor $(-1)^{l}$ accounts for the fact that angular momentum states are symmetric and antisymmetric for even and odd $l$ order respectively. This feature is essential in discriminating the allowed transitions as it will be explained in section \ref{sub:nuclearTransitions}. 
 
 
 \section{Nuclear structure} \label{sec:nuclearStructure}
 
-Nuclear structure is presented in this section.
+Nuclear structure is presented in this section. Initial emphasize was  on nuclear model, with the classical examples of the liquid drop and nuclear shell models. Next, aspects of quantum transitions and levels in the nuclei are introduced. Then, general aspects of nuclear motion are described with concentration on rotational and vibrational degrees of freedom. Finally, nuclear deformation is described. Particularly, breaking mechanisms within a reaction based perspective. 
 
 \subsection{Nuclear models}  \label{sub:nuclearModels}
 
@@ -687,15 +871,12 @@ An alternative approach to the Liquid drop model is a model based on quantum mec
 	- \frac{\hbar^2}{2m} \partial_{tt} \psi + V  \psi = E \psi.
 \end{equation}
 
-
-Some nuclear binding energies cannot be completely reproduced by the liquid drop model. 
-
-Nuclei with a special number of nucleons have a considerable difference between the predicted and measured values of the binding energy.
+Some nuclear binding energies cannot be completely reproduced by the liquid drop model. Particularly, the empirical formula of equation \ref{eq:liquidDrop_bindingEnergy} actually underestimates the binding energy for a selected list of more stable than expected nuclei. When analyzing those discrepancy, it was realized that their atomic masses showed a recurrence pattern which was out of the scope of the predictive capacity of the liquid drop model.  \\
 
 Classical examples of magic numbers are 2, 8, 20, 28, 50, ... These numbers differ from their atomic counterparts. Namely, 2, 8, 16, which are the atomic numbers of the noble gases. This happens because the relative effect of the spin orbit coupling is more noticeable in the energy level shifting in the nucleus than in the atom.\\
 
 
-A nucleus is said to be magic if it has a magic number of protons or neutrons. As well, it can be regarded as double magic if the number of protons and neutrons are both magic. \\
+A nucleus is said to be magic if it has a magic number of protons or neutrons. As well, it can be regarded as double magic if the number of protons and neutrons are both magic. Examples of this class of nuclei with double enhanced have $A = 4, 16, 40, 56, 100$ which are corresponding to $\mathrm{{}^{4}He}$, $\mathrm{{}^{16}O}$,  $\mathrm{{}^{40}Ca}$, $\mathrm{{}^{56}Ni}$ and $\mathrm{{}^{100}Sn}$ respectively. \\
 
 Being a magic nucleus implies having extra stability since all the shells are occupied by nuclei.  Spin orbit coupling causes energy levels to shift. This shifting is considerable strong that the modified lines form shells of closely related energies.  \\
 
@@ -714,7 +895,9 @@ where $\omega$ is a parameter that is analogous to the angular frequency of the 
 
 For example, for a more accurate description of the nuclear shell model, the Woods-Saxon potential can be used to obtain better predictions. \\
 
-Spin orbit coupling rules the energy levels of the nucleons. Levels are planned to be illustrated in Figure \ref{fig:nuclerShellModelLevels}.  \\
+Spin orbit coupling rules the energy levels of the nucleons are illustrated in Figure \ref{fig:nuclerShellModelLevels}.  \\
+
+Nuclear levels beyond with $A$ above 100 are matter of controversies since the result on the models are heavily dependent on details of the shell structure. Actually, for super heavy nuclei with $A$ ranging from 200 to 300 an island of stability is expected to be found. Then, new magic numbers might appear at the scale or very heavy nuclei. 
 
 - Nuclear shell model is based on quantum mechanics. \\
 -Nuclear shell model can predict the existence of the magic numbers.
@@ -970,13 +1153,23 @@ $\ddexchange$ is an example of an exchange reaction relevant for BBN and pp-chai
 
 \subsubsection{Fusion reactions} \label{ssub:fusionReactions}
 
+Although most of reactions in the nuclear astrophysical context can be regarded as fusions, the term is usually reserved when referring to reactions of the form:
+
 \begin{equation}  \label{eq:nuclearReaction_fusion}
-	X + X \rightarrow a + X'.
+	X + Y \rightarrow a + X',
 \end{equation}
+
+where $X$, $Y$ and $X'$ are heavier nuclei than the product $a$. Reactions with $X = Y$ are pivotal in stellar nucleosynthesis as it will be seen in section \ref{sec:StellarFusion}.
 
 \subsection{Kinematics} \label{sub:kinematics}
 
-Definition of the $Q$ value. This determines if the reaction is exogenic or endogenic and thus it estimates the favorability of the process. \\
+Definition of the $Q$ value. This determines if the reaction is exothermic or endothermic and thus it estimates the favorability of the process. This quantity is defined as: 
+
+\begin{equation}\label{eq:nuclearReaction_Qvalue}
+	Q = (\sum m_{\mathrm{react}} - \sum m_{\mathrm{prod}})c^2,
+\end{equation}
+
+where $\sum m_{\mathrm{react}}$ and  $\sum m_{\mathrm{prod}}$ correspond to the sum of the reactant and product nuclei respectively. If $Q > 0$, it means that energy was released and the reaction is exothermic. Reciprocally, in the case $Q < 0$ energy is absorbed and therefore the reaction is endothermic.  \\
 
 Center of mass frame is preferred since there multiple nuclei are interacting as a common system. Then, kinematical variables shall be converted to the center of mass frame. \\
 
@@ -988,25 +1181,46 @@ Cross sections have relations with the $S$-matrix.
 
 The center of mass is defined closely with the quantum mechanical definition. Particularly, the definition must consider the two body problem, which is usually the case for nuclear reactions. \\
 
-Reciprocal relations and the inclusion of spin channels. \\
+If a channel of the form $a + A \rightarrow b + B$ is considered, and its cross section $\sigma_{aA \rightarrow bB}$ is known, it is possible to information for the reciprocal reaction, which is defined as  $ b + B \rightarrow a + A$. Particularly, the cross section of the reversed reaction $\sigma_{bB \rightarrow aA}$  is given by  \cite{iliadis_2015}:
 
+\begin{equation}\label{eq:nuclearReaction_reciprocal}
+	  \sigma_{bB \rightarrow aA} = \frac{k^2_{aA}}{k^2_{bB}} \frac{(2j_a + 1)(2j_A + 1) }{ (2j_b + 1)(2j_B + 1) } \frac{1 + \delta_{bb}}{1 + \delta_{aA}} \sigma_{aA \rightarrow bB} ,  
+\end{equation}
 
+where the pair $k_{aA}$, $k_{bB}$ corresponds to the wave vectors associated with the reactants ans products respectively. The pairs $j_a$ with $j_A$ and $j_b$ with $j_B$ are associated with the total angular momentum number for their corresponding reactant and product nuclei respectively. Additionally, the terms $\delta_{aA}$ and  $\delta_{bB}$ are equal to one only if the indexed nuclei are the same, otherwise their value is zero. The introduction of this term accounts for corrections to the cross section when nuclei are indistinguishable. 
 
 \subsection{Reaction rates} \label{sub:reactionRates}
 
-The ratio that determines the quantity of a nucleus.
+The ratio that determines the number of nuclei per unit per unit volume time to be consumed is given by: 
 
 \begin{equation}  \label{eq:reactionRate_generic}
-	r = N \langle \sigma (v) \rangle v. 
+	r_{ab} = N_aN_b \langle \sigma (v)  v \rangle,
 \end{equation}
 
-\begin{equation}  \label{eq:reactionRate_definition}
-	r = A \int_0^{\infty} { E \sigma(E) \exp\left({-\frac{E}{kT}}\right)  dE}.
-\end{equation}
+where $\sigma(v)$ is the cross section of a reaction, which depends on the relative speed $v$ of the $a$ and $b$ reactant nuclei. $N_a$ and $N_b$ are the number of $a$ and $b$ nuclei per unit volume respectively. Additionally, the  product $\sigma (v) v$ can be interpreted physically as a sort of flux of the reaction. \\
+
+It is critical to observe that, rather than being a definite variable, the relative speed of the colliding nuclei has a spectrum of possible values. Particularly, at thermal equilibrium and non relativistic speeds, which is strongly predominant in most nuclear astrophysical scenarios, the Maxwell-Boltzmann distribution is preferred. The probability of finding a pair of nuclei with relative velocity  between $v$ and $v + dv$ is given by:
 
 \begin{equation} \label{eq:reactionRate_maxwellBoltzmann}
-	P(v)dv \propto v^2 \exp{\left({\frac{mv^2}{2kT}}\right)}dv.
+	P(v)dv = 4\pi \left( \frac{\mu}{2\pi kT}\right)^{3/2} v^2 \exp{\left({\frac{\mu v^2}{2kT}}\right)}dv.
 \end{equation}
+
+
+where $\mu$ is the reduced mass of the reactant nuclei,  $k$ is the Boltzmann constant and $T$ is the reservoir temperature. Then, the average reaction flux $\langle \sigma v \rangle $, expressed in terms of the center of mass energy $E$, is given by \cite{ueda_sargeant_pato_hussein_2004}:
+
+\begin{equation}  \label{eq:reactionRate_definition}
+	\langle \sigma(v) v \rangle = \left(\frac{8}{\pi \mu (kT)^3 }\right)^{1/2}  \int_0^{\infty} { E \sigma(E) \exp\left({-\frac{E}{kT}}\right)  dE},
+\end{equation}
+
+
+A notable exception of this rule happens when a photon is one of the reactants. In that case, $v = c$ as special relativity imposes. On the other hand, since the photon is a relativistic boson, it is required the use of the Bose-Einstein statistics, which is defined as:  
+
+\begin{equation} \label{eq:reactionRate_boseEinstein}
+	P(E)dE = \frac{8\pi}{(hc)^3} \frac{E^2}{\exp{\left(\frac{E}{kT}\right)} - 1}.
+\end{equation}
+
+In this case $E$ represents the photon energy and $\sigma(E)$ is interpreted as the photon absorption cross section.
+
 
 On specifying the rates, it is needed to be considered.
 
@@ -1017,11 +1231,6 @@ Reaction rates are considered from calculation of transmitted, incident and inte
 
  For particles of matter, the statistics at the star fusing scale is Maxwell - Boltzmann and for photons the Bose - Einstein statistics. \\ 
 
-The probability distribution for the case of photons, which are bosons, are given by the Bose-Einstein distribution with the form: 
-
-\begin{equation} \label{eq:reactionRate_boseEinstein}
-	P(\omega)\omega \propto k \omega^2 \frac{\hbar \omega d\omega}{\exp{(\frac{E}{\hbar\omega})-1}} .
-\end{equation}
 
 There are extensions to the Maxwell-Boltzmann treatment. For example, more general distribution functions are used such as the Tsallis statistics \cite{haubold_kumar_2008}.  \\
 
@@ -1033,7 +1242,21 @@ There are special considerations and approximations for the case of resonances. 
  	\frac{dN}{dt} = \lambda_1 N_1(t) + \lambda_2 N_2(t)  + ... -  \lambda_1' N_1'(t) + \lambda_2' N_2'(t),
  \end{equation}
 
-where $N_1(t), N_2(t), ...$ and $N_1'(t), N_2'(t), ...$ are the abundances of the elements which produce and consume the nucleus respectively. Similarly,  $\lambda_1, \lambda_2, ...$ and  $\lambda_1', \lambda_2', ...$ are quantities associated with the reaction rates of the nucleus production and decaying processes respectively. It is central to be noticed that the abundance of an element usually depends of the abundances of other nuclei. Consequently, in order to actually equations like \ref{eq:reactionRate_abundances}, it is necessary to solve all the abundances simultaneously by solving a system of differential equations with all the relevant nuclei to be considered. Since abundance equations are first order, it is necessary, in addition to estimate the reaction rates, to guess an initial distribution of the elements in the Universe. The details on this selection is still a topic of active research. \\
+where $N_1(t), N_2(t), ...$ and $N_1'(t), N_2'(t), ...$ are the abundances of the elements which produce and consume the nucleus respectively. Similarly,  $\lambda_1, \lambda_2, ...$ and  $\lambda_1', \lambda_2', ...$ are quantities associated with the decay rates favorable and unfavorable to the production of $N$ respectively. It is central to be noticed that the abundance of an element usually depends of the abundances of other nuclei. Consequently, in order to actually equations like \ref{eq:reactionRate_abundances}, it is necessary to solve all the abundances simultaneously by solving a system of differential equations with all the relevant nuclei to be considered. Since abundance equations are first order, it is necessary, in addition to estimate the reaction rates, to guess an initial distribution of the elements in the Universe. The details on this selection is still a topic of active research. \\
+
+However, equation \ref{eq:reactionRate_abundances} does not take into account the reaction rates of cross section. In order to do so, it is necessary to include the abundances of the process involved in a reaction. For example, the contribution to equation \ref{eq:reactionRate_abundances} of the channel $a + A \rightarrow b + B$ is going to be proportional to: 
+
+\begin{equation}
+		\left(\frac{dN}{dt}\right)_{aA \rightarrow bB} \sim r_{aA \rightarrow bB},
+\end{equation}
+
+where $N_a(t)$ and $N_b(t)$ are the abundances of the reactant nuclei and $ \sim r_{aA \rightarrow bB}$ is the reaction rate of the channel. This contribution can be positive or negative depending if the $N$ nuclei are produced or consumed by the reaction respectively. Therefore, a generalization of equation \ref{eq:reactionRate_abundances}, with the contributions of the cross sections, is given by: 
+
+\begin{equation}\label{eq:reactionRate_abundances_general}
+	\frac{dN}{dt} =  \sum_{k} {\lambda_k N_k}  - \sum_{l} {\lambda_l N_l} +  \sum_{m, n} {r_{mn}} - \sum_{o} {r_{o}},
+\end{equation}
+
+where the indices $k$ and $l$ tag the decays producing and consuming respectively. Additionally, the $m, n$ pair of indices corresponds to the nuclei which react to produce $N$ at a rate $r_{mn}$. Thus, the sign associated to this contribution is positive. Finally, the index $o$ accounts for the nucleus that consumes $N$ in a reaction with rate $r_0$. Therefore, its contribution is negative. \\
 
 There are broad classification of reactions. 
 
@@ -1136,29 +1359,32 @@ Stellar stability is the result of the hydrostatic equilibrium established by th
 
 The diversity of elements fusing at the core of a star heavily depends on the kind of star and the stage in the stellar evolution.  Initially, when temperature and density have reached critical values, the fusion process begins. In particular, hydrogen is the first element source of fusion reactions. \\
 
-The classical treatment of fusion in stars is given by the classical \cite{burbidge_burbidge_fowler_hoyle_1957}.
+The classical treatment of fusion in stars is given by the classical \cite{burbidge_burbidge_fowler_hoyle_1957}. \\
 
-Summary text with aspects of stellar evolution, degenerate stars and more \cite{kundt_2005}.
+Summary text with aspects of stellar evolution, degenerate stars and more \cite{kundt_2005}. \\
 
 Hertzsprung-Russel diagram permits a classification of a star with respect to specific categories which are related to different evolution stages in the lifetime of a star \cite{arsentieva_shevchenko_2021}. It classifies stars in clusters depending on their collective luminosity and magnitude characteristics. \\
 
-Brown dwarfs are the first of such classifications. This objects with stellar magnitude which where unable to produce a sustainable chain of fusion of hydrogen. As a result, their luminosity is generally low. \\
+Brown dwarfs are the first of such classifications. This objects with stellar magnitude which where unable to produce a sustainable chain of fusion of hydrogen. As a result, their luminosity is generally low. Their masses are roughly bounded by $M < 0.07M_{\odot}$. \\
 
-Red dwarfs are the smallest objects which are able to sustain a chain of nuclear fusion reaction. Their color is red and their mass $M < 0.7M_{\odot}$ and low luminescence. Most of the stars on the Universe are in this group. \\
+Red dwarfs are the smallest objects which are able to sustain a chain of nuclear fusion reaction. Their color is red and their mass $ 0.07M_{\odot} < M < 0.5 M_{\odot} $ and low luminescence. Most of the stars on the Universe are in this group. However, at these mass values they are unable to burn helium \cite{kundt_2005}. \\
 
-Main sequence branch, which is the current classification of the Sun, includes stars with middle mass with $ 0.7M_{\odot} < M < 2M_{\odot}$ approximately. Their color leans usually to yellow. They grow during their live until they reach a red giant stage. \\
+Main sequence branch, which is the current classification of the Sun, includes stars with middle mass with $ 0.5M_{\odot} < M < 2M_{\odot}$ approximately. Their color leans usually to yellow. They grow during their live until they reach a red giant stage. \\
 
-Asymptotic red giant is a superstar with the mass of  M < $M > 2M_{\odot}$. This is able to collapse as a supernova given certain conditions which are going to be generally sketched later. \\
+Asymptotic red giant is a superstar with the mass of $M > 2M_{\odot}$. They fuse $\mathrm{{}^{4}He}$ and even isotopes of carbon. Some stars of this kind releases their material without explosion, like the case of the sun, while others are massive enough to collapse as a supernova given certain conditions which are going to be generally sketched later. In fact, it is critical to be annotated that mass is not the only criteria when determining the outcome of a star since variables like nuclear composition, density, angular momentum are eventually relevant.  \\
 
-The supergiant and hypergiant are stars with  high mass $M > 3M_{\odot}$ and gigantic size with radii $R > 1000R_{\odot}$. These stars are usually involved in highly explosive environments. , \\
+The supergiant and hypergiant are stars with high mass $M > 3M_{\odot}$ and gigantic size with radii $R > 1000R_{\odot}$. These stars are usually involved in highly explosive environments. One common kind are supernovae of kind AII, which is a mechanism of core collapse for stars that have reached iron as their ultimate product. On the other hand, a less common, although more explosive, is a supernovae of kind IA, which usually involve a binary system consistent of a red giant and a white dwarf. \\
 
-White dwarfs are the remnants of the life of active stellar fusion. Their radius is close to the radius of the earth. Their stability is explained by repulsion degeneracy of their exterior layer of electrons. Actually, these kind of stars are critical for certain kinds of supernovae. \\ 
+White dwarfs are the remnants of the life of active stellar fusion. Their radius is close to the radius of the earth. Their stability is explained by repulsion degeneracy of their exterior layer of electrons. It is quite remarkable that this star is able to maintain hydrostatic equilibrium with mostly quantum mechanical originated degeneracy pressure.  Actually, these kind of stars are critical for certain kinds of supernovae. \\ 
 
-Neutron stars are compact objects which, like the white dwarfs, does not perform large scale fusion sustainable reactions. Instead, their stability is explained by the repulsion generated by the fermionic degeneracy of its constituent neutrons. These objects are extremely compact with radius of a couple of tenths of kilometers long. Therefore, they are one of the most dense objects in the universe.  It has been speculated that  at the interior of these objects, a new state of matter, which is usually called the quark gluon plasma, is possible given the extreme conditions of degeneracy at these environments.\\ 
+Neutron stars are compact objects which, like the white dwarfs, does not perform large scale fusion sustainable reactions. Instead, their stability is explained by the repulsion generated by the fermionic degeneracy of its constituent neutrons. This explains the extremely compact nature of this objects since a mass times larger than the sun is occupied within an object with radius of a couple of tenths of kilometers long. \\ 
+
+Therefore, they are one of the most dense objects in the universe.  It has been speculated that  at the interior of these objects, a new state of matter, which is usually called the quark gluon plasma, is possible given the extreme conditions of degeneracy at these environments.\\ 
 
 The next step in compactness are black holes. This objects have self collapsed gravitationally to the point that even light cannot escape the gravitational binding at regions inside the event horizon. A first approach towards determining the mass limit of a star to become a black hole is known as the Chandasekar mass, which corresponds to 2.4 solar masses. However, a complete calculation should take into account particularities on the initial configuration of the star like its metallicity and element composition.  \\
 
-Introduce the needed conditions for the creation of stars in the primordial nebula.
+Introduce the needed conditions for the creation of stars in the primordial nebula.\\
+
 Describe how the hydrogen is burnt in the star's core and the associated products.  \\
 
 
@@ -1263,12 +1489,17 @@ The last cycle fuels another nuclear capture cycle. In this case, the starting p
 There is even a third CNO cycle, which is far more uncommon and there fore is considerably less dominant than the second and first CNO cycle. In this case, the process is given by: 
 
 \begin{equation} \label{eq:reaction_CNO_O}
-	\mathrm{{}_{8}^{17}O  \rightarrow {}^{18}_{9}F  \rightarrow {}^{19}_{10}Ne  \rightarrow {}^{19}_{9}F  \rightarrow {}^{16}_{8}O  \rightarrow {}^{17}_{9}F \rightarrow {}^{15}_{8}O  }.
+	\mathrm{{}_{8}^{17}O  \rightarrow {}^{18}_{9}F  \rightarrow {}^{18}_{8}O  \rightarrow {}^{15}_{7}N  \rightarrow {}^{16}_{8}O  \rightarrow {}^{17}_{9}F \rightarrow {}^{17}_{8}O  }.
 \end{equation}
 
 All of the previous cycles are coupled in the sense that the production of one element in one cycle may affect another cycle. In particular, CNOI fuels CNOII which at the same time feeds the CNOIII cycle. Particularly, Also notice that the three cycles begin with nuclei with consecutive atomic number. More concretely, carbon, nitrogen and oxygen nuclei begin the CNOI, CNOII and CNOIII cycles respectively.\\
 
-There is also a CNOIV cycle, which would involve nuclei up to Ne. However, it is much less dominant than the CNOI cycle and certainly is not a common process in stellar fusion at standard conditions. \\
+There is also a CNOIV cycle, which is a version of the CNOIII with heavier nuclei. However, it is much less dominant than the CNOI cycle and relevant only in stellar fusion on heavy stars. The cycle is given by:
+
+\begin{equation} \label{eq:reaction_CNO_O_4}
+	\mathrm{{}_{8}^{18}O  \rightarrow {}^{19}_{9}F  \rightarrow {}^{16}_{8}O  \rightarrow {}^{17}_{9}F  \rightarrow {}^{17}_{8}O  \rightarrow {}^{18}_{9}F \rightarrow {}^{15}_{8}O }.
+\end{equation}
+
 
 The last three processes are summarized in the illustration of Figure \ref{fig:CNOcyles}.
 
@@ -1280,9 +1511,27 @@ The last three processes are summarized in the illustration of Figure \ref{fig:C
 
 Notice that the cycle balance is established by the existence of proton capture and beta decay, which increases and decreases the atomic mass respectively. Then, any change in the rates of the previous reactions would alter the possiblity of production of certain elements. In particular, at high enough temperatures, the rate of the proton capture process surpass that of the beta capture. Then, alternative products are produced and new processes form what is called hot CNO cycles. \\ 
 
-At explosive environments, the CNO cycle is altered and it forms a new cyclic reaction chain called the HCNO cycle, or hot CNO cycle.  New reactions are present given the more energetic conditions of this cycle. There are HCNOI, HCNOII and HCNOIII cycles. \\
+At explosive environments, the CNO cycle is altered and it forms a new cyclic reaction chain called the HCNO cycle, or hot CNO cycle.  New reactions are present given the more energetic conditions of this cycle. There are HCNOI, HCNOII and HCNOIII cycles, which are closely related with the CNOI, CNOII and CNOIII cycles respectively. For instance, the HCNOI proceeds as: 
 
-Further cycles related to alpha reactions Ne cycle \cite{kaeppeler_wiescher_giesen_goerres_baraffe_eleid_raiteri_busso_gallino_limongi_et_1994}
+\begin{equation} \label{eq:reaction_HCNO_C}
+	\mathrm{{}_{6}^{12}C  \rightarrow {}^{13}_{7}N  \rightarrow \textcolor{blue}{{}^{14}_{8}O}  \rightarrow {}^{14}_{7}N  \rightarrow {}^{15}_{8}O  \rightarrow {}^{15}_{7}N \rightarrow {}^{12}_{6}C}.
+\end{equation}
+
+The painted term corresponds to the differing term in the cycle. Next, the HCNOII cycle is given by: 
+
+\begin{equation} \label{eq:reaction_HCNO_N}
+	\mathrm{{}_{7}^{15}N  \rightarrow {}^{16}_{8}O  \rightarrow {}^{17}_{9}F  \rightarrow \textcolor{blue}{{}^{18}_{10}Ne  \rightarrow {}^{18}_{9}F}  \rightarrow {}^{15}_{8}O \rightarrow {}^{15}_{7}N  }.
+\end{equation}
+
+The highlighted terms are not present permit the cycle to reach a Ne isotope and are not present in the CNOII cycle. Lastly, the HCNO-III cycle proceeds like: 
+
+\begin{equation} \label{eq:reaction_HCNO_O}
+	\mathrm{{}_{18}^{9}F  \rightarrow {}^{19}_{10}Ne  \rightarrow {}^{19}_{9}F  \rightarrow {}^{16}_{6}O  \rightarrow {}^{17}_{9}F  \rightarrow {}^{18}_{10}Ne \rightarrow {}^{18}_{9}F  }.
+\end{equation}
+
+In contrast to the previous hot cycles, HCNOIII does not begin with the same nucleus than its non hot analogous the CNOIII cycle. Instead, it begins at $\mathrm{{}_{18}^{9}F}$ and, like the CNOIV cycle, is also able to produce neon nuclei in the process. \\
+
+Further cycles related to alpha reactions Ne cycle \cite{kaeppeler_wiescher_giesen_goerres_baraffe_eleid_raiteri_busso_gallino_limongi_et_1994}\\
 
 There are more cycles of capture reaction. An example regarding the MgAl cycle is given in \cite{lotay_doherty_janssens_seweryniak_albers_almaraz-calderon_carpenter_champagne_chiara_hoffman_et_2022}.
 
@@ -1448,6 +1697,22 @@ On the other hand, protons are captured at the ending of the life of a gigantic 
 
 Further processes are not viable because they are not exothermic and potential heavier nuclei than 56-Ni are photodisintegrated. At this scale of energy, nuclear reactions start to behave similarly than chemical equilibrium reactions. 
 
+An example of an s process can be given with:
+
+\begin{equation}\label{eq:reactions_sProcess}
+	\mathrm{{}^{56}Fe \rightarrow {}^{57}Fe \rightarrow  {}^{58}Fe }.
+\end{equation}
+
+Eventually, the chain stops because the decay rate, principally beta decay, is bigger than the neutron capture production rate. This process explains nuclei diversity up to $A = 100$. \\
+
+Beyond this point, the processes are associated with the rapid neutron capture or r-process. This reaction kind is present at explosive environments from supernovae and hypernovae to neutron star mergers. An example of such chain is given by: 
+
+\begin{equation}\label{eq:reactions_rProcess}
+	\mathrm{{}^{200}Au \rightarrow {}^{201}Au \rightarrow  {}^{202}Au \rightarrow  {}^{203}Au}.
+\end{equation}
+
+The limit for these chains are fixed by the neutron dripline. Nuclei with masses beyond the drip line members are extremely unstable. Hence, a decay process follows. \\
+
 The conditions are associated with the mass. Particularly, depending on the mass regime, star evolution can differentiate. For instance, there are brown dwarfs, sun like stars. \\
 
 There is an evolution process that is ruled by different instances. Each instance can be regarded as a region in the Hertzsprung-Russell diagram. This diagram consists of a two dimensional scatter plot of the intensity with respect to the spectral type of a star. Particularly, there are regions associated to the different instances of the life of a star: Main sequence (Hydrogen burning stars), red stars, neutron stars, supernova of kinds Ia Ib and other instances. \\
@@ -1480,10 +1745,22 @@ Electron capture \cite{langanke_martinez-pinedo_zegers_2021}.
 
 \subsection{The p and rp processes} \label{sub:pProcesses}
 
-The p processes are proton capture process.\\
+The p processes are proton capture process. It works in a similar way than the neutron analogous process. An example of such change of reactions is given by \\
 
-The rp processes are like the p processes going on in a faster rate.
+\begin{equation}\label{eq:reactions_pProcess}
+	\mathrm{{}^{56}Fe \rightarrow {}^{57}Ni \rightarrow  {}^{58}Cr }.
+\end{equation}
 
+The chain stops when nuclei are too unstable to keep adding protons. In particular, if the rate of p capture is slower than the decay rate, the chain can advance no longer. The decays are typical of beta, alpha or cluster decay. Additionally, there are neutrino decays, which has a great relevance in the frontier of nuclear astrophysics studies. \\
+
+The rp processes are like the p processes going on in a faster rate. The environments in where this process takes place in at stellar explosions and supernovae. Additionally, rapid capture can be also present in extreme environments like neutron merges. This is the ideal scenario since the number of protons and the energetic are too high for such events to be produced. As a result, chains are longer and the elements are way heavier as for example:
+
+\begin{equation}\label{eq:reactions_rpProcess}
+	\mathrm{{}^{238}U \rightarrow {}^{239}Np \rightarrow  {}^{240}Pu \rightarrow  {}^{241}En }.
+	\end{equation}
+
+The stopping point of this chain is given by the proton drip line. At this point, nuclear repulsion is  considerable and the stability of the nuclei is small so decaying is inevitable.  
+		
 Abundance p-process \cite{delaeter_2008}.
 
 Proton drip-line middle-heavy nuclei \cite{cai_chen_yuan_jian-jun_2022}.
@@ -1505,11 +1782,27 @@ Enumerate the broad ranges of phenomena that are left to be explained.  \\
 
 Introduce current approaches of some of the unsolved questions on nuclear astrophysics, particularly on the last instances of fusion in the star's lifetime. \\
 
-There are various types of  supernovae. However, there are mechanisms that are not considered and yet not well explained. \\
+There are various types of  supernovae. However, there are mechanisms that are not considered and yet not well explained. For example, a complete explanation of the Ia type supernova is missing. Additionally, the production of nuclei with $A > 100$ at super explosive environments like neutron star merger is still a topic of active research.  \\
+
+New states of matter may arise at points of extreme highly density and degeneracy. This is the case of the core of neutron stars. A new state of matter, which is called the quark-gluon plasma, has been proposed to be present in such extreme scenarios. \\
 
 Current experiments in detection of heavy nuclei are essential to determine the distribution of elements, specially in events like the fusion of neutron stars.\\ 
 
-Heavy and superheavy nuclei production \cite{adamian_antonenko_2022}.
+Heavy and superheavy nuclei production \cite{adamian_antonenko_2022}. The mechanisms for their synthesis are not completely known and efforts are made in order to explain mechanisms on fusion reactions at the heavy weight regime.  \\
+
+Neutrino nucleosynthesis has been a topic of attractive interest in the last years. It turns out that these particles have an unexpected outstanding role in heavy nuclei production. The standard neutrino nucleosynthesis equation is given by: 
+
+\begin{equation}\label{eq:reaction_neutrino}
+	X + \nu \rightarrow p + e^{-} +  X'.
+\end{equation}
+
+Then, neutrinos can trigger neutrons and protons production and then affect the rates of s, r, p and rp processes. On the other hand, for neutron productions, neutrinos participate as: 
+
+\begin{equation}\label{eq:reaction_neutrino_2}
+	X + \nu + p \rightarrow n + e^{+} +  X'.
+\end{equation}
+
+Still, neutrinos are challenging to model theoretically to the extent that their study is an unsolved issue motivates extensions of the standard model of particle physics. \\
 
 Review on active research topics and current challenges in nuclear astrophysics in general \cite{arcones_bardayan_beers_bernstein_blackmon_messer_brown_brown_brune_champagne_et_2017} and on low-energy nuclear physics \cite{carlson_carpenter_casten_elster_fallon_gade_gross_hagen_hayes_higinbotham_et_2017} are given.
 
@@ -1528,6 +1821,14 @@ Microscopic models are based on first principles and usually require assumptions
 \end{equation}
 
 Modern theories \textit{ab initio} electroweak reactions  (correlated spherical harmonics and variational Monte Carlo method) \cite{marcucci_nollett_schiavilla_wiringa_2006}
+
+Slater determinants is give by: 
+
+\begin{equation} \label{eq:micro_slatter}
+	\phi = \frac{1}{\sqrt{A!}} \det{(\phi_1 ... \phi_k)},
+\end{equation}
+
+where $(\phi_1 ... \phi_k$ are the individual $k$ orbitals, $A$ corresponds to a state and this expression is of great relevance at calculation aspects of nuclear structure.
 
 \subsection{\textit{Ab initio} models} \label{sub:microscopical_abinitio}
 
@@ -1782,7 +2083,10 @@ The parametrization is identical to the R-matrix case for most of the steps. How
 
 \section{Potential models} \label{sec:potentialModels}
 
-Nuclei are considered as objects subject to effective interactions. 
+
+Since nuclear force is an interaction which is far from being analytically parametrized, or even closely parametrize, models with effective interactions, which have associated potentials, are of substantial interest when modeling nuclear reactions.  \\
+
+The main approach is to consider nuclei as objects sensible to a common interaction, which is estimated by an effective potential, generated by the reactant nuclei. Exact shapes of such potentials are given in section \ref{sub:potential_effective}. Then, as it is explained in section \ref{sub:potential_calculations}, calculations are performed to obtain cross sections, and then astrophysical S-factors. Additionally, potentials can be modified to include features like folding and non-locality. Further details about these two aspects are given in sections \ref{sub:potential_folding} and \ref{sub:potential_nonlocality} respectively.
 
 \subsection{Effective potentials} \label{sub:potential_effective}
 
@@ -2050,25 +2354,52 @@ where $\xi$ is the other free parameter which accounts for the deviation from Co
 
 \subsubsection{Exchange reactions} \label{ssub:potential_calculations_exchange}
 
-The form of the reaction is $A(a, b)B$. Then, there are four interacting nuclei and two substeps that account for the global behavior of the reaction . In fact, depending on  $a$ and $b$ nuclei, there are two options the reaction to proceed \cite{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}. \\
+Since the form of the reaction is $A(a, b)B$, there are four interacting nuclei and two substeps that account for the global behavior of the reaction. In fact, depending on  $a$ and $b$ nuclei, there are two options the reaction to proceed \cite{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}. \\
 
-The first option is related with $ a \rightarrow x + b$,  $A + x \rightarrow B$ and happens when $a$ is heavier than $b$. In contrast, the second option has the processes: $a + x \rightarrow b$ and $A \rightarrow B + x$, which are possible if $a$ is lighter than $b$. \\
+The first option is related with $ a \rightarrow x + b$,  $A + x \rightarrow B$ and happens when $a$ is heavier than $b$. In contrast, the second option has the processes: $a + x \rightarrow b$ and $A \rightarrow B + x$, which are possible if $a$ is lighter than $b$. More details of such steps are presented in section \ref{ssub:exchangeReactions} \\
 
-Then, the differential cross section is computed by 
+It is desirable that exchange reaction to be reduced to a transition involving only an incident and outgoing effective nuclei. This is achieved if the pair of reactants $a$ and $A$, as well as the pair of products $b$ and $B$, are considered as composite systems. Hence, the process will be reduced to a $(aA) \rightarrow (bB)$ transitions with $(aA)$ and $(bB)$ being coupled states of aforementioned pairs. The simplest way of coupling reactants and products is by considering their elastic scattering states. \\
+
+In order to compute scattering states, it is required to proceed with solving the Schrödinger equation for the scattering scenario of $aA$ and $bB$ with an adequate potential. Then, the wavefunction for $aA$ and $bB$ scattering, named as  $\phi_c$ and $\phi_c'$ respectively will be computed. \\
+
+Then, with the scattering wavefunctions already calculated, the differential cross section is obtained by:
 
 \begin{equation} \label{eq:exchange_differential}
-	\frac{d\sigma}{d\Omega} = \frac{1}{2\pi^4} \frac{1}{E E_f} \frac{m_a}{m} \sum {CS^2 \mathcal{I} } ,
+	\frac{d\sigma}{d\Omega} = \frac{1}{4\pi} K \frac{1}{E E_f} \frac{k_f}{k}\frac{m^2_B}{m^2_A} \sum_{slj} { \frac{S^2_F}{2s + 1}\sum_{m} |t|^2},
 \end{equation}
 
-where $E$ is the center of mass energy and $E_f$ is the final energy. Additionally, $CS^2$ accounts for the spectroscopic factor and $\mathcal{I}$ is the exchange term which is approximated by the distorted Born wave approximation (DWBA). \\
+where $E$ is the center of mass energy and $E_f$ is the final energy.  $CS^2$ accounts for the spectroscopic factor, and $K$ is a constant with value:
 
-This approach is privileged for exchange reaction calculations. The transition matrix is expressed as: 
+\begin{equation} \label{eq:exchange_constant}
+	K = 	\left\{\begin{array}{l}
+		\begin{split}
+			\frac{(2J_B + 1)}{(2J_A + 1)}, \quad &\mathrm{\ stripping} \\ 
+			\frac{(2J_b + 1)}{(2J_a + 1)}, \quad &\mathrm{\ pickup}
+		\end{split}
+	\end{array}\right.
+\end{equation}
+
+The last result is consistent with the differentiated reaction mechanisms associated to the stripping and pickup reactions. Particularly, the factor pretends to average over all spin configurations on the channel in where the intermediate nuclei is consumed.  Additionally, $t$ is a term related with the exchange term which is approximated by the distorted Born wave approximation (DWBA). \\
+
+This approach is privileged for exchange reaction calculations. The transition matrix $T^{cc'}$ is expressed as: 
 
 \begin{equation}\label{eq:exchange_matrix}
-	\langle  \phi_c | \frac{\phi}{r}|  \phi_c' \rangle,
+	T^{cc'} = \langle  \phi_c | \frac{\phi}{r}|  \phi_c' \rangle,
 \end{equation}
 
-where $\phi_c $ and $\phi_c'$ are the unbounded wavefunctions for the entrance and exit channels while $\phi/r$ is given in terms of the bounded intermediate state wave function $\phi$ and it is referred as the form factor. 
+where $\phi_c $ and $\phi_c'$ are the unbounded wavefunctions for the entrance and exit channels while $\phi/r$ is given in terms of the bounded intermediate state wave function $\phi$ and it is referred as the form factor. \\
+
+The total cross section $\sigma$ associated with a particular state $J^{\pi}$ is given by: 
+
+\begin{equation} \label{eq:exchange_crossSection}
+	\sigma = K \frac{1}{E E_f} \frac{m^2_B}{m^2_A} \sum_{slj} { \frac{S^2_F}{2s + 1}\sum_{m} \sum_{l_{c'}} \left|\sum_{l_{c}} T^{cc'}\right|^2},
+\end{equation}
+
+where the last summations run with initial $l_{c}$ and final $l_{c'}$ angular momentum indexes respectively. \\
+
+Notice that the previous result shows the picture of a two potential interacting. The expression can be obtained by taken into account the Born series approximation and to apply it for the case that interaction between $A$ with $a$ and $B$ with $b$ is considerable larger than the merging-breaking middle state. \\
+
+The wave is said to be distorted given that it does not correspond to a plain wave, which is a case that is treated in standard Born approximation. Instead,  $\phi_c $ and $\phi_c'$ are solutions to the scattering $A + a \rightarrow A + a$ and $B + b \rightarrow B + b$ quantum mechanical situations. \\
  
 \subsubsection{Radiative capture reactions}   \label{ssub:potential_calculations_radiativeCapture}
 
@@ -2116,6 +2447,18 @@ In the radiative capture reactions, cross sections are computed based on electro
 
 \begin{equation}  \label{eq:radiativeCapture_crossSection}
 	\sigma_m = \sum_{k}{\langle k | \mathcal{O} | m \rangle} C_{klm}.		
+\end{equation}
+
+More specifically, the cross section expression is given by considering all the monopole terms, as parametrized with the $l$ value, as it is given by: 
+
+\begin{equation}  \label{eq:radiativeCapture_crossSection_l}
+	\sigma_m = \sum_{l} C \frac{E^{2l +1}}{(2l+1)!!} B(l), 		
+\end{equation}
+
+where $B(l)$ is the reduced factor with effectively contains all nuclear physics potential picture. Its expression is given by:
+
+\begin{equation}  \label{eq:radiativeCapture_reducedFactor}
+	B(l) \propto   |{\langle k | \mathcal{O} | m \rangle}|^{2}_{l}.
 \end{equation}
 
 It is usual that certain transitions cannot be completely described by equation \ref{eq:radiativeCapture_crossSection}. In order to account for defect, some authors introduce a new constant called spectroscopic factor for each transition such that the total cross section of the process is expressed as: 
@@ -2237,17 +2580,35 @@ p2H radiative capture E1, M1, E2 (exponential 21 + variational method + Young's 
 
 \section{Special models} \label{sec:specialModels}
 
-Models which do not fit in the previously presented categories.
+Models which do not fit in the previous categories are presented in this section. Some models use a different approach in a multiple step process, which is the case of the Trojan Horse methods. Others, are based on fundamental aspects of low energy calculations of the strong nuclear interaction, like it is the case for effective field theories. Additionally, there are models which combine advantages of the previously introduced approaches. Such cases are usually referred as hybrid models.
 
 \subsection{Trojan Horse models} \label{sub:special_trojanHorse}
 
 It occurs in a two step reaction process as expressed in:
 
-\begin{equation}
+\begin{equation}\label{eq: special_trojanHorse_reaction}
 	A + B \rightarrow a + (b + x)\rightarrow a + (c + d),
-\end{equation}\label{eq: special_trojanHorse_reaction}
+\end{equation}
 
-where the first and second steps correspond to the $A + B \rightarrow a + (b + x)$ and $b + x \rightarrow c + d$ reactions respectively. Notice that the $b$ nucleus does not appear as a final product of the reaction as it is consumed in the second step. 
+where the first and second steps correspond to the $A + B \rightarrow a + (b + x)$ and $b + x \rightarrow c + d$ reactions respectively. Notice that the $b$ nucleus does not appear as a final product of the reaction as it is consumed in the second step. \\
+
+These two reactions can be related as a double exchange reaction with nucleus $x$ as the intermediate of this process. The identity of this intermediator depends on the nuclei which are reacting. To some extent, $x$ can be modeled as a cluster embedded in the composite $A + B$ nucleus. \\ 
+
+Cross sections for the Trojan Horse method can be given by single and double differential cross section. For the former case, the relevant expression is given by: 
+
+\begin{equation}\label{eq: special_differential_single}
+	\frac{d\sigma}{d\Omega} = \sum \sum |\langle a | \hat O | b  \rangle|^2,
+\end{equation}
+
+where $\hat O$ is the relevant operator of the process. On the other hand, the double differential operator is given by 
+
+\begin{equation}\label{eq: special_differential_double}
+	\frac{d^2\sigma}{d\Omega^2} = \sum \sum \sum \sum  |\langle a | \hat O | b \rangle|^2 |\langle a' | \hat O | b' \rangle|^2,
+\end{equation}
+
+where $a$, $'a$ are the initial and $b$, $b'$ the final states pairs respectively. \\
+
+This model is useful for applications with middle heavy nuclei in reactions like $\Cfusion$. The intermediate nucleus is $\mathrm{{}^{4}He}$. \\
 
 The Trojan horse method. Selection of reactions and consideration of the characteristics of the nuclei to be considered in the method \cite{spitaleri_mukhamedzhanov_blokhintsev_cognata_pizzone_tumino_2011}.
 
@@ -2267,7 +2628,11 @@ Effective field theory $\dRadiativeCapture$ and three body interaction, M1 is th
 
 \subsection{Hybrid models} \label{sub:special_hybrid}
 
-These models include aspect of potential, microscopical and even R-matrix models. For example, there are models with clustering and effective potentials.
+These models include aspects of potential, microscopical and even R-matrix models. For example, there are models with clustering and effective potentials. \\
+
+Clustering can be included in potentials via the folding introduced in section \ref{sub:potential_folding}. A phenomenological potential, in order to be well characterized, needs to be consistent with microscopical aspects of the nucleus.  Particularly, interactions between clusters can be parametrized with more fundamental microscopical models, which are specialized in treating such interactions. \\
+
+Some models with the R-matrix approach use microscopical calculation to calibrate parameters of the potentials to be used in the calculations. Both models complement each other in a particularly useful manner when resonances are present in middle heavy nuclei fusion reactions. This is a remarkable example since the R-matrix formalism alone is mostly specialized in describing resonances and non resonant behavior of light heavy nuclei. On the other hand, potential or microscopical model calculation usually account for the non resonant part of fusion reactions. \\
 
 \section{Empirical formulas} \label{sec:empiricalFormulas}
 
@@ -2933,19 +3298,19 @@ Then, the added angular momentum assumes a representation in a higher dimension.
 The total angular momentum operator:
 
 \begin{equation}\label{eq:angularMomentum_J2}
-	J^2|l, m \rangle  = l(l+1)\hbar^2 l, m \rangle. 
+	J^2|l, m \rangle  = l(l+1)\hbar^2| l, m \rangle. 
 \end{equation}
 
 Additionally, the $z$ axis projection operator is given by: 
 
 \begin{equation}\label{eq:angularMomentum_Jz}
-	J_z|l, m \rangle  =m \hbar |l, m| \rangle. 
+	J_z|l, m \rangle  =m \hbar |l, m \rangle. 
 \end{equation}
 
 The ladder operators can change the state of the angular momentum:
 
 \begin{equation}\label{eq:angularMomentum_Jladder}
-	J_\pm|l, m \rangle  = \sqrt{(j \pm m)(j \mp m + 1)} \hbar |l, m \pm 1| \rangle. 
+	J_\pm|l, m \rangle  = \sqrt{(j \pm m)(j \mp m + 1)} \hbar |l, m \pm \rangle. 
 \end{equation}
 
 
@@ -3001,20 +3366,93 @@ This section is about fitting considerations on the different approaches used to
 Least square minimization of the quantity shown in equation \ref{eq:fitting_chiSquared}.
 
 \begin{equation} \label{eq:fitting_chiSquared}
-	\chi^2  = \sum_{k=1}^{N} {\frac{(x_k - \bar x)^2}{\sigma_k^2} },
+	\chi^2  = \sum_{l=1}^{N} {\left(\frac{f(\vec x) - x_l}{\sigma_l}\right)^2},
 \end{equation}
 
-where $k$ is an index running through all $N$ of the sample points, $x_k$ is the value, $\sigma_k$ is the error of each point and $\bar x$ corresponds to the average of the value taken from all points.\\
+where $l$ is an index running through all $N$ of the sample points, $x_l$ is the value, $\sigma_l$ is the error of each point and $f(\vec x)$ corresponds to the estimation of the function to be fitted and $\vec x$ the estimated vector of parameters. Alternatively, the chi-squared function can be expressed as: 
+
+\begin{equation} \label{eq:fitting_chiSquared_residuals}
+	\chi^2  = \sum_{l=1}^{N} {\left(\frac{r_l}{\sigma_l}\right)^2},
+\end{equation}
+
+where the terms of the form $r_l$ are known as the residuals, which are defined as:
+
+\begin{equation} \label{eq:fitting_residuals}
+	r_l = f(\vec x) - x_l.
+\end{equation}
 
 There are two process depending if the optimization is bounded or unbounded.
 
 \subsection{Unconstrained fitting} \label{sub:unconstrainedFitting}
 
-Leavenberg-Marquardt algorithms \cite{watson_more_1978} gradient descent and Newton method like for searching This model has a damping parameter. More recently (focused on computational implementations) \cite{ramadasan_chevaldonne_chateau_2017}.
+In order to introduce the algorithm used in this project, it is necessary to expand generalities on standard approaches for searching. The general idea on this is to find the vector of parameters $\vec x$ such that a particular function, which in this case corresponds to $\chi^2$, is minimized. Namely, when the derivative of the function is set to zero. \\
+
+One alternative is based on finding the roots of the derivative. An example of implementation of this approach is applying the Gaussian-Newton method for the derivative of the $\chi^2$ function. The process consists of an iterative relation where the roots are given by:
+
+\begin{equation}\label{eq:fitting_GaussianNewton}
+	\vec x_{n+1} = \vec x_{n}  - (J(\vec x_n)^{T} J(\vec x_n))^{-1} J(\vec x_n))^{T},
+\end{equation}
+
+where the $n+1$th guess $x_n$ is updated form the last $n$th guess $x_n$ with a correction parameter which is dependent on the inverse Jacobian matrix $J(\vec x_n)^{-1}$, which is defined in terms of the residuals as:
+
+\begin{equation}\label{eq:fitting_Jacobian}
+	J  = \left[ \begin{array}{ccc}
+		\frac{\partial \vec r(\vec x_n) }{\partial x_1  } & ... &  	\frac{\partial  \vec r(\vec x_n) }{\partial x_k}
+	\end{array} \right], 
+\end{equation}
+
+where $\vec r(\vec x_n) $ is the vector of all the residuals described in equation \ref{eq:fitting_residuals} calculated with $\vec x_n$ as the parameter vector. Additionally,  $k$ is the number of parameters to be fitted and the $x_1,..., x_k$ are the components of $\vec x_n$.  The iteration stops when $\vec x_{n+1}   - \vec x_n < \epsilon$, where $\epsilon$ is adjusted to obtain the precision desired. \\
+
+However,  the Gaussian-Newton algorithm does not entirely converge for diverse cases. In it common the algorithm to fail when the number of parameters  considerably excess the number of data points to be fitted. Alternatively, the algorithm is sensible to initial conditions $\vec x_0$. If they are settled too far from the optimized solution, the Gaussian-Newton will probably diverge and, after long iterations, it will be unable to achieve the tolerance required.  \\
+
+An alternative is given by the gradient descent algorithm. Like the previous case, it pretends to minimize the $\chi^2$ function. However, in this approach, gradients are the essential instruments to obtain the optimized solution.  The iterative equation is stated as: 
+
+\begin{equation}\label{eq:fitting_gradientDescent}
+	\vec x_{n+1} = \vec x_{n} - \alpha_n \vec r(\vec x_n),
+\end{equation}
+
+The parameter $\alpha_n$ is adjusted in each iteration in order to the gradient to be minimized. There are various methods used in determining this parameters. \\
+
+Despite the success of the gradient descent method, it is common fits to not be accomplished due to high fluctuations of the guessing $\vec x$ values. In order to overcome this issue, the gradient descent algorithm and the Gaussian-Newton formalisms are partially unified with the Leavenberg-Marquardt algorithms \cite{watson_more_1978}. The key distinct feature of this approach is the inclusion a damping parameter $\beta$, which is useful when accelerating the convergence of the iterative equations.  \\
+
+The computations of the implementations are based on solving the following matrix equation: 
+
+\begin{equation}\label{eq:fitting_LeavenbergMarquardt}
+	(J^{T}(\vec x_n) J(\vec x_n) + \beta I ) \delta \vec x_n = J^{T}(\vec x_n) \vec r(\vec x_n)
+\end{equation}
+
+where the variable to be solved is the difference of the iteration $\delta \vec x_n = \vec x_{n+1} - \vec x$. In addition, $I$ is the identity matrix and, as it was anticipated, the model includes a damping factor $\beta$ which is adjusted to the convergence needs of the algorithm. \\
+
+It is worth to be noticed that the previous arguments are valid for $\sigma_l = 1$, which is the case when all the data points have comparable errors. Otherwise, the components of the residual vector should be redefined as $r'_l = r_l/\sigma_l$ such that equations \ref{eq:fitting_GaussianNewton}, \ref{eq:fitting_gradientDescent} and \ref{eq:fitting_LeavenbergMarquardt} still hold. \\
+
+A computational implementation example is given in  \cite{ramadasan_chevaldonne_chateau_2017}. For the effects of this work, the Levenberg-Marquardt algorithm was utilized with the tools provided by the SciPy library of Python. 
 
 \subsection{Constrained fitting} \label{sub:constrainedFitting}
 
-Trust region reflective algorithm with computational implementation \cite{branch_coleman_li_1999} and more theory with illustrations on reflective line search \cite{coleman_li_1994}.
+In some cases, fitting is achieved when constraints are defined for the parameters. Then, optimization with restrictions shall be implemented. This implies that the algorithms reviewed in the past section are going to be modified to include the boundaries of the parameters. \\
+
+As it happens in the context of multivariable functions, the restrictions can be parametrized as a function:
+
+\begin{equation}\label{eq:fittingRestrictions}
+	\vec f(\vec x) = 0,
+\end{equation}
+
+where $\vec f$ corresponds to the vector of possible restrictions in parameters. One approach is to introduce Lagrangian multipliers, which are computed from the gradient of the function to be multiplied.
+ 
+\begin{equation}\label{eq:fittingLagrangeMultiplier}
+	L = \lambda \vec \chi^2,
+\end{equation}
+
+where $\lambda$ is a parameter to be adjusted in favor of obtaining the chi-squared minimizing function. \\
+
+However, this approach should be specialized to the case of curve fitting. In particular, the trust region reflective algorithm gives a possibility to find the parameters with reasonable computational implementation \cite{branch_coleman_li_1999}. \\
+
+Trust region definition is critical in order to speed up the convergence of the algorithm. The closer the initial guess is to the minimum, the better is the quality of convergence of the procedure.   A convenient way of visualizing this algorithm implies interpreting boundaries as reflected walls which delimit the trusted region. \\ 
+
+Particularly, in each iteration, the $\lambda$ parameter is modified in order to keep the guess
+Then, if the solutions surpasses the allowed region, the algorithm will force the solution to be in the region by reflecting against the change that pretended to move the solution out of the region. The parameter vector can be arguably modeled by the position of a billiard ball with the gradient as its velocity.  Then, as the guess approaches the solution, the change of the parameter deviation drops and, at some point, the solution would not bounce off the walls and it will be kept inside the trusted region. Eventually, the parameter will not longer change substantially and it would rather converge to the desired optimal value. \\
+
+Further details of the  theory with illustrations on reflective line search are given in \cite{coleman_li_1994}. 
 
 \section{Empirical formulas fitting} \label{sec:empiricalFitting}
 
@@ -3374,15 +3812,39 @@ The main idea of this algorithm is finding the appropriate weights for the sum w
 	\int f(x) dx \rightarrow \sum_{k}{ f(x_k) w_k}.
 \end{equation}
 
-This $w_k$ values are found by computing the polynomials such that the approximation of equation \ref{eq:numericalIntegration_gaussianQuadrature} minimizes its error. \\
+This $w_k$ values, which are named as weights, are found by computing the polynomials such that the approximation of equation \ref{eq:numericalIntegration_gaussianQuadrature} minimizes its error. This process is know as the Gaussian-Legendre quadrature and the expression of the weights is given by: 
 
-For example, the WKB numerical implementation is based on the Gaussian quadrature algorithm. \\
+\begin{equation}\label{eq:numericalIntegration_gaussianQuadrature_weights}
+	w_k = \frac{2}{(1 - x^2_k)(P'_n(x_k))^2},
+\end{equation}
+
+where $x_k$ is the point estimated in each subinterval and $P'_n(x_k))$ is the first order derivative of the Legendre polynomial of order $P_n(x_k))$, which is defined as the solution of the following differential equation: 
+
+\begin{equation}\label{eq:numericalIntegration_gaussianQuadrature_Legendre_equation}
+	(1 - x^2)\frac{d^2P_n(x)}{dx^2} - 2x\frac{dP_n(x)}{dx} + n(n+1)P_n(x) = 0,
+\end{equation}
+
+where the polynomials form an orthonormal basis for squared integrable functions in the $x \in [-1,1]$ interval. Thus, the following relation holds: 
+
+\begin{equation}\label{eq:numericalIntegration_gaussianQuadrature_Legendre_normalization}
+	\int_{-1}^{1} P_n(x) P_m(x) = \delta_{nm}. 
+\end{equation}
+
+One of the main advantages of the Gaussian quadrature its quickly convergence. This algorithm is indeed more optimized, and superior in computability, than the classical Simpson or Riemman sums. \\
+
+An application of such form of intergration is on the WKB numerical implementation. This implementation was based on the Gaussian quadrature algorithm, which is named as \texttt{quad} in the SciPy library of Python. \\
 
 \section{Numerical solution of the Schrödinger equation} \label{sec:schrodingerSolution}
 
-The numerical solution of the Schrödinger equation is found to be useful for the approaches where it is not possible to find a solution for the problem in closed form, mainly analytical solutions. 
+The numerical solution of the Schrödinger equation is found to be useful for the approaches where it is not possible to find a solution for the problem in closed form, mainly analytical solutions.  \\ 
 
-Schrodinger and Dirac equation numerical solver with central potentials \cite{salvat_fernandez-varea_2019}
+In order to compute such solution, different methods can be used. Initially, a main approach towards solving the Schrödinger equation is presented. This is based on standard methods of differential equation solving, which consider both difference and region methods. \\
+
+Additionally, since solving the Schrödinger equation requires the knowledge of a potential, a numerical implementation shall proceed. For the particular cases of potentials with folding or with non-locals effects, special numerical considerations on integration and indirect solving should be taken into account. \\
+
+Lastly, since a special emphasize is given to scattering in the treatment of nuclear reactions, asymptotic boundary conditions are required to be implemented. Therefore, the solution is divided in two parts and connection continuity is matched.  \\
+
+Schrodinger and Dirac equation numerical solver with central potentials \cite{salvat_fernandez-varea_2019}. The computational implementation was based on functions from the package of SciPy of the programming language Python. \\
 
 Coupled channels (CCFULL code ) + Woods-Saxon parametrization + boundary conditions specified + rotational, vibrational and transfer couplings \cite{hagino_rowley_kruppa_1999}.
 
@@ -3438,7 +3900,7 @@ The usual numerical procedure consists of starting with a trial solution $x_0$ a
 
 \subsection{Boundary conditions implementation} \label{sub:diffSolvingBoundaries}
 
-Expected boundary conditions at $r \rightarrow \infty$ and their numerical implementation.
+Expected boundary conditions at $r \rightarrow \infty$ and their numerical implementation. \\
 
 This boundary condition is satisfied by splitting the problem in interior and exterior regions parametrized by a boundary radius $r_b$. \\
 
