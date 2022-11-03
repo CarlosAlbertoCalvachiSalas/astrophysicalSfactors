@@ -1098,6 +1098,17 @@ On the other hand, the inelastic scattering proceeds similarly to the elastic ca
 
 where the $*$ symbol is an indicator that the initial $A$ nucleus ended up in an excited state, which is annotated as $A^{*}$. In these cases, usually the $a$ nucleus is considerably lighter than $A$.\\ 
 
+Alternatively, there are more inelastic outcomes, or channels, that can be present in the scattering picture. Particularly, they can be expressed as: 
+
+\begin{equation}  \label{eq:nuclearReaction_scattering_inelastic2}
+	\begin{split}
+	A + a 	&\rightarrow A + a^{*} \\
+				&\rightarrow A^{*} + a^{*}.
+\end{split}
+\end{equation}
+
+where $a^{*}$ is the excited version of the $a$ nucleus. \\
+
 Each of these two cases are relevant for astrophysical contexts. The elastic scattering is a common process critical to be accounted in the calculation of abundances. Additionally, excited states can be associated with resonances which are characteristic features of the behavior of a particular reaction and they increase the probability of interacting. \\
 
 \subsubsection{Capture reactions} \label{ssub:captureReactions}
@@ -1146,6 +1157,8 @@ On the other hand, pickup  occurs when $X$ is heavier than $X'$, and thus $x_2$ 
 
 It is essential to be noticed that both reactions follow a two step process. The first step consists of a decay reaction with the particularity that it produces the nucleus $x$, which serves as a reactant in the following merging reaction. Ultimately, since $x$ appears in both sides on the two possible processes,  it is not distinguished neither as a product nor as a reactant in the simplified form of the exchange reaction of equation \ref{eq:nuclearReaction_exchange}. \\
 
+A thorough description of this reaction is given by the distorted wave Born approximation DWBA. This broadly consists of using two potentials, one for each pair of reactants and products, and the other for the picking or stripping interaction. More detains are given in section \ref{ssub:potential_calculations_exchange}. \\
+
 A development on the $\mathrm{(p,n)}$ reaction kind is given by (Distorted wave Born approximation DWBA model) \cite{whitehead_poxon-pearson_nunes_potel_2022} and for the $\mathrm{(n,p)}$ in (Weisskpf-Ewing) deformation without spin description \cite{sharma_gandhi_kumar_2022}. \\
 
 $\ddexchange$ is an example of an exchange reaction relevant for BBN and pp-chain nucleosynthesis. 
@@ -1171,13 +1184,47 @@ Definition of the $Q$ value. This determines if the reaction is exothermic or en
 
 where $\sum m_{\mathrm{react}}$ and  $\sum m_{\mathrm{prod}}$ correspond to the sum of the reactant and product nuclei respectively. If $Q > 0$, it means that energy was released and the reaction is exothermic. Reciprocally, in the case $Q < 0$ energy is absorbed and therefore the reaction is endothermic.  \\
 
-Center of mass frame is preferred since there multiple nuclei are interacting as a common system. Then, kinematical variables shall be converted to the center of mass frame. \\
+Center of mass frame is preferred since there multiple nuclei are interacting as a common system. Then, kinematical variables shall be converted to the center of mass frame. Such transformations can imply coordinate changes. For instance, the center of mass of a two body system $\vec R$ is given by: 
+
+\begin{equation}\label{eq:nuclearReaction_centerOfMass}
+	\vec R = \frac{m_a \vec r_a + m_b \vec r_b}{m_a + m_b},
+\end{equation}
+
+where $m_a$ and $m_b$ are the masses and $\vec r_a $ and $\vec r_b$ are the positions of the reacting $a$ and $b$ nuclei respectively. \\
+
+Another consequence of this introduction is a change on the shape of the Schrödinger equation. For a two body with $a$ and $b$ initial nuclei, without considering centrifugal effects, the Hamiltonian is given by: 
+
+\begin{equation}\label{eq:nuclearReaction_hamiltonian_twoBody}
+	H = - \frac{\hbar^2}{2m_a} \nabla^2_a  - \frac{\hbar^2}{2m_b} \nabla^2_b + V_{ab}(r),
+\end{equation}
+
+with $\nabla^2_a$ and   $\nabla^2_b$ being the Laplacian operators corresponding to the  $\vec r_a $ and $\vec r_b$  coordinates respectively. Additionally, the central potential $ V_{ab}(r)$ is given in terms of a relative distance $r$ which is defined as $r = |\vec r_a - \vec r_b|$. \\
+
+When the center of mass coordinates are used, it is possible to transformed the two body picture of equation \ref{eq:nuclearReaction_hamiltonian_twoBody} as: 
+
+\begin{equation}\label{eq:nuclearReaction_hamiltonian_centerMass}
+	H = - \frac{\hbar^2}{2\mu} \nabla^2  + V_{ab}(r),
+\end{equation}
+
+where the Laplacian $ \nabla^2$ is defined with center of mass coordinates and the reduced mass $\mu$ is defined as: 
+
+\begin{equation}\label{eq:nuclearReaction_reducedMass}
+	\mu = \frac{m_a m_b}{m_a + m_b}.
+\end{equation}
 
 \subsection{Cross sections} \label{sub:crossSections}
 
-Cross section of a process. 
-Partial and total cross sections depending on the reaction type.
-Cross sections have relations with the $S$-matrix.
+Cross section of a process is defined within the center of mass frame. In particular, a single particle quantum mechanical picture, with variables appropiartely defined in the frame of the center of mass, can represent a two-body interaction, which is usually the case for nuclear reaction. \\
+
+A connection between the cross sections and quantum mechanical variables is given by: 
+
+\begin{equation}\label{eq:nuclearReaction_crossSection_quantumMechanics}
+	\sigma = \frac{j_c r^2 }{j_b},
+\end{equation}
+
+where $j_b$ and $j_c$ are the magnitudes of the incident and outgoing current density probabilities respectively. Notice that the factor of $r^2$ gives $\sigma$ its characteristic area units. \\
+
+There is not a unique way of determining the partial and total cross sections since its determination heavily depends  on the reaction type. Chapter \ref{ch:sfactorCalculations} is dedicated for considering multiple cross section calculations. Still, as anticipated from scattering theory, cross sections have relations with the $S$-matrix. \\
 
 The center of mass is defined closely with the quantum mechanical definition. Particularly, the definition must consider the two body problem, which is usually the case for nuclear reactions. \\
 
@@ -1392,11 +1439,19 @@ Explain the required conditions that permits nuclear fusion in the star's nucleu
 
 \subsection{Light heavy nuclei reactions} \label{sub:lightReactions}
 
+Fusion reaction at stars start with hydrogen, which is originated from the Big Bang. Then, at the hot center of stars, a long process to produce $\mathrm{{}^{4}He}$. The nuclear chain which is central in this transition is the pp chain. \\
+
+Next, if stars are high temperature enough, further heavy elements are produced from helium burning. This process is known as the triple alpha chain in where $\mathrm{{}^{12}C}$ and $\mathrm{{}^{16}O}$  nuclei are produced. They perform a series of cycles, which are referred as CNO. Also, for explosive and highly energetic environments, the alternative cycles HCNO are also present at stellar environments.  \\
+
+At the end of the life of big stars, reactions of the form $\Cfusion$ and $\Ofusion$ take place. Heavier nuclei are produced. Then neon and silicon burning occurs. With silicon burning, neon is produced. 
+
 \subsubsection{pp chain}
 
-Much of the initial fusion at the core of a great extent of lifetimes of main branch stars like the sun consist on hydrogen fusion reactions.The interactions of pp-chain processes are mostly electromagnetic and strong force with additional weak force mediated reactions. In addition, reaction rates of nuclear fusion processes depend on the interaction cross section and the abundance of the reactant nuclei. 
+Much of the initial fusion at the core of a great extent of lifetimes of main branch stars like the sun consist on hydrogen fusion reactions. The interactions of pp-chain processes are mostly electromagnetic and strong force with additional weak force mediated reactions. In addition, reaction rates of nuclear fusion processes depend on the interaction cross section and the abundance of the reactant nuclei. \\
 
-pp chain review \cite{fowler_1958}.
+Particularly, the critical pp reaction is mediated by the weak force. As a consequence of this fact, reaction times are long and therefore stars can sustain their stability driven by hydrostatic equilibrium for billions of years. 
+
+pp chain review \cite{fowler_1958}. \\
 
 The main reaction in which this process occurs is: 
 
@@ -1610,50 +1665,50 @@ The burning processes does not continue further since $\mathrm{^{56}Fe }$ is one
 $\Cfusion$ nucleosynthesis in massive stars \cite{pignatari_hirschi_wiescher_gallino_bennett_beard_fryer_herwig_rockefeller_timmes_et_2012}. $\Cfusion$ is a source of $\alpha$, $n$ and $p$ nuclei that are sources of further process, namely alpha capture, r-process and s-process respectively. 
 This reaction plays important roles on other processes and depends heavily on temperature.
 
-12C + 12C Wave packet dynamics (with two core shell model) \cite{diaz-torres_wiescher_2018}
+12C + 12C Wave packet dynamics (with two core shell model) \cite{diaz-torres_wiescher_2018} \\
 
-nonresonant Bayersian (modified S-factor $S^{*}$ + Woods-Saxon potential + statistical Hauser-Feshbach formula for nuclei evaporation decay)\cite{li_fang_bucher_li_ru_tang_2020}
+nonresonant Bayersian (modified S-factor $S^{*}$ + Woods-Saxon potential + statistical Hauser-Feshbach formula for nuclei evaporation decay)\cite{li_fang_bucher_li_ru_tang_2020} \\
 
-Modified Sfactor (Woods-Saxon + Bayesian analysis + Metopolis-Hastings algorithm ) \cite{luo_wen_lin_yang_jia_yang_huang_chang_zhang_yang_et_2022}
+Modified Sfactor (Woods-Saxon + Bayesian analysis + Metopolis-Hastings algorithm ) \cite{luo_wen_lin_yang_jia_yang_huang_chang_zhang_yang_et_2022} \\
 
 Trojan horse (with renormalization of S-factors) \cite{mukhamedzhanov_pang_kadyrov_2019}
- (with DWBA and R-matrix mentions) \cite{mukhamedzanov_2022}
- 
-full-microscopical (density functional +  antisymmetrized molecular dynamics + reduced width amplitude) \cite{taniguchi_kimura_2021}
+ (with DWBA and R-matrix mentions) \cite{mukhamedzanov_2022} \\
+  
+full-microscopical (density functional +  antisymmetrized molecular dynamics + reduced width amplitude) \cite{taniguchi_kimura_2021} \\
 
-multichannel folding ($3\alpha$ microscopical calculated densities + optical + Woods-Saxon potential + coupled channels R-matrix) \cite{assuncao_descouvemont_2016}
+multichannel folding ($3\alpha$ microscopical calculated densities + optical + Woods-Saxon potential + coupled channels R-matrix) \cite{assuncao_descouvemont_2016} \\
 
-screening effects (WKB approximation + coupled channel formalism + Double folding cluster + exp2 + selected density distributions + cosine damped screening potential [stronger screening effect]) \cite{koyuncu_soylu_2018}
+screening effects (WKB approximation + coupled channel formalism + Double folding cluster + exp2 + selected density distributions + cosine damped screening potential [stronger screening effect]) \cite{koyuncu_soylu_2018} \\
 
 correlation between carbon fusion reactions ($\Cfusion[12][12]$, $\Cfusion[12][13]$ and  $\Cfusion[13][13]$, coupled channel calculations, ingoing wave boundary condition with various potentials [Akyüz-Winther and M3Y with repulsive core], energy peak values $\Cfusion$ resonances) \cite{notani_esbensen_fang_bucher_davies_jiang_lamm_lin_ma_martin_et_2012}
-constraint 12C + 12C based on 12C + 13C reaction (potentials coupled channels M3Y with repulsive core + time dependent Hartree Fock + São Paulo folded KNS potential +wave packet dynamics ) \cite{zhang_wang_tudor_bucher_burducea_chen_chen_chesneanu_chilug_gasques_et_2020}
+constraint 12C + 12C based on 12C + 13C reaction (potentials coupled channels M3Y with repulsive core + time dependent Hartree Fock + São Paulo folded KNS potential +wave packet dynamics ) \cite{zhang_wang_tudor_bucher_burducea_chen_chen_chesneanu_chilug_gasques_et_2020} \\
 
 16O + 16O cross sections on models (SPP like barrier penetration model vs coupled channel model + [Zero point motion] inelastic couplings to vibrational bands + molecular effects with Woods-Saxon two core shell model + reduced and cranking masses) \cite{duarte_gasques_oliveira_zagatto_chamon_medina_added_seale_alcantara-nunez_rossi_et_2015} on channels and fusion cross section 
-\cite{kuronen_keinonen_tikkanen_1987} $\alpha$, $n$, $p$ and $2p$, $2\alpha$, $\alpha p$, $\alpha n$.
+\cite{kuronen_keinonen_tikkanen_1987} $\alpha$, $n$, $p$ and $2p$, $2\alpha$, $\alpha p$, $\alpha n$. \\
 
 oxygen isotopes fusion $\Ofusion$, $\Ofusion[16][17]$, $\Ofusion[16][18]$ with elastic and inelastic data \cite{thomas_chen_hinds_meredith_olson_1986}
-coupled channels potential model calculation (barrier penetration model + incoming wave boundary condition) \cite{guimin_deji_xiaowu_1992}.
+coupled channels potential model calculation (barrier penetration model + incoming wave boundary condition) \cite{guimin_deji_xiaowu_1992}. \\
 
 12C + 16O semi-microscopic algebraic cluster  + algebraic spectroscopic factor + coupled reaction channel (scattering reaction) + (Optical potential) SPP potential real part + Woods-Saxon imaginary potential + coupling schemes  \cite{ferreira_lubian_linares_ermamatov_yepez-martinez_hess_2019}
-low-energy resonances (Potential model + two Woods-Saxon models + deformation) \cite{torilov_maltsev_zherebchevsky_2021}
+low-energy resonances (Potential model + two Woods-Saxon models + deformation) \cite{torilov_maltsev_zherebchevsky_2021} \\
 
-Gross structures 12C + 16O based on yields of 12C + 16O and 12C + 18O \cite{chan_bohn_vandenbosch_sielemann_cramer_bernhardt_bhang_chiang_1979}
+Gross structures 12C + 16O based on yields of 12C + 16O and 12C + 18O \cite{chan_bohn_vandenbosch_sielemann_cramer_bernhardt_bhang_chiang_1979} \\
 
 Selected oxygen-oxygen and oxygen-carbon reactions with experimental data and model discussion + Liquid drop model parametrization + (exp11)-1 potential  \cite{kovar_geesaman_braid_eisen_henning_ophel_paul_rehm_sanders_sperr_et_1979}
-Fusion evaporation $\mathrm{{}^{16-18}O + {}^{16}O}$ and $\mathrm{{}^{16, 18}O+ {}^{12-13}C}$ reactions + Hauser Feshbach statistical model formalism to study $\alpha$ clustering + new level-density formula \cite{wang_ren_bai_2020}
+Fusion evaporation $\mathrm{{}^{16-18}O + {}^{16}O}$ and $\mathrm{{}^{16, 18}O+ {}^{12-13}C}$ reactions + Hauser Feshbach statistical model formalism to study $\alpha$ clustering + new level-density formula \cite{wang_ren_bai_2020} \\
 
-12C + 12C and 16O + 16O density dependent M3Y nucleon interaction $3\alpha$ microscopical calculation + resonant group method (optical potential with real: coupled-channel [folded] with nuclear densities and imaginary: Woods-Saxon + R-matrix solving)  \cite{assuncao_descouvemont_2015}
+12C + 12C and 16O + 16O density dependent M3Y nucleon interaction $3\alpha$ microscopical calculation + resonant group method (optical potential with real: coupled-channel [folded] with nuclear densities and imaginary: Woods-Saxon + R-matrix solving)  \cite{assuncao_descouvemont_2015} \\
 
-12C and 24Mg resonances (microscopical cluster theory + 3 cluster system 1 core, 2 bodies - $\alpha$ clustering + resonant group method / generator coordinate method + no-microscopical hyperspherical formalism + resonant analysis models) \cite{descouvemont_2021}
+12C and 24Mg resonances (microscopical cluster theory + 3 cluster system 1 core, 2 bodies - $\alpha$ clustering + resonant group method / generator coordinate method + no-microscopical hyperspherical formalism + resonant analysis models) \cite{descouvemont_2021} \\
 
-Fusion hidrance (steep fall in fusion cross section + coupled-channels [CCFULL code] model interpretation + Woods-Saxon + vibrational coupling) 12C + 24Mg reaction \cite{montagnoli_stefanini_jiang_colucci_goasduff_brugnara_mazzocco_siciliano_scarlassara_corradi_et_2020}
+Fusion hidrance (steep fall in fusion cross section + coupled-channels [CCFULL code] model interpretation + Woods-Saxon + vibrational coupling) 12C + 24Mg reaction \cite{montagnoli_stefanini_jiang_colucci_goasduff_brugnara_mazzocco_siciliano_scarlassara_corradi_et_2020} 
 
 
 \section{Heavy nuclei reactions } \label{sec:heavyReactions}
 
-Explain the different chains going on during the carbon-oxygen combustion to heavier elements like iron or silicon.
+Explain the different chains going on during the carbon-oxygen combustion to heavier elements like iron or silicon. \\
 
-Additional fusion reactions with nuclei with $A > 28$ are present at the last stages of the life of a star. There are two main environments: The stellar fusion and explosive events fusion.
+Additional fusion reactions with nuclei with $A > 28$ are present at the last stages of the life of a star. There are two main environments: The stellar fusion and explosive events fusion. \\
 
 heavy-ion reactions + coupled channels + low-energy cross section enhancements  + parameter free São Paulo potential + zero point motion (ZPM) + vibrational couplings + WKB approximation for nondeformed potential  + nuclei deformation \cite{nobre_chamon_gasques_carlson_thompson_2007}
 
@@ -1669,7 +1724,7 @@ This reaction is essential since the $\mathrm{{}^{56}Fe}$ nucleus has the maximu
 
 Alpha processes are present within all range of nuclei. \\
 
-Initially, as it was reviewed in previous sections, when $\alpha$ fusion become possible, and if sufficient conditions are settled, a triple alpha fusion reaction chain starts and it ends in the production of $\mathrm{{}^{16}O}$. 
+Initially, as it was reviewed in previous sections, when $\alpha$ fusion become possible, and if sufficient conditions are settled, a triple alpha fusion reaction chain starts and it ends in the production of $\mathrm{{}^{16}O}$.  \\
 
 Then, alpha reactions acquire a relevant role in increasing the mass number of nuclei up to the stability peak, which is reached with the $\mathrm{{}^{56}Ni}$ nucleus. This mass number increase process is known as the alpha ladder.  \\
 
@@ -1695,7 +1750,7 @@ There exists the s and  the r processes. Each permits to form heavier nuclear el
 
 On the other hand, protons are captured at the ending of the life of a gigantic star. This process, which occurs at high densities and temperatures, is referred as proton capture. In particular, under astrophysical scenarios like supernovas, the rapid proton capture, in addition to the neutron capture,  produces a considerable amount of the heavy nuclei. This process is referred as rapid proton capture, or rp process. \\ 
 
-Further processes are not viable because they are not exothermic and potential heavier nuclei than 56-Ni are photodisintegrated. At this scale of energy, nuclear reactions start to behave similarly than chemical equilibrium reactions. 
+Further processes are not viable because they are not exothermic and potential heavier nuclei than 56-Ni are photodisintegrated. At this scale of energy, nuclear reactions start to behave similarly than chemical equilibrium reactions. \\ 
 
 An example of an s process can be given with:
 
@@ -1782,13 +1837,25 @@ Enumerate the broad ranges of phenomena that are left to be explained.  \\
 
 Introduce current approaches of some of the unsolved questions on nuclear astrophysics, particularly on the last instances of fusion in the star's lifetime. \\
 
-There are various types of  supernovae. However, there are mechanisms that are not considered and yet not well explained. For example, a complete explanation of the Ia type supernova is missing. Additionally, the production of nuclei with $A > 100$ at super explosive environments like neutron star merger is still a topic of active research.  \\
+Although the Big Bang nucleosynthesis theory explains, to a great extent, the average composition of most of the light elements in the Universe, particularly $\mathrm{{}^{1}H}$ to   $\mathrm{{}^{4}He}$, it does not completely account for the abundance of heavier elements. The case of  $\mathrm{{}^{7}Li}$ is one of such cases when the nuclear astrophysics prediction differs from experimental abundance. \\
 
-New states of matter may arise at points of extreme highly density and degeneracy. This is the case of the core of neutron stars. A new state of matter, which is called the quark-gluon plasma, has been proposed to be present in such extreme scenarios. \\
+Additionally, core collapse is a phenomena that, although widely present in many nuclear astrophysics applications, is not entirely explained by current astrophysical model. Thus, it is still uncertain the theoretical prediction of the abundances of middle heavy nuclei, and even less clear for heavy nuclei. \\ 
 
-Current experiments in detection of heavy nuclei are essential to determine the distribution of elements, specially in events like the fusion of neutron stars.\\ 
+There are various types of supernovae. However, there are mechanisms that are not considered and yet not well explained. For example, a complete explanation of the Ia type supernova is missing. Additionally, the production of nuclei with $A > 100$ at super explosive environments like neutron star merger is still a topic of active research.  \\
+
+New states of matter may arise at points of extreme highly density and degeneracy. This is the case of the core of neutron stars. A new state of matter, which is called the quark-gluon plasma, has been proposed to be present in such extreme scenarios. Particularly, the pressure $p$ generated  by a degenerate object is given by: 
+
+\begin{equation}\label{eq:reaction_degenerate}
+	p \sim \rho^{\gamma},
+\end{equation} 
+
+where $\rho$ is the density and $\gamma$ an coefficient associated with the equation of state. \\
+
+Current experiments in detection of heavy nuclei are essential to determine the distribution of elements, specially in events like the fusion of neutron stars. \\ 
 
 Heavy and superheavy nuclei production \cite{adamian_antonenko_2022}. The mechanisms for their synthesis are not completely known and efforts are made in order to explain mechanisms on fusion reactions at the heavy weight regime.  \\
+
+In fact, there are super heavy nuclei whose stability conditions are regarded as extreme. These exotic nuclei might be critical in understanding highly explosive processes mediated by rapids r and rp processes for instance. However, certainties about explosive nucleosynthesis are still waiting for more concluding explanations on the mechanism of transitioning between white dwarfs to neutron stars to black holes. \\ 
 
 Neutrino nucleosynthesis has been a topic of attractive interest in the last years. It turns out that these particles have an unexpected outstanding role in heavy nuclei production. The standard neutrino nucleosynthesis equation is given by: 
 
@@ -1946,9 +2013,119 @@ Finally, there is more than a single parametrization for matrix models \cite{bru
 
 The broad idea of this approach is to parametrize the scattering states of system.  The model includes free parameter $a$ which is called the radius channel. This serves as an estimated value such that at radius $r > a$ the electromagnetical interaction becomes relevant, which is where the radiative region is located. In contrast, in the interior region, with $r < a$, the nuclear force is the dominant interaction. \\
 
-Additionally, boundary conditions are added in some cases. Then, these parameters are also considered as free since they are adjusted against experimental data. \\
+Additionally, boundary conditions are added as an external input. Recall that at the boundary, where $r = a$, the solution to the logarithmic derivative of the Schrödinger equation is imposed to be continuous since this condition implies simultaneous continuity on both the wave function and its first order derivative. Then, an non-dimensional quantity $f$, which is closely related with the logarithmic derivative, is introduced and it is defined as \cite{iliadis_2015}:
 
-As scattering states are treated, it is necessary to define a connection with the S-matrix, which ultimately permits the interpretation of the physics of the scattering process. The previous requisite motivates the introduction of a matrix which contains the details of scattering physics. This R-matrix is defined as:
+\begin{equation}\label{eq:rmatrix_f}
+	f = a\left.u(r) \frac{du(r)}{dr}\right|_{r = a}.
+\end{equation}
+
+With the channel radius defined, the value of $f(r = a)$ is fixed as a boundary condition, which is usually referred as $B$.  Then, these parameters are also considered as free since they are adjusted. This value allows to define an specific parametrization of the variables of the reaction. \\
+
+Since the formulation of the R-matrix is strongly inspired by the modeling of resonant reactions, a natural starting point is the Breit-Wigner approximation. Particularly, when angular momentum $l$ is considered, the cross section associated to a single resonance is expressed as:
+
+\begin{equation}  \label{eq:rmatrix_breitWigner}
+	\sigma = \frac{\pi}{k^2} \sum_{l} \frac{1}{2l + 1} \frac{\Gamma^{(1)}_{l} \Gamma^{(2)}_{l} }{(E - E_l)^2  + \Gamma^2_l }, 
+\end{equation}
+
+where $k$ is the wave number, $E_l$ is the energy peak,  $\Gamma^{(1)}_{l}$ and $\Gamma^{(2)}_{l}$ are the partial widths for the reactant species and $\Gamma$. summed and then averaged corresponds to the total width, which is defined as: 
+
+\begin{equation}  \label{eq:rmatrix_totalWidth}
+	\Gamma_l = \Gamma^{(1)}_{l} + \Gamma^{(2)}_{l}. 
+\end{equation}
+
+Additionally, an average over the sum of each contribution related to a particular value of $l$ is performed by introducing the $(2l +1)$ divided factor. \\
+
+Within the Breit-Wigner formalism, the energy peak and the width can be expressed terms of $f$. Before introducing the exact form of the relation, it is necessary to define additional variables that would help to expressed the aforementioned physical observable quantities.  \\
+
+One of such variables is the penetration factor $P_l$, which is defined as: 
+
+\begin{equation}  \label{eq:rmatrix_penetrationFactor}
+	P_l = \frac{a}{(k_1 f(r = a ))^2 + \left(k_2 \left.\frac{df}{dr}\right|_{r = a} \right)^2 }.
+\end{equation}
+
+This parameter is useful when expression the reaction width as: 
+
+\begin{equation}   \label{eq:rmatrix_width_penetration}
+	\Gamma_l = 2CP_l\gamma^2_l,
+\end{equation}
+
+where $\gamma$ is another variable named as reduced width,  which is defined as: 
+
+\begin{equation}   \label{eq:rmatrix_reducedWidth}
+	\gamma^2_l =C P_l\gamma^2.
+\end{equation}
+
+On the other hand, the energy peak is expressed in terms of $f$ as: 
+
+\begin{equation}  \label{eq:rmatrix_energyPeak}
+	E_l =  C P_l.
+\end{equation}
+
+The previous expressions used the fact that $f$ can be expanded in power series as following: 
+
+\begin{equation}   \label{eq:rmatrix_f_powerSeries}
+	f(r) = f(a) + \left.\frac{df}{dr}\right|_{r = a} (r - a) +  \frac{1}{2!} \left.\frac{d^2f}{dr^2}\right|_{r = a} (r - a )^2  ... \ .
+\end{equation}
+
+Then, equations \ref{eq:rmatrix_width_penetration},     \ref{eq:rmatrix_reducedWidth} and \ref{eq:rmatrix_energyPeak} where obtained by approximating $f$ up to first order in the expansion.\\
+
+Actually, a convenient rearrangement of terms can converge to the definition of a special variable, which is called the R-matrix, as: 
+
+\begin{equation}  \label{eq:rmatrix_definition1}
+	R= \sum_k {\frac{\gamma_{k} \gamma_{'k}}{E - E_k}}, 
+\end{equation}
+
+where $\gamma_{k} $ and $\gamma_{'k}$ are quantities which would play an analogous, but not necessary exact, role to reduced widths. Similarly, the R-matrix poles $E_k$ are associated but not always equal to the energy peaks. The connections of the last mentioned parameters with $f$ are equivalent to those presented in equations \ref{eq:rmatrix_width_penetration},     \ref{eq:rmatrix_reducedWidth} and \ref{eq:rmatrix_energyPeak}.   \\
+
+The R-matrix can be interpreted as a convenient tool for synthesizing variables of the reaction picture, which now includes the asymptotic effects of the Coulomb potential in a unified formalism. \\
+
+With this picture at the resonance level being settled, it is necessary to consider the asymptotic behavior far from the interaction center. Coulomb factors give the asymptotic behavior of the wave function at $r > a$, which is expressed as \ref{eq:scattering_Schrodinger_radial_solution_coulomb}. Then, the $f$ factor is given by: 
+
+\begin{equation}   \label{eq:rmatrix_f_Coulomb}
+	f(r) = k_1\frac{dH^{+}}{dr}  + k_2 \frac{dH^{-}}{dr}.
+\end{equation}
+
+With the last expression into account, is now possible to define the connections between the observed, in the experimental sense, and their correspondent R-matrix parameters. Before that, it is critical to remark that Coulomb interaction inclusion in the R-matrix formalism implies the need of defining a factor $S_l$ as:
+
+\begin{equation}   \label{eq:rmatrix_shiftFactor}
+	S_l= K P_l\gamma^2_l,
+\end{equation}
+
+Then, a pole of the R-matrix $E_\lambda$ is expressed as: 
+
+\begin{equation}  \label{eq:rmatrix_energyPole}
+	E_\lambda =  E_l - \Delta, 
+\end{equation}
+
+where the energy shift is given by: 
+
+\begin{equation}  \label{eq:rmatrix_energyShift}
+	\Delta = k_1 S_l.
+\end{equation}
+
+At this point, it is worth to be noticed that $S_l = 0$ for the case of uncharged reaction pictures. Then, for such situations, $E_\lambda = E_l$ holds and therefore there the energy pole and the actually observed energy peak are equivalent. However, within the R-matrix formalism, a shift appears when relating these two energy like terms in therms of $S_l$, which is frequently referred as the shift factor. \\
+
+Additionally, the reaction reduced $\gamma^2_\lambda$ of the R-matrix model  with is defined as:
+
+\begin{equation}   \label{eq:rmatrix_reducedWidth_formal}
+	\gamma^2_\lambda =C P_l\gamma^2 + C_2 \Delta.
+\end{equation}
+
+Notice that the width has been also corrected by the shift factor. \\
+
+However, the R-matrix has not a unique parametrization for the quantities associated with observables. In particular, it is possible to simplify the last expressions by imposing: 
+
+\begin{equation}  \label{eq:rmatrix_spacialboundaryCondition}
+	B = f(r = a). 
+\end{equation}
+
+Then, with this parametrization, $\Delta = 0$ and thus the formal and width parameters become equivalent. Naturally, equation \ref{eq:rmatrix_spacialboundaryCondition} is usually  the preferred for R-matrix calculations. \\
+
+The last introduction of the R-matrix for was based on the requisite of narrow resonance. However,  is possible to describe reactions with multiple channels and to generalize the assumptions made in the Breit-Wigner formalism with the same R-matrix definition. Particularly, extended resonances and non-resonant behavior can be also analyzed withing this theoretical framework.\\
+
+Further approaches in the context of the R-matrix have different forms depending on the inclusion of effects of channels and spins. The first approximation is given by considering a single channel. Additionally, spin effects and the related formulae are included in the R-matrix formalism. Angular momentum and parity conservation can be included within R-matrix calculations. \\
+
+As multiple incoming and outgoing states are treated, it is necessary to define a connection of the R-matrix with the S-matrix, which ultimately permits the interpretation of the physics of the scattering process. The previous requisite motivates the introduction of a matrix which contains the details of scattering physics. This R-matrix is defined as:
 
 \begin{equation}  \label{eq:rmatrix_elements}
 	R_{cc'} = \sum_k {\frac{\gamma_{ck} \gamma_{c'k}}{E - E_k}}, 
@@ -2047,7 +2224,7 @@ where $\gamma$ and $E_r$ are the total width and the energy pole parameter respe
 
 With the previous approximation taken into account, it is possible to express the penetration factor parameter $P(E)$ as:
 
-\begin{equation} \label{eq:rmatrix_penetrationFactor}
+\begin{equation} \label{eq:rmatrix_penetrationFactor_coulomb}
 	P= \frac{\Gamma}{F_l^2 + G_l^2},
 \end{equation}
 
@@ -2614,13 +2791,25 @@ The Trojan horse method. Selection of reactions and consideration of the charact
 
 \subsection{Effective field theories} \label{sub:special_effectiveField}
 
-Based on effective field theories. The general principle of these theories is that nuclear interactions correspond to low-energy approximate solutions of the physics described in quantum chromodynamics. \\
+Based on effective field theories. The general principle of these theories is that nuclear interactions correspond to low-energy approximate solutions of the physics described in quantum chromodynamics. In particular, direct standard model application at low energies have the restriction of non-convergence of the perturbative theories, and even lack of renormalization. Then, alternative field theories with new appropiate interactions shall be introduced. \\
+
+An example of a Lagrangian $\mathcal{L}$ used within the context of effective field theory is given by: 
 
 \begin{equation} \label{eq:micro_lagrangian_nucleons}
-	\mathcal{L} = N^{\dagger}i\hbar\gamma^\mu\partial_\mu N + ... .
+	\mathcal{L} = N^{\dagger}i\hbar\gamma^\mu\partial_\mu N + ... ,
 \end{equation}
 
-Diagrams associated with the processes of low-energy nuclear force. Mediators are mesons like pions. \\
+where the term $ N^{\dagger}i\hbar\gamma^\mu\partial_\mu N$ is closely related with the Dirac kinetic term for a fermion. Particularly, $N$ represents a spinor like corresponding to the nuclei. \\
+
+Now, it is necessary to include the interaction via an introduction of a coupling in equation \ref{eq:micro_lagrangian_nucleons}. This can be done with the coupling Lagrangian  $	\mathcal{L}_{\mathrm{coupling}} $ defined as: 
+
+ \begin{equation} \label{eq:micro_lagrangian_coupling}
+ 	\mathcal{L} =  C_1 A^\mu j_\mu ,
+ \end{equation}
+
+where $C_1$ is the coupling constant, which can be estimated from scattering experiments, $A^\mu $ is a term related with a nucleon field and $j_\mu$ corresponds to the conserved current.  \\
+
+Since these theories are closely related with quantum field theory, it is possible to use diagrams associated with the processes of low-energy nuclear force. In this picture, mediators are mesons like pions. The underlying symmetry can be assumed to be isospin symmetry.  \\
 
 Effective field theory $\dRadiativeCapture$ and three body interaction, M1 is the dominant contribution \cite{sadeghi_khalili_godarzi_2013}
 
@@ -2640,27 +2829,31 @@ And some empirical formulas can be given to approximate the behavior of the S-fa
 
 \subsection{Interpolations} \label{sub:empirical_interpolation}
 
-Non-resonant reactions S-factors can be calculated with polynomial interpolations and fits. 
+Non-resonant reactions S-factors can be calculated with polynomial interpolations and fits given their overall smooth and monotonic behavior. Each fit can be characterized by an order, which corresponds to maximum degree of a polynomial in the expansion. Then, based on square error minimization, it is possible to estimate the best polynomial coefficients. The astrophysical S-factor can thus be estimated as:
 
-In particular, there is a exponential expansion that is reported in literature to be useful. 
+\begin{equation}  \label{eq:empirical_polynomial}
+	S(E) = a_0 + a_1E + a_2 E^2 + ... \, 
+\end{equation}
+
+where coefficients of the form $a_k$ correspond to the weights of the polynomials of order $k$. \\
+
+Additionally,  there is a exponential expansion that is reported in literature to be useful. 
 
 \begin{equation} \label{eq:empirical_exponential}
 	S(E) = \exp{(g_0 + g_1E + g_2E^2 + g_3E^3 + ...)}.
 \end{equation}
 
-Also, more generic expansions are modeled by fitting a Laurent series expansion. 
+Notice that the exponential term of equation \ref{eq:empirical_exponential} corresponds to an embedding of the polynomial expansion given in equation \ref{eq:empirical_polynomial}. This procedure is useful when fitting rapid varying S-factor energy curves. \\
+
+When there is a sharp increase on the S-factor at low energies, like it where a pole at $E = 0$,  more generic expansions are used. These approaches modify the classical polynomial interpolation by introducing a Laurent series expansion. An example of such fitting is given by the formula: 
 
 \begin{equation}  \label{eq:empirical_laurent}
 	S(E) =\frac{ a_{-1}}{E} + a_0 + a_1 E + a_2 E^2 + ... \ .
 \end{equation}
 
-For most of the reactions, $a_{-1} = 0$, since $S(E)$ should be smooth at very low energies. Therefore, the S-factor is  described as a Taylor series expansion.
+For most of the reactions, $a_{-1} = 0$, since $S(E)$ should be smooth at very low energies. Therefore, the S-factor is  described as a Taylor series expansion as it is shown in equation \ref{eq:empirical_polynomial}. \\
 
-\begin{equation}  \label{eq:empirical_polynomial}
-	S(E) = a_0 + a_1E + a_2 E^2 + ... \ .
-\end{equation}
-
-Notice that the exponential term of equation \ref{eq:empirical_exponential} corresponds to an embedding of the polynomial expansion given in equation \ref{eq:empirical_polynomial}. This procedure is useful when fitting rapid varying S-factor energy curves. 
+More sophisticated formulas can imply exponential enhancement coefficients due to screening effects. The particularities of these adjustments are presented in section \ref{sub:resultsAnalysisNonResonant}. 
 
 \subsection{Fusion reactions formulas} \label{sub:empirical_fusion}
 
@@ -2693,18 +2886,27 @@ At energies such that $|E_c - E|/D \sim 1$, the S-factor presents a sharp change
 
 %Explain the forces and interactions going on in a star. Highlight what makes a star stable.
 
-
-For resonant reactions, the Breit-Wigner formula
+For resonant reactions, the Breit-Wigner formula is the most appropriate approximation for modeling the S-factor shape. An example of a Breit-Wigner fit is given by: 
 
 \begin{equation} \label{eq:empirical_breitWigner}
 	S(E) = S_r \frac{\Gamma^2_r/4}{(E-E_r)^2 + (\Gamma_r/2)^2}.
 \end{equation}
 
+where the index $r$ runs through all the resonances with total widths and energy peaks being $\Gamma_r$ and $E_r$ respectively. Additionally, a phenomenological parameter for the height of the resonance was included and is named as $S_0$. \\
+
+ Note that this is a modification of equation \ref{eq:rmatrix_breitWigner} when $\gamma = \Gamma/2$, which is consistent of interpeting $\Gamma$ as the double of the two partial widths $\gamma$. Additionally, the resonant amplitude has a relation with the cross section value, based on the Breit-Wigner formula, which can be expressed, for the case of $l = 0$, as: 
+ 
+ \begin{equation} \label{eq:empirical_breitWigner_S0}
+ 	S_0 \sim  \frac{\pi}{k^2}. 
+ \end{equation}
+
 This formulation permits empirical formulas to add resonant terms to the non-resonant estimation. Usually the resonant terms are added to background which is fitted to a non-resonant formula. For example, consider the expression: 
 
 \begin{equation}  \label{eq:empirical_hybridPolynomial}
-	S(E) =  \sum _{k = 0}^{N} {a_kE^k} + \sum_{l = 1}^{M} {\frac{\Gamma_l^2/4}{(E - E_l)^2 + \Gamma_l^2/4}},
+	S(E) =  \sum _{k = 0}^{N} {a_kE^k} + \sum_{l = 1}^{M} {\frac{c_l}{(E - E_l)^2 + \Gamma_l^2/4}},
 \end{equation}
+
+where $c$ is a parameter with units of those of the width squared. When comparing the last formula with equation \ref{eq:empirical_breitWigner}, it happens that $c_l = \Gamma^2_l/4$ is the best estimation. \\
 
 Analogously, if the non-resonant term has a polynomial form, the S-factor hybrid resonant and non-resonant expansion is expressed as:
 
@@ -2716,7 +2918,7 @@ where $N$ is the maximum order of the polynomial to be fitted, which accounts fo
 
 Analytical formula deduction is given by \cite{kimura_bonasera_2013}. This approach is based on Gamow peak approximation with strong resonances. \\
 
-Applications in direct capture \cite{jennings_karataglidis_shoppa_1998}.  Exchange reactions $\mathrm{(p, n)}$ kind \cite{hussein_abdullah_2020}.
+Applications in direct capture \cite{jennings_karataglidis_shoppa_1998}.  Exchange reactions $\mathrm{(p, n)}$ kind \cite{hussein_abdullah_2020}. \\
 
 Charged particle collisions non-resonant \cite{ueda_sargeant_pato_hussein_2002} and resonant \cite{ueda_sargeant_pato_hussein_2004}. \\
 
@@ -3005,11 +3207,13 @@ In a first approach, the non-resonant background was estimated empirically with 
 
 In order to avoid unrealistic physical behavior, only fits with orders up to $N = 2$ were selected as it is shown in Figure \ref{sfig:13C(p,gamma)14N-BW-residuals-exp1-poly1}. In particular, it is visualized that the fits do not entirely account for the discrepancies between data and the BW fit. This suggests that the initial assumption of a single channel contribution for the resonance has limitations in predicting the S-factor of the $\CRadiativeCapture$ reaction. \\
 
-The last observation is supported correspondence by comparing the joint resonant and non-resonant prediction with experimental data, both found in Figure \ref{fig:13C(p,gamma)14N-background-exp12-poly12}. Even though the S-factor estimation improved at low energies, new fits actually overestimate the  S-factor for entries with energies above the resonance peak. Additionally, the poly2 + BW fit has an unphysical stepping descent at low energies.
+The last observation is supported correspondence by comparing the joint resonant and non-resonant prediction with experimental data, both found in Figure \ref{fig:13C(p,gamma)14N-background-exp12-poly12}. Even though the S-factor estimation improved at low energies, new fits actually overestimate the  S-factor for entries with energies above the resonance peak. 
 
 \graph{13C(p,gamma)14N-background-exp12-poly12}{Empirical fit of the $\CRadiativeCapture$ reaction}{Empirical fit for the S-factor of the resonant $\CRadiativeCapture$ reaction. The resonant part was estimated with a Breit-Wigner fit added to a  non-resonant background, which was fitted with exponential and polynomial with first and second order formulas. All the values of the parameters used are found in Table \ref{table:fitting_empirical_CRadiative_composite}.} 
 
-This overall difference between S-factor experimental data and the prediction of the empirical formulas could be explained due to particularities of the physical phenomena underlying the $\mathrm{{}^{13}C(p, \gamma)^{14}N}$ reaction. In fact, the S-factor values presented in Figure \ref{fig:13C(p,gamma)14N-BW} corresponds to the sum of different channels associated with non-excited and excited states of  $\mathrm{{}^{14}N}$ \cite{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}. This means that the theoretical prediction should consider the transitions to all possible states of the reactants and product nuclei.
+Additionally, the poly2 + BW fit has an unphysical stepping descent at low energies, as well as it does not entirely account for values beyond the resonance. At a first glance, discrepancies can be explained by the fact poly2 + BW includes the greatest number of parameters of all the fits. This is partially supported by the fact that the shape of the fit also suggests over fitting. Additionally, some predictions for experimental points worsen for values with energies lower and higher with respect to the energy of the reaction peak.  In fact, by increasing the degree of the polynomial, it seems that Breit-Wigner formula fitting may not be the most ideal way of modeling this capture reaction. \\ 
+
+This overall difference between S-factor experimental data and the prediction of the empirical formulas could be explained due to particularities of the physical phenomena underlying the $\mathrm{{}^{13}C(p, \gamma)^{14}N}$ reaction. In fact, the S-factor values presented in Figure \ref{fig:13C(p,gamma)14N-BW} corresponds to the sum of different channels associated with non-excited and excited states of  $\mathrm{{}^{14}N}$ \cite{xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}. This means that the theoretical prediction should consider the transitions to all possible states of the reactants and product nuclei. 
 
 
 
