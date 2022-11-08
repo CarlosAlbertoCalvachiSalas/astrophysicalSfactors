@@ -2352,17 +2352,274 @@ On the other hand, clusters consider the system of interactant nuclei as a whole
  
 Hatree-Fock-Bogoliubov (HFB) + quasi particle random phase approximation (QRPA) \cite{chimanski_in_escher_peru_younes_2022}. \\
 
+An adaptation of the Hatree-Fock method was complemented by Bogoliubov for the specific needs of the nuclear physics. More particularly, the random wave approximation is used in this context.  \\
+
+The quasiparticles are used to form the Hartree-Fock. The occupation operator of creation $c^{\dagger}_\alpha$ is given by:
+
+\begin{equation}\label{eq:micro_HFB_creation}
+	c^{\dagger}_\alpha = \sum_{k} [U^{*}_{ak} \eta^{\dagger}_k + V_{ak} \eta_k]
+\end{equation}
+
+Reciprocally, the annihilation operator $c_\alpha$ is given by: 
+
+
+\begin{equation}\label{eq:micro_HFB_annihilation}
+	c_\alpha = \sum_{k} [V^{*}_{ak} \eta^{\dagger}_k + U_{ak} \eta_k],
+\end{equation}
+
+$\eta_k$ and  $\eta^{\dagger}_k $ are respectively are the annihilation and creation operators.  The base state is given in terms of the vacuum analogous state $| 0 \rangle$. One of the main properties of the HFB state is that: 
+
+\begin{equation}\label{eq:micro_HFB_base}
+	\eta_k |0\rangle = 0.
+\end{equation} 
+
+These permit the construction of the states. Also, $\alpha$ and $\beta$ are the index for quantum numbers. Additionally, where the operators $U$ and $V$ play the role of position and momentum operators. \\
+
+One of the advantages of the elements is the relation with quantum mechanical objects like the density matrix: 
+
+\begin{equation}\label{eq:micro_HFB_densityMatrix}
+	\rho_{\alpha \beta} = \sum_k {V_{ak}V^{*}_{\beta k}}.
+\end{equation}
+
+With this picture, the excited states ${\hat {\theta}}^{\dagger}$ can be deduced as:
+
+\begin{equation}\label{eq:micro_QHFB_excited}
+	{\hat {\theta}}^{\dagger} = \sum X \eta^\dagger_x \eta^\dagger_y   + Y \eta_{-x} \eta_{-y}.
+\end{equation}
+
+The idea is the restoration of the initial excited to the angular momentum number states $|\theta \rangle \rightarrow | JM \rangle$. The elements of the operators $O$, of the deformed wave, and the quadrupole operator $\hat Q$ is given by: 
+
+\begin{equation}\label{eq:micro_QHFB_quadrupole}
+	\langle  O | \hat Q|  JM \rangle. 
+\end{equation}
+
+The form of the excited state in terms of guessing wave functions with $\phi_\alpha$ and $\phi_\beta$ is given by:
+
+\begin{equation}\label{eq:micro_QHFB_densityGround}
+	Z_{\alpha, \beta} = \sum {X (V_\alpha U_\beta - V_\alpha U_\beta) + Y (U^{*}_\alpha V_\beta - U^{*}_\alpha V_\beta)}. 
+\end{equation}
+
+This can be interpreted as an antisymmetric operator. 
+
 Ab initio: Fermionic Molecular dynamics (wave-packet dynamics) \cite{neff_feldmeier_langanke_2011}. \\
+
+The state is given by a fermionic system of molecules, is given by: 
+
+\begin{equation}\label{eq:micro_FMD_state}
+	| \Psi \rangle = \mathrm{cal} \{ |\Psi_1 \otimes ... \otimes |\Psi_A \rangle \}.
+\end{equation}
+
+The wave packets are structured with the spin and a factor of $\xi$ has the form to distinguish between charged (protons) and uncharged (neutron). This accounts for the isospin symmetry:
+
+\begin{equation} \label{eq:micro_FMD_wavePacket}
+	|\Psi_k \rangle = \exp {\left ( - \frac{(\vec x - \vec b_k)^2}{2a_k} \right)} \otimes |\chi^{\uparrow}_k,  \chi^{\downarrow}_k \rangle \otimes |\xi_k \rangle, 
+\end{equation}
+
+The parameters $a_k$ and $\vec b_k$ are adjusted in order to fit appropriately the wave functions. Note that this has the form of a wave packet with the spin  $\chi$ and isospin  $\xi$ respectively. \\
+
+
+The full states are configured as: 
+
+\begin{equation} \label{eq:micro_FMD_generalState}
+	| J^{\pi} M E_n \rangle = \sum_{aK}{c^{(n)}_a | \Psi J^\pi MK \rangle} , 
+\end{equation}
+
+where $J$ and $M$ correspond to the total angular momentum and the projection angular momentum respectively. And $\pi$ is the parity and $a$ and $K$ are the indexes which parametrize the coefficients of the expansion.  \\
+
+Additionally, an overlap function is defined, in the context of regular generalized model belonging to the cluster formalism,  as: 
+
+
+\begin{equation} \label{eq:micro_FMD_overlap}
+	\psi = \int r^2 Dr' \sqrt{\langle \Phi(r) | \Phi(r') \rangle } \langle \Phi(r') | J^{\pi} E \rangle,
+\end{equation}
+
+where the $\Phi$ functions are related with the cluster wave functions. \\
 
 Unified approach chiral effective field theory  \cite{navratil_quaglioni_hupin_romero-redondo_calci_2016}. \\
 
+In the context of effective chiral field theory, the interactions have different labels depending on the order of the interactions. The most fundamental interaction is a $NN = 2N$ order which is named LO. Additionally, if intermediate paths, which could include loops and bounces, are named as $\mathrm{NLO}$. Then, the hierarchy continues with $\mathrm{N^2LO}$ and $\mathrm{N^3LO}$ interactions which could include $NNN = 3N$ and $NNNN = 4N$ interactions. Then, it is expected this series to continue with multiple intermediate processes for further interaction order.  Then, it is expected that a $k$ th order interaction to be modeled with the $\mathrm{N^kLO}$ configurations. Ultimately, these interactions can be associated closely with Feynman diagrams for low energy quantum chromodynamics. \\
+
+In the picture of chiral effective field theory, renormalization is an important concept when calculating the values of the resulting series from the aforementioned $\mathrm{N^kLO}$ interactions. Then, it is necessary to give a picture for the algebra underneath the renormalization operations. From a Hamiltonian perspective, the equation of the operator $\hat H_s$ is given by: 
+
+\begin{equation}\label{eq:micro_EFT_evolution}
+	\frac{d}{ds}\hat H_s = [\hat \eta_s, \hat H_s],
+\end{equation}
+
+where $s$ is a continuous flow parameter. In the classical context, time is an example of such kind of variable. Note that the relation of \ref{eq:micro_EFT_evolution} has the form of a dynamical equation in the context of quantum mechanics. In particular, operator $\hat H_s$ corresponds to the Hamiltonian in the Heisenberg picture of quantum mechanics. Then, the Hamiltonian is expressed as: 
+
+ \begin{equation}\label{eq:micro_EFT_hamiltonian_heisenberg}
+	\hat H_s = {{\hat U}^{\dagger}}_s \hat H \hat U_s,
+ \end{equation}
+
+where $\hat U_s$ corresponds of the unitary operator, which is closely related with the time evolution operator in the Heisenberg quantum mechanical formalism. \\
+
+On the other hand, the $\hat \eta_s$ operator corresponds to a generator of the transformations associated with the evolution operator  $\hat U_s$. Its usual expression is given by:
+ 
+  \begin{equation}\label{eq:micro_EFT_hamiltonian_generator}
+ 	\hat \eta = \left(2 \frac{\mu }{\hbar}\right)^2 [\hat T, \hat H_s],
+ \end{equation}
+
+where $\mu$ is the reduced mass and $\hat T$ corresponds to an special operator related to the flow of the Hamiltonian.\\
+
+A similar picture, with respect to the excited state with its related operator $\hat O_s$ obeys the dynamical equation: 
+
+\begin{equation}\label{eq:micro_EFT_evolution_excited}
+	\frac{d}{ds}\hat O_s = [\hat \eta_s, \hat O_s].
+\end{equation}
+
+Actually, in this formula, $\hat O_s$ plays the role of $\hat H_s$ in equation \ref{eq:micro_EFT_evolution}.\\
+ 
 Ab initio wave function no core shell model \cite{navratil_bertulani_caurier_2006}. \\
+
+An study of the $\mathrm{{}^{7}Be}$,  $\mathrm{{}^{8}B}$ can be performed via the study of ab initio functions. One of the free parameters of the model is $\Omega$, which permits the definition of energies of the form $N\hbar \Omega$, where $N$ is an integer, to parametrize the numerical solution of the system. \\
+
+The spectroscopic factor $S$ can be estimated by: 
+
+\begin{equation}\label{eq:micro_NCSH_application_S}
+	S = \int { \left| g (r)  r^2 dr \right|^2},
+\end{equation}
+
+where $g(r)$ corresponds to a form factor of the channel cluster characterized with $A - 1$, with $A$ being the mass number, $I_1$ for the isospin, $l$ for the orbital and $J$ for the angular momentum and $r$ is associated with the norm of the vector: 
+
+\begin{equation}\label{eq:micro_NCSH_application_r}
+	\vec r  = \frac{1} {A - 1} \vec r_1 + \vec r_2 + ... + \vec r_{A-1} - \vec r_A,
+\end{equation}
+
+where $\vec r$ has the role of the relative difference between the position of the last nucleon $\vec r_A$ with respect to the average of the rest. This parameter is useful when parametrizing the radial components of the wave function. \\
+
+One of the properties of the form factor is its asymptotic behavior, which is closely related with the Coulomb wavefunctions. The particular expression is given by: 
+
+\begin{equation}\label{eq:micro_NCSH_application_asymptotics}
+	r g_{lj}(r) \rightarrow C_{lj} W_{-\eta , l + 1/2} (2k_0r), 
+\end{equation}
+
+where $k_0 = \sqrt{2\mu E_0/\hbar^2}$ with $E_0$ the nucleon separation energy. Additionally, $W$ corresponds to the Whittaker function evaluated with the parameters $\eta$ for the Sommerfeld parameter and $l$ for the relative angular momentum. In order to complete the picture, the asymptotpic normalization coefficient $C_{lj}$ is added.  \\
 
 No core shell model. Beta decay \cite{atkinson_navratil_hupin_kravvaris_quaglioni_2022}. \\
 
+The way that this calculations proceeds is with the no core shell model with continuum formalism. In particular, a cluster expansion may be introduced in order to facilitate computations. \\
+
+An application of the no core shell model is given for the $\beta$ decay reaction. The relevant variables are the angular momentum parity pair $J^\pi$, the isospin $T$. The operator, which is referred as the Gamow-Teller, is defined as: 
+
+\begin{equation}\label{eq:micro_NCSM_beta_asymptotics}
+	B = \frac{1}{2} \langle \Psi || \mathcal{GT} || \Psi ' \rangle, 
+\end{equation}
+
+where $\Psi$ and $\Psi'$ are the incident and outgoing wave functions respectively. Additionally, the Gamow-Teller operator is given by: 
+
+ \begin{equation}\label{eq:micro_NCSM_beta_GToperator}
+ 	\mathcal{GT} = \sum_{k = 1}^{A} \hat \sigma_k \hat \tau_k^{\tau},
+ \end{equation}
+
+where $\hat \sigma_k$ corresponds to the operators associated with the Pauli matrices and $\hat \tau_k$ the isospin raising operator, which is similar to $L^{+}$ in quantum mechanics. Additionally, $A$ corresponds to the mass number. \\ 
+
+Further computations regarding to equation \ref{eq:micro_NCSM_beta_asymptotics} are performed on top of expanding the transition matrix coefficient: 
+
+
+\begin{equation}\label{eq:micro_NCSM_beta_transition}
+	\langle \Psi | \hat O |  \Psi ' \rangle,
+\end{equation}
+
+where $ \hat O$ corresponds to a suitable operator for one body, This is given in terms of various variables of interest in the reaction. For example, for the present case, there is a parameter $\mu_\tau = 1$ for the Gamow Teller operation. Then, this treatment can be seen as more general. \\
+
+In fact one of the general ways of expressing an operator  $\hat O' $with multiplying $\mu_1$ and $\mu_2$:
+
+\begin{equation}\label{eq:micro_NCSM_beta_operator}
+	 \hat O ' = - \frac{1}{\hat \kappa} \sum \langle j_a 1/2 m_{t_a} || \hat O || j_b 1/2 m_{t_b} \rangle a^{\dagger} a C,
+\end{equation}
+
+where $a^{\dagger}$ and $a$ are the creation and annihilation operators preferred in this picture whereas the coefficient $C$ is of the form of Clebsh-Gordan with the form: 
+
+\begin{equation}\label{eq:micro_NCSM_beta_coefficient}
+	C = \langle j_a m_a j_b m_b | \kappa \mu_k \rangle,
+\end{equation}
+
+where the pair $\kappa$ with $\mu_k$ having a similar role to the coupled $J$ and $M$ in standard quantum mechanical angular momentum addition.  \\
+
+On the other hand, the antisymmetrization operator $\hat{\mathcal{A}}_\nu$, with $\nu$ as a choice for an arbitrary quantum numbers selection, is expressed as: 
+
+\begin{equation}\label{eq:micro_NCSM_beta_antisymmetrization}
+	\hat {\mathcal{A}}_\nu  \langle \Phi \rangle  = \sum { (-1)^{I_1 + J_k + j} \hat S \hat J D E a^{\dagger} | \Psi \rightarrow },
+\end{equation}
+
+where $D$ and $E$ are angular momentum evaluated coefficients. The former corresponds to a $6j$ symbol with the form: 
+
+\begin{equation}\label{eq:micro_NCSM_beta_antisymmetrization_9j}
+	D = \left \{  \begin{matrix}
+		I_1 & \frac{1}{2} & s \\
+		l 		& J_k & j
+	\end{matrix}   \right \}. 
+\end{equation}
+
+Additionally, the latter is expressed as two Clebsh-Gordan coefficients with the form: 
+
+\begin{equation}\label{eq:micro_NCSM_beta_antisymmetrization_clebshGordan}
+	E =  \langle I_1 M_1 jm |  J_kM_k  \rangle \left \langle T_1 M_{T_1} \left| \frac{1}{2} m_t \right|  T_k M_{T_k} \right  \rangle,
+\end{equation}
+
+where $k$ is an index running across all contributions of the total angular momentum $J_k$.  \\
+
+One of the predictions of this model is half live $T_{1/2}$ for the $1/2^{+}$ state. The general phenomenological expression gives a proportionality relation of: 
+
+ \begin{equation}\label{eq:micro_NCSH_beta_halflive}
+	T_{1/2} \propto \frac{1}{g^2_A B},
+\end{equation}
+
+where $g_A$ corresponds to the coupling constant associated with the Gamow-Teller interaction. Additionally, since the reaction is of the form.\\
+
+
 Tensor force in microscopical cluster model \cite{arai_aoyama_suzuki_descouvemont_baye_2013}. \\
 
+$NN$ forces included with additional aspects of the study of microscopic models for the context of study of the deuterium reactions $\mathrm{{}^{2}H}(d, \gamma){}^{4}He$, $\mathrm{{}^{2}H}(d, p){}^{3}H$ and $\mathrm{{}^{2}H}(d, n){}^{3}He$ reactions. One of such approaches towards cluster models was based on the resonating group method (RGM) with the Minnesota potential, which accounts for the tensor force effect of the aforementioned reactions. A multichannel behavior was incorporated in the model. 
+
 The \textit{ab initio} no core shell model \cite{barrett_navratil_vary_2013}. \\
+
+In a single picture the generalized Hamiltonian for the no core shell model is expressed as: 
+
+\begin{equation}\label{eq:micro_NCSM_hamiltonian}
+	H = \frac{1}{A} \sum_{a < b} \frac{(\hat p_a - \hat p_b)^2}{2m} + \sum_{a<b} V_{\mathrm{NN}, ab} +  \sum_{a<b < c} V_{\mathrm{NNN}, abc},
+\end{equation}
+
+where $a, b, c$ are indexes conveniently chosen to consider all the possible $NN$ and $NNN$ interacting nucleons without repetition. Their respective potentials are $V_{\mathrm{NN}, ab}$ and  $V_{\mathrm{NNN}, abc}$.  Additional, the first term corresponds to the relative kinetic energy. \\
+
+One convenient expression for the potential energy, as seen by the center of mass, is given in close analogy with the harmonic oscillator. Particularly, that potential, which is labeled as $U_{\mathrm{CM}}$, is given by:
+
+\begin{equation}\label{eq:micro_NCSM_potentialHarmonic}
+	U_{\mathrm{CM}} = \frac{1}{2} A m \Omega^2 \vec {R}^2,
+\end{equation}
+
+with $\Omega$ being the frequency of the harmonic oscillator basis, $A$ the total number  and $m$ corresponds to the mass of nucleons. Additionally, $\vec {R}^2$ has the form: 
+
+\begin{equation}\label{eq:micro_NCSM_R}
+	\vec R = \frac{1}{A}\sum_{}^{A} \hat r_k, 
+\end{equation}
+
+where $\hat r_k$ is the position of the $k$th nucleon. \\
+
+In order to solve a system with this approach, there is a special basis to be formed in terms of combinations of the positions. Thus, a generalization on the usual coordinates is needed, which is a term closely related to the Jacobi coordinates. For instance, the first Jacobi coordinates vector is given by: 
+
+\begin{equation}\label{eq:micro_NCSM_jacobi0}
+	\vec \xi_0 = \sqrt{A} \vec R.
+\end{equation}
+
+Also, if the interest is to measure the difference between the first two nucleon systems, the second Jacobi coordinate is better to be used. It has the expression: 
+
+\begin{equation}\label{eq:micro_NCSM_jacobi1}
+	\vec \xi_1 = \sqrt{\frac{1}{2}} (\vec r_1 - \vec r_2).
+\end{equation}
+
+Later, the third coefficient, which is estimated with tools of the previous coefficients, is given by: 
+
+\begin{equation}\label{eq:micro_NCSM_jacobi2}
+	\vec \xi_1 = \sqrt{\frac{2}{3}} ( \frac{1}{2}(\vec r_1 - \vec r_2) - \vec r_3).
+\end{equation}
+
+If the iteration continues, a generalized coefficient of order $A - 1$ is given by: 
+
+\begin{equation}\label{eq:micro_NCSM_jacobiA-1}
+	\vec \xi_{A-1} = \sqrt{\frac{A-1}{a}} \left( \frac{1}{A-1}(\vec r_1 +  \vec r_2 + ... + \vec r_{A - 1} \right) - \vec r_A).
+\end{equation}
+
 
 \begin{figure}[H]
 	\input{Figures/microShellModels.tex}
@@ -2391,7 +2648,7 @@ One of the advantage of this approach is that cluster effects can be considered.
 
 The starting point consists of assigning the wave function of the system  $\Phi$  the form:  \\
 
-\begin{equation}\label{micro_threeBody_wavefunction}
+\begin{equation}\label{eq:micro_threeBody_wavefunction}
 	\Phi = \Psi(X, Y) \prod \Phi_k, 
 \end{equation}
 
@@ -2399,26 +2656,26 @@ where $\Phi_k$ represent the wave function of each of the $k$ clusters. Then, $\
 
 Now, the $\Psi(X, Y)$ function can be splitted in an asymptotic two nucleon like interaction $\Psi^{(2)}$ and the actual pure three force wave function $\Psi^{(3)}$ . Then, $\Psi(X, Y)$ can be expressed as: 
 
-\begin{equation}\label{micro_threeBody_splitting}
+\begin{equation}\label{eq:micro_threeBody_splitting}
 	\Psi(X, Y) = \Psi^{(2)}(X, Y) +  \Psi^{(3)}(X, Y).
 \end{equation}
 
 The three body term can be defined in terms of hyperspherical harmonics, which are one of the approaches towards the characterization of the $NNN$ interaction. Particularly, $ \Psi^{(3)}(X, Y)$ is given by: 
 
 
-\begin{equation}\label{micro_threeBody_psi3}
+\begin{equation}\label{eq:micro_threeBody_psi3}
 	\Psi^{(3)}(X, Y) = \rho^{-5/2} \sum_{K, \nu}^{\mathcal{K}} {\chi_{K, \nu}(\rho) \mathcal{J}_{K, \nu} (\theta, {\hat n}_x, {\hat n}_y ) },
 \end{equation}
 
 where $\nu$ is a collection of quantum number which includes rotations from the $x$ and $y$ coordinates $l_x$ and $l_y$, the orbital angular momentum $L$ and the spins $S$, $S_x$. Also, the hyperspherical harmonic $\mathcal{J}_{K, \nu}$ depends on a rotation angle $\theta$ and unitary vectors in the $x$ and $y$ axes ${\hat n}_x$ and ${\hat n}_y$ respectively. Additionally, $\rho$ is a quantity that absorbs the dependence of $\Psi^{(3)}$  with respect to the Jacobi coordinates and can be associated as a radial distance.  Particularly, this dependence is expressed as: 
 
-\begin{equation}\label{micro_threeBody_rho}
+\begin{equation}\label{eq:micro_threeBody_rho}
 	\rho = \sqrt{ \frac{12}{7} X^2 + \frac{7}{8} Y^2}.
 \end{equation}
 
-The index $K$ helps tag each term contributing to equation \ref{micro_threeBody_psi3}, which can be interpreted as a generalize partial wave expansion with $K$ having an analogous role to $l$ in the classical three dimensional picture. In fact, $\mathcal{K}$ is the truncation value of the $K$-series. Additionally, the generalized radial-like part of the expansion corresponds to  $\chi_{K, \nu}$. Its asymptotic behavior is given as: 
+The index $K$ helps tag each term contributing to equation \ref{eq:micro_threeBody_psi3}, which can be interpreted as a generalize partial wave expansion with $K$ having an analogous role to $l$ in the classical three dimensional picture. In fact, $\mathcal{K}$ is the truncation value of the $K$-series. Additionally, the generalized radial-like part of the expansion corresponds to  $\chi_{K, \nu}$. Its asymptotic behavior is given as: 
 
-\begin{equation}\label{micro_threeBody_chiAsymptotics}
+\begin{equation}\label{eq:micro_threeBody_chiAsymptotics}
 	\chi_{K, \nu} \rightarrow \rho^{-5/2} \exp{- \kappa \rho},
 \end{equation}
 
@@ -2426,19 +2683,19 @@ where $\kappa = \sqrt{2mE_{\mathrm{3-sep}}}$ has an analogous to the wave number
 	
 On the other hand, the two body term of the wave functions is given by the asymptotic behavior of the Coulomb terms for the subsystems tagged with $x$ and $y$. Particularly, $\Psi^{(2)}$ is expressed as: 
 
-\begin{equation}\label{micro_threeBody_psi2}
+\begin{equation}\label{eq:micro_threeBody_psi2}
 	\Psi^{(2)}(X, Y) =  \sum_{\alpha} {f_\alpha (\rho) \psi_{l_xj_x}(X) \psi_{l_yj_y}(Y) }, 
 \end{equation}
 
-where $\alpha$ is an index running through all the values of $l_x$, $l_y$, $j_x$ and $j_y$. Also, like it happens with the expression of $chi_{K, \nu}$ of equation  \ref{micro_threeBody_chiAsymptotics}, the functions $\psi$ obey asymptotics. In this concrete case, the extreme behavior is given as: 
+where $\alpha$ is an index running through all the values of $l_x$, $l_y$, $j_x$ and $j_y$. Also, like it happens with the expression of $chi_{K, \nu}$ of equation  \ref{eq:micro_threeBody_chiAsymptotics}, the functions $\psi$ obey asymptotics. In this concrete case, the extreme behavior is given as: 
 
-\begin{equation}\label{micro_threeBody_psi2_asymptotic}
+\begin{equation}\label{eq:micro_threeBody_psi2_asymptotic}
 	\psi_{l_{z}j_{z}} = W_{-\eta_{z}, l_x + 1/2}(2K_{z}(Z)),
 \end{equation}
 
 where the index $z$ and $Z$ can be replaced by $x$ and $X$ in the case of $\psi_{l_{x}j_{x}}$ and, reciprocally, by $y$ and $Y$ for $\psi_{l_{y}j_{y}}$. Furthermore, $W$ corresponds to the Whittaker functions, which are closely related to the Coulomb functions, evaluated with the somerfeld parameter $\eta_{z}$ for the $x$ and $y$ labeled subsystems.\\
 
-Additionally, the functions $f_\alpha$ are associated with the spectroscopic factors for each contribution to the expansion of equation \ref{micro_threeBody_psi2}. \\
+Additionally, the functions $f_\alpha$ are associated with the spectroscopic factors for each contribution to the expansion of equation \ref{eq:micro_threeBody_psi2}. \\
 
 No core shell model 
 \cite{barrett_navratil_vary_2013} \\
@@ -2447,7 +2704,7 @@ This approach considers that the nuclear phenomena are explained by taking into 
 
 An application to nuclear reaction for a collision within this framework is given by a description of the initial nucleus $A - a$, which is the target, which collides with the projectile $a$. In all cases, isospin, parity and angular momenta are considered. A basis function of the composite state of the system is given by \cite{barrett_navratil_vary_2013}:
 
-\begin{equation}\label{micro_noCoreShell_basis}
+\begin{equation}\label{eq:micro_noCoreShell_basis}
 	 | \Phi^{J^{\pi} T}_{\nu r} \rangle  = \left [ |A -a \alpha_1 I^{\pi_1}_1 T_1 \rangle | a \alpha_2  I^{\pi_2} T_2 \rangle  Y_l (\Delta \hat r)\right] \frac{\delta(r - |\Delta \vec r|)}{r  |\Delta \vec r|}, 
 \end{equation}
 
@@ -2457,13 +2714,13 @@ Then, when continuum is incorporated, the expression for the wave function takes
 
 
 
-\begin{equation}\label{micro_noCoreShell_continuum}
+\begin{equation}\label{eq:micro_noCoreShell_continuum}
 	| \Psi^{J^{\pi} T} \rangle  = \sum_{\lambda} c_\lambda | \lambda J^{\pi} T \rangle  + \sum_{\nu} { \int {r^2 \frac{\gamma(r)}{r} \hat {\mathcal{A} }  | \Phi^{J^{\pi} T}_{\nu r} \rangle dr} },
 \end{equation}
 
 where $T$ is the isospin,  $\gamma$ are the continuous amplitude and $c_\lambda$ is the coefficient for the discrete amplitude. Additionally, $\mathcal{A}$ assumes the role of an antisymmetrization operator, which is defined as \cite{freer_horiuchi_kanada-enyo_lee_meisner_2018}: 
 
-\begin{equation}\label{micro_noCoreShell_antisymmetrization}
+\begin{equation}\label{eq:micro_noCoreShell_antisymmetrization}
 	\mathcal{A} = \frac{(A - a)! a!}{A!}  \sum_{P} \mathrm{sgn} (P) P,
 \end{equation}
 
@@ -2484,7 +2741,7 @@ The particular form of the expression of the cross section is given by \cite{ber
 where $J$ is the total angular momentum, $I_c'$ and $I_c$ are the spin numbers of the exiting and incident channels respectively, $T_c$ and $T'_c$ is the transition matrix of the $c$ and $c'$, $l$ and $s$ are the relative orbital angular momentum and initial spin, and $l'$ with $s'$ are the analogous angular momenta numbers for the outgoing channel. \\
 
 
-Hartree-Fock (mean field) \cite{leanh_minhloc_2022}. \\
+Hartree-Fock (mean field).
 
 The following description of the Hartree-Fock method is given by \cite{heyde_2020}.\\ 
 
@@ -2499,7 +2756,7 @@ where the primed variables run through all the mass distribution of the nucleus.
 Now, there is a relation of the density and the wave function. Particularly, by considering the Born interpretation, it is possible to express the potential as: 
 
 \begin{equation}\label{eq:micro_hartreeFock_potential_waveFunction}
-	U(\vec r) = \sigma_{\alpha} \int \phi_\alpha^{*} (\vec r')  V(\hat r, \hat r') \phi_\alpha(\vec r') d \vec r ',
+	U(\vec r) = \int \phi_\alpha^{*} (\vec r')  V(\hat r, \hat r') \phi_\alpha(\vec r') d \vec r ',
 \end{equation}
 
 where $ \phi_\alpha(\vec r') $ corresponds to the wave function with quantum numbers $\alpha$ which include all the possible states to be occupied and they mainly distinguish among principal, orbital, angular, azimuthal quantum numbers. \\
@@ -2523,7 +2780,7 @@ Therefore, the Schrodinger equation has been converted to a differential coupled
 In particular, one of the conditions is to seek the following expression to hold
 
 \begin{equation} \label{eq:micro_hartreeFock_optimal}
-	\delta \rangle \Psi | H | \Psi \langle,
+	\delta \langle \Psi | H | \Psi \rangle = 0,
 \end{equation}
 
 where $\Psi$ considers the wavefunction in terms of the nucleon positions. Particularly, it is expressed as: 
@@ -2540,14 +2797,51 @@ Additionally, it is possible to express the basis of the solution of the wave fu
 	\Phi = \sum_{k} a_k \Phi_k,
 \end{equation}
 
-where coefficients $a_k$ are optimized for a convenient set of guessing wave functions $\Phi_k$. Notice that one of the consequences of this model is the variational finding of the density distributions.  
-
-
+where coefficients $a_k$ are optimized for a convenient set of guessing wave functions $\Phi_k$. Notice that one of the consequences of this model is the variational finding of the density distributions.   \\
 
 
 However, in this approach, the wave functions are not known in advance. Then, a stochastic process of determining the basis of the quantum state is included in the computation algorithm of the Hartree-Fock method. \\
 
 As a complement to the bare formalism, pairing could be included to refine deviations from experimental data predictions. \\
+
+An application of the Hartree-Fock is given in \cite{leanh_minhloc_2022}. This study was centered in radiative capture reactions: $\BeRadiativeCapture$ and $\mathrm{{}^{7}Li(n, \gamma){}^{8}Li}$. The radial differential equation implementation was given by: 
+
+\begin{equation}\label{eq:micro_hartreeFock_implementation_schrodinger}
+	\hat H \psi_{\alpha} \psi_{\alpha}(r) = \epsilon_\alpha \psi_{\alpha} (r), 
+\end{equation}
+
+where $\alpha$ concerns the principal $n$ orbital $l'$ and total $j'$ angular momentum quantum numbers. Additionally, the effective Hamiltonian operator $\hat H$ is expressed as: 
+
+\begin{equation}\label{eq:micro_hartreeFock_implementation_hamiltonian}
+	\hat H =  \left[\frac{\hbar^2}{2m^{*}(r)} - \frac{l(l+1)}{r^2}  + V(r) - \frac{d}{dr} \left (\frac{\hbar^2}{2m^*(r)} \right) \frac{d}{dr} \right] , 
+\end{equation}
+
+where $m^{*}(r)$ corresponds to the nucleon effective mass, which accounts for the mass distribution of the nucleus. This is a unique feature of the Skyrme Hartree Fock approach.  Additionally, the third term corresponds to the correction of the Hamiltonian to consider the $r$ dependence of the mass distribution. \\
+
+In order to get rid of the final term of equation \ref{eq:micro_hartreeFock_implementation_hamiltonian} and thus reduce the expression to a more familiar one, the wavefunction is re-written as: 
+
+\begin{equation}\label{eq:micro_hartreeFock_implementation_wavefunction_alternative}
+	\psi_\alpha = \sqrt{\frac{m^{*}_q}{m}} \phi_\alpha,
+\end{equation}
+
+where $m^{*}_q$ is associated with the mass density by considering the effects of the charge $q$. Additionally, $m$ is the mass and $\phi_\alpha$ is the modified wave function. With these variables, equation \ref{eq:micro_hartreeFock_implementation_schrodinger} transforms to:
+
+\begin{equation}\label{eq:micro_hartreeFock_implementation_schrodinger_modified}
+	\left \{ \frac{\hbar^2}{2\mu} \left [ - \frac{d^2}{dr^2} + \frac{l'(l'+1)}{r^2} \right] + V'_b(\epsilon_\alpha, r) \right \} \phi_\alpha = \epsilon_alpha \phi_\alpha(r).
+\end{equation}
+
+As result, the familiar kinetic term, namely the radial and centrifugal contributions, were retrieved. In return, however, the potential $V'_b$ was modified an energy dependence $\epsilon_\alpha$. \\
+
+The last results correspond to the solutions for the bounded states. In order to compute the scattering states $\xi$, which correspond to the case where the energy is a continuous variable, is given by: 
+
+\begin{equation}\label{eq:micro_hartreeFock_implementation_schrodinger_scattered}
+	\left \{ \frac{\hbar^2}{2\mu} \left [ - \frac{d^2}{dr^2} + \frac{l(l+1)}{r^2} \right] + V'_s(\epsilon_\alpha, r) \right \} \xi_\beta = \epsilon_alpha \phi_\xi(\beta),
+\end{equation}
+
+where $V'_s$ corresponds to the potential which permits the computation of the scattering state. Additionally, the index $\beta = \left \{ l, j\right \}$ runs through all the possible values of unbounded orbital $l$ and total $j$ angular momenta numbers. \\
+
+In order to actually solve the system, it is necessary to compute $m^{*}(r)$. This is done by considering particularities of the structure of the nucleus within the Hartree-Fock formalism. Concretely, this radial dependent mass-like term is found by obtaining the optimal solution by the variational arguments surrounding equation \ref{eq:micro_hartreeFock_optimal}. \\
+
 
 Additional, about pp-chain and CNO cycle  is given by (ab initio (many-body and effective field theory + ANC method + Trojan horse + quantum Monte Carlo ) exp formula motivation + poly fits + empirical formulas +   standard solar model + screening effect + new facilities) \cite{adelberger_garcia_robertson_snover_balantekin_heeger_ramsey-musolf_bemmerer_junghans_bertulani_et_2011}. \\
 
