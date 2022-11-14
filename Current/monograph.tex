@@ -1746,7 +1746,7 @@ The previous reactions are summarized in Figure \ref{fig:nuclearReactionsBNN}
 \begin{figure}[H]
 	\input{Figures/BBN.tex}
 	\caption[Nuclear reactions of Big Bang Nucleosynthesis]{Nuclear reactions of Big Bang Nucleosynthesis (under elaboration)}
-	\label{fig:nuclerReactionsBNN}
+	\label{fig:nuclearReactionsBNN}
 \end{figure}
 
 
@@ -2406,7 +2406,7 @@ Ab initio: Fermionic Molecular dynamics (wave-packet dynamics) \cite{neff_feldme
 The state is given by a fermionic system of molecules, is given by: 
 
 \begin{equation}\label{eq:micro_FMD_state}
-	| \Psi \rangle = \mathrm{cal} \{ |\Psi_1 \otimes ... \otimes |\Psi_A \rangle \}.
+	| \Psi \rangle = \mathcal{A} \{ |\Psi_1 \otimes ... \otimes |\Psi_A \rangle \}.
 \end{equation}
 
 The wave packets are structured with the spin and a factor of $\xi$ has the form to distinguish between charged (protons) and uncharged (neutron). This accounts for the isospin symmetry:
@@ -2843,9 +2843,62 @@ where $V'_s$ corresponds to the potential which permits the computation of the s
 In order to actually solve the system, it is necessary to compute $m^{*}(r)$. This is done by considering particularities of the structure of the nucleus within the Hartree-Fock formalism. Concretely, this radial dependent mass-like term is found by obtaining the optimal solution by the variational arguments surrounding equation \ref{eq:micro_hartreeFock_optimal}. \\
 
 
-Additional, about pp-chain and CNO cycle  is given by (ab initio (many-body and effective field theory + ANC method + Trojan horse + quantum Monte Carlo ) exp formula motivation + poly fits + empirical formulas +   standard solar model + screening effect + new facilities) \cite{adelberger_garcia_robertson_snover_balantekin_heeger_ramsey-musolf_bemmerer_junghans_bertulani_et_2011}. \\
+Additionally, about pp-chain and CNO cycle  is given by (ab initio (many-body and effective field theory + ANC method + Trojan horse + quantum Monte Carlo ) exp formula motivation + poly fits + empirical formulas +   standard solar model + screening effect + new facilities) \cite{adelberger_garcia_robertson_snover_balantekin_heeger_ramsey-musolf_bemmerer_junghans_bertulani_et_2011}. \\
 
+In the context of electroweak transitions, which are concerning decay phenomena in nuclear physics, the effective field theory predicts the amplitude of a process $\mathcal{M}$ as the matrix element given by:
 
+\begin{equation}\label{micro_EFT_ppCNO_matrix}
+	\mathcal{M}=  \langle  \Psi' | \hat {O}  | \Psi  \rangle,
+\end{equation}
+
+where $\Psi$ and $\Psi'$ are the wave function of the initial and final states. Within a single framework, this theory can explain low energy behavior of the nucleus by representing the nuclear interaction with structures. Additionally, the operator $\hat O $ is rendered as: 
+
+\begin{equation}\label{micro_EFT_ppCNO_operator}
+	 \hat O = \sum_{a}^{A} { \hat {\mathcal{C}}_a } + \sum_{a < b}^{A} { \hat{\mathcal{D}}_{ab}},
+\end{equation}
+
+with $A$ as the number of nucleons, $a$ and $b$ as labels which serve as indexes. The operators $\hat {\mathcal{C}}_a$ contains the relevant physics of the mean field interactions, while $\hat{\mathcal{D}}_{ab}$ includes the necessary information for describing the $NN$ interactions. \\
+
+The theory is approximated to the long-wavelength regime. Since effective field theory computations may involve perturbations, it is desired to have a variable to be used as power expansion. This variable $x$ is concretely given by:
+
+\begin{equation}\label{micro_EFT_ppCNO_expansionVariable}
+	x  = \frac{Q}{\Lambda},
+\end{equation}
+
+where $Q$ is associated with the momentum while $\Lambda$
+corresponds to the non-unacknowledged momentum. The theory is particularly useful when few powers of $x$ are required to model the physical system. \\
+
+An alternative variable $y$ that describes the convergence of the perturbative series is given by:
+
+ \begin{equation}\label{micro_EFT_ppCNO_expansionVariable_QCD}
+ 	y = \frac{m_\pi}{\Lambda_{\mathrm{QCD}}},
+ \end{equation}
+
+with $m_\pi$ as the pion mass and $\Lambda_{\mathrm{QCD}}$ as an indicator of the strength of the nuclear force at the low energy regime. The pion played a critical role in describing primative nuclear force since it can be interpreted as a exchange agent for nucleons. Then, its mass in critical to determine the strength of the interaction at low energies beyond the comprehension given by quantum chromodynamics. \\
+
+Additionally, there is an expansion variable $z$ relevant for the $NN$ which relates the mass of the pion as: 
+
+ \begin{equation}\label{micro_EFT_ppCNO_expansionVariable_2}
+	z = \frac{q}{m_\pi},
+\end{equation}
+
+where $q$ is the charge of the conserved current effective field theory. In contrast to the result in equation \ref{micro_EFT_ppCNO_expansionVariable_QCD}, it is visible that $m_\pi$ appears in the denominator. Therefore, this expansion variable grows in consideration when the interaction is more dominant that the exchange effect. \\
+
+A distinction is given between effective field theory for the base states (EFT) and an alternative approach for the excited states, which is usually referred as $\mathrm{EFT}^{*}$. This approach includes chiral effects and is considered a hybrid effective field theory.  \\
+
+One of the applications of this model is to the $pp-I$ reaction. In particular, the astrophysical S-factor is proportional to the squared a quantity $\bar \Lambda $, which is proportional to the transition matrix. This parameter has the form: 
+
+\begin{equation}\label{micro_EFT_ppCNO_Lambda}
+	\bar\Lambda  = \Lambda (1 + \delta),
+\end{equation}
+
+where $\Lambda$ contributes with the mean-field one body transition while the $\delta$ term is a correction term considering two body transitions. A current value of $\bar \Lambda^2$ which included diagrams up to the $\mathrm{N^3LO}$ configuration is: 
+
+\begin{equation}\label{micro_EFT_ppCNO_Lambda_estimation}
+ 	\bar \Lambda^2 = 7.03(1 \pm 0.008),
+ \end{equation}
+
+which is consistent to the expected interval $7.03 \leq \hat \Lambda^2 \leq 7.04$.
 
 \subsection{Cluster models} \label{sub:microscopical_cluster}
 
@@ -2886,27 +2939,1109 @@ With folding.
 
 A more detailed survey on cluster models \cite{beck_2012}. \\
 
+There are equivalent relations between the RGM and GCM models. The wave function of a state can be given as
+
+\begin{equation}\label{eq:micro_cluster_equivalency_RGM}
+	\Psi = \Phi^{-1}_{cm} \int f(R) \Phi(R) dR,
+\end{equation}
+
+where $\Phi^{-1}_{cm}$ corresponds to the center of mass wave function and $f(R)$ is a factor referred as the generator function. This is the picture given within the generate coordinate method (GCM). \\
+
+The alternative picture is by the resonance group method, which is descete and is formulated as:
+
+\begin{equation}\label{eq:micro_cluster_equivalency_GCM}
+	\Psi = \mathrm{A} \psi_1 \psi_2 g(r), 
+\end{equation}
+
+with the function $g(r)$, which is responsible for overlapping consideration, has the form of the integral: 
+
+\begin{equation}\label{eq:micro_cluster_equivalency_GCM_g}
+	g(r) = \int f(R) \Gamma(r, R) dR,
+\end{equation}
+
+where $\Gamma(r, R)$ serves as the kernel of the transformation that defines the $g(r)$ function. Then, it is possible to conclude that both methods seems to be similar as they are described by a single integration. The generator function is estimated with the Hill-Wheeler approximation, as it permits a determination of the penetration factor, which is closely related with the $\Gamma(r, R)$ parameter. \\
+
+Additionally, this $g(r)$ term may be discretized and approximated by a series as given by: 
+
+\begin{equation}\label{eq:micro_cluster_equivalency_GCM_g_series}
+	g(r) = \sum_n f(R_n) \Gamma(r, R_n),
+\end{equation}
+
+where $n$ is the index running though all the estimations. For the specific case of a two clusters, the $\Gamma(r, R)$ term might be expanded as an expression compatible with a partial waves expansion. More concretely, the formula is:
+
+\begin{equation}\label{eq:micro_cluster_gamma}
+	\Gamma(r, R) = 4\pi \sum_{lm} {\Gamma_l(r, R) Y^{l}_m(\Omega_r) Y^{l*}_m(\Omega_r)},
+\end{equation}
+
+with $\Omega_r$ as the generalized solid angle and $l$ and $m$ as the secondary and azimuthal quantum numbers. The generator function, within this framework, can be then defined as the solution of the equation: 
+
+\begin{equation}\label{eq:micro_cluster_g_equation}
+	\int H_l(R, R') - E N_l(R, R') f_l(R') dR' = 0.
+\end{equation}
+
+A minimization condition is settled. The particular expressions of the matrix elements are $ H_l(R, R') = \langle  \Phi(R) | H | \Phi(R') \rangle $ and $ N(R, R') = \langle  \Phi_l(R) | \Phi_l(R') \rangle $. \\
+
+Also, is of relevant role the definition of the overlap of wave functions. This can be distinguished when there are different isospin eigenfunctions to be superimposed. Then, the overlapping $B$ operator is defined as: 
+
+\begin{equation}\label{eq:micro_cluster_overlapping}
+	B^{c}_{ab} = \langle  \phi_a (\vec S_a)| \phi_b(\vec S'_b) \rangle ,
+\end{equation}
+
+where the vectors $\vec S_a$ and $\vec S'_b$ correspond to the position of the edges of the cluster structures. A potential can be determined in terms. Actually, it can have a exponential form of: 
+
+\begin{equation}\label{eq:micro_cluster_overlapping_exp}
+	\langle \phi_a | \phi_b \rangle  = \exp {\left(-\frac{(\vec R_a - \vec R_b)^2}{4b^2}\right)},
+\end{equation}
+
+where $\vec R_a$ and $\vec R_b$ are regarded as factors determining the position vectors for a and b nucleus and the same time the $b$ parameter accounts for the degree of diffuseness of the wave function projection. \\
+
+Additionally, the $f(R, R')$ factor may have a similar formula, as it is given by
+
+\begin{equation}\label{eq:micro_cluster_overlapping_f}
+	f(R, R') = \exp {\left(-\frac{(\vec R_a - \vec R_b)^2}{4b^2}\right)},
+\end{equation}
+
+Thus, the Coulomb interaction gets modified by considering with 
+
+\begin{equation}\label{eq:micro_cluster_overlapping_coulomb}
+	V_c = K \sum_n f_n(R, R') \sum V_n G,
+\end{equation}
+
+where $K$ is a constant and $G$ corresponds to a factor that parametrizes the nuclear force potential $V_G$
+
+
+One of the applications of $\Gamma_l$ is the expansion of $\chi $ scattering states as: 
+
+ \begin{equation}\label{eq:micro_cluster_scattering}
+	\chi(\rho) = \sum_{k} c \Gamma_l(\rho, R),
+ \end{equation}
+
+where $\rho$ corresponds to a radius like parameter.
+
+
+
 Microscopical cluster light nuclei \cite{freer_horiuchi_kanada-enyo_lee_meisner_2018}. \\
 
-Alpha-cluster alpha-closed shell + Woods Saxon potential  \cite{bai_ren_2018}. \\
+The general approach when introducing microscopical cluster models is to construct a composite state $\Phi(\vec S_1, ..., \vec S_n)$ on top of the antisymmetrization of the product of the clusters which constitute the nuclei. An expression consistent with the previous description is given by:
 
-Shell model \cite{dong_wang_michel_ploszajczak_2022} two center shell model $\Ofusion$ \cite{tazawa_1974}. \\
+\begin{equation}\label{eq:micro_cluster_generalizedWaveFunction}
+\Phi(\vec S_1, ..., \vec S_n)  = N \hat {\mathcal {A}} \{ \phi_1 (\vec S_1) ...  \phi_n (\vec S_n)\}.
+\end{equation}
+
+with $N$ as appropriate normalization constant, which usually is set to $1/\sqrt{A!}$ when all nucleons are considered within the model. Additionally, the variables $\vec S_1, ..., \vec S_n$ are interpreted as the relative positions of the clusters with respect to the center of the nuclei.  \\
+
+Then, microscopic cluster calculations are splitted in two main approaches. On the one hand,  the resonant group method (RGM) provides a picture of the state of the nucleus $	\Psi_{\mathrm{RGM}}$ as being composed on the cluster states and an intercluster wave function. Particularly, the state is give by:
+
+\begin{equation}\label{eq:micro_cluster_RGM_waveFunction}
+	\Psi_{\mathrm{RGM}} =  \hat {\mathcal{A}} \{\phi_1 \phi_2 \zeta (\xi) \},
+\end{equation}
+
+where $\xi$ is a parameter that permits the description of the intercluster coordinate system. \\
+
+On the other hand, an alternative method uses a more extended approach and exploits the use of the relative position vectors $\vec S_1, ..., \vec S_n$. This way of proceed in labeled as generator coordinate method  (GCM) and the expression of the state calculated by this approach $	\Psi_{\mathrm{GCM}}$ is expressed as: 
+
+\begin{equation}\label{eq:micro_cluster_GCM_waveFunction}
+	\Psi_{\mathrm{GCM}} = \int f(\vec S_1, ..., \vec S_n) \hat P \Phi(\vec S_1, ..., \vec S_n) d\vec S_1 ... d\vec S_n,
+\end{equation}
+
+where the function $ f(\vec S_1, ..., \vec S_n) $ is estimated with intrinsic information about the structure of the nuclei. \\
+
+The time dependent antisymmetric molecular dynamics methods (AMD) can be extended to consider time in calculations. In particular, the time extended expression has reasonable similarities with the resulting equations from the time dependent perturbation theory calculations. Particularly, the Gaussian center positions $X$, which are time dependent variables, are given within this framework as:
+
+\begin{equation}\label{eq:micro_AMD_timeDependent}
+	i \hbar \sum C \frac{dX}{dt} = \frac{\partial}{\partial X^{*}} \frac{\langle \Phi | H | \Phi \rangle }{\langle \Phi | \Phi \rangle}.
+\end{equation}
+
+with $\Phi$ corresponding to the wave function calculated by the AMD method and $C$ defined as: 
+
+\begin{equation}\label{eq:micro_AMD_timeDependent_constants}
+	C = \frac{\partial^2}{\partial X^{*} \partial X} \ln {\langle \Phi | \Phi \rangle }.
+\end{equation}
+
+When considering spinning, in the quadrupole model should be modified. Particularly, within the framework of the Tohsaki-Horiuchi-Schuck-Röpke (THSR) calculations, the perturbed moment $Q(J)$ is given by
+
+\begin{equation}\label{eq:micro_quadrupole_J}
+	Q(J) = - \frac{J}{2J + 3} Q,
+\end{equation}
+
+where $J$ is the total angular momentum and $Q$ the unmodified quadrupole moment. This correction is specially useful when considering couplings up to the second perturbation order, which is the case of quadrupole contributions. \\
+
+The no core shell model (NCSM )is an alternative of the shell models that centers its modeling strategy in proposing nuclear collective behavior. The Hamiltonian for the nucleon $k$ of this formalism is given by: 
+
+\begin{equation}\label{eq:micro_NCSM_Hamiltonian}
+	H_k = -\frac{\hbar^2}{2m} \nabla^2_k + \frac{1}{2} m \Omega^2 r^2_k,
+\end{equation}
+
+where $\Omega$ corresponds to the angular frequency of collective nuclear vibrations. \\
+
+Additionally, there are alternatives to express the NCSM formalism by considering a symmetric operator based approach. This is given in terms of the creation $c^{\dagger}$ and annihilation $c$ operators. Then, the Hamiltonian is expressed as $H_k$ is expressed as: 
+
+\begin{equation}\label{eq:micro_NCSM_symmetric_Hamiltonian}
+	H_k = \hbar \Omega \left (c^{\dagger}_{x, k} c_{x, k} + c^{\dagger}_{y, k} c_{y, k} +  c^{\dagger}_{z, k} c_{z, k} +  \frac{3}{2}  \right).
+\end{equation}
+
+The last term of the previous equation shows a base term  $3\hbar\Omega/2$ which is expected ground state energy of a three dimensional harmonic oscillator. \\
+
+Another alternative which are the Monte Carlo approaches. The central issue is obtain information about the nuclear physics of a system by applying stochastic methods. One of the key estimations arising from Monte Carlo calculations is the computation of the expectation energy $E^{\{\alpha_k\}}$, which is defined as: 
+	
+\begin{equation}\label{eq:micro_monteCarlo_variational_energy_expectation}
+	E^{\{\alpha_k\}} =  \frac{\langle \Psi^{\{\alpha_k\}} | H |  \Psi^{\{\alpha_k\}} \rangle}{ \langle \Psi^{\{\alpha_k\}} |  \Psi^{\{\alpha_k\}} \rangle},
+\end{equation}
+
+where $\{\alpha_k\}$ correspond to the set of the random parameters which determines the behavior of the wave function
+ $\Psi^{\{\alpha_k\}}$. The expectation energies are updated depending on $\alpha_k$ evolution. Then, if the application of the method ends with a convergent result, the resulting limiting wave function $\Psi_0$ is given by:
+
+\begin{equation}\label{eq:micro_monteCarlo_variational_waveFucntion_limit}
+	\Psi_0 = \lim_{t \rightarrow \infty } \exp {(-(H - E_\lambda)t)} |\Psi \rangle,
+\end{equation}
+
+where $E_\lambda$ correspond to energy eigenvalues as calculated with the Monte Carlo approach and with $t$ as the temporal evolution parameter. Additionally, the energy of the system also leans to an asymptotic behavior at $t \rightarrow \infty$ with the form:
+
+\begin{equation}\label{eq:micro_monteCarlo_variational_energy_limit}
+	E_0 = \lim_{t \rightarrow \infty } {\frac{\langle \Psi | H \exp (-(H - E_0)t) | \Psi \rangle }{\langle \Psi | \exp (-(H - E_0)t) | \Psi \rangle}}.
+\end{equation}
+
+When careful analyzing the result of the previous equation, it is observed that the energy appears on both sides of the equality. Then, the information on $E_0$ implies the computation of an inductive series, which may start with a guessing function as calculated with the use of equation \ref{eq:micro_monteCarlo_variational_waveFucntion_limit}.\\
+
+The Monte Carlo method can be extended to the study of the shell model. Particularly, in the case of a shell model with projected operator $\hat P$ for $J = 0$, the state $| \Psi \rangle$ is given by:
+	
+\begin{equation}\label{eq:micro_monteCarlo_projectedWaveFunction}
+	| \Psi \rangle = \hat P \sum_{n} {f_n |\phi_n \rangle},
+\end{equation}
+
+where $f_n$ corresponds to parameters to be found stochastically while the $|\phi_n \rangle$ constitutes the wave function for the nth nucleon or cluster. \\ 
+	
+Another alternative for nuclear microscopic modeling is the lattice approach. Its broad idea is to use a grid to divide space in regions, which are conveniently chosen to better describe the behavior of a nuclear system. It can be complemented or be associated with elements of effective field theory. \\
+
+This approach uses special operators. One of them consists of a partition like function, which is defined as: 
+
+\begin{equation}\label{eq:micro_lattice_Z}
+	Z(t) = \langle \Psi(t') | \exp {(-H_1 t)}|   \Psi(t') \rangle, 
+\end{equation}
+
+where $H_1$ is the leading order Hamiltonian term evaluated at time $t$. Additionally, the wave functions of the form $\Psi(t')$ are computed at $t'$. From the $Z$ function, it is possible to estimate the energy value associated to a system of interest. \\
+
+The lattice approach also permits expressing the state $	| \vec r \rangle_{lm}$ with angular momenta quantum numbers $l$ and $m$.  Indeed, the radial position states are given by:
+
+\begin{equation}\label{eq:micro_lattice_vector}
+	| \vec r \rangle_{lm} = \sum_{\vec r'} { Y^{l}_{m} (\hat r') \delta_{r, |\vec r'|} |\vec r' \rangle},
+\end{equation}
+
+where integration is performed over the vector $\vec r'$ and a function $\delta_{r, |\vec r'|}$ was implemented by assuring that only radius of the integration vector is the same length of $\vec r$. \\
+
+Alpha-cluster alpha-closed shell + Woods Saxon potential  
+
+\cite{bai_ren_2018}. \\
+
+When nuclei are modeled as wrappers of $\alpha$ clusters, it is desired to incorporate folding with a potential, like the Woods-Saxon. Additionally, corrections may be incorporated to describe the extended structure of the nuclei, which helps to smooth the characteristic transition of the Woods-Saxon potential. A formula that accounts for the previosly mentioned aspects is proposed to be expressed as: 
+
+\begin{equation}\label{eq:micro_doubleFolding_potential_N}
+	V_{\mathrm{N}}(r) = - V_0 \frac{f(r)}{1 + \exp {\left( \frac{r - R}{a}\right)}},
+\end{equation}
+
+where $V_0$, $R$ and $a$ are the potential depth,  radius shift and diffuseness parameters of the unmodified Woods-Saxon distribution respectively. Additionally, in this case, there is a form factor $f(r)$, which is defined as: 
+
+ \begin{equation}\label{eq:micro_doubleFolding_potential_formFactor}
+	 f(r) =  1+ \sum_k{ b_k \exp  {-c_k(r - R_k)^2}}.
+ \end{equation} 
+
+The index $k$ runs through all the Gaussian like terms with amplitude $b_k$, decaying factor $c_k$ and shift $R_k$. Usually few terms are required to approximately model phenomena. When $b_k = 0$, the potential takes the form of the original Woods-Saxon potential.  \\
+
+As the mean field like potential was already introduced, it is desired to account for the cluster internal interactions. Then, including folding is specially convenient since it incorporates a $\mathrm{NN}$ potential, which is frequently described with a Gaussian form, by integrating with respect to density distributions of the clusters $\rho_\alpha(\vec r_1)$ and the core  $\rho_c(\vec r_2)$. The exact form of such folded potential $U(\vec r)$ is given by:
+
+\begin{equation}\label{eq:micro_doubleFolding_potential}
+	U(\vec r) = C \int { \rho_\alpha(\vec r_1) \rho_c (\vec r_2) V_{\mathrm{NN}} (\vec r') d\vec r_1 d\vec r_2},
+\end{equation}
+
+where $\vec r'$ is given by:
+
+\begin{equation}\label{eq:micro_doubleFolding_potential_separationVector}
+	\vec r' = \vec r + \vec r_2 - \vec r_1,
+\end{equation}
+
+with $\vec r$ as the position of the point where the potential will be calculated and $\vec r_1$ with $\vec r_2$ as the position vectors which serve to parametrize density functions  $\rho_\alpha(\vec r_1)$ and  $\rho_c(\vec r_2)$ respectively. \\
+
+However, one of the main issues of implementing equation \ref{eq:micro_doubleFolding_potential} is that it involves two three dimensional integration. Alternatively, in order to simplify computations, a Fourier transform may be performed. The convention used for this transformation is given by: 
+
+\begin{equation}\label{eq:micro_doubleFolding_fourierTransform}
+	\hat f(\vec k) = \int f(\vec r) \exp(i \hat k \cdot \hat r) d \vec r,
+\end{equation}
+
+where the Fourier transform of $f(r)$, as parametrized in the position space, corresponds to the function defined in reciprocal space $\hat f(\vec k)$, with $\vec k$ as parameter. \\
+
+Then, in order to proceed with the transformations, concrete formulae for the densities shall be given. In the case of  $\alpha$ particle, the usual shape is modeled by the function:
+
+\begin{equation}\label{eq:micro_doubleFolding_potential_rhoalpha}
+	\rho_\alpha (\vec r_1) = \rho_1 \exp (-\beta r^2_2),
+\end{equation}
+
+where $\rho_1$ and $\beta$ are the characteristic amplitude and decay factor of the double exponent like shape. \\
+
+On the other hand, with respect to the core part, a Woods-Saxon term is used. More concretely, the expression: 
+
+\begin{equation}\label{eq:micro_doubleFolding_potential_rhoC}
+	\rho_c(\vec r_2) =  \frac{\rho_2}{1 + \exp {\left(\frac{r_1 - r_0}{a'}\right)}},
+\end{equation}
+
+with $\rho_2$ as the amplitude and $r_0$ and $a'$ as the radius shift and diffuseness parameters. \\ 
+
+With all these density functions already consider, the computation of $U(r)$ proceeds by applying the inverse Fourier transform to get the transformed potential, in the reciprocal representation, back to the position form. Then, the potential is given by:
+
+\begin{equation}\label{eq:micro_doubleFolding_potential_Fourier}
+	U(\vec r ) = \frac{1}{(2\pi)^3} \int { \exp{(-i\hat k \cdot \hat r )} \bar {\rho}_c(\vec k)  \bar {\rho}_\alpha (\vec k) \bar{V_{\mathrm{NN}}}(\vec k)  d\vec k},
+\end{equation}
+
+where $\bar {\rho}_\alpha (\vec k)$ and $\bar {\rho}_c(\vec k) $ correspond to the Fourier transforms of the alpha and core densities as well as $\bar{V_{\mathrm{NN}}}(\vec k)$ labels the transformation the $\mathrm{NN}$ potential.  \\
+
+Shell model \cite{dong_wang_michel_ploszajczak_2022}.  \\
+
+One of the approaches towards extending the shell model of section \ref{ssub:nuclearShellModel} is by considering a hierarchy of shells. Then, the most internal shell is referred as the core while the external, which is composed by the most energetic and less bounded nucleons, as valence shell. The Hamiltonian that  distinguish between core and valence nucleons is given by:
+
+\begin{equation}\label{eq:micro_shellGamow_hamiltonian}
+	H = \sum_l  \left( \frac{p^2_k}{2m_k} + U_{\mathrm{core}} \right) + \sum_{k < l} \left( {V(\vec r_k - \vec r_l) - \frac{\vec p^2_k \cdot \vec p^2_l}{M}} \right),
+\end{equation}
+
+where the left summation contains the kinetic and potential terms affecting one nucleon at the time while the second summation considers the $\mathrm{NN}$ potential $V$ and the correction couplings of unequal momenta. In fact, a restriction on the indices, namely $k < l$, was included in order to avoid double counting the interacting nuclei. \\   
+
+A convenient regrouping of the potential terms of equation \ref{eq:micro_shellGamow_hamiltonian} permits to differentiate basis $U_{\mathrm{basis}}$ and residual potentials $V_{\mathrm{res}}$. The former, which generally accounts for the mean field contribution for the potential, 
+
+\begin{equation}\label{eq:micro_shellGamow_basis}
+	U_{\mathrm{basis}} = \sum_l (  U_{\mathrm{core}} + U_0).
+\end{equation}
+
+were $U_0$ correspond to the base term for the potential, which can be associated with a calibration constant for $U_{\mathrm{basis}}$. On the other hand, the residual interaction potential is defined by: 
+
+\begin{equation}\label{eq:micro_shellGamow_residual}
+	V_{\mathrm{res}} = \left( {V(\vec r_k - \vec r_l) - \frac{\vec p^2_k \cdot \vec p^2_l}{M}} \right) - \sum_k U_0,
+\end{equation}
+
+where $M$ and $m_k$ accounts for the masses of the nucleus and the $n_k$ nucleon respectively. This is the characteristic parametrization which identifies a Gamow shell model. \\
+
+With the terms just presented, it is possible to define a differential equation that effectively explains the state of the clustered system. Such equation is given within the coupled channel formalism. Particularly, there the incoming and outgoing channels, which are labeled as $c$ and $c'$ respectively. Then, it is possible to find a differential equation for the radial wave function term $u_c(r)$ as:
+
+\begin{equation}\label{eq:micro_shellGamow_coupledCahnnel}
+	\sum_c \int_0^\infty {H_{c', c} (r', r) - E O_{c', c}(r', r ) \frac{u_c(r)}{r}} = 0,
+\end{equation}
+
+with $E$ as the center of mass energy and $r'$ as an integration variable which accounts for the final state and the extended structure of the nuclear shell. Then, as the process involves a transition of the form $c \rightarrow c'$, matrix elements for the Hamiltonian $H_{c', c} (r', r)$ and $O_{c', c}(r', r )$ are introduced in the differential equation. The former is defined by:
+
+\begin{equation}\label{eq:micro_shellGamow_coupledCahnnel_hamiltonian}
+	H_{c', c} (r', r) = \langle r', c' | \hat H |  r, c \rangle. 
+\end{equation}
+
+Additionally, the normed transition matrix is given by:
+
+\begin{equation}\label{eq:micro_shellGamow_coupledCahnnel_normOperator}
+		O_{c', c} (r', r) = \langle r', c' |  r, c \rangle. 
+\end{equation}
+
+Despite completing the necessary elements to introduce the coupled channels differential equation, some additional normalization factors might be needed to appropriately model the cross section of a process. Such corrections are taken into account via the in introduction of spectroscopic factor. For the specific case of  Gamow shell model relating $\mathrm{{}^{9}Li}$ with $\mathrm{{}^{8}Li}$ transitions, the squared of the spectroscopic factor $S^2_{l}$, for angular momentum number value $l$,  which ultimately is the relevant variable when considering normalization, is given by:
+
+\begin{equation}\label{eq:micro_shellGamow_spectroscopic}
+	S^2_{l} = \int {\sum \frac{|\langle \Psi_A | a^{\dagger}(k)| \Psi_{A-1} \rangle |^2}{2J_A + 1}} dk,
+\end{equation}
+
+where the squared transition matrix $|\langle \Psi_A | a^{\dagger}(k)| \Psi_{A-1} \rangle |^2$ accounts for the reaction involving the $\mathrm{{}^{9}Li}$ and $\mathrm{{}^{8}Li}$ with $A = 9$. Particularly, the $a^{\dagger}(k)$ can be broadly interpreted as the creation operator which acts of the $\Psi_{A-1}$, which represents the state of initial $\mathrm{{}^{8}Li}$ nucleus, with the final state $\Psi_{A}$, which is associated with the resulting  $\mathrm{{}^{9}Li}$ nucleus. Additionally, the degeneracy due to the angular momentum $J_A$ was accounting by the $2J_A + 1 $  correcting factor in the denominator. \\
+
+
+Two center shell model $\Ofusion$ \cite{tazawa_1974}. \\
+
+Modified harmonic oscillator potential with radius dependence frequency $\omega(R)$. It includes de overlapping of two cores. This study was centered to describing $\Ofusion$ scattering reactions. \\
+
+The Hamiltonian $H$ is given by: 
+
+\begin{equation}\label{eq:micro_twoCenterShell_Hamltonian}
+	H = -\frac{\hbar^2}{2m} + \frac{1}{2}m (\omega^2_x  x^2  \omega^2_y y^2 + \omega^2_z (|z| - R)^2),
+\end{equation}
+
+where $\omega_x$, $\omega_y$ and $\omega_z$ correspond to the frequencies of the $x$, $y$ and $z$ axes. Additionally, there is an insotropy in the $z$ axis term since it is given in terms of the quantity $|z-R|$, which is added to include the two cores in the model. \\
+
+When solving the Schrödinger equation for the wave equation $\phi$ with the previous Hamiltonian, the separation of variables ansatz used is expressed as: 
+
+\begin{equation}\label{eq:micro_twoCenterShell_anzats}
+	\phi = u v \psi
+\end{equation},
+
+where $u$ and $v$ are functions depedent on $x$ and $y$ while $\psi$ is the solution of the differential equation: 
+
+\begin{equation}\label{eq:micro_twoCenterShell_differentialEquation}
+	-\frac{\hbar^2}{2m} + \frac{1}{2}m (\omega^2_x  x^2  \omega^2_y y^2 + \omega^2_z (|z| - R)^2) \psi = E \psi.
+\end{equation}
+
+A quantum number $n$ was introduced in order to serve as an expression of the separation of variables constant. With its introduction, this equation can be expressed in terms of the special hypergeometric ${n}^{}F^{1}$ and gamma $\Gamma(n)$ functions as:
+
+\begin{equation}\label{eq:micro_twoCenterShell_solution_specialFunctions}
+	\psi = {n}^{}F^{1} (r) + \Gamma(n).
+\end{equation}
+
+Now, there are actually two solutions to be consider which, in broad terms, corresponds to the bounding and antibounding states of this molecular two core system. Each of this solutions is associated with the quantum number $n_+$ if it is antibounded and $n_-$ is the bounded states. The asympotic behavior of the previously introduced numbers is given by 
+
+\begin{equation}\label{eq:micro_twoCenterShell_solution_asymptotic}
+	n_\pm = n \pm K \exp {\left(\frac{m\omega^2}{2\hbar }\right)},
+\end{equation}
+
+where $n$ is the integer which $n_\pm$ leans to as $r \rightarrow \infty$. Additionally, it is observed that the asympotics includes to some extent the harmonic oscillator behavior. \\
+
+In order to account for the composite effect of the two cores, the state of the system $\phi$ can be given by: 
+
+\begin{equation} \label{eq:micro_twoCenterShell_solution_system}
+	\phi = \phi(r/2) \phi(-r/2),
+\end{equation}
+
+with $r$ as the separation of the two cores which are parametrized withe functions $\phi(r/2) $ and $ \phi(-r/2)$.  \\
+
+Additionally, it is possible to define a global state of the system $\psi$ in terms of the eigenfunctions $\psi_+$ ans $\psi_-$, which have associated energies $E_+$ and $E_-$. Then $\psi$ may be expressed as: 
+
+\begin{equation}\label{eq:micro_twoCenterShell_solution_superposition}
+	\psi(r) =  \exp {\left(\frac{iE_+ t}{\hbar}\right)} \psi_{+}(r) +   \exp {\left(\frac{iE_+ t}{\hbar}\right)}  \psi_{-}(r).
+\end{equation}
+
+The term permits to understand the system as if the states $ \psi_{\pm}$ where the basis vectors with their evolution operators. \\
+
 
 Multicluster $\Cfusion$ (3$\alpha$) \cite{dufour_descouvemont_1997}. \\
 
+Middle heavy nuclei can be modeled as cluster collections. In the case of $\mathrm{{}^{12}C}$, it corresponds to $3 \alpha$. Then, the carbon nucleus is regarded as a compounded system of three identical particles. Cluster approach permits a description of the systems as a triangle conformed by the three alpha particle and parametrized by position like variables coordinates $\vec S_1 $, $\vec S_2$ and $\vec S_3$. Then, the $\mathrm{{}^{12}C}$ wavefunction $\Phi_{3\alpha}$ is expressed within this formalism as: 
+
+\begin{equation}\label{eq:micro_multicluster_3alpha}
+	\Phi_{3\alpha} = \hat {\mathcal{A}} \left\{ \Phi_\alpha (\vec S_1) \Phi_\alpha(\vec S_2) \Phi_\alpha(\vec S_3) \right\},
+\end{equation}
+
+where $\Phi_\alpha (\vec S_1)$,   $\Phi_\alpha (\vec S_2)$ and 
+$\Phi_\alpha (\vec S_3)$ are the wavefunctions for the three alpha clusters. Then, since these are fermionic-like indistinguishable particles, the antisymmetrization operator  $\hat {\mathcal{A}} $ was introduced. \\
+
+An interaction with a nucleon with a three cluster system requires the introduction of an additional variable $\vec R$, which accounts for the position from, approximately, the center of the triangle to the nucleon. The picture of the composite state related to the last description has the form: 
+
+
+\begin{equation} 	\label{eq:micro_multicluster_abc}
+	\Phi^{N}_{3\alpha} = \Phi_\alpha \left (\frac{1}{12} \vec R - \vec S_1 \right )  \Phi_\alpha \left (\frac{1}{12} \vec R - \vec S_2 \right )  \Phi_\alpha \left (\frac{1}{12} \vec R - \vec S_3 \right )  \Phi_N \left( \frac{12}{13} \vec R \right),
+\end{equation},
+
+where $\Phi_N$ corresponds to the wave function of the nucleon $N$ and the center or core like $3\alpha$. The exact form of $\vec S_1$, $\vec S_2$ and $\vec S_3$ depends on the spacial orientation of the cluster. Since it involves rotations in various planes, a better picture of the state of the system is given by:
+
+\begin{equation} 	\label{eq:micro_multicluster_eulerAlgles}
+	\Omega = (\alpha, \beta, \gamma),
+\end{equation}
+
+where the triple $\Omega$ is determined by the Euler angles $\alpha$, $\beta$ and $\gamma$. \\
+
+However, up to this point, it was not imposed the rotation invariance, which is necessary to include in the description of the cluster and its interaction with the nucleon. Then, the more appropriate $\Psi$ function is defined as: 
+
+ \begin{equation} 	\label{eq:micro_multicluster_psi}
+ 	\Psi \sim \sum_{K} \langle K | JM \rangle \Phi^{JMK}_{3\alpha},
+ \end{equation}
+
+where $K$ serves as an index running through different rotation contribution. Actually, there is a quantity which permits the rotation invariance to be expressed as in integral form. 
+
+ \begin{equation} 	\label{eq:micro_multicluster_psi_integral}
+	\Psi(\vec r) \sim \phi_{\mathrm{cm}} \sum_{K}  \int \langle K | JM \rangle  Y^{k}_{M}(\hat r )  \mathcal{\Omega} \Phi^{JMK}_{3\alpha},
+\end{equation}, 
+
+with $\phi_{\mathrm{cm}} $ as the wave function related to the center of mass, $R_c$ as a radius like variable, which helps on delimiting the cluster extension and $\mathcal{\Omega}$ as the Wigner function, which was the quantity that was mentioned earlier. \\
+
+Furthermore, this picture of the NN and cluster interaction may be complemented by considering distortion, which is usually parametrized by adding the $\omega$ parameter. The wave function is changed as: 
+
+\begin{equation} 	\label{eq:micro_multicluster_distortion}
+	\Psi \rightarrow \Psi^{\omega},
+\end{equation}
+
+where $ \Psi^{\omega}$ corresponds to the wave function of the case where the distrortions are computed. These parameter might serve to adequate the modeling of nuclei with intrinsic collective oscillatory behavior. \\
+
+Additionally, the values of energy are corrected due to distorsion. The changed energy term $E'$ can be expressed as: 
+
+\begin{equation}\label{eq:micro_multicluster_distortion_energy}
+	E' = \frac{N}{A} - E^{\omega} - \frac{1}{4} \hbar \omega, 
+\end{equation}
+
+where $N$ and $A$ are closely related with overlapping of the NN and cluster wave functions, $E^{\omega}$ is a term directly related to the distortion and $1/4 \hbar \omega$ rakes into account a base correction of the state of the system. Actually, when distortions are not present, then $\omega = 0$, the picture returns to the previous non-distorted treatment. \\ 
+
 Hartree-Fock $\Ofusion$ \cite{simenel_keser_umar_oberacker_2013}. \\
+
+Time dependent Hartree-Fock formalism applied to the study of the $\Ofusion$ reaction. This takes the particular advantage of incorporating nuclear structure details like the higher order quadrupole behavior.
+
+The dynamics of the quantum mechanical system, in the Heisenberg picture, may be expressed as:  
+
+\begin{equation}\label{micro_TDHF_evolution}
+	i\hbar \frac{d\rho}{dt} = [H[\rho], \rho],
+\end{equation}
+
+where $\rho$ is the density matrix of the system and the functional $H[\rho]$, which turns out to be the Hamiltonian which is computed based on the form of $\rho$. \\
+
+One of the key distinguished features of the fusion reactions is that their cross sections can be estimated as an angular momentum number $l$ weighted sum of the tranmission coefficients. Particularly, since nuclei are identical for the $\Ofusion$ reaction, only even terms of $l$ are considered. Then, the estimation of the wave function is given by: 
+
+\begin{equation}
+	\frac{\pi\hbar^2}{2\mu E}  [L (L + 3 ) + 2],
+\end{equation}
+
+where $L$ corresponds to the maximum value at which the series truncates. \\
+
+An alternative method for transmission probability $P_L$ which does not need series truncation, is given by the Hill-Wheeler approximation. This is expressed as: 
+
+\begin{equation} \label{micro_TDHF_fusion_crossSectionEven}
+	P_l = \frac{\exp {(x_L)}}{1 + \exp {(x_L)}}.
+\end{equation}
+
+where $x_L = (E - B(L))/a$ with $B(L)$ as the fusion barrier height and $a$ as a sort of diffuseness parameter.  \\
+
+However, the previous picture needs to be completed with information about the structure of the nucleus. Multipole contributions may be necessary to be implemented in the cross section to improve calculation and it thus require a quantum mechanical operator. For example,  the quadrupole term can be written as an operator with the form:
+
+\begin{equation}\label{micro_TDHF_quadrupole}
+	Q = \int (3z^2 - r^2) \cos (2\theta) d\Omega,
+\end{equation}
+
+where $z$ and $r$ are the vertical axis and radius coordinates respectively. Additionally, $\theta$ is the polar angle, as well as $d\Omega$ corresponds to differential of the solid angle.  \\
+
+The contribution due to incorporation of the quadrupole moment $S$ is given by:
+
+\begin{equation}\label{micro_TDHF_quadrupole_calculation}
+	S = \int Q  \exp{\left( \frac{iEt}{\hbar }\right)}dt, 
+\end{equation}
+
+where $E$ is a parameter that appropriately determines the form of the time $t$ dependent transition. \\ 
+
+One of the main purposes of the Hatree-Fock formalism is the computation of the energy and, by adjusting the wave functions with a reasonable guess on $\rho$, to obtain the optimal solution. In this case,  the function to be minimized, as it is expected by considering that the Hartree-Fock method is strongly associated with a variational method. The expression of the aforementioned function is given by:
+
+\begin{equation}\label{micro_TDHF_energy}
+	E = E_0 + \int (\rho - \rho_{\mathrm{TDHF}} ) dr +   \int (\rho' - \rho'_{\mathrm{TDHF}} ) dr, 
+\end{equation}
+
+where $E_0$ is the initial estimation of the energy and the terms $\rho_{\mathrm{TDHF}}$ and  $\rho'_{\mathrm{TDHF}}$ correspond to the guessed density matrix functions which helps to better adjust the $E$ function.  \\
+
+Alternatively, an additional re writing of equation  \ref{micro_TDHF_energy} is given by considering the spacial parameter $E^{\star}$, which is related with $E$ as: 
+
+\begin{equation}\label{micro_TDHF_energy_reduced}
+	E = E_0' - E^{\star},
+\end{equation}
+
+where the parameter $E'_0$ equally accounts for the minimization effects needed on $E$ in order to obtain the optimal solution. \\
 
 Break up effects (four -five body model)\cite{shubhchintak_descouvemont_2022}. \\
 
+The hyperspherical coordinates, which are useful when describing the effects of clustering, are frequently parametrized with the Jacobi $\vec x$ and $\vec y$ coordinates. For the specific case of three clusters, the former is given by:
+
+\begin{equation}\label{eq:micro_cluster_breakup_jacobi_x}
+	\vec x = \frac{1}{\sqrt{2}} (\vec r_3 - \vec r_2)
+\end{equation}
+
+while the latter is expressed as: 
+
+\begin{equation}\label{eq:micro_cluster_breakup_jacobi_y}
+	\vec y = \frac{2A_1}{A_1 + 2} \left ( \vec r_1  - \frac{\vec r_2 + \vec r_3}{2} \right),
+\end{equation}
+
+where $\vec r_1$, $\vec r_2$ and $\vec r_3$ correspond to the position vectors of the three clusters. In particular, this was used for a nucleus with the form $C + n + n$. Namely, with one core $C$ and two neutrons $n$. \\
+
+When introducing the Schrödinger equation for this kind of cluster approaches, it is necessary to modify the kinetic energy operator. If cylindrical like coordinates for the  $(\rho, \phi')$ are used, with 
+
+\begin{equation}\label{eq:micro_cluster_breakup_rho}
+	\rho = \sqrt{x^2 + y^2}
+\end{equation}
+
+and with 
+
+\begin{equation}\label{eq:micro_cluster_breakup_phi}
+	\phi' = \arctan \left( \frac{y}{x}\right),
+\end{equation}
+
+the operator  $T$ is given by:
+
+\begin{equation}\label{eq:micro_cluster_breakup_kinetic}
+	T = -\frac{\hbar^2}{2m} \left( \frac{\partial^2}{\partial \rho^2}  + \frac{5}{\rho} \frac{\partial }{\partial \rho} - \frac{K^2(\Omega)}{\rho^2}\right),
+\end{equation} 
+
+where $\Sigma = (\Sigma_x, \Sigma_y, \phi')$ as the hyper frequency and $m$ the mass of the nulceon. Additionally, $K$ plays the role of a fifth dimensional angular momentum. Their eigenfunctions are defined as: 
+
+\begin{equation}\label{eq:micro_cluster_breakup_hyperspherical}
+	\mathcal{Y} = \phi (\phi') [Y^{l_x}(\Omega_x) \times Y^{l_y} (\Omega_y)],
+\end{equation}
+
+where $l_x$ and $l_y$ are the angular momentum values for $\vec x$ and $\vec y$ while $\phi$ corresponds to a wave function which is defined as: 
+
+\begin{equation}\label{eq:micro_cluster_breakup_wavefunction}
+	\phi(\phi')  = C (\cos \phi')^{l_x}   (\sin \phi')^{l_y} P_n^{l_y + 1/2, l_x + 1/2} \cos (2\phi'),
+\end{equation}
+
+where $C$ is a normalization constant and the polynomials $P_n^{l_y + 1/2, l_x + 1/2} \cos (2\phi')$ are generalizations of the Legendre with a particular form. The integer $n$ is defined as: 
+
+\begin{equation}\label{eq:micro_cluster_breakup_n}
+	n = \frac{K - l_x - l_y}{2}
+\end{equation}
+
+Also, a more general hyperspherical harmonics can be introduced by considering the spin of external neutrons. More concretely, when the spinor $\chi$ is introduced, the modified spherical harmonics $\mathcal{Y}'$ is given by 
+
+\begin{equation}\label{eq:micro_cluster_breakup_hyperspherical_spinor}
+	\mathcal{Y}' = \mathcal{Y} \otimes \chi.
+\end{equation}
+
+With the previous picture considered, the wave function, for a three body interaction, is expressed as: 
+
+\begin{equation}\label{eq:micro_cluster_breakup_wavefunction_complete}
+	\Psi = {\rho}^{-5/2} \sum_{K} \sum_{\nu} {\chi^{j\pi}_{\nu K} (\rho) \mathcal{Y}^{jm}_{\nu K} (\Omega_{\rho})}.
+\end{equation}
+
+Usually the series is truncated at $K'$. On the other hand, the radial functions $\chi$ are solutions to the scattering-like differential equation: 
+
+\begin{equation}\label{eq:micro_cluster_breakup_differentialEquation}
+	\left[ -\frac{\hbar^2}{2m} \left( \frac{d^2}{d\rho^2} - \frac{(K + 3/2)(K + 5/2)}{\rho^2} - E \right)  \right ] \chi^{j\pi}_{\nu K} (\rho)   + \sum_{\nu' K'} V^{j\pi}_{\nu' K', \nu K}
+\end{equation}
+
+Notice that the difference between primed (incident) and non-primed (outgoing) quantum numbers make equation \ref{eq:micro_cluster_breakup_differentialEquation} to be coupled. Additionally, $V^{j\pi}_{\nu' K', \nu K}$ represents the matrix elements of the two-potential. Additionally, since this picture is fifth dimensional and includes spin, the term $(K + 3/2)(K + 5/2)$ differs to the three dimensional analogous $l(l +1)$ description as it contains higher and fractional numbers $3/2$ and $5/2$ in contrast to the $0$ and $1$ for the traditional quantum mechanical picture. \\
+
+
 Linear chain (Molecular dynamics) \cite{baba_taniguchi_kimura_2022}. \\
+
+The direct product of the wave packet functions can be expanded as, which is given as an alternative formulation: 
+
+\begin{equation}\label{eq:micro_linearChain_waveFunction}
+	\phi_k = \prod_{\alpha} {\exp \left [- v_\alpha \left ( r_\alpha - \frac{Z_{k\alpha}}{\sqrt v_\alpha} \right )^2 \right]} \otimes \chi_k \otimes \xi_k,
+\end{equation} 
+
+with $\alpha$ as the running index, $\xi_k$ corresponds to the spin state, which is given by the combination of: 
+
+\begin{equation}\label{eq:micro_linearChain_chi}
+	\chi_k = a_k \xi_{\uparrow} + b_k \xi_\downarrow,
+\end{equation} 
+
+where the weighting coefficients $ a_k$ and $b_k $ parametrizes the expression of $\chi_k$ as a linear combination of the possible observable states $\xi_{\uparrow}  $ and $\xi_\downarrow$, which correspond to spin up and down respectively. On the other hand, $\xi_k$ correspond to the isospin part, which takes different values for the case that a nucleon is a proton or neutron. \\
+
+\begin{equation}\label{eq:micro_linearChain}
+	\phi_k = \prod_{\alpha} {\exp \left [- v_\alpha \left ( r_\alpha - \frac{Z_{k\alpha}}{\sqrt v_\alpha} \right )^2 \right]} \otimes \chi_k \otimes \xi_k,
+\end{equation} 
+
+It is possible to distinguish directions in nuclei. This distinction affects the symmetries on the wave function. Thus, an alternative re writing of the state is usually given as: 
+
+\begin{equation}\label{eq:micro_linearChain_2state}
+	\phi_\pm = \frac{1}{\sqrt{2}} (\phi_L \pm \phi_R),
+\end{equation} 
+
+where $\phi_+$ corresponds to the symmetric and $\phi_-$ to the antisymmetric combinations of the left and right handed $\phi_L$ and $\phi_R$ wave functions respectively.  \\
+
+Another feature is the reduced with, which helps to pamaterize resonant states. Particularly, this width $\theta$ is given in terms of: 
+
+\begin{equation}\label{eq:micro_linearChain_width}
+	\theta^2_l (a) = \frac{a}{3} |a y_l(a)|^2,
+\end{equation} 
+
+with $a$ as a variable related to the boundary between the radiative region in the scattering picture and $y_l(a)$ is interpreted as a reduced with amplitude with the form: 
+
+\begin{equation}\label{eq:micro_linearChain_widthAmplitude}
+	y_l(r) = \sqrt{\frac{A!}{A_1!A_2! }} \langle \phi_1 \phi_2 Y^l_{0}| \rangle, 
+\end{equation} 
+
+where the indices 1 and 2 stand for the clusters 1 and 2 respectively. The wave function of each cluster can be closely related to equation \ref{eq:micro_linearChain}. \\
+
+Wave functions of cluster structured approaches frequently exhibit overlapping. A general expression of the function $\O $ is given by:  
+
+\begin{equation}\label{eq:micro_linearChain_overlapping}
+	O(r) = \frac{|\langle \Phi | \hat P | \Psi \rangle |^2}{|\langle \Phi | \hat P | \Phi \rangle | |\langle \Psi | \hat P | \Psi \rangle |},
+\end{equation} 
+
+where $\Psi$ is the wave function calculated with the antisymmetrized molecular dynamics and the $\Phi$ considers the linear alignment of the nuclei. Particularly, the general shape of this wave function is given by: 
+
+ \begin{equation}\label{eq:micro_linearChain_chainWaveFunction}
+ 	\Phi = \hat P^{\pi} \{ \hat {\mathcal{A}}  {\phi (-r/2)  \phi (r/2) } \},
+ \end{equation} 
+
+where $r$ is the relative distance. The term considers two contributions with reflective values of $r$. Each of the $\phi$ terms has associated different values of quantum numbers
+
 
 \section{Matrix models}  \label{sec:matrixModels}
 
-The matrix models permit the modeling of resonances with an appropriate fitting of free parameters. In particular, the main formalism in this approach is the R-matrix model \cite{lane_thomas_1958} and a more recent review \cite{descouvemont_baye_2010}. \\
+The matrix models permit the modeling of resonances with an appropriate fitting of free parameters. In particular, the main formalism in this approach is the R-matrix model \cite{lane_thomas_1958}. \\
 
-Additionally, this alternative models have the advantage that they are compatible with numerical solutions for the wave functions. For example, they use basis functions which serve for mesh generation, which is a critical process in approximating numerically the Schrödinger equation. \\
+
+A more recent review \cite{descouvemont_baye_2010}. \\
+
+Asymptotic behavior by the Whittaker functions for the $r \rightarrow \infty$ limit are given by: 
+
+\begin{equation}\label{rmatrix_whittaker_asymptotics}
+	W_{-\eta, l + 1/2} (r) \rightarrow x^{-\eta} \exp {-\frac{r}{2}}.
+\end{equation}
+
+A closely related result for the asymptotics of a coulomb wave function $\psi_C(r)$ is given by:
+
+\begin{equation}\label{rmatrix_coulombPsi_asymptotics}
+	\psi_C(r) \rightarrow \frac{1}{(2\pi)^{3/2}} \left(\phi_1(r) + \phi_2(r)\right),
+\end{equation}
+
+where the first contribution to the wave function is given by:
+
+\begin{equation}\label{rmatrix_coulombPsi_asymptotics_1}
+	\phi_1 = \exp {i (kz + \nu 	\ln {k(r-z)}) },
+\end{equation}
+
+which corresponds to a shifted plane wave traveling in the $z$ axis. On the other hand, $\psi_2$ is expressed as: 
+
+\begin{equation}\label{rmatrix_coulombPsi_asymptotics_2}
+	\phi_2 = f_c(\Omega) \frac{\exp {i (kz - \nu 	\ln {k(r-z)}) }}{r},
+\end{equation}
+
+where $f_c(\Omega)$ corresponds to the scattering amplitude, which is defined as the following: 
+
+\begin{equation}\label{rmatrix_coulombPsi_scatteringAmplitude}
+	f_c(\Omega) = - \frac{\eta}{2k\sin^2 \left(\frac{\theta}{2}\right)} \exp{ 2i \left(\sigma_0 - \nu \ln \sin (\theta /2)\right)}.
+\end{equation}
+
+From this formula, the Rutherford formula for the differential cross section is derived. A more convenient way of expressiong $\psi_C$ is by using the partial wave expansion. For example, a useful formula in this context is given by: 
+
+ \begin{equation}\label{rmatrix_coulombPsi_partialWaves}
+	\psi_C(r) = \frac{1}{(2\pi)^{3/2}kr} \sum_{l=0}^{\infty} { (2l + 1) i^l e^{i\sigma_l} P_l(\cos \theta) F_{l\ni} (kr)}.
+ \end{equation}
+
+The outgoing wave corresponds to a solution to the Schrödinger equation with a given potential. The radial solution has to be well behaved at $r = 0$. The asymptotic of the function is given as: 
+
+ \begin{equation}\label{rmatrix_coulombPsi_u_asymptotics}
+	u_l(r) = C_l (I_{l\eta}(kr) - U_lO_{l\eta}(kr)),
+\end{equation}
+
+with $I_{l\eta}(kr)$ and $O_{l\eta}(kr)$ as the ingoing and outgoing Coulomb functions and $U_l$ named as the scattering matrix, which has the form 
+
+\begin{equation}\label{rmatrix_coulombPsi_collision}
+	U_l = \exp {(2i\delta_l)},
+\end{equation}
+
+where $\delta_l$ corresponds to the phase shift. Then, the outgoing wave function $\Psi(r)$ is expressed as:
+
+ \begin{equation}\label{rmatrix_coulombPsi_outgoing}
+	\Psi(r) = \frac{1}{(2\pi)^{3/2}} \frac{1}{2kr} \sum_{l=0}^{\infty} {(2l + 1)i^{l+1} \exp {(i\sigma_l)} P_l(\cos \theta) C^{-1}_l u_l(r) }.
+\end{equation}
+
+Also, the asymptotics outgoing wave is given by: 
+
+ \begin{equation}\label{rmatrix_coulombPsi_outgoing_asymptotics}
+		\Psi_c(r) \rightarrow  \psi_c(r) + \frac{1}{(2\pi)^{3/2}} f(\Omega) \frac{\exp {(i(kr - \eta \ln {2kr}))}}{r},
+\end{equation}
+
+where the scattering amplitude of the outgoing process is given by: 
+
+ \begin{equation}\label{rmatrix_coulombPsi_outgoing_scatteringAmplitude}
+	f(\Omega) = \frac{1}{2ik} \sum_{l=0}^{\infty} {(2l+1)\exp {(2i\sigma_l) (U_l - 1)P_l(\cos \theta) }}
+\end{equation}
+
+Finally, the total elastic differential cross section, as the incoming and outgoing wave numbers are equal, is given by: 
+
+ \begin{equation}\label{rmatrix_coulombPsi_total_scatteringAmplitude}
+	\frac{d\sigma}{d\Omega} = |f_c(\Omega) + f(\Omega)|^2.
+\end{equation}
+
+This scattering picture is complemented when more bodies are added to consideration. A given channel has an activation energy $E_c$, then there are useful quantities to define. \\
+
+Firstly, the wave number associated with channel $c$ is given as 
+
+\begin{equation}\label{rmatrix_channels_waveNumber}
+	k = \sqrt{\frac{\mu_c(E - E_c)}{\hbar^2}},
+\end{equation}
+
+where $\mu_c$ corresponds to the reduced mass of the nuclei associated with the channel $c$. Reciprocally, in the case of a close channel, namely when $E < E_c$, an alternative wave number like quantity $\kappa_c$ is given by:
+
+\begin{equation}\label{rmatrix_channels_waveNumber_closed}
+	\kappa = \sqrt{\frac{\mu_c(E_c - E)}{\hbar^2}}.
+\end{equation}
+
+In order to describe the state of the system $	|c\rangle$ of coupled internals states is given by: 
+
+
+\begin{equation}\label{rmatrix_channels_state}
+	|c\rangle = i^{l_c} [[\phi^{(1)}_{cI_1} \otimes  \phi^{(2)}_{cI_2}]_{I_c} \otimes Y_{l_c}(\Omega_c) ]^{(JM\pi)},
+\end{equation}
+
+where the two wave functions $\phi^{(1)}_{cI_1}$ and $\phi^{(2)}_{cI_2}$ are coupled with the direct product. They have associated spins which are labeled as $I_1$ and $I_2$, as well as a channel spin $I_c$, which is the result of the addition of the previous angular momenta. Additionally, the spherical harmonics $Y_{l_c}(\Omega_c)$ is parametrized with the solid angle $\Omega_c$ and with the relative angular momentum number $l_c$. All the previous variables are considered within the framework of transitioning to the $J, M$ angular momentum basis with parity $\pi$. \\
+
+Additionally, an orthonormality condition is imposed for the channel states, which is expressed as: 
+
+\begin{equation}\label{rmatrix_channels_orthonormality}
+	\langle c| c' \rangle.
+\end{equation}
+
+The composite system is going to be thus formed as a combination of the channel states. More concretely, this is given by: 
+
+\begin{equation}\label{rmatrix_channels_systemState}
+	\Psi = \sum_{c} \hat {\mathcal{A}} |c \rangle \frac{u_c}{r_c}(r_c),
+\end{equation}
+
+where $\hat{\mathcal{A}}$ corresponds to the antisymmetrization operator. Then, when this wave function is considered in the Schrödinger equation, a coupled channel equation arises, which corresponds to the expression:
+
+\begin{equation}\label{rmatrix_channels_coupledEquation}
+	[T_c + V_c(r) + E_c - E]u_c(r) + H =0,
+\end{equation}
+
+where $T_c$ is the kinetic operator defined as:
+
+\begin{equation}\label{rmatrix_channels_kineticOperator}
+	T_c = -\frac{\hbar^2}{2\mu_c} \left(\frac{d^2}{dr^2} - \frac{l_c(l_c + 1)}{r^2}\right).
+\end{equation}
+
+Also, the term $V_c(r)$, which corresponds to the matrix elements of the local potential, is given by:
+
+\begin{equation}\label{rmatrix_channels_V}
+	V_c(r) = \langle c | V | c \rangle. 
+\end{equation}
+
+Additionally, the term $H$ corresponds to the non local part of the potential, which is given in the terms:
+
+\begin{equation}\label{rmatrix_channels_nonLocal}
+	\sum_{c'}{\int_{0}^{\infty} W_{cc'}(r, r')u_{c'}(r') d'},
+\end{equation}
+
+with $W_{cc'}$ even further defined as: 
+
+\begin{equation}\label{rmatrix_channels_nonLocal_W}
+	W_{cc'}(r, r') = \langle c | \delta (r_c - r) V \hat{\mathcal{A}} \delta (r_{c'} - r')|  c' \rangle - V_c(r)\delta_{cc'}\delta {r- r'},
+\end{equation}
+
+where $V_c(r)$ labels a channel potential and $V$ corresponds to the many body potential, which may take into account NN interactions. \\
+
+One of the main consequences of this incorporation is a change on the shape of the asymptotic behavior. More particularly, the incoming term Coulomb term is given by:
+
+ \begin{equation}\label{rmatrix_channels_incomingCoulomb}
+ 	\Psi_1(r) \rightarrow \phi^{(1)}_{cI_1} \phi^{(2)}_{cI_2}.
+ \end{equation}
+
+Meanwhile, the outgoing term has the form :
+
+
+\begin{equation}\label{rmatrix_channels_outgoing}
+	\Psi_1(r) \rightarrow \frac{1}{(2\pi)^{3/2}} \sum_{c' \alpha} \exp {[i(k_{c'}r - \eta_{c'} \ln {(2k_{c'}r )})]} f^{c}_{\alpha}(\Omega)  \phi^{(1)}_{cI_1} \phi^{(2)}_{cI_2},
+\end{equation}
+
+where $\alpha$ correspond to a set of quantum numbers that would fully parametrize the states of the system. Therefore, the final state $\Psi$ is approached by: 
+
+\begin{equation}\label{rmatrix_channels_state_final}
+	\Psi(r) \rightarrow \Psi_1(r) + \Psi_2(r).
+\end{equation}
+
+The function can be further expanded and it could include a change of basis. More particularly, the modified state $	\Psi'(r)$ may be written as:
+
+\begin{equation}\label{rmatrix_channels_state_final_change}
+	\Psi'(r) = i \frac{\pi^{1/2}}{(2\pi)^{3/2} k} \sum_{J\pi} \sum_{Il} C^{-1}_c \sqrt{2l + 1} \exp (i\sigma_l) K \Psi(r),
+\end{equation}
+
+with the coefficients $K$ defined in terms of Clebsh Gordan coefficients as: 
+
+\begin{equation}\label{rmatrix_channels_state_final_clebshGordan}
+	K = (I_1 I_2 M_1 M_2 | IM)(IlM0 | JM).
+\end{equation}
+
+
+The reduced differential cross section for the inlesatic process $c\rightarrow c'$ is given by:
+
+\begin{equation}\label{rmatrix_difcrossSection_ccprime}
+	\frac{d\sigma_{c\rightarrow c'}}{d\Omega} = C \sum_{M_1M_2} \sum_{M'_1M'_2} |f^{(c M_1 M_2)}_{c' M'_1 M'_2}|,
+\end{equation}
+
+where the spin constant $C$ is defined as:
+
+\begin{equation}\label{rmatrix_difcrossSection_spinConstant}
+	C = \frac{1}{(2I_1 + 1)(2I_2 + 1)},
+\end{equation}
+
+where $I_1$ and $I_2$ correspond to the spin values of the reactants and products. They account for the spin degeneracy correction. \\
+
+Now, the expression of the cross section is given in terms of the collision matrix as:
+
+\begin{equation}\label{rmatrix_crossSection_ccprime}
+	\sigma_{c\rightarrow c'} = \frac{\pi}{k^2} C \sum_{J\pi} {(2J +1) \sum_{Il} \sum_{I'l'} |U^{J\pi}_{c'I'l'cIl}|^2},
+\end{equation}
+
+with $J$ and $\pi$ as the total angular momentum and parity quantum numbers and $I$ and $I'$ as the incoming and outgoing channel angular momentum number. Reciprocally, $l$ and $l'$ holds for the reciprocal angular momentum number of the $c$ and $c'$ channels respectively.\\
+
+In the specific case of radiative capture, the collision matrix is given by: 
+
+\begin{equation}\label{rmatrix_radiativeCapture_U}
+	U = \sqrt{\frac{2J_f + 1}{2J + 1}} A \frac{\langle \Psi^{J_f\Pi_f} || \mathcal{M}^{\sigma \lambda} ||  \Psi^{J \Pi}_{Il} \rangle }{C_{Il}},
+\end{equation}
+
+where the term $A$ is given by:
+
+\begin{equation}\label{rmatrix_radiativeCapture_A}
+	A = \sqrt{\frac{8\pi(\lambda + 1)}{\hbar v \lambda [(2\lambda + 1)!!]^2}}.
+\end{equation}
+
+It is possible to reduce the transition matrix elements. Particularly, by using the Wigner-Eckart, the matrix element is given by:
+
+\begin{equation}\label{rmatrix_radiativeCapture_transitionMatrix}
+	\langle \Psi^{J_fM_f\Pi_f} | \mathcal{M}^{\sigma \lambda}_\mu |  \Psi^{J M \Pi}_{Il} \rangle = (J\lambda M \mu | J_fM_f) \langle \Psi^{J_f\Pi_f} || \mathcal{M}^{\sigma \lambda} ||  \Psi^{J \Pi}_{Il} \rangle,
+\end{equation}
+
+where $\mu$ is an index of a component of the non-reduced matrix element $\mathcal{M}^{\sigma \lambda}_{\mu}$, which is analogous to the role that $m$ plays in classical angular momentum description. The general form of the amplitude for electric transitions is given by: 
+
+\begin{equation}\label{rmatrix_radiativeCapture_M}
+	\mathcal{M}^{E\lambda}_{\mu} = eZ^{(E\lambda)}_{\mathrm{eff}} r^{\lambda} Y^{\lambda}_{\mu} (\Omega),
+\end{equation}
+
+with $e$ the electric charge and the effective charged $Z^{(E\lambda)}_{\mathrm{eff}}$ defined as: 
+
+\begin{equation}\label{rmatrix_radiativeCapture_effectiveCharge}
+		Z^{(E\lambda)}_{\mathrm{eff}} = Z_1\left(- \frac{m_2}{m}\right)^{\lambda} + Z_2 \left(\frac{m_1}{m}\right)^{\lambda}.
+\end{equation}
+
+On the other hand, the reduced matrix is given by: 
+
+\begin{equation}\label{rmatrix_radiativeCapture_reducedMatrix_expression}
+	\langle \Psi^{J_f\Pi_f} || \mathcal{M}^{\sigma \lambda} ||  \Psi^{J \Pi}_{Il} \rangle = e \frac{Z^{(E\lambda)}_{\mathrm{eff}}}{\sqrt{4\pi (2J_f + 1)}} \sum_{I_fl_fl_0}(-1)^{I_f - J} Z \int_0^{\infty} {u^{J_f}_{I_fl_f}(r) r^\lambda u^{J}_{I_fl_0} (r)dr}, 
+\end{equation}
+
+with the coefficients $Z$ defined as: 
+
+\begin{equation}\label{rmatrix_radiativeCapture_Zcoefficients}
+	Z = (-1)^{J + J'} \sqrt{(2\lambda + 1)(2J+ 1)(2J' + 1)(2l + 1)(2L + 1)} K ,
+\end{equation}
+
+where the term $K$ is terms of 3j and 6j symbols as: 
+
+\begin{equation}\label{rmatrix_radiativeCapture_3j6j}
+	K  = \left(\begin{matrix}
+		l & L & \lambda \\
+		0 & 0 & 0
+	\end{matrix}\right) \left\{ \begin{matrix}
+		l & L & \lambda \\
+		J' & J & I
+\end{matrix} \right\}.
+\end{equation}
+
+
+
+ 
+Solution of the Bloch-Schrödinger equation with the form of a Green's function equation:
+
+\begin{equation}\label{rmatrix_BlochSchrodinger}
+	(H_l + \mathcal{L}(B) - E)G_l(r, 'r) = \delta(r - r'),
+\end{equation}
+
+where the operator $\mathcal{L}(B)$, which is known as the surface Bloch operator,  is given by:
+
+\begin{equation}\label{rmatrix_Bloch_operator}
+	\mathcal{L}(B) = \frac{\hbar^2}{2\mu} \delta(r - a) \left(\frac{d}{dr} - \frac{B}{r}\right),
+\end{equation} 
+
+with $B$ as the boundary parameter which is frequently introduced within the R-matrix formalism. \\
+
+With the last terms just presented, the R-matrix is specifically defined as: 
+
+\begin{equation}\label{rmatrix_Bloch_rmatrix}
+	R_l(E) = \frac{\hbar^2}{2\mu a} G_l(a, a).
+\end{equation} 
+
+Alternatively, the R-matrix is given by:
+
+\begin{equation}\label{rmatrix_u_rmatrix}
+	R_l(E) =  \frac{u_l(a)}{au'_{l}(a) - Bu_l(a)}.
+\end{equation} 
+
+Then, the wave function, which is a solution of the inhomogeneous Green's function differential equation is given by:
+
+\begin{equation}\label{rmatrix_BlochSchrodinger_inhomogeneous}
+	(H_l + \mathcal{L}(B) - E)u^{\mathrm{(Int)}}_l = \mathrm{cal}(B) u^{\mathrm{(Ext)}}_l ,
+\end{equation}
+
+with the continuity conditions on both the radial wave function and its first order derivative. Then, the internal wave function is given as:
+
+\begin{equation}\label{rmatrix_Bloch_internalWaveFunction}
+	u^{(\mathrm{Int})}_l(r) = \int_{0}^{a} G_l(r, r') \mathcal{L}(B) u^{\mathrm{Ext}} (r') dr'.
+\end{equation} 
+
+Matrix element division
+
+\begin{equation}\label{rmatrix_scatteringMatrix_division}
+	U = U^{\mathrm{(Int)}} + U^{\mathrm{(Ext)}}.
+\end{equation} 
+
+The width contribution can be expressed for the radiative capture reaction as: 
+
+\begin{equation}\label{rmatrix_radiativeCapture_width}
+	\Gamma = 8\pi \frac{2J_f + 1}{2J + 1} \frac{(\lambda + 1)k^{2\lambda + 1}}{\lambda [(2\lambda + 1)!!]^2}  \langle \Psi^{J_f \pi_f} || \mathcal{M} || \Phi^{J\pi}_n \rangle,
+\end{equation}
+
+where the photon wave number $k_\gamma$ is given by:
+
+\begin{equation}\label{rmatrix_radiativeCapture_waveNumberPhoton}
+	k_\gamma \ \frac{E- E_f}{\hbar c},
+\end{equation}
+
+with $E_f$ as the final energy of the system. \\
+
+
+The wave function can be splitted in two parts. One represents the behavior behind the boundary with $r < a$, which is named as $u^{(\mathrm{Int})}$ while the other accounts for above the barrier radial part $u^{(\mathrm{Ext})}$. The total is given by: 
+
+\begin{equation}\label{rmatrix_internal_external}
+	u_l = u^{(\mathrm{Int})}_l +  u^{(\mathrm{Ext})}_l.
+\end{equation} 
+
+With respect to asymptotic expressions, the external function has the form: 
+
+\begin{equation}\label{rmatrix_external_asymptotic}
+	u^{(\mathrm{Int})} = C_l [I_l(kr) - U_l O_l(kr)],
+\end{equation} 
+
+while the internal has the form of a superposition of bounded wave functions, which is expressed as: 
+
+\begin{equation}\label{rmatrix_internal_asymptotic}
+	u^{(\mathrm{Int})} = \sum_{l=0}^{N} c_k \phi_k(r),
+\end{equation} 
+
+where the set of functions $\{\phi_k(r)\}$ serves as a basis for the internal solutions. Some specific shapes for these functions may be conveniently selected to reproduce cross section data. \\
+
+When it comes to defining details on radiative capture calculations, it is necessary to compute the transition elements of the form $\langle u_f | r^\lambda| u \rangle $, with $u_f$ as the final wave function state and $u$ as the initial wave function. This computation process follows as:
+ 
+\begin{equation}\label{rmatrix_radiativeCapture_integral}
+	\int_0^{a} u_f r^\lambda u  dr.
+\end{equation}
+
+This integral can be solved by considering both the internal and external contributions related to the wave function. For the former, the integral can be approximated as: 
+
+\begin{equation}\label{rmatrix_radiativeCapture_integral_internal}
+	\int_0^{a} u^{(\mathrm{Int})}_f r^\lambda u^{(\mathrm{Int})}  dr  = \sum_{k, k'} c_{f, k'} c_{k} \int_0^{a} \phi_{k'} r^\lambda \phi_{k}dr. 
+\end{equation},
+
+where $k$ and $k'$ correspond to the wave numbers of the contributions of the incoming and outgoing channels. Additionally, as the computation is restricted to the region $r < a$, the integral of the right of equation \ref{rmatrix_radiativeCapture_integral_internal} is evaluated with the bounded wave functions $\phi$. \\
+
+On the other hand, for the external computations, the expression is given as: 
+
+
+\begin{equation}\label{rmatrix_radiativeCapture_integral_external}
+	\int_0^{\int} u^{(\mathrm{Ext})}_f r^\lambda u^{(\mathrm{Ext})}  dr = C C_f \int_a^{\infty} W (2\kappa r) r^{\lambda} (I(kr) - U O(kr)) kr, 
+\end{equation}
+
+where $\kappa$ is a variable associated with the wave number of external states. Additionally, the scattered picture was given by using the incoming and outgoing wave functions. In addition, the scattering matrix was included, which could be parametrized as: 
+
+\begin{equation}\label{rmatrix_collisionMatrix}
+	U = Z^{-1} Z^{*}.
+\end{equation}
+
+with each element of matrix $Z$ defined as: 
+
+\begin{equation}\label{rmatrix_collisionMatrix_Z}
+	Z_{cc'} = \frac{1}{(k_{c'}a)^{1/2}} [O_c (k_c a)\delta_{cc'} - k_{c'}a R_{cc'} O'_{c'} (k_{c'}a) ],
+\end{equation}
+
+with $k_{c}$ and $k_{c'}$ as the wave numbers of the incoming and outgoing $c$ and $c'$ channels respectively. Notice that this matrix depends explicitly on the R-matrix due to the inclusion of the term $R_{cc'}$. \\
+
+The picture of the width computation is usually complemented by introducing further dependency on the multipolarity index $\lambda$. Particularly, the radiative capture connection for the width, which becomes energy dependent, is given by:
+
+ \begin{equation}\label{rmatrix_radiativeCapture_width_E}
+	\Gamma(E) = \left( \frac{E - E_f}{E_n - E_f} \right)^{2\lambda + 1} \Gamma(E_n),
+\end{equation}
+
+where $E_n$ is the energy at pole $n$, $E_f$ corresponds to the final energy and the collision energy is given by $E$. \\
+
+Additionally, these alternative models have the advantage that they are compatible with numerical solutions for the wave functions. For example, they use basis functions which serve for mesh generation, which is a critical process in approximating numerically the Schrödinger equation. \\
 
 On the other hand, there are matrix models with no free parameters. For example, the K-matrix model predicts the cross sections without including the channel radius, which is an arbitrary parameter required in the R-matrix calculations \cite{humblet_1990}. \\
+
+A similar parametrization of the K-matrix could be given with respect to a R-matrix like form: 
+
+\begin{equation}\label{eq:rmatrix_kmatrix_series}
+	K_l =  \sum_\lambda { \frac{g^2_{l\lambda}}{E_{l\lambda} - E}},
+\end{equation}
+
+with the parameters related to the squared of the width related as: 
+
+\begin{equation}\label{eq:rmatrix_kmatrix_g}
+	g^2_{l\lambda} = \frac{\hbar^2}{2m} \left(\frac{u_l(a, k_{l\lambda}}{\hat G_l (a, k_{
+			l\lambda})}  \right)^2 v^{-1}_{l\lambda},
+\end{equation}
+
+where the factor $v_{l\lambda}$ is given by:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_v}
+	v_{l\lambda} = \int_0^{a} u^2_l(r, k_{l\lambda}) dr  + \frac{\hbar^2}{2m} u^2_l(a,  k_{l\lambda}) \dot {L}_{l\lambda},
+\end{equation}
+
+with $u_l$ as the radial wave function, $\lambda$ as the pole index, $k_{l\lambda})$ as the wave number of the pole and $\dot {L}_{l\lambda}$ corresponds to a derivative of the quantity:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_L}
+	L_{l\lambda} = \frac{\hat G'}{\hat G}(E = E_\lambda), 
+\end{equation}
+
+with $\hat G'$ as the first order derivative of $\hat G$. This expression is evaluated at the energy pole when $E = E_\lambda$. This results comes from applying the Green's theorem K-matrix formalism. \\
+
+Relations with Coulomb functions are given by:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_coulomb}
+	K_l = - \frac{W(V_l, \bar F_l, a)}{W(V_l, \bar G_l, a)},
+\end{equation}
+
+where $\bar F_l$ and $\bar G_l$ correspond to the regular and irregular entire coulomb functions, which are defined as:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_coulombG_entire}
+	\bar G_l = \epsilon_l k^l G_l
+\end{equation}
+
+and 
+
+\begin{equation}\label{eq:rmatrix_kmatrix_coulombF_entire}
+	\bar F_l = \epsilon_l k^l F_l.
+\end{equation}
+
+ Then, the S-matrix can be expressed as: 
+
+\begin{equation}\label{eq:rmatrix_kmatrix_Smatrix}
+	S_l = \frac{1 + ip^2_l K_l}{1 + ip^2_l K_l},
+\end{equation}
+
+where $p^2_l$ is related with the quantum momentum number $l$ as:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_pl}
+	p_l = \epsilon_l(\eta) k^{l + 1/2},
+\end{equation}
+
+where the variable $\epsilon_l(\eta)$ depends on the Sommerfeld parameter $\eta$. \\
+
+A parametrization can be given for the S matrix as:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_Smatrix_definition}
+	S_{dc} = - \frac{x_d}{y_d},
+\end{equation}
+
+where the $x_d$ and $y_c$ are the coefficients of the outgoing and incoming contributions to the wave function. More concretely, the former is given by:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_Smatrix_x}
+	x_d = W(V_d, I_d, a_d) k^{-1/2}_d,
+\end{equation}
+
+where $W$ corresponds to the Wronksian function, $I_d$ to the incoming wavefunction  with $a_d$ as the boundary radius and $k_d$ as the outgoing wave number value. Analogously, the latter is expressed as: 
+
+\begin{equation}\label{eq:rmatrix_kmatrix_Smatrix_y}
+	y_c = W(V_c, O_c, a_c) k^{-1/2}_c,
+\end{equation}
+
+with $O_c$, $a_c$ and $k_c$ as the outgoing, boundary radius and wave number of the incoming channel respectively. The expression of the incoming $I_d$ and outgoing $O_d$ functions are closely related with Coulomb functions. The first is given by:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_Smatrix_ingoing}
+	I_d = G_d - i F_d
+\end{equation}
+
+while the second is expressed as:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_Smatrix_outgoing}
+	O_c = G_c + iF_c
+\end{equation}
+
+
+This form of parametrizing the R-matrix is convenient for expressing resonances. Particularly, the transition matrix is given by:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_transitionMatrix}
+	T_{dc} = i \frac{\Gamma^{1/2}_{d\lambda} \Gamma^{1/2}_{c\lambda} }{E - (E\lambda + \Delta_\lambda) + i \Gamma_\lambda/2},
+\end{equation}
+
+where $d$ and $c$ are the exit and entrance channels respectively. Then, $\Gamma_{c\lambda}$ is the width related to $c$ and each $\lambda$ pole and, reciprocally $\Gamma_{d\lambda}$ corresponds to the width of the $d$ and $\lambda$ coupling. The total with is given by:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_totalWidth}
+	\Gamma_\lambda = \Gamma_{c\lambda} + \Gamma_{d\lambda}.
+\end{equation}
+
+Each width is given in terms of the $p^2_l$ amplitude factor as:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_witdh}
+	\Gamma_{l\gamma} = 2p^2_l g^2_{l\lambda}.
+\end{equation}
+
+On the other hand, the shift factor, like it happens in the R-matrix formalism, is also added to account for the difference between formal and observed energy. In the K-matrix approach, this is given by:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_shift}
+	\Delta_\lambda = \sum_{j} (-1)^l b^{2l + 1}_j g^2_{j\lambda}.
+\end{equation}
+
 
 This method is also compatible with the Trojan hourse method subbarrier thresholds \cite{mukhamedzhanov_shubhchintak_bertulani_2017}. \\
 
@@ -3720,25 +4855,325 @@ The main difference on the São Paulo formulation is the inclusion of the Coulom
 An application to pycnonuclear reactions in neutron stars + strange matter + optical model + Pauli nonlocality + São Paulo  + WKB approximation \cite{golf_hellmers_weber_2009}.\\ 
 
 
+General expression of the folding is given by
+
+\begin{equation}\label{potential_nonLocal_folding}
+	V = \int \rho_1(\vec r_1) \rho_2(\vec r_2) V_\mathrm{NN} d\vec r_1 d\vec r_2,
+\end{equation}
+
+where $V_\mathrm{NN}$ is the nucleon - nucleon potential and $\rho_1(\vec r_1)$ with  $\rho_2(\vec r_2)$ correspond to the pair of densities evaluated at points $\vec r_1$ and $\vec r_2$ respectively. \\
+
+The approximation, which derives form the Perey and Buck approach, is given by: 
+
+\begin{equation}\label{potential_nonLocal_LE}
+	V_\mathrm{LE}(R, E) \approx V_\mathrm{F}(R) \exp {-\gamma (E - V_C(R) -V_\mathrm{LE}(R, E))}.
+\end{equation}
+
+With the gamma defined as:
+
+\begin{equation}\label{potential_nonLocal_b}
+	\gamma = \frac{\mu b^2}{2\hbar^2}.
+\end{equation}
+
+Series calculation of the potential
+
+\begin{equation}\label{potential_nonLocal_seriesV}
+	V(\vec r, \vec r') = V_{\mathrm{bare}}(\vec r, \vec r') + \sum_k{V_k(\vec r)G_k (\vec r, \vec r', E)V_k(\vec r') }
+\end{equation}
+
+The bare potential $V_{\mathrm{bare}}(\vec r, \vec r') $ and additional term contributions.  This can be complemented as the optical potential is given by:
+
+
+\begin{equation}\label{potential_nonLocal_optical}
+	\frac{1}{u_l(R)} 	\int_{0}^{\infty} {V_(R, R') u_l(R')} = V_\mathrm{LE}(R, E) + i W_\mathrm{LE}(R, E), 
+\end{equation}
+
+with $V_\mathrm{LE}(R, E)$ and $W_\mathrm{LE}(R, E)$ are the real and imaginary potential.\\
+
 And, potentials with non-locality are also found in literature. For example, there is the São Paulo potential that accounts for the effect of non-local interactions between the interactant nuclei. \\
+
+Also, a matter density distribution could have the form of a exponential decaying form, as it is given by:
+
+\begin{equation}\label{potential_nonLocal_density_exp}
+	\rho = \rho_0 \exp{\frac{-r}{a}},
+\end{equation}
+
+with $\rho_0$ as the maximum density at $r = 0$ and $a$ as the diffuseness parameter. Then, when double fondling integration is performed, an expression is given by:
+
+\begin{equation}\label{potential_nonLocal_density_vf}
+	v_f = \frac{V_0}{64\pi a^3} \exp {-\frac{r}{a}} \left(1 + \frac{r}{a} + \frac{1}{3} \left(\frac{r}{a}\right)^2 \right).
+\end{equation}
 
 Non-locality review in $\alpha$ decay \cite{rojas-gamboa_velasquez_kelkar_upadhyay_2022}. \\
 
+\begin{equation}\label{potential_nonLocal_WKB_quantization}
+	\int_{r_1}^{r_2} {k(r) dr} = \left (n + \frac{1}{2} \right )\pi,
+\end{equation}
+
+where $n$ is an integer that serves to parametrize the quantization. \\
+
+The non-local potential is splitted by 
+
+\begin{equation}\label{potential_nonLocal_gaussian}
+	V_{\mathrm{NL}} (\vec r, \vec r') = \frac{1}{\pi^{3/2}b} U_N \left( \frac{|\vec r + \vec r'|}{2}\right) \exp \left(- \left( \frac{|\vec r - \vec r'|}{2}\right)^2\right),
+\end{equation}
+
+with $b$ as the label for the non-locality parameter.\\
+
+Deformed nuclei is given by modifying the Woods-Saxon distribution as by accounting for angle $\theta$ as:
+
+
+ \begin{equation}\label{potential_nonLocal_modifiedWoodsSaxon}
+ 	\rho'(r, \theta) = \frac{\rho }{1+\exp{\left(\frac{r-R(\theta)}{a(\theta)}\right)}}.
+ \end{equation}
+ 
+The modified parameters are given by:
+
+ \begin{equation}\label{potential_nonLocal_modifiedWoodsSaxon_r}
+	R(\theta) = R_0(1 + \beta_2 Y^{2}_{0}(\theta) + \beta_4Y^{4}(\theta)).
+\end{equation}
+
+Additionally the diffuseness is corrected with:
+
+ \begin{equation}\label{potential_nonLocal_modifiedWoodsSaxon_a}
+	a(\theta) = a'(\theta) \sqrt{1 + |\vec \nabla R(\theta)|^2 }
+\end{equation}
+
+with $a'$ being defined as:
+
+ \begin{equation}\label{potential_nonLocal_modifiedWoodsSaxon_aprime}
+	a'(\theta) = a_0 \left(1 + \beta_2 Y^{2}_{0}(\theta) + \beta_4Y^{4}(\theta)\right)
+\end{equation}
+
 Non-locality assessment in $\alpha$ decay \cite{perez_velasquez_kelkar_upadhyay_2019}. \\
+
+For the specific case of beta decay, the NN interaction might be modeled as a double Yukawua exponential term like: 
+
+\begin{equation}\label{potential_nonLocal_M3Y}
+	V_{\mathrm{NN}}(\vec r_{12}, E) = V_0 \frac{-\beta_0 |\vec r_{12}|}{a_0} - V_1 \frac{-\beta_1 |\vec r_{12}|}{a_1} + J_{00}\delta{\vec r_{12}},
+\end{equation}
+
+where $J_{00}$ parametrizes the exchange term of the $\alpha-\alpha$ interaction.
+
+The Coulomb potential can also be modified as: 
+
+\begin{equation}\label{potential_nonLocal_coulomb}
+	V_{C}(r) = \int \rho^{(C)}_\alpha(\vec r_1) \rho^{{C}}(\vec r_2) \frac{e^2}{|\vec r_{12}|} d\vec r_1 d\vec r_2.
+\end{equation}
+
 
 Mumbai non local potential \cite{upadhyay_bhagwat_jain_2017}. \\
 
+The Kernel for the potential is given by: 
+
+\begin{equation}\label{potential_nonLocal_Mumbai_kernel}
+	g(l, r, r') = \frac{2rr'}{\sqrt{\pi}\beta^3} \exp {\left(\frac{-(r^2 - r'^2)}{\beta^2}\right)} \mathcal{I},
+\end{equation}
+
+with the integral term $\mathcal{I}$ evaluated as: 
+
+\begin{equation}\label{potential_nonLocal_Mumbai_kernel_integral}
+	\mathcal{I} = \int_{-1}^{1}{U \left(\frac{|\vec r + \vec r'|}{2} \right) \exp \left(\frac{2rr'\cos \theta}{\beta^2}\right)}
+\end{equation}
+
 p2H radiative capture E1, M1, E2 (exponential 21 + variational method + Young's scheme) \cite{dubovichenko_dzhazairov-kakhramanov_2009}. \\
+
+In the study of the $\dRadiativeCapture$, an inter cluster interaction is proposed to be 
+
+
+\begin{equation}\label{eq:potential_intercluster_12}
+		V(r) = V_0 \exp (-\alpha r^2) + V_1 \exp (-\beta r),
+\end{equation}
+
+where $V_0$ and $V_1$ are the depths and the parameters $\alpha$ and $\beta$ serves are proportional to the extent in which the Gaussian and exponential terms damps. While the attractive contribution is associated with the Gaussian term, so $V_0 < 0$, a repulsive correction is taken into account by setting  $V_1 > 0$. \\
+
+The values of the coefficients depends on how the nuclei in the reaction are modeled as states of the form: 
+
+\begin{equation}\label{eq:potential_Young_scheme}
+	{}^{2J + 1} L, \{f\},
+\end{equation}
+
+where $L$ and $J$ correspond to the orbital and total angular momentum values. Most cases are analyzed for the s-wave case, when $l = 0$, and p-wave, with $l = 1$. Additionally, the $\{f\}$ symbols corresponds to the internal configuration of the nuclei in the reactions. These are instances of what is named as the Young's scheme.\\
+
+In order to determine the wave function, this approach was centered in the variational parameter method. The expression of the wave function $\Phi_l(r)$ ins given by:
+
+\begin{equation}\label{eq:potential_variational}
+	\Phi_l(r) = r^l \sum_{k} C_k \exp(-\alpha_k r^2),
+\end{equation}
+
+where the wave function is modeled as a superposition of exponential functions as the basis with free parameters $C_k$ and $\alpha_k$. \\
 
 2Hdp reaction in metallic environments (theoretical and experimental screening effect)  \cite{czerski_huke_heide_ruprecht_2006}. \\
 
+Screening effect due to electrons dams the Coulomb potential. In a first estimation, the damped $V(r)$ is given by:
+
+\begin{equation}\label{eq:potential_screening_simple}
+	V(r) = \frac{e^2}{r} \exp {\left( - \frac{r}{a}\right)},
+\end{equation}
+
+with $e$ as the electric charge and $a$ as the diffuseness parameter. \\
+
+A correction of the relation between the cross section and the astrophysical S-factor is given by:
+
+\begin{equation}\label{eq:potential_screening_sFactor}
+	S(E) = \sqrt{E(E+U_e)} \exp {\left( \sqrt{\frac{E_G}{E + U_e}}\right)},
+\end{equation}
+
+with $E_G$ as the Gamow energy and $U_e$ refers to a free variable which parametrizes the screening enhancement. \\
+
+A more sophisticated treatment of the screening effect is giving by modeling the Coulomb potential as:
+
+\begin{equation}\label{eq:potential_screening}
+	V(r) = \frac{e^2}{r} \Psi(r),
+\end{equation}
+
+with $\Psi(r)$ as the correction to be made to the Coulomb potential. An usual approximation to $V(r)$ is given by conveniently evaluating the Fourier transform such:
+
+\begin{equation}\label{eq:potential_screening_fourier}
+	V(r) = \frac{1}{(2\pi)^3} \int \frac{4\pi e^2 \phi^2(k)}{\epsilon_\nu (k) \epsilon_c (k) k^2} \exp(i \vec k \cdot \vec r) d^3 \vec k,
+\end{equation}
+
+with the form factor $\phi(k)$, being defined with the aid of the Thomas-Fermi approximation, with the form: 
+
+\begin{equation}\label{eq:potential_screening_formFactor}
+	\phi(k) = 1 - z + \frac{zk^2}{k^2 + {k'}^2} + \mathcal{O}(z^3),
+\end{equation}
+
+where $z$ is an expansion variable and $k'$ is defined as: 
+
+\begin{equation}\label{eq:potential_screening_kThomasFermi}
+	{k'}^2 = \frac{6\pi e^2 n}{E_F},
+\end{equation}
+
+with $n$ and $E_F$ as the number density and Fermi energy respectively. On the other hand, the dielectric function is given by:
+
+\begin{equation}\label{eq:potential_screening_dielectric}
+	\epsilon_\nu = 1 - \frac{\nu(k) P(\nu)}{1 + \nu(k) G(k) P(k)},
+\end{equation}
+
+with $\nu(k)$ defined as: 
+
+\begin{equation}\label{eq:potential_screening_nu}
+	\nu(k) = \frac{4\pi e^2}{k^2}.
+\end{equation}
+
+Additionally, parameters $P(k)$ and $G(k)$ are linked with the polaribizability and electron correlation respectively. \\
+
+Another quantity that is useful for annotating is the polarizability energy $U_{\mathrm{pol}}$, which is defined as: 
+
+\begin{equation}\label{eq:potential_screening_Upolarizability}
+	U_{\mathrm{pol}} = \lim_{r \rightarrow 0 } {\left(\frac{e^2}{r} - \frac{e^2}{r} \Phi(r) \right)}.
+\end{equation}
+
+
 13C radiative capture (modified Woods-Saxon + spin-orbit + SF + ANC). \\
 
-R-matrix treatment for resonant cross section and poly2 empirical formula \cite{kabir_irgaziev_nabi_2020} potential cluster model (exp2 potential + variational method + Young's schemes)
+R-matrix treatment for resonant cross section and poly2 empirical formula \cite{kabir_irgaziev_nabi_2020} \\
+
+Radiative capture allows computations on both the widths related to the proton $\Gamma_p(E)$ and the photon $\Gamma_\gamma(E)$ with the presence of resonant phenomena. The former is given by: 
+
+\begin{equation}\label{eq:potential_radiative_width_proton}
+	\Gamma_p(E)  = \frac{P_l(E)}{P_l(E_r)}  \Gamma_p(E_r),
+\end{equation}
+
+where $E_r$ is the peak energy of the resonance and the penetrability $P_l(E)$ is given in terms of the channel radius $a$ as: 
+
+\begin{equation}\label{eq:potential_radiative_penetrability}
+	P_l (E) = \frac{ka}{F^2_l(k, a) + G^2_l(k, a)},
+\end{equation}
+
+where $k$ is the usual energy dependent defined wave functions and $F_l(k, a)$ with $G_l(k, a)$ define the Coulomb regular and irregular functions.  \\
+
+On the other hand, the latter width is given by:
+
+\begin{equation}\label{eq:potential_radiative_width_photon}
+	\Gamma_\gamma(E)  =  \left(\frac{E + \epsilon_f}{E_r + \epsilon_f}\right)^{2\lambda + 1} \frac{P_l(E)}{P_l(E_r)}  \Gamma_\gamma(E_r),
+\end{equation}
+
+where $\lambda$ is the polarity of the radiation source and $\epsilon_\gamma$ the final bound state of the system. \\
+
+
+
+Cross sections are determined as the sum 
+
+
+\begin{equation}\label{eq:potential_radiativeCrossSections}
+	\sigma(E) = \sum_{N, J_f} \sigma_{N, j_f} (E),
+\end{equation}
+
+as $N$ is the nucleon number and $J_f$ corresponds to the angular momentum. Then, the total cross section is regarded as the sum of all the contributions of all the transitions.\\
+
+A more concrete picture on the cross section for each contribution is given by: 
+
+\begin{equation}\label{eq:potential_radiativeCrossSections_each}
+	 \sigma_{N, j_f} (E) = \frac{8\pi K e^2 \mu}{\hbar^2 k^2} C(S_1 S_2) D(J) B^2_J(NK, L) \sum_{L_0, J_0} P^2_{J} I^2_{J} ,
+\end{equation}
+
+where the spin constant $C(S_1, S_2)$ is given by: 
+
+\begin{equation}\label{eq:potential_radiativeCrossSections_spinConstant}
+	C(S_1, S_2) = \frac{1}{(2S_1 + 1)(2S_2 + 1)}.
+\end{equation}
+
+Additionally, the total angular momentum $J$ constant has the expression:
+
+\begin{equation}\label{eq:potential_radiativeCrossSections_JConstant}
+	D(J) = \frac{J+1}{J[(2J + 1)!!]^2},
+\end{equation}
+
+where the !! symbol denotes the double factorial. Additionally, the parameter $P^2_{J}$ is given in terms of $NJ$, $J_f$ and $J_0$, which is the initial total angular momemtum and the other term $I^2$ depends on $J_f$ and $J_0$. More concretely, they are defined as:
+
+\begin{equation}\label{eq:potential_radiativeCrossSections_Iintegral}
+	I_J(J_f, J_0) = 	\langle\chi_l(r) | r^J| \phi_l(r) \rangle,
+\end{equation}
+
+with $\chi_l(r) $ as the scattering and $phi_l(r) $ as the bounded cross section. Also, $B_J(EJ, K)$ is given by:
+
+\begin{equation}\label{eq:potential_radiativeCrossSections_Bj}
+	B_J(EJ, K) = K^J \mu^J \left( \frac{Z_p}{m^J_p} + (-1)^{J} \frac{Z}{M}\right),
+\end{equation}
+
+where $Z$ and $M$ are the pair of the atomic number and mass of the nulceus while $Z_p$ and $m^J_p$ correspond to the number and effective mass of the proton
+
+
+
+potential cluster model (exp2 potential + variational method + Young's schemes)
 \cite{dubovichenko_2012}. \\
+
+Variational approximation the the wave function, as described by a gaussian basis, is given by
+
+\begin{equation}\label{eq:potential_variational_basis}
+	\phi_l = r^l \sum_{k}  c_k \exp{-\alpha_k r^2},
+ \end{equation}
+
+with $l$ as the angular momentum and $k$ as the contribution of the Gaussian basis with coefficient $c_k$ and decaying factor $\alpha_k$. These values are determined to minimizing fitting losses. In particular, a eigenvalues equation which is obeyed is given by
+
+
+\begin{equation}\label{eq:potential_variational_eigenvalues}
+	\sum_{a} (H_{ab} - E L_{ab})C_a = 0,
+\end{equation}
+
+where $H_{ab}$ corresponds to the Hamiltonian and $L_{ab}$ as the overlap matrix and $C_a$ accounts for the eigenvectors.  \\
+
+The asymptotic behavior of the scattering wave function $\chi_l$ is given by:
+
+
+\begin{equation}\label{eq:potential_variational_scattering}
+	\chi_l = \sqrt{2k_0} C_W W_{-\eta l + 1/2}(2k_0R),
+\end{equation}
+
+with $k_0$ as the wave number and $C_W$ as the coefficient with $ W_{-\eta l + 1/2}(2k_0R)$ as the Wittaker function with $\eta$ as the Sommerfeld parameter and $R$ as radius. 
 
 
 16O fusion two-center shell model with Wood-Saxon potentials (cranking and reduced mass + molecular dynamics) \cite{diaz-torres_gasques_wiescher_2007} \\
+
+The Cranking mass $M(R)$ is defined as: 
+
+\begin{equation}\label{potential_crankingMass}
+	M(R) = 2 \hbar^2 \sum_{k=1}^{A} \sum_{j > A} \frac{\left|\left \langle j | \frac{\partial}{\partial r} | k \right \rangle \right|^2}{E_j - E_k},
+\end{equation}
+
+where $R$ is the separation between nuclei and the levels are $E_k$ calculated on approaches like two core shell model. This mass definition explains effects on nuclear breaking, which is essential in the explanation of reaction behavior.
 
 
 \section{Special models} \label{sec:specialModels}
@@ -3773,7 +5208,71 @@ where $a$, $'a$ are the initial and $b$, $b'$ the final states pairs respectivel
 
 This model is useful for applications with middle heavy nuclei in reactions like $\Cfusion$. The intermediate nucleus is $\mathrm{{}^{4}He}$. \\
 
-The Trojan horse method. Selection of reactions and consideration of the characteristics of the nuclei to be considered in the method \cite{spitaleri_mukhamedzhanov_blokhintsev_cognata_pizzone_tumino_2011}.
+The Trojan horse method. Selection of reactions and consideration of the characteristics of the nuclei to be considered in the method \cite{spitaleri_mukhamedzhanov_blokhintsev_cognata_pizzone_tumino_2011}. \\
+
+The Trojan horse method considers reactions with two reacting nuclei A and B which collide to form an intermediate nucleus C and additional products D and S. The reaction thus has the shape:
+
+\begin{equation}\label{eq:special_THM_reaction}
+	\mathrm{A + B \rightarrow C + D + S}.
+\end{equation}
+
+Considering the fact that this is a multi-step process, the energy definition should consider an intermediate nucleus $x$ which is not visible as neither a product nor a reactant. Then, the center of mass energy $E$ equation is adapted such that: 
+
+\begin{equation}\label{eq:special_THM_energy}
+	E = E_{x\mathrm{B}} - B_{x\mathrm{S}},
+\end{equation}
+
+where $E_{x\mathrm{B}}$ corresponds to system energy $x$ with nucleus B while the factor $B_{x\mathrm{S}}$ takes into account the energy of bounding between nuclei $x$ and S.  \\
+
+Additionally, since the process has assigned a three nuclei final state, it is not possible to obtain a one order differential cross section in a direct manner. Instead, a triple differential cross section for the reaction is introduced as, 
+
+\begin{equation}\label{eq:special_THM_triple differential}
+	\frac{d^3\sigma }{d\Omega_{\mathrm{C}} d\Omega_{\mathrm{D}} dE_\mathrm{C}} = \mathrm{KF} |\phi(p_\mathrm{S})|^2 \left(  \frac{d\sigma}{d\Omega}\right)^{'},
+\end{equation}
+
+where $d\Omega_\mathrm{C}$ and $d\Omega_\mathrm{D}$ correspond to the differential of the solid angles belonging to the C and D nuclei. Additionally, this third order differential cross section considers dependence with the energy of the C nucleus by introducing a the differential $dE_c$. \\ 
+
+It is observed that this cross section term depends on the $\mathrm{KF}$ factor, which will be introduced later, as well as a momentum distribution term $\phi(p_\mathrm{S})$ which is given in term of the final momentum of the S nucleus $p_\mathrm{S}$. A relevant aspect of the last variable is that it is constrained by the inequality of the form:
+
+\begin{equation}\label{eq:special_THM_momentum_inequality}
+	0 \le p_\mathrm{S} \le k_{x\mathrm{S}},
+\end{equation}
+
+where the upper bound corresponds to $k_{\mathrm{S}}$, which is defined as: 
+
+\begin{equation}\label{eq:special_THM_momentum_max}
+	k_{x\mathrm{S}} = \sqrt{2 \mu_{x\mathrm{S}}  B_{x\mathrm{S}}}
+\end{equation}
+
+Lastly, an experimentally measured cross section of the last step process $(d\sigma/d\Omega)'$ is also included in the expression. This ensures the cross section to include both of the steps which characterize the modeling within the Trojan horse method.  \\
+
+Usually, an alternative method of expression for the momentum distribution is needed. Particularly, a frequent parametrization of $|\phi(p_S)|^2$ is given by:
+
+\begin{equation}\label{eq:special_THM_momentumDistribution}
+	|\phi(p_S)|^2  = S (\sigma_{\lambda} |T^{L \lambda}|^2 ),
+\end{equation}
+
+where $S$ corresponds to the spectroscopic factor while the components $T^{L\lambda}$ are related with the transition matrix of a multipole expansion with order $\lambda$ and angular momentum number $L$. Also, $\sigma_\lambda$ is regarded as a parameter related to the cross section. \\
+
+Returning to the kinematic considerations, the definition of   $\mathrm{KF}$ is expressed in the terms: 
+
+\begin{equation}\label{eq:special_THM_kinematicFactor}
+	\mathrm{KF} = \frac{(m_\mathrm{B} + m_x)(m_\mathrm{C} + m_\mathrm{D})}{m_x} \frac{k_\mathrm{C} k_\mathrm{D}}{\hbar^2 k_\mathrm{A}} \frac{|\vec k_0|}{|\vec k_1|} h,
+\end{equation}
+
+where $m_{\mathrm{B}}$,  $m_{\mathrm{C}}$,  $m_{\mathrm{D}}$, $m_x$ as the masses of the B, C, D and $x$ nuclei respectively. In a similar manner, $k_\mathrm{A}$,  $k_\mathrm{C}$, $k_\mathrm{D}$ stand for the wave number magnitudes for nuclei A, C and D. Also, the initial $\vec k_0$ and final $\vec k_1$ wave number vectors for the composite states of the reactants and products are included. To complete the $KF$ picture, an essential adimensional parameter $h$  defined as: 
+
+\begin{equation}\label{eq:special_THM_hParameter}
+	 h = \left( 1 + \frac{m_\mathrm{C}}{m_\mathrm{S}} \left( 1 + \frac{k_\mathrm{C}}{k_\mathrm{D}} \cos \theta - \frac{m_\mathrm{D}}{k_\mathrm{D}} \cos \theta \right) \right)^{-1},
+\end{equation}
+
+where $m_\mathrm{S}$ as the mass of the S nucleus and $\theta$ as the relative angle of deflection measured from the initial to the final trail of the nuclei. This angle can be defined in terms of velocity and momenta as: 
+
+\begin{equation}\label{eq:special_THM_angle}
+	\theta = \arccos {\left( \frac{\vec p_\mathrm{S} \cdot (\vec v_\mathrm{C} - \vec v_\mathrm{D})}{|\vec p_\mathrm{S}| |\vec v_\mathrm{C} - \vec v_\mathrm{D}|} \right)},
+\end{equation}
+
+with $p_\mathrm{S}$ as the momentum of nucleus S and $\vec v_\mathrm{C}$ with  $\vec v_\mathrm{D}$ as the labels for the velocities of nuclei C and D respectively. 
 
 \subsection{Effective field theories} \label{sub:special_effectiveField}
 
@@ -3798,6 +5297,88 @@ where $C_1$ is the coupling constant, which can be estimated from scattering exp
 Since these theories are closely related with quantum field theory, it is possible to use diagrams associated with the processes of low-energy nuclear force. In this picture, mediators are mesons like pions. The underlying symmetry can be assumed to be isospin symmetry.  \\
 
 Effective field theory $\dRadiativeCapture$ and three body interaction, M1 is the dominant contribution \cite{sadeghi_khalili_godarzi_2013}. \\
+
+Pionless EFT for the $\dRadiativeCapture$ reaction. 
+
+\begin{equation}\label{eq:micro_EFT_lagrangian_extended}
+	\mathcal{L} = \mathcal{L}_N  -  \mathcal{L}_d -   \mathcal{L}_t +  \mathcal{L}_{d-\mathrm{C}}  +   \mathcal{L}_{t-\mathrm{C}} + \mathcal{L}_B + \mathrm{L}_{\mathcal{NNN}}
+\end{equation}
+
+The core of the effective field theory is the formulation of a Lagrangian $\mathcal{L}$ with enough information to account for the symmetries of the system and sufficiently detailed to describe the relevant interactions of the system. For the upcoming definitions, natural units are used. Then, $\hbar = 1$, as it usually happens with effective field theory. The first Lagrangian to be introduced, the nucleon lagrangian $\mathcal{L}_N$, is given by:
+ 
+\begin{equation}\label{eq:micro_EFT_lagrangian_N}
+	 \mathcal{L}_N  = N^{\dagger} \left(i D_0 + \frac{\vec D^2}{2M_N} \right) N,
+\end{equation}
+
+where $N$ corresponds to the field of the nucleon and $M_N$ labels the mass of the nucleon.  t is critical to be detailed that this field comes with a complex conjugate, which is labeled as $N^{\dagger}$. The previously introduced term consists of a free particle lagrangian in the sense that it has the analogous role, in the field theory context, of the kinetic term of the nucleon. \\
+
+Additionally, since the term has to be consistent with a quantum mechanical description, and the Gauge symmetry should be taken into account, as it happens in other field theories, a change of derivative is used. Now, $D$ corresponds to the covariant derivative, which effectively assumes the role of the standard partial derivative in the traditional quantum mechanical picture. However, since the free field is inspired in a relativistic theory, a four vector nature of $D_\mu$ shall be assumed. The notation with index $\mu$ corresponds to specific time and space coordinates cases such that  $\mu = 0$  corresponds to the temporal and the remaining $\mu = 1, 2, 3$ to spacial variables,  this quantity is defined as:
+
+\begin{equation}\label{eq:micro_EFT_covariantDerivative}
+	D_\mu = \partial_\mu  + i e A_\mu \cdot \hat Q,
+\end{equation}
+
+where $A_\mu$ is the field of the Lagrangian and $\hat Q$ is an operator associated to a conserved quantity. This expression illustrates how the derivative gets corrected by a factor coupled to a constant, in this case the charge $e$. These constants are critical for field theories to work and they are mostly obtained experimentally. \\
+
+Next, a similar, although not exactly the same in form as the nucleon field, is given by the deuterium free Lagrangian $\mathcal{L}_d$, which is defined as
+
+\begin{equation}\label{eq:micro_EFT_lagrangian_d}
+	\mathcal{L}_d  = d^{\dagger} \left( \sigma_d + i D_0 + \frac{D^2}{2M_d} \right) d,
+\end{equation}
+
+where $M_d$ is the mass of the deuterium nucleus and $d$ is analogous to the Dirac spinor field for deuterium. A subtle difference with the form of equation \ref{eq:micro_EFT_lagrangian_N} appears with the inclusion a $\sigma_d$. This operator generally accounts for the description of the spin of deuterium. This is useful when transitions within the reaction are considered. Then, if spin matrices were not included, $\mathcal{L}_d$ would be completely analogous to the nucleon field Lagrangian term $\mathcal{L}_N$.  \\
+
+Analogously, the tritium free Lagrangian is given by: 
+
+\begin{equation}\label{eq:micro_EFT_lagrangian_t}
+	\mathcal{L}_t  = t^{\dagger} \left( \sigma_t + i D_0 + \frac{D^2}{2M_t} \right) t,
+\end{equation}
+
+with $t$ as the tritium field and $M_t$ is the mass of tritium.\\
+
+With the free fields of the massive actors in the $\dRadiativeCapture$ already introduced, it is necessary to include their interactions. This is done in the framework of field theory by incorporating the coupling terms to the extended Lagrangian. In the deuterium case, the coupling term $	\mathcal{L}_{d-\mathrm{C}}$ is given by:
+
+ \begin{equation}\label{eq:micro_EFT_lagrangian_d_coupling}
+	\mathcal{L}_{d-\mathrm{C}}  = y_d [d^{\dagger} (N^{T} P_d N) + h.c.],
+\end{equation}
+
+where $y_d$ has the role of a coupling constant and the projection operator $P_d$ is design to project to the ${}^{3}S_1$ state and is defined as: 
+
+\begin{equation}\label{eq:micro_EFT_Pd}
+	P_d = \frac{1}{\sqrt{8}} \sigma^2 \sigma^k \tau^2,
+ \end{equation}
+
+where $\sigma_k$ corresponds to the $k$th Pauli matrix while $\tau$ is an operator that accounts for isospin. Then, $d$ has $k$ degrees of freedom due to spin. These projection operators are central when considering the details on the transitions of an initial and final state. \\
+
+Similarly, in the case of tritium, its coupled Lagrangian $\mathcal{L}_{t-\mathrm{C}}$ term is described as: 
+
+\begin{equation}\label{eq:micro_EFT_lagrangian_t_coupling}
+	\mathcal{L}_{t-\mathrm{C}}  = y_t [t^{\dagger} (N^{T} P_t N) + h.c.],
+\end{equation}
+
+with $y_t$ as a coupling constant and $P_t$, which makes a transition to $^{1}S_0$, is defined as: 
+
+\begin{equation}\label{eq:micro_EFT_Pt}
+	P_t = \frac{1}{\sqrt{8}} \sigma^2 \tau^2 \sigma^k,
+\end{equation}
+
+Additionally, the photon contribution $\mathcal{L}_B$, which has no free Lagrangian term associated with since it is massless,  is given by 
+
+\begin{equation}\label{eq:micro_EFT_lagrangian_B}
+	\mathcal{L}_B = \frac{e}{2M_n} N^\dagger (k_0 + k_1 \tau^3) \sigma \cdot B + e C d'^{j\dagger}  d' B_j + h.c,
+\end{equation}
+
+where $k_0$ and $k_1$ are conveniently defined wave numbers corresponding to the composite initial and final state respectively. Additionally, the $\tau$ operator is closely related with the isospin characteristic matrix. The field associated with the photon might be referred as $B$. With this interpretation, the left hand side term correspond to the coupling of the nucleon with the electromagnetic field while the second accounts for a similar coupling between the deuterium field and the photon.  \\
+
+Finaly, the three body interaction $\mathcal{L}_{\mathrm{NNN}}$ is determined by an expansion on the Hamiltonan formalism with 
+
+\begin{equation}\label{eq:micro_EFT_lagrangian_hamiltonianNNN}
+	\mathcal{H}(E, \Lambda ) = 2  \frac{\mathcal{H}_0}{\Lambda^2} + 2 \frac{\mathcal{H}_2}{\Lambda^4}(ME + \gamma^2_t) + \mathcal{O} \left( \frac{1}{\Lambda^6} \right),
+\end{equation}
+
+where $\Lambda$ is referred as a cut off. Then the Lagrangian can be estimated by obtaining it from the Hamiltonian formalism. \\
+
+Additionally, the series is truncated in order to favor a convergent estimation, which must be consistent with a physical behavior of the system. If such convergences are not achieved, a renormalization procedure shall continue. However, it is worth to be noticed that not all the theories are renormalizable, and then they are unable to handle appropriately the divergences on non-perturbative computations. \\
 
  Halo effective field theory $\BeRadiativeCapture$ reaction + coupled channel implementation + two theories with and without $\mathrm{{}^{7}Be}$ excited core  + E1 and M1 transitions + ANC + Bayesian analysis Metropoli-Hasting algorithm + polynomial empirical formula  \cite{higa_premarathna_rupak_2022}. \\
 
