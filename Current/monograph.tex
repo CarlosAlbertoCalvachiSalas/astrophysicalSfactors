@@ -358,7 +358,7 @@ If all the expressions of equations \ref{eq:scattering_Schrodinger_separationVar
 Then, the $\phi$ dependent term consists of solutions of the form: 
 
 \begin{equation}\label{eq:scattering_Schrodinger_azimuthal_solution}
-	\Phi(\phi) = e^{\pm im}.
+	\Phi(\phi) = e^{\pm im \phi}.
 \end{equation}
 
 On the other hand, the polar term is obtained by solving the differential equation: 
@@ -2337,13 +2337,84 @@ Finally, if a more fundamental approach is needed, effective nuclear theories ar
 
 Modern theories \textit{ab initio} electroweak reactions  (correlated spherical harmonics and variational Monte Carlo method) \cite{marcucci_nollett_schiavilla_wiringa_2006}. \\
 
-Slater determinants is give by: 
+
+AV18 is an NN potential which has the form: 
+
+\begin{equation}\label{eq:micro_modernTheories_AV18_NN}
+	v_{ab} = \sum_{p} v_p(r_{ab}) O^{p}_{ab},
+\end{equation}
+
+where the index $p$ accounts for the components and the operator $O$ is defined as:
+
+\begin{equation}\label{eq:micro_modernTheories_AV18_O}
+	O^{p}_{ab} = [1, \vec \sigma_a, \vec \sigma_b, S_{ab}, \vec L \cdot \vec S ] \otimes [1, \vec \tau_a \cdot \vec \tau b],
+\end{equation}
+
+where $1$ is the identity operator, $\vec \sigma_a \cdot \vec \sigma_b$ corresponds to the dot product of the Pauli matrices with labels $a$ and $b$. Similarly, $\vec L \cdot \vec S$ denotes the product of the relative orbital angular momentum and spin operators respectively. Additionally, $\vec \tau_a \cdot \vec \tau_b$ represent the product of the Pauli matrices for isospin.  \\
+
+In the specific case of weak processes, the total cross section is given by:
+
+
+\begin{equation}\label{eq:micro_modernTheories_weak_crossSection}
+	\sigma^{(\beta)} (E) = \int {2\pi \delta (E_0 - E_f) \frac{1}{v} 	{g \frac{d\vec p_e}{(2\pi)^3} \frac{d\vec p_\nu}{(2\pi)^3} }  },
+\end{equation}
+
+with $\vec v_e$ and the integration variables $\vec v_\nu$ label electron and neutrino momentum.   In addition, $E_0$ and $E_f$ account for the initial and final energies. The element matrix in contained within the term $g$, which is defined as:
+
+\begin{equation}\label{eq:micro_modernTheories_weak_crossSection_g}
+	g = \sum_{s_e s_\nu} \sum_{M_1 M_2} {\frac{1}{(2J_1 + 1)(2J_2 + 1)}|\langle f | H_{W} |0 \rangle|^2 },
+\end{equation}
+
+where $s_e$ and $s_\nu$ are the indexes running for electron and neutrino spin values, as well as $M_1$ with $M_2$ corresponds to the pair of projections of the angular momentum. Additionally, the label $f$ and $0$ denote final and initial states respectively and $H_W$ denotes the Hamiltonian of the weak interaction. \\
+
+An alternative way to express $g$ is given by:
+
+\begin{equation}\label{eq:micro_modernTheories_weak_crossSection_g_alternative}
+	g = (2\pi)^2 G^{2}_V L_{\sigma \tau} N^{\sigma \tau},
+\end{equation}
+
+with $G_V$ as the Fermi constant and $L^{\sigma \tau}$ and $N^{\sigma \tau}$ as the lepton and nuclear tensors. These factors are allowed to be expressed in terms of multipole expansion. \\
+
+Another method is the variational Monte Carlo, which is used for estimating the bound states wave functions. The form of the trial wave function is given by:
+
+\begin{equation}\label{eq:micro_modernTheories_variationalMonteCarlo}
+	| \Psi_V \rangle = \left[ 1 + \sum_{a < b < c} U_{abc}\right]  \left[ \mathcal{S}  \prod_{a < b \le A } {1 + U_{ab}}\right],
+\end{equation}
+
+with $\mathcal{S}$ as the symmetrization operator and the terms of the form $U_{ab}$ are associated with the correlation operators. These have a direct connection with the $O^{p}_{ab}$ in the frame of NN interactions, as given in equation \ref{eq:micro_modernTheories_AV18_O}. The related formula is given by:
+
+\begin{equation}\label{eq:micro_modernTheories_variationalMonteCarlo_correlation}
+	U_{ab} = \sum_{p} u_{p}(r_{ab}) O^{p}_{ab},
+\end{equation}
+
+where $u_{p}(r_{ab})$ is associated with the radial wave function evaluated at position $r_{ab}$. Meanwhile, the operators $U_{abc}$ correspond to three correlations.  \\
+
+Depending on the case, $|\Psi_J \rangle$ assumes a different form. For the simplest case, which corresponds to a type s shell, the Jastrow wave function is given by:
+
+
+\begin{equation}\label{eq:micro_modernTheories_variationalMonteCarlo_Jastrow}
+	| \Psi_J \rangle  = \left[ \prod_{a < b \le A }{f^{d}_{abc}} \right] \left[ \prod_{a < b \le A }{f_d(r_{ab})} \right] |\Phi_A \rangle
+\end{equation}
+
+with $f_d(r_{ab})$ and $f^{d}_{abc}$ as the two and three body correlation functions. Additionally, the state $|\Phi_A \rangle$ is obtained from the Slater determinant of the states of the nucleons.  \\
+
+Slater determinants are given by: 
 
 \begin{equation} \label{eq:micro_slatter}
 	\phi = \frac{1}{\sqrt{A!}} \det{(\phi_1 ... \phi_k)},
 \end{equation}
 
-where $(\phi_1 ... \phi_k$ are the individual $k$ orbitals, $A$ corresponds to a state and this expression is of great relevance at calculation aspects of nuclear structure.
+where $(\phi_1 ... \phi_k$ are the individual $k$ orbitals, $A$ corresponds to a state and this expression is of great relevance at calculation aspects of nuclear structure. \\
+
+The functions $f$ and $u$ are found by optimizing selected parameters to minimize the expectation value $E_V$ which is given by:
+
+\begin{equation}\label{eq:micro_modernTheories_expectationValue}
+	E_V = \langle \Psi_V | H | \Psi_V \rangle.
+\end{equation}
+
+The algorithm for stochastic integration is Metropolis Monte Carlo. \\
+
+
 
 \subsection{\textit{Ab initio} models} \label{sub:microscopical_abinitio}
 
@@ -4392,11 +4463,155 @@ This is the case of the potential of Yakovlev et. al model \cite{yakovlev_beard_
 
 proton capture review $\mathrm{{}^{2}H}$, $\mathrm{{}^{6,7}Li}$, $\mathrm{^{12, 13}C}$ reactions (two-cluster potential model, exponential 21, exponential2 + Young's scheme) + poly parametrization \cite{dubovichenko_dzhazairov-kakhramanov_2012}. \\
 
+Coupled Young scheme with spin $\{f_S\}$ and isospin $\{f_T\}$  contributions is given by: 
+
+\begin{equation}\label{eq:potential_Young_coupled}
+	\{f_{ST}\} = \{f_S\} \otimes \{f_T\}.
+\end{equation}
+
+Phase shift may be used in order to calculate the astrophysical S-factor. An example that illustrates the calculation sequence stats with experimental cross sections $\sigma^{(\mathrm{exp})}$ and it is given by:
+
+\begin{equation}\label{eq:potential_phaseShift_sequence}
+	\sigma^{(\mathrm{exp})} \rightarrow \delta_L(E) \rightarrow V(r) \rightarrow \sigma(E) \rightarrow S(E),
+\end{equation}
+
+where $\delta_L(E)$ corresponds to the phase shift reconstructed from experimental cross section data. \\
+
+One relevant relation on the phase shift related to a hybrid Young scheme is given by: 
+
+\begin{equation}\label{eq:potential_phaseShift_sumRule}
+	\delta^{\{f_1\} + \{f_2\}} = \frac{\delta^{\{f_1\}} + \delta^{\{f_2\}} }{2}.
+\end{equation}
+
+Additionally, it is possible to estimate the mean square radius. More concretely, this relation is given by:
+
+\begin{equation}\label{eq:potential_meanRadius_mass}
+	R^2_m = \frac{M_1}{M} \langle r^{2}_{m} \rangle_1 +   \frac{M_2}{M} \langle r^{2}_{m} \rangle_2 + \frac{M_1M_2}{M^2}I_2,
+\end{equation}
+
+where, in a picture of two clusters, the pairs $M_1$ and $M_2$, with  $\langle r^{2}_{m} \rangle_1$ and $\langle r^{2}_{m} \rangle_2$ correspond to the individual masses and mean square radii of clusters 1 and 2 respectively. Also, $M = M_1 + M_2$ and the integral term $I_2$ is given by:
+
+\begin{equation}\label{eq:potential_meanRadius_I_2}
+	I_2 = \langle \chi_{L} (R) | R^2 | \chi_{L} (R)   \rangle, 
+\end{equation}
+
+with $\chi_{L} (R)$ as the wave function with quantum number $L$ for an unbounded state. \\
+
+In a similar manner, the charge radius is averaged as: 
+
+
+\begin{equation}\label{eq:potential_meanRadius_charge}
+	R^2_z = \frac{Z_1}{Z} \langle r^{2}_{z} \rangle_1 +   \frac{Z_2}{Z} \langle r^{2}_{z} \rangle_2 + \frac{Z_2M^2_1 + Z_1M^2_2 }{ZM^2}I_2,
+\end{equation}
+
+where $\langle r^{2}_{z} \rangle_1$ and $\langle r^{2}_{z} \rangle_2$ are the mean square charge radius respectively. Additionally, $Z = Z_1 + Z_2$. \\
+
 7Be radiative capture(exponential2 + Asymptotic normalization coefficients) \cite{tursunov_turakulov_kadyrov_blokhintsev_2021}. \\
+
+Magnetic operators in the radiative capture framework are given by:
+
+\begin{equation}\label{eq:potential_calculations_radiativeCapture_magneticM}
+		\mathcal{M}^{M}_{1\mu} = \sqrt{\frac{3}{4\pi}} \sum_{j=1}^{A}{\mu_N \left(\frac{A_2Z_1}{AA_1} + \frac{A_1Z_2}{AA_2}\right) \hat l _{r \mu} + 2(\mu_1\hat S_{1\mu} + \mu_2\hat S_{2\mu})},
+\end{equation}
+
+with $\mu_N$ as the nuclear magnetron, $\hat l_{j\mu}$ as the projection of the orbital angular momentum, $j$ is an index for the particle. Also, the index $\mu$ has the usual values for $l=1$. Namely, $\mu \in \{-1, 0, 1\}$. \\
+
+One convenient way of splitting equation \ref{eq:potential_calculations_radiativeCapture_magneticM} is by introducing the partial orbital and spin angular momentum amplitudes, which are labeled as $\mathcal{M}_1(l)$ and $\mathcal{M}_1(S)$. Particularly, the parametrization has the form: 
+
+\begin{equation}\label{eq:potential_calculations_radiativeCapture_magneticM_simplified}
+	\mathcal{M}^{M}_{1\mu} = \sqrt{\frac{3}{4\pi}}(M_1(l) + M_2(S))
+\end{equation}
+
+On the other hand, the reduced transition matrix for the orbital part is given by: 
+
+\begin{equation}\label{eq:potential_calculations_radiativeCapture_magneticM_reduced}
+	\langle \Psi^{J_f}_{l_fS'}  ||  \mathcal{M}_1(l) ||  \Psi^{J}_{lS} \rangle = \mu_N \left( \frac{A_2Z_1}{AA_1} + \frac{A_1Z_2}{AA_2} \right) \sqrt{l(l+1)(2J + 1)(2l + 1)} (-1)^{\epsilon_1} \left \{ \begin{matrix}
+		l & S & J_f \\
+		J & 1 & l
+	\end{matrix} \right \} \delta_{ll_f} \delta_{SS'} I_{0f},
+\end{equation}
+
+where the overlap integral is expressed as:
+
+\begin{equation}\label{eq:potential_calculations_radiativeCapture_magneticM_overlapIntegral}
+	I_{0f} = \sqrt{\frac{3}{4\pi}} \int_{0}^{\infty} {u^{(lSJ)}_E (r)u^{(l_fS'J_f)}(r)dr}.
+\end{equation}
+
+On the other hand, the exponent $\epsilon_1$ of equation \ref{eq:potential_calculations_radiativeCapture_magneticM_reduced} has the form: 
+
+\begin{equation}\label{eq:potential_calculations_radiativeCapture_magneticM_exponent1}
+	\epsilon_1 = S + 1 + J + l.
+\end{equation}
+
+The spin reduced matrix is further divided in two terms, which correspond to $S_1$ and $S_2$ values. The former is accountable for the proton contribution as it is given by:
+
+\begin{equation}\label{eq:potential_calculations_radiativeCapture_magneticM_reduced_S1}
+	\langle \Psi^{J_f}_{l_fS'}  ||  \mathcal{M}^{M}_1(S_1) ||  \Psi^{J}_{lS} \rangle = 2\mu_p (-1)^{\epsilon_2} \sqrt{S_1(S_1+1)(2S_1 + 1)(2S + 1)(2S' + 1)(2J + 1)}  K \delta_{ll_f} \delta_{SS'} I_{0f},
+\end{equation}
+
+with the 6j constant $K$ defined as:
+
+\begin{equation}\label{eq:potential_calculations_radiativeCapture_magneticM_reduced_S1_6j}
+	K =	\left \{ \begin{matrix}
+		S_1& S_2 & S\\
+		S' & 1 & S_1
+	\end{matrix} \right \}  \left \{ \begin{matrix}
+	S & l & J\\
+	J_f & 1 & S'
+\end{matrix} \right \}
+\end{equation}
+
+and the exponent $\epsilon_2$ is expressed as: 
+
+\begin{equation}\label{eq:potential_calculations_radiativeCapture_magneticM_reduced_S1_exponential}
+	\epsilon_2 = S_1 + S_2 + 2S + l + J_f.
+\end{equation}
+
+On the other hand, the nucleus part with $S_2$, gives a resulting reduced matrix by substituting $S_1$ by $S_2$ in equations \ref{eq:potential_calculations_radiativeCapture_magneticM_reduced} and \ref{eq:potential_calculations_radiativeCapture_magneticM_reduced_S1_6j}. Additionally, the exponent of equation \ref{eq:potential_calculations_radiativeCapture_magneticM_exponent1} is replaced by \ref{eq:potential_calculations_radiativeCapture_magneticM_reduced_S1_exponential}, which is defined as:
+
+\begin{equation}\label{eq:potential_calculations_radiativeCapture_magneticM_reduced_S2_exponential}
+	\epsilon_3 = S_1 + S_2 + S + S' + l + J_f.
+\end{equation}
+
+As well as $\mu_p$, which is the proton magnetron, is replaced by the magnetron $\mu_X$ of the nucleus of interest $X$. \\
 
 Cross section deduced potential  $\Cfusion$ and $\Ofusion$ reactions (exp(11)-1 potential approximated to exp(-1) empirical potential + Liquid drop radius )\cite{bass_1977}. \\
 
+A nuclear empirical potential formula is given by: 
+
+\begin{equation}\label{potential_empirical_exp1}
+	V_n(s) = - \frac{da_2}{r^2_0} \frac{R_1R_2}{R_1 + R_2} 	\exp \left( - \frac{s}{d}\right),
+\end{equation}
+
+where $R_1$ and $R_2$ are estimations for the radius of the interacting nuclei and $s$ is defined as: 
+
+\begin{equation}\label{potential_empirical_exp1_s}
+	s = r - R_1 - R_2,
+\end{equation}
+
+with $s$ as the radius. A similar potential is given in terms of: 
+
+\begin{equation}\label{potential_empirical_exp11}
+	V_n(s) = - \frac{R_1R_2}{R_1 + R_2} g(s),
+\end{equation}
+
+where $g(s)$ is given by:
+
+\begin{equation}\label{potential_empirical_exp11_g}
+	g(s) = \frac{1}{A\exp (s/d_1) + B\exp(s/d_2)},
+\end{equation}
+
+with $A$ and $B$ as amplitude like terms and $d_1$ with $d_2$ as the pair of diffuseness parameters. \\
+
 Review nuclear potentials heavy-ion reactions (Woods-Saxon and double folding potentials (SPP) + empirical potentials  + mean field model Skyrme Hartree - Fock) + poly6 + polyfrac for potential barriers \cite{nandi_swami_gupta_kumar_chakraborty_manjunatha_2022}. \\
+
+Empirical formulas are presented with a vast variety of uses. The expansion variable $z$ is given by:
+
+\begin{equation}\label{eq:potential_empirical_z}
+	z = \frac{Z_pZ_t }{A_p^{1/3} + A_t^{1/3}},
+\end{equation}
+
+where the pairs $Z_p$ with $Z_t$ and $A_p$ with $A_t$ corresponds to the atomic and mass numbers of the projectile and target nucleus respectively.
 
 \subsubsection{Woods-Saxon potentials} \label{sub:potential_effective_woodsSaxon}
 
@@ -5301,7 +5516,7 @@ Effective field theory $\dRadiativeCapture$ and three body interaction, M1 is th
 Pionless EFT for the $\dRadiativeCapture$ reaction. 
 
 \begin{equation}\label{eq:micro_EFT_lagrangian_extended}
-	\mathcal{L} = \mathcal{L}_N  -  \mathcal{L}_d -   \mathcal{L}_t +  \mathcal{L}_{d-\mathrm{C}}  +   \mathcal{L}_{t-\mathrm{C}} + \mathcal{L}_B + \mathrm{L}_{\mathcal{NNN}}
+	\mathcal{L} = \mathcal{L}_N  -  \mathcal{L}_d -   \mathcal{L}_t +  \mathcal{L}_{d-\mathrm{C}}  +   \mathcal{L}_{t-\mathrm{C}} + \mathcal{L}_B + \mathcal{L}_{\mathrm{NNN}}
 \end{equation}
 
 The core of the effective field theory is the formulation of a Lagrangian $\mathcal{L}$ with enough information to account for the symmetries of the system and sufficiently detailed to describe the relevant interactions of the system. For the upcoming definitions, natural units are used. Then, $\hbar = 1$, as it usually happens with effective field theory. The first Lagrangian to be introduced, the nucleon lagrangian $\mathcal{L}_N$, is given by:
