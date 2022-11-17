@@ -71,7 +71,9 @@ Comment on the applicability of the models for each reaction. Comparison between
 
 \chapter*{Acknowledgments}
 
-Mom for everything.
+Mom for everything. \\
+
+Professor Neelima. 
 
 \clearpage
 
@@ -2065,42 +2067,425 @@ This reaction plays important roles on other processes and depends heavily on te
 
 12C + 12C Wave packet dynamics (with two core shell model) \cite{diaz-torres_wiescher_2018} \\
 
-nonresonant Bayersian (modified S-factor $S^{*}$ + Woods-Saxon potential + statistical Hauser-Feshbach formula for nuclei evaporation decay)\cite{li_fang_bucher_li_ru_tang_2020} \\
+Ansatz
+
+\begin{equation}\label{eq:middleFusion_wavePacket_ansatz}
+	\Psi = \chi \psi.
+\end{equation}
+
+Transmission coefficient.
+
+\begin{equation}\label{eq:middleFusion_wavePacket_transmission}
+	T(E_k) = - \frac{8}{\hbar v_l} \epsilon^4 \frac{\langle \chi  | \mathcal{Im}(\hat H) | \chi \rangle  }{P_0(E_k)}.
+\end{equation}
+
+
+Collective kinetic energy operator 
+
+\begin{equation}\label{eq:middleFusion_wavePacket_collectiveKinetic}
+	\hat T.
+\end{equation}
+
+Collective potential energy operator
+
+\begin{equation}\label{eq:middleFusion_collectivePotential}
+	E = E_c + E_n.
+\end{equation}
+
+
+nonresonant Bayesian (modified S-factor $S^{*}$ + Woods-Saxon potential + statistical Hauser-Feshbach formula for nuclei evaporation decay)\cite{li_fang_bucher_li_ru_tang_2020} \\
+
+Hauser-Feshbach 
+
+\begin{equation}\label{eq:middleFusion_hauserFeschbach}
+	\sigma_{\alpha \alpha'} = \frac{\pi}{\lambda^2_\alpha} \sum_{J} \frac{2J+1}{(2I_1 + 1)(2I_2 + 1)} \frac {\sigma T_{l}(\alpha)\sigma T_{l'}(\alpha ')}{\sigma T_{l''}(\alpha '')} 
+\end{equation}
 
 Modified Sfactor (Woods-Saxon + Bayesian analysis + Metopolis-Hastings algorithm ) \cite{luo_wen_lin_yang_jia_yang_huang_chang_zhang_yang_et_2022} \\
 
-Trojan horse (with renormalization of S-factors) \cite{mukhamedzhanov_pang_kadyrov_2019}
+Bayesian theorem
+
+ \begin{equation}\label{eq:middleFusion_bayesian_theorem}
+	P(x | D) = \frac{P( D | x) P(x)}{P(D)}.
+\end{equation}
+
+Statistical expectation values
+
+ \begin{equation}\label{eq:middleFusion_bayesian_expectation}
+	\langle S \rangle = \int S(x) P(x | D) dx.
+\end{equation}
+
+Trojan horse (with renormalization of S-factors) \cite{mukhamedzhanov_pang_kadyrov_2019} \\
+
+Single differential cross section
+
+ \begin{equation}\label{eq:middleFusion_THM_singleDifferential}
+	\frac{d\sigma}{d\Omega}
+\end{equation}
+
+S-factor plane wave approximation
+
+ \begin{equation}\label{eq:middleFusion_THM_sfactorFormula_planeWave}
+	S(E) = \frac{N_F}{K(E)} 
+\end{equation}
+
  (with DWBA and R-matrix mentions) \cite{mukhamedzanov_2022} \\
+ 
+Triple differential cross section 
+
+ \begin{equation}\label{eq:middleFusion_THM_tripleDifferential}
+	\frac{d^3\sigma}{d\Omega^3}
+\end{equation}
+
+Double differential cross section 
+
+ \begin{equation}\label{eq:middleFusion_THM_doubleDifferential}
+	\frac{d^2\sigma}{d\Omega^2}
+\end{equation}
+
+Astrophysical S-factor THM formula
+ 
+ \begin{equation}\label{eq:middleFusion_THM_sfactorFormula}
+ 	S(E) = \frac{J_F}{J_xJ_A} 
+ \end{equation}
   
 full-microscopical (density functional +  antisymmetrized molecular dynamics + reduced width amplitude) \cite{taniguchi_kimura_2021} \\
 
+Psi function (resonance function)
+
+\begin{equation}\label{eq:middleFusion_AMD_waveFunction}
+	\Psi = \sum c P^{J}_{MK} \Phi.
+\end{equation}
+
+Phi function of equation (1).
+
+\begin{equation}\label{eq:middleFusion_AMD_waves}
+	\Phi = \frac{1 + \pi P_r}{2} \hat{\mathcal{A}} \{\phi_1 ... \phi_A\}.
+\end{equation}
+
+Overlap equation . 
+
+\begin{equation}\label{eq:middleFusion_decayRate_overlap}
+	y^{(A_1 + A_2)}_l(a) = \sqrt {\frac{24}{A_1}} \langle \frac{ \delta(r - a)}{a^2} | \Psi \rangle
+\end{equation}
+
+
+Ratio $\theta$.
+
+\begin{equation}\label{eq:middleFusion_decayRate_theta}
+	\theta^{2}{A_1 + A_2} = \frac{a}{3} |ay^{(A_1 + A_2)}_l(a)|^2.
+\end{equation}
+
+Decay.
+
+\begin{equation}\label{eq:middleFusion_decayRate}
+	\Gamma_{\mathrm{A_1 + A_2}} = 2 P_l(ka) \frac{3\hbar^2}{2\mu a^2} \theta^{2}{A_1 + A_2}.
+\end{equation}
+
 multichannel folding ($3\alpha$ microscopical calculated densities + optical + Woods-Saxon potential + coupled channels R-matrix) \cite{assuncao_descouvemont_2016} \\
+
+Fusion probability 
+
+\begin{equation}\label{eq:middleFusion_fusion_probability}
+	P_J(E) = - \frac{2}{\hbar v} \sum_{c} \int {|g^{J\pi}_c(r)|^2 W_{cc}(r) dr}.
+\end{equation}
+
+Fusion probability approximation
+
+\begin{equation}\label{eq:middleFusion_fusion_probability_approximation}
+	P_J(E) = 1 - |U^{J}|^2,
+\end{equation}
+
+with $ |U^{J}|^2$ as the elastic contribution to the collision matrix.
 
 screening effects (WKB approximation + coupled channel formalism + Double folding cluster + exp2 + selected density distributions + cosine damped screening potential [stronger screening effect]) \cite{koyuncu_soylu_2018} \\
 
+Proximity analytical potential 
+
+\begin{equation}\label{eq:middleFusion_analytical_proximity}
+	V_{\mathrm{N}}(\zeta) = 4\pi\gamma b \frac{C_1C_2}{C_1 + C_2} \phi(\zeta).
+\end{equation}
+
+Polynomial and exponential splitted behaviors are given for the 
+$\phi(\zeta)$ function as: 
+
+\begin{equation} \label{eq:middleFusion_analytical_proximity_phi}
+		\phi (\zeta) = 	\left\{\begin{array}{l}
+		\begin{split}
+			\frac{1}{2}(\zeta - \zeta_0)^2 - a_1(\zeta - \zeta_0)^3, \quad & \zeta \le \zeta_1 \\ 
+			-a_2\exp {-\zeta/a_3}, \quad & \zeta > \zeta_1
+		\end{split}
+	\end{array}\right.
+\end{equation}
+
+Damped potential 
+
+\begin{equation}\label{eq:middleFusion_screening_dampedPotential}
+	V(r) = \frac{Z_1Z_2 e^2}{r}(1+ br)\exp {\left(-\frac{r}{\delta_D}\right)}.
+\end{equation}
+
+Debye screening length
+
+\begin{equation}\label{eq:middleFusion_screening_debayWavelegth}
+	\lambda_D = \sqrt{\frac{\epsilon_0kT}{ne^2}}.
+\end{equation}
+
 correlation between carbon fusion reactions ($\Cfusion[12][12]$, $\Cfusion[12][13]$ and  $\Cfusion[13][13]$, coupled channel calculations, ingoing wave boundary condition with various potentials [Akyüz-Winther and M3Y with repulsive core], energy peak values $\Cfusion$ resonances) \cite{notani_esbensen_fang_bucher_davies_jiang_lamm_lin_ma_martin_et_2012}
+
+Measurments of cross sections gives an expression:
+
+\begin{equation}\label{eq:middleFusion_experimental_crossSection}
+	\delta (E) = \frac{1}{\epsilon} \frac{M_T}{fN_A} \frac{dY}{dE} \frac{dE}{d(\rho X)}, 
+\end{equation}
+
+where $\epsilon$ is the detector efficiency, $M_T$ is the molecular weight of the target, $f$ corresponds to the molecular fraction of the nucleus, $N_A$ is the Avogadro number and $dE/d(\rho X)$ is a simulated stopping power. The actual measurable variable is the energy derivative of the thick-targer yield $dY/dE$.
+
 constraint 12C + 12C based on 12C + 13C reaction (potentials coupled channels M3Y with repulsive core + time dependent Hartree Fock + São Paulo folded KNS potential +wave packet dynamics ) \cite{zhang_wang_tudor_bucher_burducea_chen_chen_chesneanu_chilug_gasques_et_2020} \\
 
-16O + 16O cross sections on models (SPP like barrier penetration model vs coupled channel model + [Zero point motion] inelastic couplings to vibrational bands + molecular effects with Woods-Saxon two core shell model + reduced and cranking masses) \cite{duarte_gasques_oliveira_zagatto_chamon_medina_added_seale_alcantara-nunez_rossi_et_2015} on channels and fusion cross section 
+The $\mathrm{{}^{12}C + {}^{13}C}$ reactions constraint the S-factor for $\Cfusion$ processes and, in a wide range of interest, the former has resonances with similar behavior than the latter. Particularly, one of the main fusion channels is given by: 
+
+\begin{equation}\label{eq:middleFusion_12C13C}
+	\mathrm{{}^{12}C + {}^{13}C \rightarrow p + {}^{24}Na}.
+\end{equation} 
+
+
+16O + 16O cross sections on models (SPP like barrier penetration model vs coupled channel model + [Zero point motion] inelastic couplings to vibrational bands + molecular effects with Woods-Saxon two core shell model + reduced and cranking masses) on channels and fusion cross section  \cite{duarte_gasques_oliveira_zagatto_chamon_medina_added_seale_alcantara-nunez_rossi_et_2015} 
+
+The total cross section $\sigma$ has the form of the sum of all the cross sections for every $c$. The expression is usually given by:
+
+\begin{equation}\label{eq:middleFusion_experimental_crossSection_channelSum}
+	\sigma = \Gamma \sum_{c} {\sigma^{(\gamma)}_{c}}, 
+\end{equation}
+
+where $\sigma^{(\gamma)}_{c}$ is the cross section extracted from $\gamma$-ray spectroscopy for each $c$ channel, as well as $\Gamma$ is a normalization constant. 
+
+Each cross section term is estimated by:
+
+\begin{equation}\label{eq:middleFusion_experimental_crossSection_channelSum_c}
+	\sigma^{(\gamma)}_{c} = \frac{Y^{(\gamma)}_{c} }{N_0N_1\beta^{(\gamma)}_{c}  \epsilon^{(\gamma)}},
+\end{equation}
+
+with $Y^{(\gamma)}_{c}$, $\beta^{(\gamma)}_{c}$  as the yield and branching factor for the channel $c$ respectively. Additionally, $\epsilon^{(\gamma)}$ corresponds to the  absolute efficiency of the detector and the pair $N_0$ with $N_1$ are related with the incident and target nuclei number per unit area. \\
+
 \cite{kuronen_keinonen_tikkanen_1987} $\alpha$, $n$, $p$ and $2p$, $2\alpha$, $\alpha p$, $\alpha n$. \\
 
-oxygen isotopes fusion $\Ofusion$, $\Ofusion[16][17]$, $\Ofusion[16][18]$ with elastic and inelastic data \cite{thomas_chen_hinds_meredith_olson_1986}
+All the channels related to the $\Ofusion$ are given by: 
+
+\begin{equation}\label{eq:middleFusion_experimental_16O16O_channels}
+	\begin{split}
+		\Ofusion &\rightarrow \mathrm{n + {}^{31}S} \\
+						&\rightarrow \mathrm{2p + {}^{30}Si} \\
+						&\rightarrow \mathrm{p + {}^{31}P} \\
+						&\rightarrow \mathrm{\alpha + p + {}^{27}Al} \\
+						&\rightarrow \mathrm{\alpha + {}^{28}Si} \\
+						&\rightarrow \mathrm{2\alpha + {}^{24}Mg} \\
+						&\rightarrow \mathrm{n + p + {}^{30}P}. \\
+	\end{split}
+\end{equation}
+
+oxygen isotopes fusion $\Ofusion$, $\Ofusion[16][17]$, $\Ofusion[16][18]$ with elastic and inelastic data \cite{thomas_chen_hinds_meredith_olson_1986} \\
+
+Additionally, $\Ofusion[16][17]$, $\Ofusion[16][18]$ also have many channels. The former has associated the following list: 
+
+\begin{equation}\label{eq:middleFusion_experimental_16O17O_channels}
+	\begin{split}
+		\Ofusion[16][17] &\rightarrow \mathrm{2n + {}^{31}S} \\
+		&\rightarrow \mathrm{2p + {}^{31}Si} \\
+		&\rightarrow \mathrm{p + {}^{32}P} \\
+		&\rightarrow \mathrm{\alpha + p + {}^{28}Al} \\
+		&\rightarrow \mathrm{\alpha + {}^{29}Si} \\
+		&\rightarrow \mathrm{2\alpha + {}^{25}Mg} \\
+		&\rightarrow \mathrm{n + p + {}^{31}P}. \\
+	\end{split}
+\end{equation}
+
+Reciprocally, the latter is related with the reactions:
+
+
+\begin{equation}\label{eq:middleFusion_experimental_16O18O_channels}
+	\begin{split}
+		\Ofusion[16][18] &\rightarrow \mathrm{2n + {}^{32}S} \\
+		&\rightarrow \mathrm{2p + {}^{32}Si} \\
+		&\rightarrow \mathrm{2p + n + {}^{31}Si} \\
+		&\rightarrow \mathrm{p + {}^{33}P} \\
+		&\rightarrow \mathrm{\alpha + p + {}^{29}Al} \\
+		&\rightarrow \mathrm{\alpha + {}^{30}Si} \\
+		&\rightarrow \mathrm{\alpha + n + {}^{29}Si} \\
+		&\rightarrow \mathrm{2\alpha + {}^{26}Mg} \\
+		&\rightarrow \mathrm{n + p + {}^{32}P}. \\
+		&\rightarrow \mathrm{2n + p + {}^{31}P}. \\
+	\end{split}
+\end{equation}
+
+
 coupled channels potential model calculation (barrier penetration model + incoming wave boundary condition) \cite{guimin_deji_xiaowu_1992}. \\
 
+\begin{equation}\label{eq:middleFusion_fusionCrossSection}
+	\sigma_f(E) = \sum_{m} {|U_{m0}|^2 \frac{\pi \hbar^2}{2(D_p + D_c)2\mu E} \ln {1 + \exp {(-2K_0)}} },
+\end{equation}
+
+where $D_p$, $D_c$ and $K_0$ are model parameters. Additionally, $U_{m0}$ correspond to overlaps between the ground state and a solution of the coupled differential equation with $m$ as a projection.\\
+
 12C + 16O semi-microscopic algebraic cluster  + algebraic spectroscopic factor + coupled reaction channel (scattering reaction) + (Optical potential) SPP potential real part + Woods-Saxon imaginary potential + coupling schemes  \cite{ferreira_lubian_linares_ermamatov_yepez-martinez_hess_2019}
+
+Clusters are modeled with creation and annihilation operators, which are labeled as $\pi^{\dagger}_m$ and $\pi_m$ respectively. Relative motion is represented by a group $U(4)$ and generators incorporate Pauli matrices $\sigma$. The representation of the nucleus $(\lambda, \mu)$ is given by:
+
+\begin{equation}\label{eq:middleFusion_algebraic_representation}
+	(\lambda, \mu) = (\lambda_1, \mu_1) \otimes  (\lambda_2, \mu_2) \otimes (n_\pi, 0),
+\end{equation}
+
+where $(\lambda_1, \mu_1)$ and $(\lambda_2, \mu_2)$ are the representations of the clusters whereas $ (n_\pi, 0)$ contains information on the boson mediator. \\
+
+The three relevant groups when modeling the system algebraically are $SU(3)$, $O(4)$ and $O(3)$. Particularly, the expression for the Hamiltonian $H$ is: 
+
+\begin{equation}\label{eq:middleFusion_algebraic_hamiltonian}
+	H = xyH_{SU(3)} + y(1-x)H_{O(4)} + (1-y)H_{O(3)}.
+\end{equation}
+
 low-energy resonances (Potential model + two Woods-Saxon models + deformation) \cite{torilov_maltsev_zherebchevsky_2021} \\
+
+Multiple resonances are present in the $\mathrm{{}^{12}C + {}^{16}O}$ reaction. The total cross section $\sigma^{(\mathrm{tot})}$ is given by superimposing the resonant and nonresonant contributions. Namely, 
+
+\begin{equation}\label{eq:middleFusion_sumResonantNonResonant}
+	\sigma^{(\mathrm{tot})} = \sigma^{(\mathrm{res})} + \sigma^{(\mathrm{non-res})},
+\end{equation}
+
+where $\sigma^{(\mathrm{res})}$ and $\sigma^{(\mathrm{non-res})}$ are the resonant and non resonant cross sections respectively. \\
 
 Gross structures 12C + 16O based on yields of 12C + 16O and 12C + 18O \cite{chan_bohn_vandenbosch_sielemann_cramer_bernhardt_bhang_chiang_1979} \\
 
+Channels for the $\mathrm{{}^{12}C + {}^{18}O}$ reaction are given by:
+
+\begin{equation}\label{eq:middleFusion_experimental_12C18O_channels}
+	\begin{split}
+		\mathrm{{}^{12}C + {}^{16}O} &\rightarrow \mathrm{p + {}^{27}Al} \\
+		&\rightarrow \mathrm{2p + {}^{26}Mg} \\
+		&\rightarrow \mathrm{\alpha + 2p + {}^{22}Ne} \\
+		&\rightarrow \mathrm{\alpha  + {}^{24}Mg} \\
+		&\rightarrow \mathrm{n + 2p + {}^{25}Mg} \\
+		&\rightarrow \mathrm{{}^{28}Si^{*}} \\
+	\end{split}
+\end{equation}
+
 Selected oxygen-oxygen and oxygen-carbon reactions with experimental data and model discussion + Liquid drop model parametrization + (exp11)-1 potential  \cite{kovar_geesaman_braid_eisen_henning_ophel_paul_rehm_sanders_sperr_et_1979}
+
+The fusion cross section $\sigma_F$ is given by:
+ 
+\begin{equation}\label{eq:middleFusion_empirical_crossSection_Parametrized}
+	\sigma_F(E) = \pi R_b^2 \left(1 - \frac{V_b}{E}\right),
+\end{equation}
+
+with $R_b$ and $V_b$ as the radius and potential barrier respectively. This barrier can be further parametrized with the Liquid drop model as: 
+
+\begin{equation}\label{eq:middleFusion_empirical_barrier_Parametrized}
+	V_b = \frac{Z_1Z_2e^2}{R + a + d},
+\end{equation}
+
+where $R = r_0 (A^{1/3}_1 + A^{1/3}_2)$ is the radius and $d$ corresponds to the distance between the surfaces at the barrier. Additionally, the term $a$ is related to the range of the potential.
+
+
 Fusion evaporation $\mathrm{{}^{16-18}O + {}^{16}O}$ and $\mathrm{{}^{16, 18}O+ {}^{12-13}C}$ reactions + Hauser Feshbach statistical model formalism to study $\alpha$ clustering + new level-density formula \cite{wang_ren_bai_2020} \\
+
+The expression of the evaporation width $\Gamma(E_C, J_C)$ of the ejected nucleus, which is based in the Hauser-Feschbach formalism,  is given by: 
+
+\begin{equation}\label{eq:middleFusion_evaporationWidth}
+	\Gamma(E_C, J_C) = \frac{1}{2 \pi \rho_C(E, J)} \int \sum_{S = |S_B -S_b|}^{S_B + S_b} \sum_{l = |J_C - S|^{J_C+S}} {T_l(\epsilon) \rho_B(E_B, S, B)},
+\end{equation}
+
+where $E_c$ and $J_c$ as the excitation energy and total angular momentum of the compound nucleus. On the other hand, $\epsilon$ corresponds to the emission energy while $S_b$ and $l$ are the spin and orbital angular momentum of the emitted $b$ nucleus. Finally, the remaining nucleus $B$ has energy $E_B$ and total angular momentum $J_B$.\\
+
+Then, densities are parametrized with splitted angular momentum and energy dependence as: 
+
+\begin{equation}\label{eq:middleFusion_density}
+	\rho(E, J) = \rho_1(J)\rho_2(E),
+\end{equation}
+
+where $\rho_1(J)$ is estimated, within the Gilbert-Cameron level density formula as:
+
+\begin{equation}\label{eq:middleFusion_density_rhoJ}
+	\rho_1(J) = \frac{2J + 1}{2\sigma^2} \exp {\left( \frac{- J(J+1)}{2\sigma^2}\right)},
+\end{equation}
+
+with $\sigma$ as a model parameter with a role closely related to the standard deviation. Meanwhile,  $\rho_2(J)$ has the form:
+
+\begin{equation}\label{eq:middleFusion_density_rhoE}
+	\rho_2(E) = 	\left\{\begin{array}{l}
+		\begin{split}
+			\frac{1}{T} \exp {\left( \frac{E - E_0}{T}\right)}, \quad & 	E < E'\\ 
+		 	\frac{\exp {2 \sqrt{a(E - \Delta)}}}{12\sigma \sqrt{2} a^{1/4}(E - \Delta)^{5/4}} \quad &  E \ge E',  \\ 
+		\end{split}
+	\end{array}\right.
+\end{equation}
+
+where the parameters $T$ and $E_0$ are determining by imposing smoothness and continuity at $E = E'$, which corresponds to the energy correspondingly of the connection formula. Additionally, $\Delta$ is the correction term for energy. \\
 
 12C + 12C and 16O + 16O density dependent M3Y nucleon interaction $3\alpha$ microscopical calculation + resonant group method (optical potential with real: coupled-channel [folded] with nuclear densities and imaginary: Woods-Saxon + R-matrix solving)  \cite{assuncao_descouvemont_2015} \\
 
+A coupled wave function $u^{J\pi}_c(r)$ is obtained by solving the differential equation: 
+
+\begin{equation}\label{eq:middleFusion_coupledChannels}
+	- \frac{\hbar^2}{2\mu} \left[ \frac{d^2}{dr^2} - \frac{l(l+1)}{r^2}\right]u^{J\pi}_c(r) + \sum_{c'}{V^{J\pi}_{cc'} u^{J\pi}_{c'} } = (E - E^{c}_1 - E^{c}_2) u^{J\pi}_c(r),
+\end{equation}
+
+where $E^{1}_{c}$ and $E^{2}_{c}$ are the energies of the reactant nuclei. Additionally, the imaginary term of the optical potential is given by a Woods-Saxon like term with the shape:
+
+\begin{equation}\label{eq:middleFusion_coupledChannels_opticalPotential}
+	W_{cc'}(r) = - \frac{W_0}{1 + \exp { \frac{r - R_0}{a}}} \delta_{cc'}.
+\end{equation}
+
 12C and 24Mg resonances (microscopical cluster theory + 3 cluster system 1 core, 2 bodies - $\alpha$ clustering + resonant group method / generator coordinate method + no-microscopical hyperspherical formalism + resonant analysis models) \cite{descouvemont_2021} \\
+
+The $\mathrm{{}^{12}C}$ and $\mathrm{{}^{24}Mg}$ can be modeled as a three cluster nuclei with the form $\alpha + \alpha + \alpha$ and $\mathrm{{}^{16}O + \alpha + \alpha}$ respectively. \\
+
+The Jacobi coordinates for the three body model are given as: 
+
+\begin{equation}\label{eq:middleFusion_threeBody_cluster_x}
+	\vec x = \sqrt{ \frac{A_1A_2}{A_1 + A_2}} \vec r 
+\end{equation}
+
+and 
+
+\begin{equation}\label{eq:middleFusion_threeBody_cluster_y}
+	\vec y = \sqrt{ A_c\frac{A_1A_2}{A_c + A_1 + A_2}} \vec R, 
+\end{equation}
+
+where $A_c$, $A_1$ and $A_2$ correspond to the mass numbers of the core and the valence clusters respectively. Then, the wave function assumes the shape: 
+
+\begin{equation}\label{eq:middleFusion_threeBody_waveFunction}
+	\Psi^{JM\pi} = \sum_{l_xl_y} \sum_{K = 0}^{\infty} { \hat{ \mathcal{A}} {\phi_1 \phi_2 \phi_3}  \mathcal{Y}^{l_x l_y}_{KJM}(\Omega^4) \chi^{J\pi}_{l_x l_y K}(\rho}.
+\end{equation}
+
+There are various approaches to include resonances. One is to introduce a rotation in position and momentum space. This converts the Schrödinger equation as: 
+
+\begin{equation}\label{eq:middleFusion_threeBody_resonances_rotation}
+	H(\alpha) \Psi (\alpha) = E(\alpha) \Psi (\alpha),
+\end{equation}
+
+where $\theta$ corresponds to the rotation angle. The advantage of this strategy, which is referred as the complex scaling method, is that states with resonances are not affected by the transformation. Particularly, the eigenvalues are given by: 
+
+\begin{equation}\label{eq:middleFusion_threeBody_resonances_rotation_eigenValues}
+	E(\theta) = E_R - i \frac{\Gamma}{2},
+\end{equation}
+
+where $E_R$ and $\Gamma$ correspond to the energy peak and width of the resonances.\\
+
+Alternatively, under the complex absorbing potential method, the Hamiltonian can be modified by introducing a new term accountable for the resonant behavior. Such transformation has the form: 
+
+\begin{equation}\label{eq:middleFusion_threeBody_resonances_complexAbsorption}
+	H(R', R) \rightarrow H(R, R') - i \eta W(R) \delta(R - R'),
+\end{equation}
+
+with the complex potential term as: 
+
+\begin{equation}\label{eq:middleFusion_threeBody_resonances_complexAbsorption_potential}
+	 W(R) = \theta(R - R_0) (R - R_0)^{\beta},
+\end{equation}
+
+where $R_0$ relates to a radius free parameter and $\theta$ corresponds to the step function and the exponent $\beta = 4$ usually. \\
 
 Fusion hidrance (steep fall in fusion cross section + coupled-channels [CCFULL code] model interpretation + Woods-Saxon + vibrational coupling) 12C + 24Mg reaction \cite{montagnoli_stefanini_jiang_colucci_goasduff_brugnara_mazzocco_siciliano_scarlassara_corradi_et_2020} 
 
+The S-factor achieves a maximum in reactions like $\mathrm{{}^{12}C + {}^{24}Mg}$ as well as in the  $\mathrm {{}^{12}C + {}^{30}Si}$ cases. This happens at subbarrier energies.
 
 \section{Heavy nuclei reactions } \label{sec:heavyReactions}
 
@@ -4629,11 +5014,70 @@ where $V_0$ represents the potential depth, $a$ the parametrization and $R$ a co
 
 Further details about capture reactions (potential model Woods-Saxon + spin-orbit coupling + ANC + SF) with single-particle states is given by \cite{huang_bertulani_guimaraes_2010}. \\
 
+The asymptotic behavior is given by: 
+
+\begin{equation}\label{eq:potential_uc}
+	u_{\alpha_c}(r \rightarrow \infty) = i \sqrt{\frac{\mu}{2\pi k \hbar^2}}[H^{-}_l(r) - S_{\alpha_c}H^{+}_l(r)]\exp {i\sigma_l(E)},
+\end{equation}
+
+where $H^{-}_l(r)$ and $H^{+}_l(r)$ are the incoming and outgoing Hankel functions. Additionally, $S_{\alpha_c}$ corresponds to the S-matrix and is defined in terms of the shift factor as: $S_{\alpha_c} = \exp{2i\delta_{\alpha_c	}}(E)$. \\
+	
+The general expression of the radiative capture is given by:
+
+\begin{equation}\label{eq:potential_radiativeCapture}
+	\sigma = \frac{(2\pi)^3}{k^2} \left(\frac{E_\gamma}{\hbar c}\right)^{2L + 1} ABC,
+\end{equation}
+
+with $A$ given by the spin factor:
+
+\begin{equation}\label{eq:potential_radiativeCapture_A}
+	A = \frac{2(2I_a + 1)}{(2I_n + 1)(2I_x + 1)}.
+\end{equation}
+
+Also, $B$ takes into account the orbital angular momentum degeneracy factor as: 
+
+\begin{equation}\label{eq:potential_radiativeCapture_B}
+	B =  \frac{L+1}{L[(2L+1)!!]^2}.
+\end{equation}
+
+Additionally, the term with the elements of the transition matrix is given by:
+
+\begin{equation}\label{eq:potential_radiativeCapture_C}
+	C =  \sum_{J_Cj_cI_c} (2J_c + 1) \left \{  \begin{matrix}
+		j_c & J_c & I_x \\
+		J_b & j_b & L
+	\end{matrix} \right \}^2 |\langle l_cj_c || \mathcal{O}_{\pi L} || l_b j_b \rangle|^2,
+\end{equation}
+
+where $|\langle l_cj_c || \mathcal{O}_{\pi L} || l_b j_b \rangle|$ corresponds to the transition matrix with operator $| \mathcal{O}_{\pi L}$ for electric $\pi = E$ and magnetic $\pi = M$ choices.\\
+
 Coupled channels  E1, M1 and E2 transitions (Woods-Saxon + spin-orbit coupling + spectroscopic factor) \cite{bertulani_1996}. \\
+
+In the context of $\BeRadiativeCapture$, the $J = 1^+$ state holds for the M1 transition while E1 admits values of $l=0, 2$. \\
+
+Additionally, wave packets can be constructed to facilitate computation convergence. Given a set of functions $\{\phi_{Ejl}\}$, the wave packet is expression is given by:
+
+\begin{equation}\label{eq:potential_wavePacket}
+	\phi_{E_0jl}(r) = \frac{1}{\sqrt{\Delta E}} \int_{E_0 - \Delta E}^{E_0 + \Delta E} {\phi_{Ejl}(r)dE},
+\end{equation}
+
+where the packet is centered at $E_0$ with diffuseness parameter $\delta E$.
 
 9Be radiative capture. Mostly E1 transition.  (modified Woods-Saxon + spin-orbit + SF + ANC) \cite{kabir_nabi_2021}. \\
 
+The potential, with spin orbit coupling, used to modeling of the S-factor of reaction $\BeRadiativeCapture$ is given by:
+
+\begin{equation}\label{eq:potential_woodsSaxon_spinOrbit}
+	V_{\mathrm{WS+SO}}(r) = -[V_0 - V_{LS} (L \cdot S) \frac{1}{m^2_\pi r} \frac{d}{dr}]  \frac{1}{1 + q \exp {\left(\frac{r - R_N}{a}\right)}}.
+\end{equation}
+
 11C radiative capture (modified Woods-Saxon + spin orbit coupling)\cite{kabir_irgaziev_nabi_sagheer_2022}. \\
+
+Cross section is given by:
+
+\begin{equation}\label{eq:potential_radiativeCapture_crossSection_BJ}
+	\sigma_{N. j_f} = \frac{8\pi K e^2}{\hbar^2 k^2} \frac{\mu}{(2S_1 + 1)(2S_2 + 1)} \frac{J + 1}{ J[(2J + 1)!!]^2} B^2_J \sum_{L_0J_0} {P^2_J I^2_J}.
+\end{equation}
 
 On the other hand, it is relevant, specially at low energies, the inclusion of angular momentum effects in the potential. In order to account for that effect, there is the potential with angular moment. \\
 
@@ -4663,7 +5107,31 @@ In addition to the Woods-Saxon and generalized Woods-Saxon potential, it is poss
 
 As an example, a Woods-Saxon potential can be solved analytically with $l = 0$ with cut off procedure \cite{salamon_baran_vertse_2016}. \\
 
+The Woods-Saxon potential can be solved analyticaly. However, the expression is complex and cumbersome. \\
+
+A cut off for a Woods-Saxon can be implemented with potentials as:
+
+\begin{equation}\label{eq:potential_woodsSaxon_cutOFF}
+	V_{\mathrm{CWS}} = - V_1 \theta(- (r- R_{max})) \frac{1}{1 + \exp {\frac{r - R}{a}}},
+\end{equation}
+
+where $R_{max}$ corresponds to the cut off radius.\\
+
 coupled channels and modified energy dependent diffuseness parameter for modified Woods-Saxon \cite{singh_sukhvinder_kharab_2013A} \\
+
+Rotation operator is given by: 
+
+\begin{equation}\label{eq:potential_rotation}
+	\hat {O}_R = \beta_2R_tY_{20} + \beta_4 R_T Y_{40}.
+\end{equation}
+
+Vibration operator with the form: 
+
+\begin{equation}\label{eq:potential_vibration}
+	\hat {O}_V = \frac{\beta_\lambda}{\sqrt{4\pi}} R_T (a^\dagger_{\lambda0} + a_{\lambda0}),
+\end{equation}
+
+given $R_T$ as the empirical radius and $\beta_\lambda$ as the deformation parameters and  $a^\dagger_{\lambda0}$ with $a_{\lambda0}$ corresponds to the annihilation and creation operator pair.  \\
 
 
 In order to make the model more general, some parameters like $V_0(E)$ and $a(E)$, are made energy dependent. Recurrent formulas are reported in literature for this parameters which help to effectively.
@@ -4696,11 +5164,62 @@ Is not always the case, specially for large heavy nuclei, that the LS coupling i
 
 Optical model (Modified Woods-Saxon energy dependent) $\mathrm{{}^{12}C}$ with $A = 6$ projectile reactions + double folding São Paulo (SPP)  and double folding cluster model dynamic polarization potential + poly2 empirical formulas \cite{amer_penionzhkevich_2021}. \\
 
+A double folding potential can be hybridized with clustering for selected reactions. For instance, in the case of $\mathrm{{}^{6}Li + {}^{12}C}$, can be represented as assuming $\mathrm{{}^{12}C}$ as the core interacting with the composed $\alpha + d = \mathrm{{}^{6}Li}$ nucleus as:
+
+\begin{equation}\label{eq:potential_cluster_6Li12C}
+	V_{\mathrm{6Li-12C}}(\vec R) = \int \left[V_{\alpha-\mathrm{12C}} \left(\vec R - \frac{1}{3} \vec r\right) + V_{d-\mathrm{12C}}\left(\vec R + \frac{2}{3} \vec r \right) \right]  |\chi_{\alpha d} (\vec r)|^2 d\vec r,
+\end{equation} 
+
+where $\chi_{\alpha d}$ corresponds to the inter cluster wave function. Similarly, for the case of $\mathrm{{}^{6}Li + {}^{12}C}$, the potential is given by:
+
+
+\begin{equation}\label{eq:potential_cluster_6He12C}
+	V_{\mathrm{6He-12C}}(\vec R) = \int \left[V_{t-\mathrm{12C}} \left(\vec R - \frac{1}{2} \vec r\right) + V_{t-\mathrm{12C}}\left(\vec R + \frac{1}{2} \vec r\right)  \right] |\chi_{t t} (\vec r)|^2 d\vec r .
+\end{equation} 
+
 Hill-Wheeler approximation for transmission probability and applications in fission reactions \cite{hill_wheeler_1953}. \\
+
+The barrier penetration probability is approximated by:
+
+\begin{equation}\label{eq:potential_hillWheeler}
+	P_{\mathrm{HW}}(x) = \frac{\exp(x)}{1 + \exp(x)},
+\end{equation}
+
+with the factor $x$ defined as: 
+
+\begin{equation}\label{eq:potential_hillWheeler_x}
+	x_L = \frac{E - V_B(L)}{\epsilon_0}.
+\end{equation}
 
 Hill-Wheeler approximation  application to $\mathrm{{}^{11}Li + {}^{12}C}$ reaction + optical model + Wong's formula  \cite{esbensen_2012}. \\
  
+The fusion cross section related to the Hill-Wheeler is 
+
+\begin{equation}\label{eq:potential_hillWheeler_crossSection}
+	\sigma_f = \frac{\pi \hbar^2}{2\mu E} \sum_{L} (2L + 1)   \frac{\exp(x_L)}{1 + \exp(x_L)}.
+\end{equation}
+
+On the other hand, by using the parabola approximation, it is possible to find an analytical formula for the cross section by approximating the $L$-series of equation \ref{eq:potential_hillWheeler_crossSection} with an integral. This approximation gives what is called the Wong's formula with the form:
+
+\begin{equation}\label{eq:potential_wong}
+	\sigma_f = \pi R^2 \frac{\epsilon_0}{E} \ln (1 + \exp (x_0)).
+\end{equation}
+ 
 Coupled channels + optical potential +  polarization +  Hill-Wheeler approximation  +  WKB approximation \cite{cardenas_canto_donangelo_hussein_lubian_romanelli_2002}. \\ 
+
+An alternative method when treating coupled channel matrix is by constructing a polarization potential, which is defined as: 
+
+\begin{equation}\label{eq:potential_polatization}
+	U^{(\mathrm{pol})} = \sum_\alpha {V_{0\alpha} (\vec r) G(E_\alpha, \vec r, \vec r') V_{\alpha0} (\vec r)},
+\end{equation}
+
+where the non local $U^{(\mathrm{pol})} $  depends on a local potential $V$ and the Green's function $G(E_\alpha, \vec r, \vec r')$ corresponding to the propagator, which is given by:
+
+\begin{equation}\label{eq:potential_propagator}
+	G = \frac{1}{E - QH_0Q + i\epsilon},
+\end{equation}
+
+given that $Q = 1 - P$, where $P$ is the projector and $H_0$ is related with the base Hamiltonian. \\
 
 The general form of the optical potential is given by:
 
@@ -4713,6 +5232,29 @@ where $V_R(r)$ and $W_R(r)$ correspond to the real and imaginary parts of the po
 In fact, this model is referred as optical since imaginary term is used in optics to model the damping effect of light when entering a dissipation medium. Analogously, in the optical model, the imaginary term counts for a dismissal of the probability of a particular process due to absorption to inelastic channels. \\
 
 Optical energy dependent model (parabolic approximation with analytical cross section) \cite{singh_sukhvinder_kharab_2013B}. \\
+
+The approximation is given by:
+
+\begin{equation}\label{eq:potential_parabolicApproximation}
+	V_l(r) \approx V_l - \frac{\mu \omega^2_l}{2}(r - R_l)^2,
+\end{equation}
+
+given $V_l$ is related by: 
+
+\begin{equation}\label{eq:potential_parabolicApproximation_Vl}
+	V_l  = V_B + \frac{l(l+1) \hbar^2}{2\mu r^2},
+\end{equation}
+
+where $V_B$ is the potential barrier. \\
+
+An energy dependent empirical  parametrization for the Woods-Saxon diffuseness is given by:
+
+\begin{equation}\label{eq:potential_WoodsSaxon_a_energyDependet}
+	a(E) = a_0 \left[1 + \frac{r_0}{r_1(A_P^{-1/3} + A_T^{-1/3} ) (1 + \exp (\frac{E/V_{BO} - b_1}{b_2}))}\right],
+\end{equation}
+
+where $A_P$ and $A_T$ are the mass numbers of the projectile and target nuclei respectively. The remaining of parameters are obtained by fitting.
+
 
 \subsection{Calculations}  \label{sub:potential_calculations}
 
@@ -4847,7 +5389,7 @@ The wave is said to be distorted given that it does not correspond to a plain wa
 
 Given that photons are emitted in these processes, it is essential to model the reaction as the composed effect of  all electromagnetic transitions going from a bounded to a continuum state.  \\
 
-General approach towards radiative capture calculations are given in \cite{goldhaber_weneser_1955}.\\
+General approach towards radiative capture calculations are given in electromagnetic transitions of the nuclei \cite{goldhaber_weneser_1955}.\\
 
 In fact, each transition is classified depending of its origin and multipolarity. The first criteria distinguish whether the transition has electric or magnetic nature. The second item is related to the order of the contribution in terms of the multipole expansion. For example, E1 and M1 corresponds to an electric and magnetic transition of first order, which corresponds to electric and magnetic dipoles respectively. The usual order of relevance of the contributions is given by: 
 
@@ -4968,7 +5510,7 @@ Despite the sophistication of the radiative capture model, it is usual that cert
 
 where each ${SF}_m$ correspond to the weight of the $m$th transition. \\ 
 
-Radiative interaction with nuclei is reviewed in \cite{blatt_weisskopf_1952}. \\
+Radiative interaction with nuclei is reviewed in the Blatt Weisskopf textbook \cite{blatt_weisskopf_1952}. \\
 
 Usually, this new term is obtained by experimental fitting \cite{kabir_nabi_2021, xu_takahashi_goriely_arnould_ohta_utsunomiya_2013}. \\
 
@@ -5029,7 +5571,36 @@ An illustration of the folding procedure is planned to appear in Figure \ref{fig
 
 $\Ofusion$ + inelastic and elastic scattering + coupled channels + optical model + folding + M3Y NN effective interaction \cite{hassanain_al_sebiey_2014}.  \\
 
+A deformed potential is introduced by: 
+
+\begin{equation}\label{eq:potential_deformed}
+	U^{\mathrm{DP}}_\lambda = - \delta^{U}_\lambda \frac{dU(r)}{dr},
+\end{equation} 
+
+with $\delta^{U}_\lambda$ as the deformation length, which is accountable for parametrizing the strength of this potential contribution. Alternatively, the density additional contribution is also obtained similarly with: 
+
+\begin{equation}\label{eq:potential_deformed_density}
+	\rho^{\mathrm{tr}}_\lambda = - \delta^{m}_\lambda \frac{d\rho(r)}{dr},
+\end{equation} 
+
+where the $\delta^{m}_\lambda$ is usually equivalent to its potential analogous $\delta^{U}_\lambda$, as well it is equal regardless of the kind of nucleon. These densities can be used for calculating folded potentials. \\
+
 Capture reaction review light nuclei (Double folding model + Yukawa-like + spin orbit coupling)\cite{ghasemi_sadeghi_2018}
+
+
+The $NN$ potential is given by:
+
+\begin{equation}\label{eq:potential_NN_YukawaDelta}
+	v(s) = A \frac{\exp {(-\beta_1 s)}}{\beta_1 s} + B \frac{\exp {(-\beta_2 s)}}{\beta_2 s} + C \delta(s),
+\end{equation}
+
+with $s = |\vec r + \vec r_2 - \vec r_1|$. Additionally, the spin orbit coupling term is expressed as: 
+
+\begin{equation}\label{eq:potential_M3Y_spinOrbit}
+	V_{\mathrm{SO}} = 	- \lambda_{\mathrm{SO}} \left(\frac{\hbar}{m_\pi c}\right)^2 \frac{1}{r} \frac{d}{dr} V(r),
+\end{equation}
+
+where $m_\pi$ correspond to the mass of the pion and $\lambda_{\mathrm{SO}}$ serves as an adjustable parameter for the spin-orbit coupling potential contribution.
 
 \subsection{Non-locality}  \label{sub:potential_nonlocality}
 
@@ -5596,7 +6167,21 @@ where $\Lambda$ is referred as a cut off. Then the Lagrangian can be estimated b
 Additionally, the series is truncated in order to favor a convergent estimation, which must be consistent with a physical behavior of the system. If such convergences are not achieved, a renormalization procedure shall continue. However, it is worth to be noticed that not all the theories are renormalizable, and then they are unable to handle appropriately the divergences on non-perturbative computations. \\
 
  Halo effective field theory $\BeRadiativeCapture$ reaction + coupled channel implementation + two theories with and without $\mathrm{{}^{7}Be}$ excited core  + E1 and M1 transitions + ANC + Bayesian analysis Metropoli-Hasting algorithm + polynomial empirical formula  \cite{higa_premarathna_rupak_2022}. \\
+ 
+ A second field theory consider the excited state of the reactant nucleus. In this case, the $\mathrm{{}^{7}Be^{\star}}$ of the $\BeRadiativeCapture$ reaction. The Lagrangian in given by: 
+ 
+ \begin{equation}\label{eq:special_EFT_excited}
+ 	\mathcal{L}_{\star} = \mathcal{L}_{N} + \mathcal{L}_{C} +  \mathcal{L}_{C_{\star}} +  \mathcal{L}_{\chi-1} +  \mathcal{L}_{\chi-2},
+ \end{equation}
 
+where $ \mathcal{L}_{N}$ and $ \mathcal{L}_{C}$ correspond to the free Lagrangians of the nucleon and the core. Additionally, the excited core Lagrangian $\mathcal{L}_{C_\star}$ is similar, but not equal, to a free Dirac term and it is expressed as: 
+
+\begin{equation}\label{eq:special_EFT_excited_star}
+	\mathcal{L}_{C_\star} = C^\dagger_{\star} \left(i\partial_0 - E_{\star} + \frac{\nabla^2}{2m}\right) C_{\star},
+\end{equation}
+
+with $C_{\star}$ as the excited core field, $E_{\star}$ the excitation energy and $m_c$ the core mass. Additionally, $ \mathcal{L}_{\chi-1}$ and $ \mathcal{L}_{\chi-2}$ are coupling Lagrangians that depend on the field of the propagator inverse $\chi$.
+ 
 \subsection{Hybrid models} \label{sub:special_hybrid}
 
 These models include aspects of potential, microscopical and even R-matrix models. For example, there are models with clustering and effective potentials. \\
@@ -5700,11 +6285,56 @@ where $N$ is the maximum order of the polynomial to be fitted, which accounts fo
 
 Analytical formula deduction is given by \cite{kimura_bonasera_2013}. This is motivated by introducing Gamow peak maximization and this permits the modeling of resonant S-factor in terms of the analytical formula of resonances with parameters of the resonant peak. \\
 
+One way of expressing the average flux of a reaction is given by: 
+
+\begin{equation}\label{eq:potential_sfactor_flux}
+	\langle \sigma v \rangle = \sqrt{\frac{8}{\mu \pi}} \frac{1}{(kT)^{3/2}} \int_0^{\infty} S(E) \exp {\left( - \frac{E}{kT} - \frac{b}{\sqrt E} \right) },
+\end{equation}
+
+where $b = 31.28Z_1Z_2A^{1/2} \ \mathrm{keV^{1/2}}$ . The desired parameter is optimized with the condition:
+
+\begin{equation}\label{eq:potential_sfactor_condition}
+	\frac{d}{dE} \left(- \frac{E}{kT} - \frac{b}{\sqrt{E}}\right)_{E = E_0} = 0
+\end{equation}
+
+to obtain the Gamow energy, which is defined as: 
+
+\begin{equation}\label{eq:potential_sfactor_gamowEnergy}
+	E_0 = \left(\frac{kTb}{2}\right)^{2/3}.
+\end{equation}
+
+
 This approach is based on Gamow peak approximation with strong resonances. These reactions are closely related with narrow resonances and this permits S-factor description of the resonant reactions.   \\
 
-Applications in direct capture \cite{jennings_karataglidis_shoppa_1998}. Astrophysical S-factors can present an overall increasing factors due to contributions on various transitions on multipole order.  Leading order is E1, which is electric and first order in polarity. Then, M1 < E2 < ...  Additionally, spins are included to obtain normalization coefficients, which are closely related with the spectroscopic factor. \\
+Applications in direct capture \cite{jennings_karataglidis_shoppa_1998}. \\
 
- Exchange reactions $\mathrm{(p, n)}$ kind \cite{hussein_abdullah_2020}. Enhancement factors are computed with exponential screening factor. This is further explored in Chapter \ref{ch:sfactorCalculations}. The non-screened factor corresponds to the exchange behavior with, to a certain extent, is similar to an increasing S-factor shape. \\
+The S factor is given by:
+
+\begin{equation}\label{eq:empirical_sFactor_integralFromula}
+	S = C(I^2_0 + 2I^2_2) E^3_\gamma (J_{11}\beta^2_{11} + J_{12}\beta^2_{12}) \frac{1}{1 - \exp {(-2\pi \eta(E))}},
+\end{equation}
+
+where the integrals of the form $I_l$ are given by:
+
+\begin{equation}\label{eq:empirical_sFactor_integralFromula_I.L}
+	I_l = \int_{0}^{\infty} {\frac{\psi_{0L}(r) \psi_{f}(r)}{k} r^2 dr},
+\end{equation}
+
+as well as $C$ corresponds to a model constant. The factors $J_{LS}$ are referred as spectroscopic for angular momentum $L$ and channel spin $S$. Additionally, $\psi_f$ and $\psi_{0L}$ correspond to the final and initial wave functions respectively. In s-waves are predominantly considered,  the integral $I_0$ satisfies:
+
+\begin{equation}\label{eq:empirical_sFactor_integralFromula_I.0}
+	I_0 \propto \frac{1}{E^2_\gamma}.
+\end{equation}
+
+Then, the S-factor can be expanded as a Laurent series. \\
+
+Astrophysical S-factors can present an overall increasing factors due to contributions on various transitions on multipole order.  Leading order is E1, which is electric and first order in polarity. Then, M1 < E2 < ...  Additionally, spins are included to obtain normalization coefficients, which are closely related with the spectroscopic factor. \\
+
+ Exchange reactions $\mathrm{(p, n)}$ kind \cite{hussein_abdullah_2020}. \\
+ 
+Heavy nuclei reactions are analyzed with S-factor empirical exponential fitting. The list of nuclei include: $\mathrm{{}^{45}}Sc$,  $\mathrm{{}^{48}}Ti$, $\mathrm{{}^{51}}V$, $\mathrm{{}^{52}}Cr$, $\mathrm{{}^{55}}Mn$,  $\mathrm{{}^{56}}Fe$, $\mathrm{{}^{59}}Co$, $\mathrm{{}^{62}}Ni$, $\mathrm{{}^{63}}Cu$, $\mathrm{{}^{66}}Zn$.
+ 
+ Enhancement factors are computed with exponential screening factor. This is further explored in Chapter \ref{ch:sfactorCalculations}. The non-screened factor corresponds to the exchange behavior with, to a certain extent, is similar to an increasing S-factor shape. \\
 
 Charged particle collisions non-resonant \cite{ueda_sargeant_pato_hussein_2002} in terms of approximations of reaction rates in terms of Taylor like series with derivatives on the S-factor.  Then, it is possible to approximate the Gamow high energy part with a contribution of the threshold part.  \\
 
