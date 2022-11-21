@@ -814,6 +814,90 @@ The changes of state that nuclei exhibit obey certain rules. In particular, this
 
 Selection rules. Electromagnetic interaction and resonances E1 and M1 gigantic resonances (finite amplitude method - Hartree-Fock - mean field like - random phase approximation + double magic nuclei) \cite{sasaki_kawano_stetcu_2022}.
 
+Finite amplitude method is a short cut when solving random phase approximation equations, which are obtained from linearization of the time dependent Hartree-Fock Hamiltonian. \\
+
+\begin{equation}\label{eq:micro_RPA_singleHamiltonian}
+	H = \sum_{q} (h^{\mathrm{even}}_q + h^{\mathrm{odd}}_q),
+\end{equation}
+
+where $q$ is a tag for each nucleon. The even contribution is given by:
+
+\begin{equation}\label{eq:micro_RPA_singleHamiltonian_even}
+	h^{\mathrm{even}}_q = - \vec \nabla \cdot \frac{\hbar^2}{2m^{*}_q} + U_q - i \vec W_q \dot (\vec \nabla \times \vec \sigma) + \delta_{qp} V_c
+\end{equation} 
+
+and the odd term has the form:
+
+\begin{equation}\label{eq:micro_RPA_singleHamiltonian_odd}
+	h^{\mathrm{odd}}_q = \vec S_q \cdot \vec \sigma - \frac{i}{2} (\vec \nabla \cdot \vec A_q + 2 \vec A_q \vec \nabla).
+\end{equation} 
+
+Additionally, the Coulomb potential is calculated by: 
+
+\begin{equation}\label{eq:micro_RPA_coulomb}
+	V_{C} = e^2 \int { \left( \frac{\rho_p}{|\vec r - \vec r'|} \right) d^3\vec r' } - e^2 \left(\frac{3}{\pi}\right)^{1/3}\rho^{1/3}_p.
+\end{equation} 
+
+The wave functions are linearized up to first order of a newly introduced parameter $\eta$ as: 
+
+\begin{equation}\label{eq:micro_RPA_linearization_X}
+	\psi_k(\vec r, \sigma, q) = \phi_k(\vec r, \omega, q) +  \eta \sum_{m}X^{q}_{mk} \phi_m(\vec r, \sigma, q)
+\end{equation} 
+
+and 
+
+\begin{equation}\label{eq:micro_RPA_linearization_Y}
+	\psi^{'*}_k(\vec r, \sigma, q) = \phi_k(\vec r, \sigma, q) +  \eta \sum_{m}Y^{q}_{mk} \phi^{*}_m(\vec r, \sigma, q)
+\end{equation} 
+
+Then, the master matrix equation of the random phase approximation is given by: 
+
+\begin{equation}\label{eq:micro_RPA_matrix}
+	\left[ \left(\begin{matrix}
+		A & B \\
+		B^{*} & A^{*}
+	\end{matrix}\right) - \omega \left(\begin{matrix}
+	1 & 0 \\
+	0^{*} & -1
+\end{matrix}\right)  \right] \left( \begin{matrix}
+	X^{q'}_{nj} \\
+	Y^{q'}_{nj}
+\end{matrix}\right) = - \left( \begin{matrix}
+f^{q'}_{mk} \\
+f^{q'}_{km}
+\end{matrix}\right),
+\end{equation}
+
+with $A$ and $B$ matrices referred as the RPA matrix approximation matrices, which are dependent on the wave function $\phi$ and the individual Hamiltonian $h_q$. On the other hand,  $f$ is dependent on the external potential $V_{\mathrm{ext}}$. \\ 
+
+With the finite amplitude method, equation \ref{eq:micro_RPA_matrix} simplifies to: 
+
+\begin{equation}\label{eq:micro_FAM_X}
+	\omega | X_k(\omega) \rangle = (h_0 - \epsilon_k) | X_k(\omega) \rangle + \hat {P} \{V_{ext}(\omega) + \delta h (\omega)\} |\phi_k \rangle 
+\end{equation}
+
+and 
+
+\begin{equation}\label{eq:micro_FAM_Y}
+	 - \omega \langle X_k(\omega) | =  \langle Y_k(\omega) | (h_0 - \epsilon_k) + \langle \phi_k | \{V_{ext}(\omega) + \delta h (\omega)\}  \hat{P},
+\end{equation}
+
+ where $\hat{P}$ is the projector operator on the $\{\phi_k\}$ basis, $\epsilon_\mu$ are the eigenenergies of the $h_0$ operator and the $\delta h(\omega)$ term is defined as:
+ 
+ \begin{equation}\label{eq:micro_FAM_deltah}
+ 	\delta h(\omega) = \frac{h(\langle \psi^{'}_k| \psi_k \rangle ) - h_0}{\eta}.
+ \end{equation}
+ 
+ All the previous equations were given in the reciprocal $\omega$ representation.  \\
+
+This formalism permits the calculation of giant resonances with $E1$ or $M1$ contributions, particularly the transition strength is given by: 
+
+\begin{equation}\label{eq:micro_FAM_transitionStrength}
+	\frac{dB(E, V_{\mathrm{ext}})}{dE} =  - \frac{1}{\pi} \mathrm{Im} \left[\sum_{q} \sum_{m, k} {f^{q*}_{mk}X^{q}_{mk} + f^{q*}_{km}Y^{q}_{mk} } \right].
+	\end{equation}
+
+Paring correlations are included in the $h^{\mathrm{even}}$ and $h^{\mathrm{odd}}$ terms.
+
 \subsection{Angular momentum}  \label{sub:quantumAngularMomentum}
 
 Angular momentum is an relevant conserved quantity in physics, in particular in nuclear reactions.
@@ -1374,9 +1458,50 @@ It is essential to be noticed that both reactions follow a two step process. The
 
 A thorough description of this reaction is given by the distorted wave Born approximation DWBA. This broadly consists of using two potentials, one for each pair of reactants and products, and the other for the picking or stripping interaction. More detains are given in section \ref{ssub:potential_calculations_exchange}. \\
 
-A development on the $\mathrm{(p,n)}$ reaction kind is given by (Distorted wave Born approximation DWBA model) \cite{whitehead_poxon-pearson_nunes_potel_2022} and for the $\mathrm{(n,p)}$ in (Weisskpf-Ewing) deformation without spin description \cite{sharma_gandhi_kumar_2022}. \\
+A development on the $\mathrm{(p,n)}$ reaction kind is given by (Distorted wave Born approximation DWBA model) \cite{whitehead_poxon-pearson_nunes_potel_2022} \\
+
+Transitions to isobaric analog states are found in charged exchange reactions $\mathrm{{}^{14}C(p, n){}^{14}N}$, $\mathrm{{}^{48}Ca(p, n){}^{48}Sc}$, $\mathrm{{}^{90}Zr(p, n){}^{90}Nb}$. \\
+
+A suitable potential for modeling these reactions is given by: 
+
+\begin{equation}\label{eq:potential_exchange_optical}
+	U(\vec R) = U_0(\vec R) + \frac{\vec \tau \cdot \vec T}{4A} U_1(\vec R),
+\end{equation}
+
+with $\vec R$ as the vector connecting the center of mass position to the projectile, $U_0(\vec R)$ and $U_1(\vec R)$ correspond to the elastic and charge-exchange specific contributions to the potential. Additionally, $\vec \tau$ and $\vec T$ are the isospin operators associated with the projectile and target respectively. The latter potential is further expressed as: 
+
+\begin{equation}\label{eq:potential_exchange_optical_Uexchange}
+	U_1(\vec R)  = \frac{A}{2(N-Z)} [U_n(\vec R) - U_p(\vec R), ]
+\end{equation}
+
+where $U_n$ and $U_p$ are optical potentials for modeling neutrons and protons respectively. \\
+
+and for the $\mathrm{(n,p)}$ in (Weisskpf-Ewing) deformation without spin description \cite{sharma_gandhi_kumar_2022}. \\
+
+Two step process: compound nucleus with energy shared and a disintegration that ejects the remnant nucleon. The decay probability is given by:
+
+\begin{equation}\label{micro_hauserFeshbach_decayP}
+	P_{\delta \xi}(E) = \sum_{J\pi} F^{\mathrm{CN}}_{\delta}(E, J, \pi)G^{\mathrm{CN}}_{\chi}(E, J, \pi).
+\end{equation}
+
+The last equation is obtained form the Hauser Feshbach formalism. The Weisskopf-Ewing approximation considers the fact that $G^{\mathrm{CN}}_{\chi}(E, J, \pi) = G^{\mathrm{CN}}_{\chi}(E)$, namely that it does not depend on neither momentum nor parity. Then, given that the sum of $F$ terms is normalized, the approximation is given by:
+
+\begin{equation}\label{micro_weisskopfEwing_decayP}
+	P^{\mathrm{(WE)}}_{\delta \xi}(E) = G^{\mathrm{CN}}_{\chi}(E).
+\end{equation} 
+
+Therefore, the cross section for a channel $\alpha$ is expressed as: 
+
+\begin{equation}\label{micro_weisskopfEwing_crossSection}
+	\sigma_{\alpha \chi}(E) = \sigma^{\mathrm{CN}}_{\alpha}(E) P^{\mathrm{CN}}_{\delta \chi}(E).
+\end{equation} 
+
+
+Reactions $\mathrm{{}^{48}Ti(n, p){}^{48}Sc}$, $\mathrm{{}^{53}Cr(n, p){}^{53}V}$, $\mathrm{{}^{56}Fe(n, p){}^{56}Mn}$, $\mathrm{{}^{59}Co(n, p){}^{59}Fe}$ can be modeled with the Weisskopf-Ewing approximation. However, the validity of the model is limited since spin effects are not considered. \\
+
 
 $\ddexchange$ is an example of an exchange reaction relevant for BBN and pp-chain nucleosynthesis. 
+
 
 
 \subsubsection{Fusion reactions} \label{ssub:fusionReactions}
@@ -1495,6 +1620,8 @@ Reaction rates are considered from calculation of transmitted, incident and inte
 
 
 There are extensions to the Maxwell-Boltzmann treatment. For example, more general distribution functions are used such as the Tsallis statistics \cite{haubold_kumar_2008}.  \\
+
+This statistics is ideal for modeling correlations and long range interactions in plasmas, additionally this approach is useful when high velocities are considered. \\
 
 There are special considerations and approximations for the case of resonances. If they are sufficiently broad, the Breit-Wigner like dependence can be dropped out of the reaction rate integral. \\
 
@@ -1754,13 +1881,35 @@ The previous reactions are summarized in Figure \ref{fig:nuclearReactionsBNN}
 
 BBN description \cite{coc_vangioni_2010}. \\
 
+BBN reaction $n(p, \gamma)d$ which is essential in deuterium production. Constants can be constraints with $\delta_{NN} = 10^{-2}$ and redshifts $z \sim 10 - 15$.
+
 Review \cite{patrignani_et_particle-data-group_2016}. \\
+
+\begin{equation}\label{eq:reaction_neutronProtonRation}
+	\frac{n}{p} = \exp {\left(- \frac{Q}{kT}\right)},
+\end{equation}
+
+with $Q$ is the neutron-proton mass difference. It is stunning that such a small difference explains the leaning proton production in the Universe as it cooled down.
 
 Elements very high temperatures \cite{wagoner_fowler_hoyle_1967}. \\
 
+Main ingredients that are by products of BNN are $d$, $\mathrm{{}^{3}He}$, $\mathrm{{}^{4}He}$, $\mathrm{{}^{7}Li}$. This nuclei can be bind together with the reaction chain: 
+
+\begin{equation}\label{eq:reaction_BBN_chain}
+	\mathrm{{}^{3}He({}^{4}He, \gamma){}^{7}Be({}^{4}He, \gamma){}^{11}C}.
+\end{equation}
+
 Even CNO elements can be produced via BBN nucleosynthesis under specific conditions \cite{su-qing_kai-su_yong-shou_neng-chuan_zhi-hong_2010}.\\
 
-Unlike other abundances of lighter elements, lithium abundance is not well explained by Standard Big Bang theory \cite{bertulani_2019}. 
+An auxiliary chain towards CNO element production in the BNN framework:
+
+\begin{equation}\label{eq:reaction_BBN_CNO_path}
+	\mathrm{{}^{8}Li(n, \gamma){}^{9}Li(\alpha, n){}^{12}B(\beta){}^{12}C}.
+\end{equation}
+
+Unlike other abundances of lighter elements, lithium abundance is not well explained by Standard Big Bang theory \cite{bertulani_2019}.  \\
+
+$\mathrm{{}^{7}Li/H} \sim 10^{-10}$ abundance ratio, and  $\mathrm{{}^{6}Li/H} \sim 10^{-14}$, predicted by Big Bang theory is not entirely consistent with experiments. However, experimental values is a factor of 3 lower than expected. An alternative can be proposed by assuming Tsallis statistics. Entropy is parametrized with a factor $q$, which is related to the departure form Boltzmann statistics. Values for the lithium problem is ranging $1.069<q<1.082$.
 
 
 \section{Stellar fusion}  \label{sec:StellarFusion}
@@ -1887,7 +2036,14 @@ The ppII is more unlikely than the ppIII chain \cite{bertulani_2003}. This might
 
 As it is seen in the previous reactions, this chain ends with the production of $\mathrm{{}^{4}He}$. The chain stops here because this is the most stable nucleus of the light nuclei class. Additionally, this resulting nucleus is a relevant source of the production of heavier nuclei, in particular of the triple alpha process reactions. \\
 
-Additionally, screening effect present in light weight nuclear reactions \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002} and a review of screening effect \cite{assenbaum_langanke_rolfs_1987}.
+Additionally, screening effect present in light weight nuclear reactions \cite{raiola_migliardi_gyurky_aliotta_formicola_bonetti_broggini_campajola_corvisiero_costantini_et_2002} . \\
+
+In the case of $\ddexchange$ reaction, the electron screening effect in present with Al, Zr and Ta metallic material. Each has a different potential screening factor $U_e$. 
+
+and a review of screening effect \cite{assenbaum_langanke_rolfs_1987}. \\
+
+Channels with screening effect: $d+d$, $d+\mathrm{{}^{3}He}$, $\mathrm{{}^{3}He}+\mathrm{{}^{3}He}$, $p+\mathrm{{}^{7}Li}$, $p+\mathrm{{}^{11}B}$, $\alpha+\mathrm{{}^{12}C}$ and $\Cfusion$. 
+
 
 \subsubsection{Triple alpha process}
 
@@ -1988,8 +2144,16 @@ The previous hot HCNO cycles are represented in Figure
 
 Further cycles related to alpha reactions Ne cycle \cite{kaeppeler_wiescher_giesen_goerres_baraffe_eleid_raiteri_busso_gallino_limongi_et_1994}\\
 
-There are more cycles of capture reaction. An example regarding the MgAl cycle is given in \cite{lotay_doherty_janssens_seweryniak_albers_almaraz-calderon_carpenter_champagne_chiara_hoffman_et_2022}.
+Extension of the triple alpha reaction chain:
 
+\begin{equation}\label{eq:reaction_4chain}
+	\mathrm{{}^{12}C(\alpha, \gamma){}^{16}O(\alpha, \gamma){}^{20}Ne(\alpha, \gamma){}^{24}Mg.}
+\end{equation}
+
+
+There are more cycles of capture reaction. An example regarding the MgAl cycle is given in \cite{lotay_doherty_janssens_seweryniak_albers_almaraz-calderon_carpenter_champagne_chiara_hoffman_et_2022}. \\
+
+This process takes place on asymptotic branch stars, massive stars and novae. The main production of the $\mathrm{{}^{25}Mg}$, with the process $\mathrm{{}^{25}Mg(p, \gamma){}^{26}Al}$. The state is determine by resonance which is represented as a isomeric level. This energy level difference imply characteristic $\gamma$ decays. \\
 
 \subsection{Medium heavy fusion reactions} \label{sub:mediumHeavyReactions}
 
@@ -2043,9 +2207,30 @@ Reactions are not limited to ground state reactants. In fact, there are inelasti
 
 Additionally, neon burning stats by fusing with $\mathrm{{}^{4}He}$ nuclei to produce heavier elements.
 
- Neon burning \cite{arnett_1974}.
+ Neon burning \cite{arnett_1974}. \\
+ 
+ The main reactions relating neon are 
+ 
+ \begin{equation}\label{eq:reaction_neon_processes}
+	\begin{split}
+		\mathrm{{}^{23}Ne(\alpha, p){}^{26}Mg}, \\
+		\mathrm{{}^{23}Ne(p, \alpha){}^{20}Ne}, \\
+		\mathrm{{}^{20}Ne(\alpha, \gamma){}^{24}Mg}, \\
+	\end{split}
+ \end{equation}
 
-Fusion up to oxygen \cite{eleid_meyer_the_2004}.
+with the net effect defined as: 
+
+\begin{equation}\label{eq:reaction_neon_net}
+	 \mathrm{4{}^{23}N \rightarrow 2 {}^{26}Mg + {}^{24}Mg + {}^{16}O}.
+\end{equation}
+
+
+
+Fusion up to oxygen \cite{eleid_meyer_the_2004}.\\ 
+
+Massive stars of the order of 15, 20, 25 and 30 $M_{\odot}$
+end with core oxygen burning. A natural relevant reaction is given by $\mathrm{{}^{12}C(\alpha, \gamma){}^{16}O}$ that plays the role of the main source of $\mathrm{{}^{16}O}$. Relevant ratios of production of nuclei are $\mathrm{{}^{12}C/{}^{13}C}$, $\mathrm{{}^{14}N/{}^{15}N}$, $\mathrm{{}^{16}O/{}^{17}O}$, and $\mathrm{{}^{16}O/{}^{18}O}$ with the neon-iron ratio $\mathrm{Na/Fe}$. \\
 
 There is a silicon burning process with the following description 
 
@@ -2053,7 +2238,22 @@ There is a silicon burning process with the following description
 	\mathrm{{}^{28}_{14}Si +{}^{4}_{2}He \rightarrow {}^{32}_{16}S}.
 \end{equation}
 
-Silicon burning is another process that closes the middle heavy burning. Silicon burning \cite{bodansky_clayton_fowler_1968}.  An example of a channel of the fusion reaction is given by:
+Silicon burning is another process that closes the middle heavy burning. Silicon burning \cite{bodansky_clayton_fowler_1968}.   \\
+
+
+Connection with the equilibrium reaction that take place on photodisintegration with the following:
+
+\begin{equation}\label{eq:reaction_Si_equillibrium}
+	\mathrm{{}^{24}Mg + \alpha \leftrightarrow {}^{28}Si + \gamma}.
+\end{equation}
+
+Additionally, another relevant reaction is given by:
+
+\begin{equation}\label{eq:reaction_S_equillibrium}
+	\mathrm{{}^{28}Si+ \alpha \leftrightarrow {}^{32}S + \gamma}.
+\end{equation}
+
+An example of a channel of the fusion reaction is given by:
 
 
 \begin{equation} \label{eq:reaction_28Sifusion_alpha56Fe}
@@ -2063,7 +2263,7 @@ Silicon burning is another process that closes the middle heavy burning. Silicon
 The burning processes does not continue further since $\mathrm{^{56}Fe }$ is one of the most stable of the whole list of nuclei. Then, as it is explained in the next section, alternative fusion process would need to occur to increment the mass of the resulting nuclei.
 
 $\Cfusion$ nucleosynthesis in massive stars \cite{pignatari_hirschi_wiescher_gallino_bennett_beard_fryer_herwig_rockefeller_timmes_et_2012}. $\Cfusion$ is a source of $\alpha$, $n$ and $p$ nuclei that are sources of further process, namely alpha capture, r-process and s-process respectively. 
-This reaction plays important roles on other processes and depends heavily on temperature.
+This reaction plays important roles on other processes and depends heavily on temperature. Nucleosynthesis still depends on the kind of solar model to be used. $\Cfusion$ are strongly related with the ration $R_\alpha/R_p$ of $\alpha$ particles and protons.\\
 
 12C + 12C Wave packet dynamics (with two core shell model) \cite{diaz-torres_wiescher_2018} \\
 
@@ -2495,6 +2695,44 @@ Additional fusion reactions with nuclei with $A > 28$ are present at the last st
 
 heavy-ion reactions + coupled channels + low-energy cross section enhancements  + parameter free São Paulo potential + zero point motion (ZPM) + vibrational couplings + WKB approximation for nondeformed potential  + nuclei deformation \cite{nobre_chamon_gasques_carlson_thompson_2007}
 
+The zero point model starts by parametrizing the potential with a parabolic barrier. Additionally, an harmonic oscillator term is added to the height of the former potential. The previous contributions are parametrized with radius variables $r$ and $s$ respectively. The parabolic barrier is given by: 
+
+\begin{equation}\label{eq:potential_ZPM_parabolic}
+		V(r, s) = 	\left\{\begin{array}{l}
+		\begin{split}
+			V_B - Fs - \frac{1}{2} \mu \omega^2 r^2 , \quad & |r| \le r_0 \\ 
+			0, \quad & |r| > r_0,
+		\end{split}
+	\end{array}\right.
+\end{equation}
+
+with $V_B = 1/2\mu\omega^2r_0^2$. The wave function is expressed as the sum with the form: 
+
+\begin{equation}\label{eq:potential_ZPM_waveFunction}
+	\psi(r, s) = \sum_{\psi_n(r)\phi_n(s)},
+\end{equation}
+
+where $\psi_n(s)$ is the harmonic oscillator solution with the form: 
+
+\begin{equation}\label{eq:potential_ZPM_waveFunction_harmonicOscillator}
+	\phi_n(s) = \frac{1}{(2\pi \sigma^2)^{1/4}} \exp {\left(-\frac{s^2}{4\sigma^2}\right)} \frac{H_n\left(\frac{s}{\sigma \sqrt 2 }\right)}{\sqrt{n!2^n}},
+\end{equation}
+
+while $\psi_n(r)$ are the solutions of the following coupled differential equation: 
+
+\begin{equation}\label{eq:potential_ZPM_waveFunction_coupledDifferentialEquation}
+	 - \frac{\hbar^2}{2\mu} \frac{d^2\psi_n(r)}{dr^2} + \left(V_B - \frac{1}{2} \mu \omega^2 r^2 \right) \psi_n(r) + \sum_{m\neq n}{V_{nm}\psi_m(r)} = (E - nE^{*})\psi_n(r),
+\end{equation}
+
+with $E^{*}$ represents the excited energy and $V_{nm}$ is given by: 
+
+\begin{equation}\label{eq:potential_ZPM_potentialCoupled}
+	V_{nm} = - F\sigma (\sqrt {n} \delta_{n, m+1} + \sqrt{m}\delta_{n, m-1}). 
+\end{equation}
+
+The coupled channel equation, for practical purposes, can be approximated, for example with the Hill-Wheeler formula, which is used in modeling several heavy-ion systems.
+
+
 \subsection{Supernovae and other explosive environments} \label{sub:explosive}
 
 This reaction is essential since the $\mathrm{{}^{56}Fe}$ nucleus has the maximum binding energy. Then, fusion reactions of heavier nuclei tend to be less spontaneous.Then,  this chain of reactions continues until the process in there 56-Ni is reached.
@@ -2521,11 +2759,13 @@ $(\alpha, n), (\alpha, p), (\alpha, \gamma)$ and alpha emission: $(p, \alpha), (
 In fact, at explosive environments, accelerated alpha capture is given. However, as it will be treated later, rapid neutron, and to a minor extent proton capture, are the predominant processes under these scenarios. \\  
 
 
+Alpha and cluster decay \cite{maroufi_dehghani_alavi_2019}. \\
 
-Alpha and cluster decay \cite{maroufi_dehghani_alavi_2019}.
+In the context of decay of superheavy nuclei can happen with $\alpha$ particles and clusters that range from kinds $\mathrm{{}^{23}F}$, $\mathrm{{}^{22,24,26}Ne}$, $\mathrm{{}^{28,30}Mg}$, $\mathrm{{}^{32}Si}$, $\mathrm{{}^{38,42}S}$ and $\mathrm{{}^{46}Ar}$ with $A \sim 230$. \\
 
-Alpha induced reactions \cite{le_duy_hung_2021}.
+Alpha induced reactions \cite{le_duy_hung_2021}. \\
 
+Some $\alpha$ reactions are relevant in the production of stable p-nuclei, which include $\mathrm{{}^{154}Sm}$,  $\mathrm{{}^{162}Dy}$, $\mathrm{{}^{166}Er}$ and $\mathrm{{}^{197}Au}$. Alpha particle reactions $(\alpha, \gamma)$ are competing with photodisintegration $(\alpha, n)$
 
 \subsection{The s and r processes} \label{sub:srProcesses}
 
@@ -2563,23 +2803,63 @@ If mass increases further, there is no place to any degeneracy compensation so t
 
 s-process known and unknown \cite{lattanzio_lugaro_2005}.
 
-s-process nucleosynthesis \cite{kappeler_2005}.
+In the context of asymptotic giant stars (AGB) the $\mathrm{{}^{13}C(\alpha, n)}{}^{16}O$ is the dominant neutron production. However, the responsible of the $\mathrm{{}^{13}C}$ pocket is not entirely well understood. There are three components that partially explain composition of heavy nuclei in the universe: weak, main and strong with $A<90$, $90<A<204$, $A>204$ respectively. Metallicity are related with larger neutron production. \\
 
-r-process form O-Ne-Mg cores \cite{wanajo_tamamura_itoh_nomoto_ishimaru_beers_nozawa_2003}.
+s-process nucleosynthesis \cite{kappeler_2005}. \\
 
-r-process and beta decay \cite{suzuki_shibagaki_yoshida_kajino_otsuka_2018}.
+The main sequence to produce the s-process is given by: 
+
+\begin{equation}\label{eq:reaction_sprocess_source}
+	\mathrm{{}^{14}N(\alpha, \gamma) {}^{18}F(\beta^+, \nu) {}^{18}O(\alpha, \gamma) {}^{22}Ne(\alpha, n) {}^{25}Mg}.
+\end{equation}
+
+The resulting products are concentrated in the $70 < A < 90$ range. \\
+
+r-process form O-Ne-Mg cores \cite{wanajo_tamamura_itoh_nomoto_ishimaru_beers_nozawa_2003}. \\
+
+At some point, a star core of the O-Ne-Mg core is given. It happens with stars of the order 1.38 $M_{\odot}$. Explosive environments take place within 8-10 $M_{\odot}$ with $Y_e \approx 0.14-0.20$. The network of reaction includes 3600 different kinds. \\
+
+r-process and beta decay \cite{suzuki_shibagaki_yoshida_kajino_otsuka_2018}. \\
+
+Core collapse supernova with a magic number $N = 126$ up to $Z = 78$ are determined by $\beta$ decay half lives. Neutrino wind may play a critical role on the nucleosythesis. \\
 
 alpha-process and r-process \cite{woosley_hoffman_1992}.
 
-r-process without excess neutrons \cite{meyer_2002}.
+The radiative capture of neutron $(n, \gamma)$ are fueled by the $(p, n)$ and $(\alpha, n)$ source reactions. The standard production is $A \sim 66$ and, if enough neutrons are produced, the $\alpha$-particle freeze out is overcomed and nuclei reach the limit of $A \sim 100$. \\
+
+r-process without excess neutrons \cite{meyer_2002}. \\
+
+Explosive high entropy environment per nucleon are condition of heavy nuclei production. Nucleons and alpha particle free to be captured. The density is given by: 
+
+\begin{equation}\label{eq:reaction_density}
+	\rho(t) = \rho_1 \exp \left( - \frac{t}{\tau}\right) + \rho_2 \left( \frac{\Delta}{\Delta + t}\right)^2,
+\end{equation}
+
+the first is rapidly decaying and the second is parametrized with the $\Delta$ variable. \\
+
+The ratio of the number of neutrons to protons $Y_e$ determines if the preferred process is r or rp capture. \\
 
 Neutrino capture and r-process \cite{meyer_mclaughlin_fuller_1998}.
 
+The neutrino reaction is given by: 
+
+\begin{equation}\label{eq:reaction_neutrino_ne}
+	\nu_e + n \rightarrow p + e^{-}.
+\end{equation}
+
+On the other hand, the anti neutrino 
+
+\begin{equation}\label{eq:reaction_antineutrino_hatne}
+	\hat {\nu}_{e} + p \rightarrow n + e^{+}.
+\end{equation}
+
 r-process production beyond $\mathrm{{}^{209}Bi}$ \cite{qian_vogel_wasserburg_1999}.
 
-Electron capture \cite{langanke_martinez-pinedo_zegers_2021}.
+Decay of nuclei $\mathrm{{}^{226}Ra}$,  $\mathrm{{}^{229}Th}$, $\mathrm{{}^{241}Am}$, $\mathrm{{}^{243}Am}$, $\mathrm{{}^{249}Cf}$ and $\mathrm{{}^{251}Cf}$. Nuclei with $A>209$ are produced exclusively by the r-process.
 
+Electron capture \cite{langanke_martinez-pinedo_zegers_2021}. \\
 
+This process plays a critical role in nucleosynthesis in the explosive environments of core collapse and thermonuclear processes. Degenerate relativistic gas with nuclei with mass $A \sim 20-65$. 
 
 \subsection{The p and rp processes} \label{sub:pProcesses}
 
@@ -2599,20 +2879,45 @@ The rp processes are like the p processes going on in a faster rate. The environ
 
 The stopping point of this chain is given by the proton drip line. At this point, nuclear repulsion is  considerable and the stability of the nuclei is small so decaying is inevitable.   \\
 		
-Abundance p-process \cite{delaeter_2008}.
+Abundance p-process \cite{delaeter_2008}. \\
 
-Proton drip-line middle-heavy nuclei \cite{cai_chen_yuan_jian-jun_2022}.
+Significant $\mathrm{{}^{92, 94}Mo}$, $\mathrm{{}^{96, 98}Ru}$, $\mathrm{{}^{138}La}$,  $\mathrm{{}^{180}Ta^{m}}$. 
+Their abundances had been calculated until recently. \\
+	
+Proton drip-line middle-heavy nuclei \cite{cai_chen_yuan_jian-jun_2022}. \\
 
-Alpha - gamma heavy p-nuclei \cite{kiss_szucs_gyurky_fulop_farkas_kertesz_somorjai_laubenstein_frohlich_rauscher_et_2011} 
+$30 \le Z, N \le 50$ drip line settled in p-nuclei kind.  It includes isotope chains of Ge, As, Se, Br, Kr, Sr with nuclei with $Z > N$
+in a significant manner\\
 
-Proton and alpha capture p process \cite{harissopulos_lagoyannis_spyrou_zarkadas_galanopoulos_perdikakis_becker_rolfs_strieder_kunz_et_2005} \cite{harissopulos_spyrou_lagoyannis_zarkadas_becker_rolfs_strieder_hammer_dewald_zell_et_2005}.
+Alpha - gamma heavy p-nuclei \cite{kiss_szucs_gyurky_fulop_farkas_kertesz_somorjai_laubenstein_frohlich_rauscher_et_2011}. \\
+
+X-ray radiation is used as a technique for measuring cross sections via activation or counting methods. p-nuclei are arranged between $\mathrm{{}^{74}Se}$ and $\mathrm{{}^{196}Hg}$. Production of p-nuclei with $140 \le A \le 200$ is considerable sensible to $(\gamma, \alpha)$ distintegration. \\
+
+Proton and alpha capture p process \cite{harissopulos_lagoyannis_spyrou_zarkadas_galanopoulos_perdikakis_becker_rolfs_strieder_kunz_et_2005}. \\
+
+There are around 20 000 cross sections involved in p-process nucleosynthesis. This process produces 35 stable nuclei, which are named as p nuclei. However, p-processes descriptions are considerable sensible to uncertainties on data. This issue is increasingly challenge with very heavy nuclei, with $A \ge 100$. \\
+
+\cite{harissopulos_spyrou_lagoyannis_zarkadas_becker_rolfs_strieder_hammer_dewald_zell_et_2005}. \\
+
+Examples of $(\alpha, \gamma)$ reactions are given by $\mathrm{{}^{72}Ge}$, $\mathrm{{}^{91,92}Ge}$, $\mathrm{{}^{92}Mo}$, $\mathrm{{}^{104}Pd}$, $\mathrm{{}^{116,118}Sn}$ whereas $(p, \gamma)$ reactions are found on $\mathrm{{}^{104,105,106}Pd}$  $\mathrm{{}^{96}Mo}$ nuclei. Calibrations are performed by comparison with data from the $\mathrm{{}^{27}Al(p, \gamma){}^{28}Si}$ reaction. \\
 
 p-process nuclei 
-\cite{quinn_spyrou_simon_battaglia_couder_deyoung_dombos_fang_gosrres_kontos_et_2013}
+\cite{quinn_spyrou_simon_battaglia_couder_deyoung_dombos_fang_gosrres_kontos_et_2013}. \\
 
-End point rp processes  \cite{schatz_aprahamian_barnard_bildsten_cumming_ouellette_rauscher_thielemann_wiescher_2001}.
+Photodisintegration occurs in three main processes with the form $(\gamma, n)$, $(\gamma, p)$ and $(\gamma, \alpha).$ $\mathrm{{}^{74}Se}$ and $\mathrm{{}^{78}Kr}$ corresponds to the first and second of the lightest p-nuclei. The chain of production of the former is given by: 
 
-Proton drip-line rp processes \cite{brown_clement_schatz_volya_richter_2002}.
+\begin{equation}\label{eq:reactions_74Se}
+	\mathrm{{}^{74}Ge(p, \gamma){}^{75}As(p, n){}^{75}Se(\gamma, n){}^{74}Se}.
+\end{equation}
+
+End point rp processes  \cite{schatz_aprahamian_barnard_bildsten_cumming_ouellette_rauscher_thielemann_wiescher_2001}. \\
+
+Accreting neutron star with reaction network up to $\mathrm{Xe}$. In some regions, $(\alpha, p)$ and $(p, \gamma)$ are alternated to keep the production of heavier nuclei, which is known as the $\alpha p$ process. The endpoint is determined for the case of $Z \le 54$ due to the existence of the $\mathrm{SnSbTe}$ cycle, which ends with photodisintegration on $\mathrm{{}^{106}Te}$, $\mathrm{{}^{107}Te}$ and $\mathrm{{}^{108}Te}$. \\
+
+Proton drip-line rp processes \cite{brown_clement_schatz_volya_richter_2002}. \\
+
+Proton-rich nuclei for the region of $A=41-75$. Masses of proton-rich above $A =60$ have been not measured entirely. The r-process in key for high temperature burning and in neutron stars with respect X-ray emission phenomena. Masses are critical when establishing the capture-photodisintegration equilibrium point. Examples of such nuclei with a required higher precision mass measurements range from $\mathrm{{}^{61}}Ga$ to $\mathrm{{}^{73}}Kr$. Candidates for diproton emission are  $\mathrm{{}^{64}}Zn$,  $\mathrm{{}^{59}}Ge$, $\mathrm{{}^{63}}Se$, $\mathrm{{}^{67}}Kr$, $\mathrm{{}^{71}}Sr$.
+
 
 \section{Active research topics} \label{sec:activeResearch}
 
@@ -2653,6 +2958,8 @@ At radius with $r < r_s$, no object including light can escape. \\
 Current experiments in detection of heavy nuclei are essential to determine the distribution of elements, specially in events like the fusion of neutron stars. \\ 
 
 Heavy and superheavy nuclei production \cite{adamian_antonenko_2022}. The mechanisms for their synthesis are not completely known and efforts are made in order to explain mechanisms on fusion reactions at the heavy weight regime.  \\
+
+$Z = 119, 120$ and unknown nuclei production. Reaction $\mathrm{{}^{26}Mg + {}^{248}Cm \rightarrow {}^{274-xn}Hn +xn}$ with $x$ ranging from 3 to 5. Quasifission (nuclei are held together), symetrization (nuclei exchange clusters) and complete fussion (unified nuclei).  Isotopes of $\mathrm{Hs}$, $\mathrm{Mt}$, $\mathrm{Ds}$ and $\mathrm{Rg}$ can be produced with neutron evaporation with relative light targets, with $Z = 6-18$. Additionally, with neutron evaporation channels, it is possible to produce currently unkwown isotopes like $\mathrm{{}^{285}}Cn$, $\mathrm{{}^{294, 295}}Lv$, $\mathrm{{}^{295, 296}}Lv$ and $\mathrm{{}^{295-298}}Og$, which extend stability island boundaries. \\
 
 In fact, there are super heavy nuclei whose stability conditions are regarded as extreme. These exotic nuclei might be critical in understanding highly explosive processes mediated by rapids r and rp processes for instance. However, certainties about explosive nucleosynthesis are still waiting for more concluding explanations on the mechanism of transitioning between white dwarfs to neutron stars to black holes. \\ 
 
@@ -4384,6 +4691,69 @@ Additionally, these alternative models have the advantage that they are compatib
 
 On the other hand, there are matrix models with no free parameters. For example, the K-matrix model predicts the cross sections without including the channel radius, which is an arbitrary parameter required in the R-matrix calculations \cite{humblet_1990}. \\
 
+The shift energy derivative $d\delta_l/dE$ is given in R-matrix:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_deltaE}
+	 \left. \frac{\delta_l}{E} \right|_{E = E_{l\lambda}} = \frac{1}{p^2_l(E_{l\lambda})g^2_{l\lambda}}.
+\end{equation}
+
+The alternative parametrization of the K-matrix 
+
+\begin{equation}\label{eq:rmatrix_kmatrix_alternative}
+	\mathcal{K}_{dc} = \sum_{\lambda} \frac{g_{d\lambda}g_{c\lambda} }{E_\lambda - E} + B_{dc}.
+\end{equation}
+
+The S-matrix is given by:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_smatrix}
+	S_{dc} = \delta_{dc}  2ip_dc \sum_{j} \mathcal{K}_{de} [(1- i\mu \mathcal{K})^{-1}]p_c. 
+\end{equation}
+
+This facilitates the fitting adjustment. An expression of the shift is given by:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_deltal}
+	\tan {\delta_l} = \epsilon^2_l k^{2l+1}_l \mathcal{K}_l.
+\end{equation}
+
+A matrix expression of the $\mathcal{K}$. 
+
+
+\begin{equation}\label{eq:rmatrix_kmatrix_K_matrixElements}
+	\mathcal{K} = \left[\begin{matrix}
+		\mathcal{K}^{++} & \mathcal{K}^{+-} \\
+		\mathcal{K}^{-+} & \mathcal{K}^{--} \\
+	\end{matrix}\right].
+\end{equation}
+
+The $\mathcal{D}$ 
+
+\begin{equation}\label{eq:rmatrix_kmatrix_D_matrixElements}
+	\mathcal{D} = \left[\begin{matrix}
+		\mathcal{D}^{++} & \mathcal{D}^{+-} \\
+		0	 &	1	 \\
+	\end{matrix}\right].
+\end{equation}
+
+And the $\mathcal{K}(1 - i\mu \mathrm{K})^{-1}$ is expressed in matrix form like:
+
+\begin{equation}\label{eq:rmatrix_kmatrix_KN_matrixElements}
+	\mathcal{K}(1 - i\mu \mathrm{K})^{-1}= \left[\begin{matrix}
+		\mathcal{K}^{++} {N}^{++} & \mathcal{K}^{++} {N}^{+-} + \mathcal{K}^{+-} \\
+		\mathcal{K}^{-+} {N}^{++} & \mathcal{K}^{-+} {N}^{+-} + \mathcal{K}^{--} \\
+	\end{matrix}\right].
+\end{equation}
+
+where the matrix form $N$ is given by:
+
+
+\begin{equation}\label{eq:rmatrix_kmatrix_N_matrixElements}
+	N = \left[\begin{matrix}
+		N^{++} & N^{+-} \\
+		0	 &	1	 \\
+	\end{matrix}\right].
+\end{equation}
+
+
 A similar parametrization of the K-matrix could be given with respect to a R-matrix like form: 
 
 \begin{equation}\label{eq:rmatrix_kmatrix_series}
@@ -4470,7 +4840,7 @@ with $O_c$, $a_c$ and $k_c$ as the outgoing, boundary radius and wave number of 
 while the second is expressed as:
 
 \begin{equation}\label{eq:rmatrix_kmatrix_Smatrix_outgoing}
-	O_c = G_c + iF_c
+	O_c = G_c + iF_c.
 \end{equation}
 
 
@@ -4498,10 +4868,35 @@ On the other hand, the shift factor, like it happens in the R-matrix formalism, 
 	\Delta_\lambda = \sum_{j} (-1)^l b^{2l + 1}_j g^2_{j\lambda}.
 \end{equation}
 
-
 This method is also compatible with the Trojan hourse method subbarrier thresholds \cite{mukhamedzhanov_shubhchintak_bertulani_2017}. \\
 
+R-matrix to treat subthreshold resonances in the cases of one level with single and double channels. The approach is generalized to include three body reaction terms. Parameters relavant to the resonances of the $\mathrm{{}^{13}C(\alpha, n){}^{16}O}$ reactions are $1/2^{+}$ and $E_x = 6.356$MeV. \\
+
 Finally, there is more than a single parametrization for matrix models \cite{brune_2002}. Usually the alternative formulations surge from the need to express the parameters of the model in order to facilitate the imposition of boundary conditions.  
+
+\begin{equation}\label{eq:rmatrix_E}
+	\mathcal{E} = e - \sum_{c}{\gamma_c \gamma^{T}_c (S_c - B_c)}.
+\end{equation}
+
+This matrix $\mathcal{E}$ obeys the eigenvalue equation:
+
+\begin{equation}\label{eq:rmatrix_E_values}
+	\mathcal{E}\vec a_k = E_k \vec a_k.
+\end{equation}
+
+The width in the formalism is given by:
+
+\begin{equation}\label{eq:rmatrix_width}
+	\Gamma_{kc} = \frac{2P_c \hat {{\gamma}^2_{kc}}}{1 + \sum_{c}{\hat {{\gamma}^2_{kc}} \left(\frac{dS_c}{dE}\right)_{\hat{E}_c}  }}.
+\end{equation}
+
+The symbols with $\hat {{\gamma}^2_{kc}}$ has the expression: 
+
+\begin{equation}\label{eq:rmatrix_width_reduced}
+	\hat {{\gamma}^2_{kc}} = a^{T}_{k} \gamma_c.
+\end{equation}
+
+
 
 \subsection{Calculable R-matrix} \label{sub:rmatrix_calculable}
 
@@ -4686,29 +5081,165 @@ The sum is over levels and the elements are parameterized as channels.  \\
 
 Resonances arrives from poles. Deviations from Breit-Wigner resonance prediction. A description on the physical consideration of poles in the scattering (S-matrix) is given in \cite{ramirezjimenez_kelkar_2018}. \\
 
+For broad resonances, the Breit-Wigner formula can be expanded. Meaning that 
+
+\begin{equation}\label{eq:rmatrix_generalizedBW}
+	\sigma_l = \frac{4\pi(2l+1)}{\epsilon_{lr}} \frac{(\Gamma_{lr}/2 )^2}{(k^2 - \epsilon_{lr})^2 + (\Gamma_{lr}/2)^2} P \left(\frac{\Gamma_{lr}}{2\epsilon_{lr}}\right),
+\end{equation}
+
+where the term $P$ permits the expansion in Taylor series which effectively corrects the Briet-Wigner formula behavior as: 
+
+\begin{equation}\label{eq:rmatrix_generalizedBW_expansion}
+	 P \left(\frac{\Gamma_{lr}}{2\epsilon_{lr}}\right) = 1 - \frac{1}{4} \left(\frac{\Gamma_{lr}}{2\epsilon_{lr}}\right)^2 + \frac{1}{8} \left(\frac{\Gamma_{lr}}{2\epsilon_{lr}}\right) ^4 + ... .
+\end{equation}
+
+
 Applications of the R-matrix formalism to specific reactions: \\
 
-In primordial nucleosynthesis \cite{desouza_iliadis_coc_2019} big-bang 3He and several reactions \cite{sparta_pizzone_bertulani_hou_lamia_tumino_2020}. \\
+In primordial nucleosynthesis \cite{desouza_iliadis_coc_2019} big-bang 3He and several reactions. \\
+
+Analysis of the BNN reaction $\mathrm{{}^{3}He(d, p){}^{4}He}$. The model uses Bayesian analysis to improve parameter fitting. The likelihood of a parameter is given by:
+
+\begin{equation}\label{eq:rmatrix_bayesian_likelihood}
+	\mathcal{L}(S|\theta) = \prod_{k=1}^{N} \frac{1}{\sqrt{2\pi \sigma^2} } \exp {\left[- \frac{(S_k - S_k(\theta))}{2\sigma^2}\right]},
+\end{equation}
+
+where $\theta$ considers the parameters to be optimized and $S_k$ corresponds to experimental S-factor values. \\
+
+
+\cite{sparta_pizzone_bertulani_hou_lamia_tumino_2020}. \\
+
+Analytical formulas were used to describe the S-factor behavior of non resonant $\ddexchange$, $\mathrm{{}^{2}H(d, n){}^{3}He}$ reactions and the resonant behavior, with a formula inspired in the R-matrix formalism, of the $\mathrm{{}^{3}He(d,p){}^{4}He}$ (one resonance) and $\mathrm{{}^{7}Li(d, \alpha){}^{4}He}$ (two resonances) reaction. \\
 
 Bayesian fitting methods \cite{odell_brune_phillips_2022}. \\
 
+Bayesian analysis improves the performance of the R-matrix method when estimating S-factors. The parameter set used is given by:
+
+\begin{equation}\label{eq:rmatrix_parameterSet}
+	\theta_{R} = \{E_r, \gamma^{2}_d, \gamma^{2}n, U_e\},
+\end{equation}
+
+with $E_r$, $\gamma^{2}_d$, $\gamma^{2}n$ and $U_e$ as the energy peak, the deuterium and neutron widths and the screening potential parameter respectively. The case of study was the $\mathrm{{}^{3}H(d, n){}^{4}He}$ reaction.\\
+
 Lithium deuterium capture \cite{grineviciute_lamia_mukhamedzhanov_spitaleri_lacognata_2015}. \\
 
-10B proton non-radiative \cite{kolk_macon_deboer_anderson_boeltzig_brandenburg_brune_chen_clark_danley_et_2022} and similarly \cite{sieverding_randhawa_zetterberg_deboer_ahn_mancino_martinez-pinedo_hix_2022}. \\
+The reaction of the form $\mathrm{{}^{6}Li(d, \alpha){}^{4}He}$, a three level fit is used with two $2^{+}$ resonances and a $0^{+}$ non coherent state. \\
+
+10B proton non-radiative \cite{kolk_macon_deboer_anderson_boeltzig_brandenburg_brune_chen_clark_danley_et_2022}  \\
+
+Reaction $\mathrm{{}^{10}B(p, \alpha){}^{7}Be}$, two main resonances are present at $E = 1.05, 1.36\mathrm{MeV}$ with $E_x = 9.74$MeV in both cases. \\
+
+and similarly \cite{sieverding_randhawa_zetterberg_deboer_ahn_mancino_martinez-pinedo_hix_2022}. \\
+
+Reaction $\mathrm{{}^{10}Be(p, \alpha){}^{7}Li}$ with a 193keV resonance of kind $1/2^{+}$. Seven levels where included in order to model the resonances with alpha and proton partial widths. \\
 
 10B radiative and resonances in 11C inverse kinematics \cite{kaur_guimaraes_zamora_assuncao_alcantara-nunez_delara_zevallos_ribeiro_lichtenthaler_pires_et_2022}. \\
 
+
+Resonance scattering of the $\mathrm{{}^{10}B + p}$ system,  which is associated with the $\mathrm{{}^{1}H({}^{10}B, p){}^{10}B}$ scattering. Resonances where found with $E_x = 10.503, 11.26, 11.589, 11.691 \ \mathrm{MeV}$ with states $J^{\pi} = 5/2^{+}, 7/2^{+}, 3/2^{+}, 5/2^{+} \ \mathrm{MeV}$ respectively. \\
+
 Alpha capture reactions of carbon \cite{schurmann_gialanella_kunz_strieder_2012}.  \\
+
+Reaction $\mathrm{{}^{12}C(\alpha, \gamma){}^{16}O}$. The transitions analyzed where $3^{-}$ and $4^{+}$ with three levels and $a = 5.5\mathrm{fm}$ and $1^{-}$ with ${2}^{+}$ with five levels. The low energy S-factor extrapolation is estimated as $S_0 = 161 \pm 19_{\mathrm{stat}^{\mathrm{+8}_{-2\mathrm{sys}}}}$. \\
+
 
  Hybrid potential/R-matrix \cite{sparenberg_2005}. \\
 
+The total R-matrix considers both potential and resonant contributions with 
+
+ \begin{equation}\label{eq:rmatrix_potentialResonant}
+ 	R(E) = 	R_{\mathrm{pot}}(E) + \sum_{\lambda = 1}^{L} \frac{\sigma^2_\lambda}{E_\lambda - E},
+ \end{equation}
+
+where $R_{\mathrm{pot}}(E)$ corresponds to the R-matrix non resonant contribution. \\
+
+Potential term can be constructed from elastic scattering phase shifts. Particularly, this expansion is expressed as:
+
+ \begin{equation}\label{eq:rmatrix_potentialResonant_potential}
+	U_\mathrm{pot}(E) = U_0(k^2) \prod_{m=1}^{M} \frac{k_m + k}{k_m - k},
+\end{equation}
+
+where $k_m$ are the poles of the phase shifts, which are obtained by fitting.\\ 
+
  13C alpha capture and 16O determination \cite{prusachenko_bobrovsky_bondarenko_bokhovko_gurbich_ketlerov_2022}. \\
+ 
+ The reaction $\mathrm{{}^{16}O(n, \alpha){}^{13}C }$ serves to estimate the helium quantity at environments of high neutron absorption. However, the reciprocal reaction,  $\mathrm{{}^{13}C(\alpha, n){}^{16}O }$ is more accessible to determine experimentally. The differential cross section is given by: 
+ 
+ \begin{equation}\label{eq:rmatrix_differentialCrossSection_experimental}
+ 	\frac{d\sigma}{d\Omega}(\theta) = \frac{S_n(\theta)\gamma(\theta)}{N_\alpha \eta \epsilon \Omega},
+ \end{equation}
 
-Proton capture carbon \cite{burtebaev_igamov_peterson_yarmukhamedov_zazulin_2008} for C12 and \cite{chakraborty_deboer_mukherjee_roy_2015} for C13 and \cite{genard_descouvemont_terwagne_2010} for the same reaction. \\
+where $S_n$, $\gamma$, $N_\alpha$, $\eta$, $\Omega$ correspond to the number of counts effective counts, the correction factor due to multiple scattering, incident $\alpha$ particles, intrinsic efficiency of the detector, number of $\mathrm{{}^{13}C}$ atoms per unit area and the solid angle respectively.
 
-15N capture in \cite{barker_2008} and 14N in \cite{angulo_champagne_trautvetter_2005}.  \\
+Proton capture carbon \cite{burtebaev_igamov_peterson_yarmukhamedov_zazulin_2008} for C12 and\\
+
+Reaction $\mathrm{{}^{12}C(p, \gamma){}^{13}N }$. The resonances are associated with energies $0.421$, $1.570$, $8.371$ MeV with $\lambda = 1, 2, 3$ respectively and states $1/2^{+}$, $3/2^{-}$, $1/2^{-}$ correspondingly. Additionally,  the width is given by the contribution of the internal and external terms.
+
+\begin{equation}\label{eq:rmatrix_width_internalExternal}
+	\gamma = \gamma^{(\mathrm{int})} + \gamma^{(\mathrm{ext})}.
+\end{equation}
+
+On the other hand, the cross section can be expressed as: 
+
+\begin{equation}\label{eq:rmatrix_crossSection_m}
+	\sigma(E) = \frac{\pi}{2k^2} \sum_{JlI} (2J + 1) |M_{JlI}|^2,
+\end{equation}
+
+where the term $M_{JlI}$ is approximated in a different manner for electrical and magnetical transitions. One of such approaches takes into account the low wave length approximation. 
+
+
+
+
+ \cite{chakraborty_deboer_mukherjee_roy_2015} for C13 \\
+
+Resonant $0^{+}$ is relevant when correcting the behavior of the S-factor beyond the resonance. Additionally, multiple excited states of $\mathrm{{}^{14}N^{*}}$ are considered. The energies are given as: 
+
+\begin{equation}\label{eq:rmatrix_excited_14N}
+	\begin{split}
+		\mathrm{{}^{14}N^{*}} & \rightarrow 2.31\mathrm{MeV} \\
+											& \rightarrow 4.92\mathrm{MeV} \\
+											& \rightarrow 3.95\mathrm{MeV} \\
+											& \rightarrow 5.11\mathrm{MeV} \\
+	\end{split}
+\end{equation}
+ 
+
+\begin{equation}\label{eq:rmatrix_spectroscopic_parametrization}
+	C^2S_{J_f l_f} =  \left (\frac{C_{J_fl_f}}{b_{l_fj_f}} \right)^2,
+\end{equation}
+
+where $C^2$ is related with the square of the isospin Clebsh-Gordan coefficients and $C_{J_fl_f}$ to the ANC and $b_{l_fj_f}$ as the single particle ANC.
+
+
+  and \cite{genard_descouvemont_terwagne_2010} for the same reaction. \\
+
+An R-matrix analysis of the S-factor of the $\CRadiativeCapture$ reaction, with transition $1^{-} \rightarrow 1^{+}$ permitted the definition of parameters $E_R = 511.3 \pm 0.5 \mathrm{keV}$, $\Gamma_R = 34.5 \pm 1.1 \mathrm{keV}$ andf $\omega \gamma = 6.2 \pm 0.3 \mathrm{eV}$. The channel radius used was $a = 6.8 \mathrm{fm}$.
+
+15N capture in \cite{barker_2008}  \\
+
+Reaction $\mathrm{{}^{15}N(p, \gamma) {}^{16}O}$ R-matrix approximation with two levels. The parametrization used fixed the boundary condition $B_c = S_c(E_2)$. The spectroscopic factor is determined in terms of the reduced-width dimensionless parameters as: 
+
+\begin{equation}\label{eq:rmatrix_spectroscopic_reduced}
+	\theta^2_f = C^2S \theta^2_0,
+\end{equation}
+
+with $\theta^2_0$ defined as:
+
+\begin{equation}\label{eq:rmatrix_spectroscopic_reduced_theta0}
+	\theta^2_0 = \frac{a_p}{2} \frac{u^2(a_p)}{\int_{0}^{a_p} {u^2(r) dr} },
+\end{equation}
+
+where $a_p$ corresponds to the channel radius of proton and $u$ is the wave function. \\
+
+and 14N in \cite{angulo_champagne_trautvetter_2005}.  \\
+
+The value of the channel radius is set to $a = 5.5\mathrm{fm}$ and the extrapolated S-factor was determined as $S(0) = 1.70 \pm 0.07 \pm 0.10 \mathrm{keV-b}$, where the last errors are the statistical and systematic respectively. The computations mostly considered s and p waves.  The transition is given to 	6.79MeV. The proton and gamma widths were given by $\Gamma_p =  0.97 \pm 0.05 \mathrm{keV}$ and $\Gamma_\gamma = 9.9 \pm 0.5 \mathrm{meV}$. In addition to the $1/2^{+}$ resonant contribution, non resonant transitions $1/2^{}-$, $3/2^{-}$, $5/2^{-}$ were also analyzed. \\
+
 
 Also on 14N proton capture \cite{formicola_imbriani_costantini_angulo_bemmerer_bonetti_broggini_corvisiero_cruz_descouvemont_et_2004}. \\
+
+The $\mathrm{{}^{14}N(p, \gamma){}^{15}O}$ radiative capture reaction was analyzed with the R-matrix formalism.  Parameters where found using different values for channel radius and ANC coefficient. The calculation yields the values $E_{R} = 259 \mathrm{keV}$, the resonant state with the form $J^{\pi} = 1/2^{+}$. \\
+
 
 \subsection{Phenomenological R-matrix} \label{sub:rmatrix_phenomenological}
 
@@ -6693,7 +7224,21 @@ atomic, massic, mass excess, spin, charge, data. $L^{\pi}$.
 
 In this section, the reference to the experimental data on astrophysical S-factors for the selected reactions will be presented. In particular, the  II database was widely used for reactions with $A < 10$. On the other hand, for reactions with $A > 10$, more specific references were used to obtain the experimental data.
 
-Additional, light heavy experimental data pd reaction \cite{bystritsky_gerasimov_krylov_parzhitskii_dudkin_kaminskii_nechaev_padalko_petrov_mesyats_et_2008} and 2H proton capture c\cite{schmid_chasteler_laymon_weller_prior_tilley_1995} and He3 photodisintegration \cite{berman_koester_smith_1964} with \cite{warren_erdman_robertson_axen_macdonald_1963}
+Additional, light heavy experimental data pd reaction \cite{bystritsky_gerasimov_krylov_parzhitskii_dudkin_kaminskii_nechaev_padalko_petrov_mesyats_et_2008} and\\
+
+The reaction of the form $\mathrm{p(d,\gamma){}^{3}He}$. Three body interaction may be present. Cross sections were obtained with energies $E = 8.28, 9.49, 10.10 \mathrm{keV}$. 
+
+ 2H proton capture \cite{schmid_chasteler_laymon_weller_prior_tilley_1995} \\
+
+Experimental data for the $\ddexchange$ reaction were obtained in the energy range of $E < 55.3\mathrm{keV}$.
+
+ and He3 photodisintegration \cite{berman_koester_smith_1964} with  \\
+
+The necessary photons to reproduce photodisintegration conditions of light nuclei, require photon sources. X-ray are chosen for getting energy values to the MeV scale. The main source used was bremsstrahlung beam. 
+
+ \cite{warren_erdman_robertson_axen_macdonald_1963}
+
+Reaction $\mathrm{{}^{3}He(\gamma, p)d}$ measured at $E_\gamma = 6.14, 6.97, 7.08$ MeV.
 
 \subsection{Nacre II database} \label{sub:nacreII}
 
@@ -6781,7 +7326,9 @@ $\Cfusion$ reaction.
 
 Resonant specific data will be presented. In particular, for those reactions with the aviable information, the experimental peak as well as the reaction peak will be detailed. Additionally, with special observance on the radiative capture reactions, the transitions will be specified.
 
-Data on the resonant 7Be + p and experimental methods \cite{buompane_dileva_gialanella_d'onofrio_decesare_duarte_fulop_gasques_gyurky_morales-gallegos_et_2022}.
+Data on the resonant 7Be + p and experimental methods \cite{buompane_dileva_gialanella_d'onofrio_decesare_duarte_fulop_gasques_gyurky_morales-gallegos_et_2022}. \\
+
+Study on the $\BeRadiativeCapture$ reaction. The main source of $\mathrm{{}^{7}Be}$ nuclei is the $\mathrm{{}^{7}Li(p, n){}^{7}Be}$ reaction. It has a resonance at $E_r = 630 \mathrm{keV}$. Experimental set up considerably affects the degree of relevance of uncertainties. Measured energy range $E = 367-812\mathrm{keV}$.
 
 \subsection{Resonance data}  \label{sub:ResonanceData}
 
@@ -7042,6 +7589,8 @@ The parameter $\alpha_n$ is adjusted in each iteration in order to the gradient 
 
 Despite the success of the gradient descent method, it is common fits to not be accomplished due to high fluctuations of the guessing $\vec x$ values. In order to overcome this issue, the gradient descent algorithm and the Gaussian-Newton formalisms are partially unified with the Leavenberg-Marquardt algorithms \cite{watson_more_1978}. The key distinct feature of this approach is the inclusion a damping parameter $\beta$, which is useful when accelerating the convergence of the iterative equations.  \\
 
+Damping factor are adjusted as part of the iteration. For example, based on the performance of the algorithm, $\lambda_{k+1}$ is decided based on the information of the previous $\lambda_k$ parameter. \\
+
 The computations of the implementations are based on solving the following matrix equation: 
 
 \begin{equation}\label{eq:fitting_LeavenbergMarquardt}
@@ -7052,7 +7601,20 @@ where the variable to be solved is the difference of the iteration $\delta \vec 
 
 It is worth to be noticed that the previous arguments are valid for $\sigma_l = 1$, which is the case when all the data points have comparable errors. Otherwise, the components of the residual vector should be redefined as $r'_l = r_l/\sigma_l$ such that equations \ref{eq:fitting_GaussianNewton}, \ref{eq:fitting_gradientDescent} and \ref{eq:fitting_LeavenbergMarquardt} still hold. \\
 
-A computational implementation example is given in  \cite{ramadasan_chevaldonne_chateau_2017}. For the effects of this work, the Levenberg-Marquardt algorithm was utilized with the tools provided by the SciPy library of Python. 
+A computational implementation example is given in  \cite{ramadasan_chevaldonne_chateau_2017}. For the effects of this work, the Levenberg-Marquardt algorithm was utilized with the tools provided by the SciPy library of Python.  \\
+
+The residuals are given by:
+
+\begin{equation}\label{eq:unconstrained_fitting_residuals}
+	\mathcal{E}(X) = f_1(X) + ... + f_n(X),
+\end{equation}
+
+where $X$ is the vector of parameters. $X = X_0$ holds for some initial guess $X_0$. Then, parameters are updated within a $\Delta X$, which is obtained by solving:
+
+
+\begin{equation}\label{eq:unconstrained_LevenbergMarquardt}
+	(J^{T}J + \delta I)\Delta X = J^{T} \mathcal{E} \Delta X.
+\end{equation}
 
 \subsection{Constrained fitting} \label{sub:constrainedFitting}
 
@@ -7074,12 +7636,33 @@ where $\lambda$ is a parameter to be adjusted in favor of obtaining the chi-squa
 
 However, this approach should be specialized to the case of curve fitting. In particular, the trust region reflective algorithm gives a possibility to find the parameters with reasonable computational implementation \cite{branch_coleman_li_1999}. \\
 
+The main objective is to minimize the $\chi^2$ function up to certain conditions on a region $R$ as:
+
+\begin{equation}\label{eq:constrained_fitting_definition}
+	\min_{x \in R} f(x).
+\end{equation}
+ 
 Trust region definition is critical in order to speed up the convergence of the algorithm. The closer the initial guess is to the minimum, the better is the quality of convergence of the procedure.   A convenient way of visualizing this algorithm implies interpreting boundaries as reflected walls which delimit the trusted region. \\ 
 
 Particularly, in each iteration, the $\lambda$ parameter is modified in order to keep the guess
 Then, if the solutions surpasses the allowed region, the algorithm will force the solution to be in the region by reflecting against the change that pretended to move the solution out of the region. The parameter vector can be arguably modeled by the position of a billiard ball with the gradient as its velocity.  Then, as the guess approaches the solution, the change of the parameter deviation drops and, at some point, the solution would not bounce off the walls and it will be kept inside the trusted region. Eventually, the parameter will not longer change substantially and it would rather converge to the desired optimal value. \\
 
-Further details of the  theory with illustrations on reflective line search are given in \cite{coleman_li_1994}. 
+Further details of the  theory with illustrations on reflective line search are given in \cite{coleman_li_1994}.  \\ 
+
+In the optimal selection,  the following holds:
+
+\begin{equation}\label{eq:constrained_fitting_optimal}
+	D(x)^2 \nabla f(x) = 0,
+\end{equation}
+
+where $D(x)$ contains the information relevant to the description of the bouncing phenomena just described and it is given as:
+
+\begin{equation}\label{eq:constrained_fitting_optimal_D}
+	D(x) = \mathrm{diag} (\sqrt{|v(x)|}).
+\end{equation}
+
+Now, depending on the value of the gradient $\nabla f(c)_c$ can assume multiple values which are adjusted in order to enable constrained fitting. 
+
 
 \section{Empirical formulas fitting} \label{sec:empiricalFitting}
 
@@ -7393,13 +7976,59 @@ Parameter list, uncertainty and its respective formula.
 
 São Paulo potential + Brazilian potential model + nuclear densities + phase shift data fits + computational implementation + optical models \cite{chamon_carlson_gasques_2021}. \\
 
-Woods-Saxon potential + two core shell model + spin orbit coupling +  dynamical (adiabatic and non -adiabatic) coupling  + computational implementation \cite{diaz-torres_2018} .
+\textsc{REGINA} code serves to calculate São Paulo potential. Densities could be also estimated from microscopical models like the Hartree-Fock approach. Additionally, deformation parameters may be added. A Fourier transformation is used in order to simplify folding potential computations in reciprocal space. Density may be expanded as: 
+
+\begin{equation}\label{eq:potentialNumerical_SaoPablo_densities}
+	\rho(r, \theta) = \rho_{t, sph}(r) - \delta^{(p)}_{t2} \frac{d\rho_{r, sph}}{dr} Y^{2}_{0}(\theta, \phi) - - \delta^{(p)}_{t4} \frac{d\rho_{r, sph}}{dr} Y^{4}_{0}(\theta, \phi).
+\end{equation}
+
+Woods-Saxon potential + two core shell model + spin orbit coupling +  dynamical (adiabatic and non -adiabatic) coupling  + computational implementation \cite{diaz-torres_2018}. \\
+
+The two core embedding of a nuclear potential $V_s$ has the form of: 
+
+\begin{equation}\label{potentialNumerical_TCSM_V}
+	V = \sum_{s=1}^{2} {\exp{(-i\vec R_s \hat k)} V_s \exp{(i\vec R_s \hat k)} },
+\end{equation}
+
+with $\hat k$ as the unitary wave number operator and $\vec R$ as the relative difference vector of the two cores. Now, each nuclei can be approximated by considering an expansion of the form:
+
+\begin{equation}\label{potentialNumerical_TCSM_V_s}
+	V_s \approx \sum_{s\nu} |s\nu \rangle V^{s}_{\nu \mu} \langle s \mu |, 
+\end{equation}
+
+with $\nu$ and $\mu$ as quantum number indices. The system is solved by the algebraic equation:
+
+\begin{equation}\label{potentialNumerical_TCSM_algebraicEquation}
+\sum_{\mu'} \sum_{s'} \left[\delta_{ss'}\delta_{\mu\mu'} - \sum_{\nu} { \langle s\mu | G_0(E) \exp{(i(\vec R_s - \vec r_{s'}))} | s'\nu \rangle } \right] V^{s'}_{\nu \mu'}A_{s'\mu'} = 0 ,
+\end{equation}
+
+where $G_0$ is the Green operator. Additionally, the volume conservation condition shall be imposed, the more concrete form of such rule in given by: 
+ 
+ \begin{equation}\label{potentialNumerical_TCSM_volumeConservation}
+	\int\theta(\Sigma_0 - \Sigma) dv = v_0.
+ \end{equation}
+
+
 
 \section{Microscopic model fitting} \label{sec:microscopicFitting}
 
 Parameter list, uncertainty and its respective formula.
 
-Double folding two spherical nuclei + modified (logarithmic Gross-Kalinowski profile) Woods-Saxon potential + computational implementation \cite{gontchar_chushnyakova_2016}.
+Double folding two spherical nuclei + modified (logarithmic Gross-Kalinowski profile) Woods-Saxon potential + computational implementation \cite{gontchar_chushnyakova_2016}. \\
+
+In order to boost calculation simplicity for the double folding potential, the Gross-Kalinowski formula is provided and it has the following particular shape: 
+
+\begin{equation}\label{numericalPotential_doubleFolding_approximation}
+	V(R) = - \ln {\left[1 + \exp {\left(-\frac{\Delta R}{a_{GK}}\right)} \right]} (A_{0GK} + A_{1GK} \Delta R + A_{2GK} \Delta R^2),
+\end{equation}
+
+with $a_{GK}$ and $A_{0GK}$ + $A_{1GK}$ as free parameters for the model, which may be determined by fitting. Additionally, $\Delta R$ is defined as: 
+
+\begin{equation}\label{numericalPotential_doubleFolding_approximation_DeltaR}
+	\Delta R = R - r_{GK} (A^{1/3}_P + A^{1/3}_T),  
+\end{equation}
+
+where $R$ is the radius and $A_P$ with $A_T$ are the mass numbers of projectile and target nuclei. Additionally, $r_{GK}$ is a model parameter analogous to the radius $r_0$. 
 
 \section{R-matrix fitting} \label{sec:rmatrixFitting}
 
@@ -7419,10 +8048,83 @@ Parameter list, uncertainty and its respective formula. Widths and channels.
 	\label{table:fitting_rmatrix}
 \end{table}
 
-Coupled channels R-matrix + Numerov algorithm computational implementation \cite{descouvemont_2016}
+Coupled channels R-matrix + Numerov algorithm computational implementation \cite{descouvemont_2016}\\
+
+When Lagrange basis functions are used, matrix elements are simplified as: 
+
+\begin{equation}\label{eq:numericalRmatrix_elements}
+	\langle \phi_n|  W| \phi_m \rangle \approx a \sqrt{\lambda_n\lambda_m} W(ax_n, ax_m),
+\end{equation}
+
+where $x_n$ and $x_m$ are the ratios of the radius $r$ and the channel radius $a$ for each point of the mesh with indices $n$ and $m$. Additionally, $\lambda_n$ and $\lambda_m$ are the weights of the Gaussian-Legandre quadrature.\\
+
  $\mathrm{{}^{7}Be}$ nucleus structure. General, phenomenological and simplified R-matrix theory 
- + transformations + numerical implementation \cite{thompson_deboer_dimitriou_kunieda_pigni_arbanas_leeb_srdinko_hale_tamagno_et_2019}
-AZURE R-matrix code + formalism + channels + transformations + analysis for selected reactions + single and multi channel 	\cite{azuma_uberseder_simpson_brune_costantini_deboer_gorres_heil_leblanc_ugalde_et_2010}
+ + transformations + numerical implementation \cite{thompson_deboer_dimitriou_kunieda_pigni_arbanas_leeb_srdinko_hale_tamagno_et_2019}. \\
+ 
+ Reduced amplitudes are given as:
+ 
+ \begin{equation}\label{eq:numericalRmatrix_gamma}
+ 	\gamma_{c\lambda} = \frac{\hbar^2}{2\mu_ca_c}\Phi^{\lambda}_{c}(a_c),
+ \end{equation}
+
+where $\lambda$ and $c$ are indicators of the pole and the channel respectively. A representation of the scattering S-matrix is given by:
+
+ \begin{equation}\label{eq:numericalRmatrix_S}
+	S = \frac{t^{1/2}H^{+} - Rt^{1/2}(aH^{+'} - BH^{+})}{t^{1/2}H^{-} - Rt^{1/2}(aH^{-'} - BH^{-})},
+\end{equation}
+
+$t$ correspond to the kinetic energy like matrix, $H$ to the Hankel functions and derivatives $H'$, and $B$ is the matrix of the boundary. All of the $a$, $t$ and $B$ matrices are diagonal. \\
+
+A simplified formulation expresses the S-matrix in terms of a modified $\bar{S} = v^{1/2}Sv^{-1/2}$ with $v$ as the matrix associated with velocity parameters defined as: 
+
+ \begin{equation}\label{eq:numericalRmatrix_v}
+	v_c = \frac{\hbar k_c}{\mu_c}.
+\end{equation}
+
+This modified S-matrix is expressed as:
+
+\begin{equation}\label{eq:numericalRmatrix_S_modified}
+	\hat{S} = \Omega[1+ 2iP^{1/2}(1- aRL)^{-1}RP^{1/2}]\Omega,
+\end{equation}
+
+with $P$ as the penetrability matrix and $L$ being defined as:
+
+\begin{equation}\label{eq:numericalRmatrix_L}
+	L = \frac{S + iP - B}{a},
+\end{equation}
+
+where $S$ is the shift matrix. Additionally, $\Omega$ is the diagonal formed $e^{i\phi_c}$ matrix, with $\phi_c$ defined as: 
+
+\begin{equation}\label{eq:numericalRmatrix_phi}
+	\tan (\phi_c) = - \frac{F_c}{G_c}.
+\end{equation}
+
+ 
+\textsc{AZURE} R-matrix code + formalism + channels + transformations + analysis for selected reactions + single and multi channel 	\cite{azuma_uberseder_simpson_brune_costantini_deboer_gorres_heil_leblanc_ugalde_et_2010} \\
+
+It uses the A-matrix approach, which is a level matrix of the form $A_{\lambda \lambda'}$. This is defined in therm of its inverse as: 
+
+\begin{equation}\label{eq:numericalRmatrix_A}
+	(A^{-1})_{\lambda \lambda'} = (E_\lambda - E)\delta_{\lambda\lambda'} + \Delta_{\lambda\lambda'} - i\frac{\Gamma_{\lambda\lambda'}}{2}, 
+\end{equation}
+
+where the shift $\Delta_{\lambda\lambda'}$  is defined as: 
+
+\begin{equation}\label{eq:numericalRmatrix_A_shift}
+	\Delta_{\lambda\lambda'} = -\sum_{c}{\gamma_{\lambda c}\gamma_{\lambda'c}(S_c - B_c)}
+\end{equation}
+
+and the width $\Gamma_{\lambda \lambda'}$ is given by 
+
+\begin{equation}\label{eq:numericalRmatrix_A_width}
+	\Gamma_{\lambda \lambda'} = \sum_{c}{2P_c\gamma_{\lambda c}\gamma_{\gamma'c}}.
+\end{equation}
+
+The introduction of this quantity enhance computational calculations due to its simple expression. Additionally, it has a connection with the collision matrix as:
+
+\begin{equation}\label{eq:numericalRmatrix_A_collision}
+	U_{cc'} = \Omega_{c}\Omega_{c'} \left[\delta_{cc'} + i \sum_{\lambda \lambda'} \Gamma^{1/2}_{\lambda c}  \Gamma^{1/2}_{\lambda c'} A_{\lambda \lambda'}\right].
+\end{equation}
 
 \chapter{Numerical integration and differential equation solving} \label{ap:numericalSolving}
 
@@ -7473,7 +8175,64 @@ Lastly, since a special emphasize is given to scattering in the treatment of nuc
 
 Schrodinger and Dirac equation numerical solver with central potentials \cite{salvat_fernandez-varea_2019}. The computational implementation was based on functions from the package of SciPy of the programming language Python. \\
 
-Coupled channels (CCFULL code ) + Woods-Saxon parametrization + boundary conditions specified + rotational, vibrational and transfer couplings \cite{hagino_rowley_kruppa_1999}.
+RADIAL program. Power series expansion. The variable $\mathcal{V}(r)$, which is defined as:
+
+\begin{equation}\label{eq:numericalSolver_radialSchrodinger_Vmodified}
+	\mathcal{V}(r) = r V(r),
+\end{equation}
+
+is used for power series expansion, which is interpolated by a third order polynomial,  as given by: 
+
+\begin{equation}\label{eq:numericalSolver_radialSchrodinger_Vmodified_expansion}
+	\mathcal{V}(r) = v^{(k)}_0 + v^{(k)}_1r + v^{(k)}_2r^2 + v^{(k)}_3r^2,
+\end{equation}
+
+each interpolation is done for the $k$th interval of the form $[r_k, r_{k+1}]$. Now, if the separation of variables for the radial Schrödinger equation is given by: 
+
+\begin{equation}\label{eq:numericalSolver_radialSchrodinger_separation}
+	\psi_{Elm}(\vec r) = \frac{1}{r} P_{El}(r)Y^{l}_{m}(\hat r),
+\end{equation}
+
+the adapted form of the radial Schrödinger equation is given by:
+
+\begin{equation}\label{eq:numericalSolver_radialSchrodinger_adapted}
+		\frac{d^2P}{dr^2} = - 2 \left[E - V - \frac{l(l+1)}{2r^2}P\right]. 
+\end{equation}
+
+Then, $P(r)$ might be expressed in terms of the following power series expansion: 
+
+\begin{equation}\label{eq:numericalSolver_radialSchrodinger_P}
+	P(r) = \mathcal{P}(x) = \sum_{n=0}^{\infty} A_n x^n,
+\end{equation}
+
+where $x$ is the result of a convenient change of variables in the case of the interval $[r_a, r_b]$ as:
+
+\begin{equation}\label{eq:numericalSolver_radialSchrodinger_P_x}
+	x = \frac{r - r_a}{h},
+\end{equation}
+
+with $h = r_b - r_a$. The radius of calculation interest is $r_b$. \\
+
+Coupled channels (CCFULL code ) + Woods-Saxon parametrization + boundary conditions specified + rotational, vibrational and transfer couplings \cite{hagino_rowley_kruppa_1999}. \\
+
+The Schrödinger equation to be solved in the coupled channels formalism is:
+
+\begin{equation}\label{eq:numericalSolver_coupledChannels}
+	 \left[- \frac{\hbar^2}{2\mu} \frac{d^2}{dr^2} + \frac{J(J+1)}{2\mu r^2} + V_N(r) + V_C(r) + \epsilon_n - E \right] \psi_n(r) + \sum_{m} V_{nm}(r) \psi_m(r) = 0.
+\end{equation}
+
+ It sets a $r_{min}$ value such that the wave function at $r > r_{max}$ behaves like a free wave and at $r \le r_{rmin}$ in a bound state. More particularly, 
+
+\begin{equation}\label{eq:numericalSolver_coupledChannels_waveFunction}
+		\psi_n(r) = 	\left\{\begin{array}{l}
+			\begin{split}
+				T_n \exp {\left(- i \int^{r}_{r_{min}} {k_n(r')dr' }\right)}, \quad &r \le r_{min} \\ 
+				H^{(-)}_J(k_nr) \delta_{n,0} + R_n H^{+}_{J}(k_nr) \quad &r > r_{max},
+			\end{split}
+		\end{array}\right.
+\end{equation}
+
+where $n=0$ corresponds to the entrance channel and $k_n$ is the wave number obtained from equation \ref{eq:numericalSolver_coupledChannels} in the $n$th channel. Boundary conditions are imposed at $r_{min}$. The wave functions from $r > r_{min}$ are determined by the application of the  Runge-Kutta and Numerov methods. It is possible to incorporate rotational and vibrational couplings to model calculations.
 
 \subsection{Main approach} \label{sub:diffSolvingMainApproach}
 
